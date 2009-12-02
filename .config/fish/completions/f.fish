@@ -1,1 +1,1 @@
-complete -c f -a "(ls $PROJECTS | sort | grep -vE \"^_\")"
+complete -x -c f -a"(__fish_complete_directories ($PROJECTS))"
