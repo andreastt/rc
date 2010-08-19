@@ -36,9 +36,11 @@ complete -F _f f
 
 export CDPATH=".:~"
 
-export GOROOT=`brew --cellar`/go/HEAD
-export GOARCH=amd64
-export GOOS=darwin
+if [[ -d `brew --cellar`/go/HEAD]]; then
+  export GOROOT=`brew --cellar`/go/HEAD
+  export GOARCH=amd64
+  export GOOS=darwin
+fi
 
 function wr () {
   open -a "Writeroom" $@
