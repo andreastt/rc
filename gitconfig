@@ -1,0 +1,41 @@
+[user]
+  name = Chris Lloyd
+  email = christopher.lloyd@gmail.com
+[core]
+  autocrlf = input
+[github]
+  user = chrislloyd
+[color]
+  ui = auto
+[pack]
+  threads = 0
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  untracked = black bold
+[branch]
+  autosetupmerge = true
+[alias]
+  a = add
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  headless = !sh -c 'git symbolic-ref HEAD refs/heads/$0 && rm .git/index && git clean -fdx'
+  d = diff
+  cia = commit -v -a
+  cp = cherry-pick
+  l = log
+  lm = log master..
+  llm = log -p master..
+  b = branch

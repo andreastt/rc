@@ -1,3 +1,0 @@
-function m
-  mate .
-end
