@@ -1,14 +1,10 @@
 [user]
-  name = Chris Lloyd
-  email = christopher.lloyd@gmail.com
-[core]
-  autocrlf = input
+  name = Andreas Tolf Tolfsen
+  email = ato@fsfe.org
 [github]
-  user = chrislloyd
+  user = andreastt
 [color]
   ui = auto
-[pack]
-  threads = 0
 [color "branch"]
   current = yellow reverse
   local = yellow

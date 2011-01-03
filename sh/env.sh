@@ -1,2 +1,2 @@
 export RUBYOPT='rubygems'
-export EDITOR='mate -w'
+export EDITOR='emacs'

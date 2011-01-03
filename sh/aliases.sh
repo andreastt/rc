@@ -20,5 +20,3 @@ alias ls='ls -G'
 alias la='ls -ah'
 alias l='ls -lah'
 alias sl=ls
-
-# TODO Alias mate to emacs if mate isn't in path
