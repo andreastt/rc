@@ -47,29 +47,14 @@
 ;; ---------------------------
 ;; Set Emacs frame dimensions.
 ;; ---------------------------
-(add-to-list 'default-frame-alist '(height . 85))
-(add-to-list 'default-frame-alist '(width . 225))
+(add-to-list 'default-frame-alist '(height . 124))
+(add-to-list 'default-frame-alist '(width . 180))
 
 
 ;; ---------
 ;; yes -> y.
 ;; ---------
 (fset 'yes-or-no-p 'y-or-n-p)
-
-
-;; ---------------------
-;; Menu and scroll bars.
-;; ---------------------
-(menu-bar-mode -1)
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
-
-
-;; ----
-;; ECB.
-;; ----
-;;(ecb-activate)
-(require 'ecb-autoloads)
 
 
 ;; ------
@@ -132,7 +117,7 @@
 ;; ------------------------
 ;; PHP and web development.
 ;; ------------------------
-(load "~/.emacs.d/nxhtml/autostart.el")
+(load "~ato/.emacs.d/nxhtml/autostart.el")
 
 
 ;; ----
@@ -153,13 +138,6 @@
 (require 'magit)
 
 
-;; -----
-;; Font.
-;; -----
-(set-face-font 'default "-unknown-DejaVu Sans Mono-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-;;(set-face-font 'default "-jmk-neep alt-medium-r-*-*-20-*-*-*-c-*-iso10646-1")
-
-
 ;; ---------------------------------------------------------
 ;; Settings set with the internal Emacs customization panel.
 ;; ---------------------------------------------------------
@@ -169,16 +147,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.32")
  '(inhibit-startup-screen t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
-;; '(default ((t (:inherit nil :stipple nil :background "black"
-;;         :foreground "white" :inverse-video nil :box nil :strike-through
-;;         nil :overline nil :underline nil :slant normal :weight normal
-;;         :height 9 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))
 (put 'upcase-region 'disabled nil)
