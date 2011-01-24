@@ -26,10 +26,12 @@
       `((".*" ,temporary-file-directory t)))
 
 
-;; -------------
-;; Hide toolbar.
-;; -------------
+;; --------------------------------
+;; Hide menu-, scroll- and toolbar.
+;; --------------------------------
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 
 ;; -----------
@@ -41,14 +43,14 @@
 ;; ---------------------------
 ;; Setting font size to ~10pt.
 ;; ---------------------------
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 90)
 
 
 ;; ---------------------------
 ;; Set Emacs frame dimensions.
 ;; ---------------------------
-(add-to-list 'default-frame-alist '(height . 124))
-(add-to-list 'default-frame-alist '(width . 180))
+(add-to-list 'default-frame-alist '(height . 79))
+(add-to-list 'default-frame-alist '(width . 225))
 
 
 ;; ---------
@@ -117,7 +119,7 @@
 ;; ------------------------
 ;; PHP and web development.
 ;; ------------------------
-(load "~ato/.emacs.d/nxhtml/autostart.el")
+(load "~/.emacs.d/nxhtml/autostart.el")
 
 
 ;; ----
