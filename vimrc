@@ -1,5 +1,6 @@
 " -----------------------------------------------------------------------------
 " | VIM Settings |
+" | (see gvimrc for gui vim settings) |
 " -----------------------------------------------------------------------------
  
 set nocompatible
@@ -7,9 +8,14 @@ set nocompatible
 " Tabs ************************************************************************
 "set softtabstop=2
 "set shiftwidth=2
+"set tabstop=2
+"set shiftwidth=2
+"set expandtab
+
+set expandtab
 set tabstop=2
 set shiftwidth=2
-set expandtab
+
 "set sta " a <Tab> in an indent inserts 'shiftwidth' spaces
  
  
@@ -19,8 +25,11 @@ set expandtab
 
 "set autoindent
 "set smartindent
-set cindent
 
+"set cindent
+
+set autoindent
+set smartindent
 
 " Whitespaces ****************************************************************
 highlight RedundantWhitespace ctermbg=red guibg=red
@@ -76,7 +85,8 @@ syntax on
 "colorscheme vanzan_color
 colorscheme xoria256
 "colorscheme algkalv
- 
+"colorscheme ir_black
+
  
 " Status Line *****************************************************************
 "set showcmd
@@ -147,7 +157,7 @@ autocmd FileType html set filetype=xhtml formatoptions+=tl
 
 " For PHP programming, have things in braces indenting themselves.  Also, use
 " genuine tab characters:
-autocmd FileType php,phtml set filetype=php autoindent noexpandtab tabstop=2
+"autocmd FileType php,phtml set filetype=php autoindent noexpandtab tabstop=2
 
 " For CSS, also have things in braces indented:
 autocmd FileType css set smartindent
@@ -177,7 +187,7 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
  
 " Misc ************************************************************************
 set backspace=indent,eol,start
-set number " Show line numbers
+"set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
  
