@@ -86,6 +86,9 @@ syntax on
 colorscheme xoria256
 "colorscheme algkalv
 "colorscheme ir_black
+"colorscheme inkpot
+"colorscheme green
+"colorscheme bright
 
  
 " Status Line *****************************************************************
@@ -108,6 +111,9 @@ imap jj <Esc>
 imap uu _
 imap hh =>
 imap aa @
+
+" Map leader to |
+let mapleader = "|"
 
 " Map t to NERDtree.
 nmap t :NERDTree<Enter>
