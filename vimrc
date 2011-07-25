@@ -102,7 +102,8 @@ set statusline=%f\ %2*%m\ %1*%h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?
 set nowrap
 set linebreak  " Wrap at word
 set joinspaces " Sane space operation
-set textwidth=72
+"set textwidth=72
+set textwidth=0
 
  
 " Mappings ********************************************************************

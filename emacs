@@ -74,7 +74,8 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-clarity)))
+     (color-theme-charcoal-black)))
+     ;;(color-theme-clarity)))
 
 
 ;; -----------
