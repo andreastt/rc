@@ -36,7 +36,8 @@ Dir['*'].
 
 puts green('Linked dotfiles')
 
-
 system 'mkdir ~/misc'
-system 'tar xzf xmobar.tar.gz -C ~/misc'
-puts green('Installed xmobar')
+system 'mkdir ~/import'
+system 'mkdir ~/backup'
+system 'mkdir ~/backup/vim'
+system 'mkdir ~/backup/vim/swap'
