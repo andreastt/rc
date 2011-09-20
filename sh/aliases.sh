@@ -29,5 +29,5 @@ alias sl=ls
 alias spartoi_terminal="ssh root@$SPARTOI -t 'screen -dr'"
 alias spartoi="xtightvncviewer $SPARTOI:1 -passwd /home/andreastt/.vnc/passwd"
 
-alias orgelet="ssh ato@e-tjenesten.org -t 'screen -dr'"
-
+alias orgelet_irc="ssh ato@sny.no -t 'screen -rx -p irc'"
+alias orgelet_mail="ssh ato@sny.no -t 'screen -rx -p mail'"
