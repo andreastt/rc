@@ -19,13 +19,14 @@
     <location key="#Project_Structure.1600.0.1600.1200" x="1880" y="187" />
     <location key="OptionsEditor.0.0.1600.1200" x="1636" y="175" />
     <location key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog.1600.0.1600.1200" x="2118" y="358" />
+    <location key="OptionsEditor.0.0.1366.768" x="3" y="3" />
     <location key="FileChooserDialogImpl.0.0.1600.1200" x="804" y="349" />
     <location key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor.1600.0.1600.1200" x="1995" y="284" />
     <location key="NewModule_or_Project.wizard.0.0.1600.1200" x="354" y="290" />
     <location key="findTextDialog.0.0.1600.1200" x="496" y="403" />
     <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.1600.0.1600.1200" x="2142" y="381" />
-    <location key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog.1600.0.1600.1200" x="2227" y="517" />
     <location key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1600.1200" x="441" y="413" />
+    <location key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog.1600.0.1600.1200" x="2227" y="517" />
     <location key="svn4idea.checkout.options.0.0.1600.1200" x="552" y="481" />
     <location key="FileChooserDialogImpl" x="2191" y="342" />
     <location key="DetectedSourceRootsDialog.1600.0.1600.1200" x="2168" y="323" />
@@ -45,6 +46,7 @@
     <size key="#com.intellij.execution.impl.EditConfigurationsDialog.1600.0.1600.1200" width="1041" height="856" />
     <size key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1600.1200" width="836" height="631" />
     <size key="DebuggerActiveHint.1600.0.1600.1200" width="1045" height="369" />
+    <size key="OptionsEditor.0.0.1366.768" width="1216" height="738" />
     <size key="FileChooserDialogImpl.0.0.1600.1200" width="416" height="494" />
     <size key="DiffWindow.1600.0.1600.1200" width="1598" height="1179" />
     <size key="ShowImplementationPopup.1600.0.1600.1200" width="602" height="420" />

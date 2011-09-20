@@ -2,7 +2,7 @@
 <application>
   <component name="StatisticsApplicationUsages">
     <group name="run-configuration-type">
-      <project id="webdriver-opera" values="JUnit,Application" />
+      <project id="webdriver-opera" values="Application,JUnit" />
     </group>
     <group name="module type">
       <project id="selenium" values="JAVA_MODULE" />

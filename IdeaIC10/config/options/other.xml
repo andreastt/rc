@@ -169,8 +169,8 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
-        <option value="$USER_HOME$/dev/selenium" />
         <option value="$USER_HOME$/dev/webdriver-opera" />
+        <option value="$USER_HOME$/dev/selenium" />
       </list>
     </option>
     <option name="openPaths">
@@ -178,7 +178,7 @@
         <option value="$USER_HOME$/dev/webdriver-opera" />
       </list>
     </option>
-    <option name="lastPath" value="$USER_HOME$/dev/selenium" />
+    <option name="lastPath" value="$USER_HOME$/dev/webdriver-opera" />
   </component>
   <component name="RefactoringSettings">
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_CLASS" value="false" />
