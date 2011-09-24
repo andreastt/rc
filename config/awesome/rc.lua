@@ -13,7 +13,7 @@ require("debian.menu")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/andreastt/.config/awesome/themes/ato/theme.lua")
+beautiful.init("/home/ato/.config/awesome/themes/ato/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
