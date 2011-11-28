@@ -2,10 +2,10 @@
 <application>
   <component name="NotificationConfiguration">
     <notification groupId="Git" displayType="STICKY_BALLOON" />
+    <notification groupId="Indexing" displayType="BALLOON_ONLY" />
     <notification groupId="SendUsagesStatistics" displayType="STICKY_BALLOON" />
     <notification groupId="System Messages" displayType="BALLOON" />
     <notification groupId="Project Loading Error" displayType="BALLOON" />
-    <notification groupId="Indexing" displayType="BALLOON_ONLY" />
     <notification groupId="Facet Detector" displayType="BALLOON" />
   </component>
 </application>

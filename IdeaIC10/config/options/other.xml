@@ -77,36 +77,36 @@
     <option name="RECENT_FIND_STRINGS">
       <value>
         <list size="30">
-          <item index="0" class="java.lang.String" itemvalue="PRODUCT" />
-          <item index="1" class="java.lang.String" itemvalue="binary_pr" />
-          <item index="2" class="java.lang.String" itemvalue="sana" />
-          <item index="3" class="java.lang.String" itemvalue="saniti" />
-          <item index="4" class="java.lang.String" itemvalue="autotestmode" />
-          <item index="5" class="java.lang.String" itemvalue="getLocation" />
-          <item index="6" class="java.lang.String" itemvalue="getLocation(" />
-          <item index="7" class="java.lang.String" itemvalue="got error" />
-          <item index="8" class="java.lang.String" itemvalue="getOperaPath" />
-          <item index="9" class="java.lang.String" itemvalue="isPathValid" />
-          <item index="10" class="java.lang.String" itemvalue="Command:" />
-          <item index="11" class="java.lang.String" itemvalue="CommandLine" />
-          <item index="12" class="java.lang.String" itemvalue="warning" />
-          <item index="13" class="java.lang.String" itemvalue="OPERA_ARGS" />
-          <item index="14" class="java.lang.String" itemvalue="1.3" />
-          <item index="15" class="java.lang.String" itemvalue="getHostInfo" />
-          <item index="16" class="java.lang.String" itemvalue="Could not start the " />
-          <item index="17" class="java.lang.String" itemvalue="error on" />
-          <item index="18" class="java.lang.String" itemvalue="getHost" />
-          <item index="19" class="java.lang.String" itemvalue="opera" />
-          <item index="20" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAFrameUsingAPreviously" />
-          <item index="21" class="java.lang.String" itemvalue="getAttribute" />
-          <item index="22" class="java.lang.String" itemvalue="isVersion" />
-          <item index="23" class="java.lang.String" itemvalue="testShouldFocusOnTheReplaceMentWhenAFrameFollowsALinkToA" />
-          <item index="24" class="java.lang.String" itemvalue="testShouldbeAbletoClik" />
-          <item index="25" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAnIFrameUsingAPreviously" />
-          <item index="26" class="java.lang.String" itemvalue="WebElement" />
-          <item index="27" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAnIFrameUsingAPreviouslyLocatedWebElement" />
-          <item index="28" class="java.lang.String" itemvalue="wrapped" />
-          <item index="29" class="java.lang.String" itemvalue="getWrapped" />
+          <item index="0" class="java.lang.String" itemvalue="sana" />
+          <item index="1" class="java.lang.String" itemvalue="saniti" />
+          <item index="2" class="java.lang.String" itemvalue="autotestmode" />
+          <item index="3" class="java.lang.String" itemvalue="getLocation" />
+          <item index="4" class="java.lang.String" itemvalue="getLocation(" />
+          <item index="5" class="java.lang.String" itemvalue="got error" />
+          <item index="6" class="java.lang.String" itemvalue="getOperaPath" />
+          <item index="7" class="java.lang.String" itemvalue="isPathValid" />
+          <item index="8" class="java.lang.String" itemvalue="Command:" />
+          <item index="9" class="java.lang.String" itemvalue="CommandLine" />
+          <item index="10" class="java.lang.String" itemvalue="warning" />
+          <item index="11" class="java.lang.String" itemvalue="OPERA_ARGS" />
+          <item index="12" class="java.lang.String" itemvalue="1.3" />
+          <item index="13" class="java.lang.String" itemvalue="getHostInfo" />
+          <item index="14" class="java.lang.String" itemvalue="Could not start the " />
+          <item index="15" class="java.lang.String" itemvalue="error on" />
+          <item index="16" class="java.lang.String" itemvalue="getHost" />
+          <item index="17" class="java.lang.String" itemvalue="opera" />
+          <item index="18" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAFrameUsingAPreviously" />
+          <item index="19" class="java.lang.String" itemvalue="getAttribute" />
+          <item index="20" class="java.lang.String" itemvalue="isVersion" />
+          <item index="21" class="java.lang.String" itemvalue="testShouldFocusOnTheReplaceMentWhenAFrameFollowsALinkToA" />
+          <item index="22" class="java.lang.String" itemvalue="testShouldbeAbletoClik" />
+          <item index="23" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAnIFrameUsingAPreviously" />
+          <item index="24" class="java.lang.String" itemvalue="WebElement" />
+          <item index="25" class="java.lang.String" itemvalue="testShouldBeAbleToSwitchToAnIFrameUsingAPreviouslyLocatedWebElement" />
+          <item index="26" class="java.lang.String" itemvalue="wrapped" />
+          <item index="27" class="java.lang.String" itemvalue="getWrapped" />
+          <item index="28" class="java.lang.String" itemvalue="finally" />
+          <item index="29" class="java.lang.String" itemvalue="exec" />
         </list>
       </value>
     </option>
@@ -169,20 +169,23 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
+        <option value="$USER_HOME$/dev/webc-java" />
         <option value="$USER_HOME$/dev/webdriver-opera" />
+        <option value="$USER_HOME$/dev/webc" />
         <option value="$USER_HOME$/dev/selenium" />
       </list>
     </option>
     <option name="openPaths">
       <list>
-        <option value="$USER_HOME$/dev/webdriver-opera" />
+        <option value="$USER_HOME$/dev/webc-java" />
       </list>
     </option>
-    <option name="lastPath" value="$USER_HOME$/dev/webdriver-opera" />
+    <option name="lastPath" value="$USER_HOME$/dev/webc-java" />
   </component>
   <component name="RefactoringSettings">
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_CLASS" value="false" />
     <option name="RENAME_SEARCH_FOR_TEXT_FOR_CLASS" value="false" />
+    <option name="MOVE_PREVIEW_USAGES" value="false" />
     <option name="RENAME_INHERITORS" value="false" />
     <option name="RENAME_VARIABLES" value="false" />
     <option name="RENAME_TESTS" value="false" />
@@ -223,10 +226,11 @@
     </option>
     <option name="myKnownUpdateChannels">
       <value>
-        <list size="3">
+        <list size="4">
           <item index="0" class="java.lang.String" itemvalue="idea90" />
           <item index="1" class="java.lang.String" itemvalue="IDEA10EAP" />
           <item index="2" class="java.lang.String" itemvalue="IDEA10" />
+          <item index="3" class="java.lang.String" itemvalue="IDEA11EAP" />
         </list>
       </value>
     </option>
@@ -236,7 +240,7 @@
       </value>
     </option>
     <option name="CHECK_NEEDED" value="true" />
-    <option name="LAST_TIME_CHECKED" value="1316522106492" />
+    <option name="LAST_TIME_CHECKED" value="1322405467457" />
     <option name="UPDATE_CHANNEL_TYPE" value="release" />
   </component>
   <component name="XDebuggerSettings">
