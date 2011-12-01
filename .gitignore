@@ -2,4 +2,7 @@
 vim/.netrwhist
 IdeaIC10/config/componentVersions/*
 IdeaIC10/config/tasks/*
+IdeaIC10/config/options/*
 IdeaIC10/system
+emacs.d/tramp
+emacs.d/auto-save-list
