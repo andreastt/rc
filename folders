@@ -1,0 +1,30 @@
+Personal {
+ .Personal/INBOX	"Inbox"
+ out {
+  .Personal/INBOX.Drafts	"Drafts"
+  .Personal/INBOX.Sent Messages	"Sent" 
+ }
+ .Personal/INBOX.Deleted Messages	"Trash"
+}
+Opera {
+ .Opera/INBOX	"Inbox"
+ out {
+  .Opera/Drafts	"Drafts"
+  .Opera/Sent	"Sent"
+ }
+ .Opera/Trash	"Trash"
+}
+FSFE {
+ .FSFE/INBOX	"Inbox"
+ .FSFE/INBOX.Out	"Out"
+ .FSFE/INBOX.Trash	"Trash"
+}
+E-tjenesten {
+ .Etjenesten/INBOX	"Inbox"
+ .Etjenesten/Drafts	"Drafts"
+ out {
+  .Etjenesten/Sent Messages	"Sent"
+  .Etjenesten/Out  "Out"
+ }
+ .Etjenesten/Deleted Messages	"Trash"
+}
