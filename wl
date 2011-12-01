@@ -8,7 +8,7 @@
  wl-fcc-force-as-read t
  wl-folder-window-width 25
  wl-forward-subject-prefix "Fwd: " ;; use "Fwd: ", not "Forward: "
- wl-insert-message-id nil ;; let SMTP handle message-id
+ ;;wl-insert-message-id nil ;; let SMTP handle message-id
  wl-local-domain "sny.no"  ;; baldr.sny.no
  wl-stay-folder-window t
  wl-summary-always-sticky-folder-list t

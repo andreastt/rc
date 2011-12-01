@@ -1,8 +1,15 @@
-export RUBYOPT='rubygems'               # Rubygems
-export EDITOR='vim'                     # Use vim for terminals
-export PATH="$PATH:/usr/lib/jruby/bin"  # JRuby
-export PATH="$PATH:/home/andreastt/bin/idea-IC-103.255/bin"  # IntelliJ
-export PATH="$PATH:/home/ato/dev/webc-java/bin"  # webc
+# Use Emacs Client by default, fall back to new Emacs session
+export EDITOR=e
+export PATH="$PATH:$HOME/bin/"
+
+# IntelliJ
+export PATH="$PATH:$HOME/bin/idea-IC-103.255/bin"
+
+# WebC
+export PATH="$PATH:$HOME/dev/webc-java/bin"
+export WEBC_HOME=/home/ato/dev/webc-java
+
+# Java related (don't need this if using OpenJDK)
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.@text=true"  # Antialiasing for fonts in Java
 
 # Selenium test suites will continue running even if they reach an error or fail
@@ -19,10 +26,6 @@ export SELENIUM_SERVER_JAR=/home/andreastt/dev/selenium/build/java/server/src/or
 
 export WATIR_WEBDRIVER_BROWSER=opera
 
-export WEBC_HOME=/home/ato/dev/webc-java
-
 export SPARTOI='10.20.28.228'
 
 export GITHUB_USER="andreastt"
-export GITHUB_TOKEN="275d7ccb40182e00d93d856fa2c3f0f0"
-
