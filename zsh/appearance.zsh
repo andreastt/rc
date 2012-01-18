@@ -38,4 +38,4 @@ setopt cdablevarS
 # Setup the prompt with pretty colors
 setopt prompt_subst
 
-PS1="$FX[bold]$FG[034]●$FX[reset] "
+PS1="$FX[bold]$FG[036]●$FX[reset] "
