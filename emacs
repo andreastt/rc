@@ -73,7 +73,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (require 'auto-complete-config)
-(add-to-lsit 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
 (ac-config-default)
 
 
@@ -89,16 +89,24 @@
 ;; -----
 ;; Theme
 ;; -----
-;; (require 'color-theme)
-;; (eval-after-load "color-theme"
-;;   '(progn
-;;      (color-theme-initialize)
-;;      (color-theme-charcoal-black)))
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-charcoal-black)))
 
 
-;; ----------
+;; --------------------------------------------------------
+;; C++
+;; --------------------------------------------------------
+
+(setq-default c-default-style "linux"
+	      c-basic-offset 4)
+
+
+;; --------------------------------------------------------
 ;; Perl stuff
-;; ----------
+;; --------------------------------------------------------
 (fset 'perl-mode 'cperl-mode)
 
 (setq cperl-indent-level 2
