@@ -6,15 +6,15 @@
 
  mime-edit-split-message nil
  wl-fcc-force-as-read t
- wl-folder-window-width 25
+ wl-folder-window-width 32
  wl-forward-subject-prefix "Fwd: " ;; use "Fwd: ", not "Forward: "
  ;;wl-insert-message-id nil ;; let SMTP handle message-id
- wl-local-domain "sny.no"  ;; baldr.sny.no
+ wl-local-domain "opera.com"  ;; baldr.sny.no
  wl-stay-folder-window t
  wl-summary-always-sticky-folder-list t
  wl-summary-width 150
 
- wl-from "Andreas Tolf Tolfsen <ato@sny.no>"
+ wl-from "Andreas Tolf Tolfsen <andreastt@opera.com>"
 
  wl-template-alist
  '(
@@ -75,25 +75,25 @@
 
    ;; Personal
    (
-    (and (string-match ".*personal" wl-draft-parent-folder))
+    (and (string-match ".*Personal" wl-draft-parent-folder))
     (template . "personal")
     )
 
    ;; Opera
    (
-    (and (string-match ".*opera" wl-draft-parent-folder))
+    (and (string-match ".*Opera" wl-draft-parent-folder))
     (template . "opera")
     )
 
    ;; FSFE
    (
-    (and (string-match ".*fsfe" wl-draft-parent-folder))
+    (and (string-match ".*FSFE" wl-draft-parent-folder))
     (template . "fsfe")
     )
 
    ;; E-tjenesten
    (
-    (and (string-match ".*etjenesten" wl-draft-parent-folder))
+    (and (string-match ".*Etjenesten" wl-draft-parent-folder))
     (template . "etjenesten")
     )
 

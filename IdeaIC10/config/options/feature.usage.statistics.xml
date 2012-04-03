@@ -3,9 +3,9 @@
   <component name="FeatureUsageStatistics" first-run="1302527869021" have-been-shown="true" show-in-other="true" show-in-compilation="true">
     <feature id="navigation.goto.inspection" count="0" last-shown="1308828648566" last-used="0" average-frequency="0" shown-count="4" />
     <feature id="navigation.popup.camelprefix" count="3" last-shown="1309183151928" last-used="1315557103019" average-frequency="1179803" shown-count="1" />
-    <feature id="editing.completion.variable.name" count="1090" last-shown="0" last-used="1322438710750" average-frequency="5320756" shown-count="0" />
+    <feature id="editing.completion.variable.name" count="1324" last-shown="0" last-used="1322842206885" average-frequency="4459385" shown-count="0" />
     <feature id="refactoring.move.moveInner" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="navigation.goto.implementation" count="49" last-shown="1302705031172" last-used="1321361060867" average-frequency="136599393" shown-count="1" />
+    <feature id="navigation.goto.implementation" count="52" last-shown="1302705031172" last-used="1322757107652" average-frequency="129096512" shown-count="1" />
     <feature id="codeassists.quickdefinition.lookup" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="ui.horizontal.scrolling" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="codeassists.quickjavadoc.ctrln" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
@@ -15,11 +15,11 @@
     <feature id="editing.completion.smarttype.anonymous" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="refactoring.introduceVariable" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="ui.tree.speedsearch" count="8" last-shown="0" last-used="1318062176416" average-frequency="35782675" shown-count="0" />
-    <feature id="navigation.popup.class" count="327" last-shown="0" last-used="1322410698365" average-frequency="31196385" shown-count="0" />
+    <feature id="navigation.popup.class" count="350" last-shown="0" last-used="1322837353620" average-frequency="29431738" shown-count="0" />
     <feature id="navigation.popup.wildcards" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.smarttype.casting" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="navigation.goto.declaration" count="295" last-shown="0" last-used="1322431897410" average-frequency="30508140" shown-count="0" />
-    <feature id="editing.completion.basic" count="1370" last-shown="0" last-used="1322437331839" average-frequency="3853907" shown-count="0" />
+    <feature id="navigation.goto.declaration" count="329" last-shown="0" last-used="1322842350948" average-frequency="27674128" shown-count="0" />
+    <feature id="editing.completion.basic" count="1808" last-shown="0" last-used="1322842540905" average-frequency="2978205" shown-count="0" />
     <feature id="editing.completion.second.smarttype.array.member" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.second.smarttype.aslist" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="find.recent.search" count="2" last-shown="0" last-used="1309346625209" average-frequency="39407115" shown-count="0" />
@@ -34,7 +34,7 @@
     <feature id="ant.quickfix.CreateProperty" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.smarttype.afternew" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.global.member.name" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="editing.completion.finishByDotEtc" count="691" last-shown="0" last-used="1322437328482" average-frequency="7260329" shown-count="0" />
+    <feature id="editing.completion.finishByDotEtc" count="989" last-shown="0" last-used="1322842539077" average-frequency="5178800" shown-count="0" />
     <feature id="codeassists.complete.statement" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="codeassists.surroundwith.statement" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.second.basic" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
@@ -49,10 +49,10 @@
     <feature id="navigation.popup.action" count="1" last-shown="0" last-used="1302787302631" average-frequency="0" shown-count="0" />
     <feature id="refactoring.introduceVariable.incompleteStatement" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="find.completion" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="editing.completion.replace" count="148" last-shown="0" last-used="1318285812856" average-frequency="11494776" shown-count="0" />
-    <feature id="editing.select.word" count="485" last-shown="0" last-used="1322438705495" average-frequency="15050179" shown-count="0" />
+    <feature id="editing.completion.replace" count="156" last-shown="0" last-used="1322835233589" average-frequency="11532055" shown-count="0" />
+    <feature id="editing.select.word" count="615" last-shown="0" last-used="1322842453772" average-frequency="12039502" shown-count="0" />
     <feature id="codeassists.comment.block" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="editing.completion.classname" count="0" last-shown="1322405720046" last-used="0" average-frequency="0" shown-count="17" />
+    <feature id="editing.completion.classname" count="0" last-shown="1322839162428" last-used="0" average-frequency="0" shown-count="18" />
     <feature id="codeassists.highlight.implements" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="codeassists.quickdefinition" count="1" last-shown="0" last-used="1316079291183" average-frequency="0" shown-count="0" />
     <feature id="ui.scheme.quickswitch" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
@@ -60,8 +60,8 @@
     <feature id="navigation.recent.files" count="1" last-shown="0" last-used="1316167992623" average-frequency="0" shown-count="0" />
     <feature id="codeassists.highlight.return" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="editing.completion.second.classname" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
-    <feature id="editing.completion.smarttype.general" count="0" last-shown="1322406264388" last-used="0" average-frequency="0" shown-count="20" />
-    <feature id="editing.completion.camelHumps" count="16" last-shown="0" last-used="1318284958826" average-frequency="192708532" shown-count="0" />
+    <feature id="editing.completion.smarttype.general" count="0" last-shown="1322737665746" last-used="0" average-frequency="0" shown-count="21" />
+    <feature id="editing.completion.camelHumps" count="20" last-shown="0" last-used="1322834127768" average-frequency="159000253" shown-count="0" />
     <feature id="codeassists.overrideimplement" count="4" last-shown="0" last-used="1322431955610" average-frequency="136031029" shown-count="0" />
     <feature id="ant.quickfix.CreateTarget" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />
     <feature id="codeassists.quickjavadoc" count="0" last-shown="0" last-used="0" average-frequency="0" shown-count="0" />

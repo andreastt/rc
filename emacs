@@ -1,14 +1,13 @@
 ;; mode:-*-emacs-lisp-*-
 
-;;; emacs --- ato's emacs configuration
+;;; .emacs --- ato's emacs configuration
+
+;; Load paths
+(add-to-list 'load-path "~/.emacs.d/vendor")
 
 ;; Disable splash screen and startup message
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
-
-;; Load paths
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/color-theme")
 
 ;; Backup directory
 (setq backup-directory-alist
@@ -27,9 +26,37 @@
 ;; yes -> y
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Auto indent
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; Window size
+(setq default-frame-alist '(
+			    (width . 140)
+			    (height . 65)
+			    ))
+
+;; Smooth scrolling
+(setq scroll-step 1)
+
+;; Cusor type
+(setq-default cursor-type 'bar)
+
+;; History
+(setq history-length 250)
+(savehist-mode 1)
+(setq savehist-file "~/.emacs.d/tmp/savehist")
+
 ;; Use Opera as default web browser
-(setq browse-url-generic-program "opera-next"
+(setq browse-url-generic-program "opera"
       browse-url-browser-function 'browse-url-generic)
+
+;; Enable meta key (OS X)
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
+
+;; Forward delete in OS X (Fn+Delete)
+(global-set-key [kp-delete] 'delete-char)
 
 
 ;; -----
@@ -40,23 +67,33 @@
 (setq password-cache-expiry nil)
 
 
+;; ------------
+;; Autocomplete
+;; ------------
+
+(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+(require 'auto-complete-config)
+(add-to-lsit 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
+(ac-config-default)
+
+
+;; ---
+;; ECB
+;; ---
+
+(add-to-list 'load-path "~/.emacs.d/vendor/ecb")
+(require 'ecb)
+(require 'ecb-autoloads)
+
+
 ;; -----
 ;; Theme
 ;; -----
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-charcoal-black)))
-
-
-;; ----------
-;; Wanderlust
-;; ----------
-(setq user-mail-address "ato@sny.no")
-(autoload 'wl "wl" "Wanderlust" t)
-(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
-(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+;; (require 'color-theme)
+;; (eval-after-load "color-theme"
+;;   '(progn
+;;      (color-theme-initialize)
+;;      (color-theme-charcoal-black)))
 
 
 ;; ----------
@@ -76,22 +113,34 @@
 (setq css-indent-offset 2)
 
 
-;; ------------------
-;; C/C++ Google Style
-;; ------------------
-;(load-file "~/.emacs.d/google-c-style.el")
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;; ------
+;; Python
+;; ------
 
-;; Highlight long lines and other style issues
-;; (require 'whitespace)
-;; (setq whitespace-style '(face indentation trailing empty lines-tail))
-;; (setq whitespace-line-column nil)
-;; (set-face-attribute 'whitespace-line nil
-;;                     :background "purple"
-;;                     :foreground "white"
-;;                     :weight 'bold)
-;; (global-whitespace-mode 1)
+;; IPython shell instead of interactive python shell
+(setq py-python-command-args '( "-colors" "Linux"))
+(require 'python-mode)
+(require 'ipython)
+
+(defadvice py-execute-buffer (around python-keep-focus activate)
+  "return focus to python code buffer"
+  (save-excursion ad-to-it))
+
+;; On the fly code syntax checking
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-create-temp-buffer-copy
+		       'flymake-create-temp-inplace))
+	   (local-file (file-relative-name
+			temp-file
+			(file-name-directory buffer-file-name))))
+      (list "pycheckers" (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+	       '("\\.py\\'" flymake-pyflakes-init)))
+(load-library "flymake-cursor")
+(global-set-key [f10] 'flymake-goto-prev-error)
+(global-set-key [f11] 'flymake-goto-next-error)
 
 
 ;; --------------------------------------------------------

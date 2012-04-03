@@ -4,29 +4,30 @@
     <jdk version="2">
       <name value="1.6" />
       <type value="JavaSDK" />
-      <version value="java version &quot;1.6.0_26&quot;" />
-      <homePath value="/usr/lib/jvm/java-6-sun" />
+      <version value="java version &quot;1.6.0_18&quot;" />
+      <homePath value="/usr/lib/jvm/java-6-openjdk" />
       <roots>
         <annotationsPath>
           <root type="composite" />
         </annotationsPath>
         <classPath>
           <root type="composite">
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/alt-rt.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/plugin.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/rt.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/jsse.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/javaws.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/alt-string.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/deploy.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/resources.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/jce.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/charsets.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/management-agent.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/ext/sunpkcs11.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/ext/sunjce_provider.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/ext/dnsns.jar!/" />
-            <root type="simple" url="jar:///usr/lib/jvm/java-6-sun/jre/lib/ext/localedata.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/compilefontconfig.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/javazic.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/about.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/rhino.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/management-agent.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/jce.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/charsets.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/sunjce_provider.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/pulse-java.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/sunpkcs11.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/localedata.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/dnsns.jar!/" />
+            <root type="simple" url="jar:///usr/lib/jvm/java-6-openjdk/jre/lib/ext/gnome-java-bridge.jar!/" />
           </root>
         </classPath>
         <javadocPath>
