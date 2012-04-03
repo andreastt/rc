@@ -29,6 +29,9 @@
 ;; Auto indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+;; Follow symlinks automatically, but show a warning
+(setq vc-follow-symlinks nil)
+
 ;; Window size
 (setq default-frame-alist '(
 			    (width . 140)
@@ -89,6 +92,8 @@
 ;; -----
 ;; Theme
 ;; -----
+
+(add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
