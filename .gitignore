@@ -5,4 +5,6 @@ IdeaIC10/config/tasks/*
 IdeaIC10/config/options/*
 IdeaIC10/system
 emacs.d/tramp
+emacs.d/ac-comphist.dat
+emacs.d/tmp/savehist
 emacs.d/auto-save-list
