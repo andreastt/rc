@@ -44,6 +44,10 @@
 ;; Cusor type
 (setq-default cursor-type 'bar)
 
+;; Whitespace
+(require 'whitespace)
+(setq whitespace-style '(empty trailing))
+
 ;; History
 (setq history-length 250)
 (savehist-mode 1)
