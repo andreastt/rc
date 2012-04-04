@@ -7,6 +7,7 @@
     <location key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.1600.0.1600.1200" x="2141" y="320" />
     <location key="NotificationsPopup" x="2176" y="425" />
     <location key="svn.repositoryBrowser.0.0.1600.1200" x="640" y="408" />
+    <location key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog.0.0.1600.1200" x="628" y="519" />
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1366.768" x="437" y="220" />
     <location key="DetectedSourceRootsDialog.0.0.1600.1200" x="1923" y="311" />
     <location key="OptionsEditor.0.0.1600.1200" x="1636" y="175" />
@@ -14,13 +15,13 @@
     <location key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor.1600.0.1600.1200" x="1995" y="284" />
     <location key="FileChooserDialogImpl.0.0.1366.768" x="408" y="121" />
     <location key="NewModule_or_Project.wizard.0.0.1600.1200" x="354" y="290" />
-    <location key="findTextDialog.0.0.1600.1200" x="496" y="403" />
     <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.1600.0.1600.1200" x="2142" y="381" />
+    <location key="findTextDialog.0.0.1600.1200" x="496" y="403" />
     <location key="EditParametersPopupWindow.0.0.1366.768" x="462" y="290" />
-    <location key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog.1600.0.1600.1200" x="2227" y="517" />
     <location key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1600.1200" x="441" y="413" />
-    <location key="FileChooserDialogImpl" x="2191" y="342" />
+    <location key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog.1600.0.1600.1200" x="2227" y="517" />
     <location key="svn4idea.checkout.options.0.0.1600.1200" x="552" y="481" />
+    <location key="FileChooserDialogImpl" x="2191" y="342" />
     <location key="com.intellij.history.integration.ui.views.FileHistoryDialog.0.0.1366.768" x="103" y="122" />
     <location key="#com.intellij.ide.util.MemberChooser.1600.0.1600.1200" x="2216" y="332" />
     <location key="ProcessPopupWindow" x="1919" y="392" />
@@ -44,15 +45,16 @@
     <location key="#Project_Structure.1600.0.1600.1200" x="1880" y="187" />
     <location key="#com.intellij.ide.util.MemberChooser.0.0.1366.768" x="774" y="120" />
     <location key="FileChooserDialogImpl.0.0.1600.1200" x="804" y="349" />
+    <location key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor.0.0.1600.1200" x="390" y="280" />
     <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1366.768" x="427" y="167" />
     <location key="DetectedSourceRootsDialog.1600.0.1600.1200" x="2168" y="323" />
     <location key="NewModule_or_Project.wizard.0.0.1366.768" x="286" y="93" />
     <location key="#com.intellij.ide.util.MemberChooser.0.0.1600.1200" x="1224" y="316" />
     <location key="FileChooserDialogImpl.1600.0.1600.1200" x="1914" y="343" />
     <location key="com.intellij.ide.passwordSafe.impl.providers.masterKey.ResetPasswordDialog.0.0.1366.768" x="525" y="337" />
-    <location key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1366.768" x="329" y="206" />
-    <location key="#com.intellij.ide.util.TreeClassChooserDialog.1600.0.1600.1200" x="2046" y="418" />
     <location key="chooseDestDirectoryDialog.1600.0.1600.1200" x="2199" y="420" />
+    <location key="#com.intellij.ide.util.TreeClassChooserDialog.1600.0.1600.1200" x="2046" y="418" />
+    <location key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1366.768" x="329" y="206" />
     <location key="chooseDestDirectoryDialog.0.0.1600.1200" x="597" y="409" />
     <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1366.768" x="211" y="55" />
     <size key="com.intellij.history.integration.ui.views.FileHistoryDialog.0.0.1366.768" width="1164" height="547" />
@@ -81,10 +83,10 @@
     <laf class-name="idea.laf.classname" />
   </component>
   <component name="PropertiesComponent">
-    <property name="KEEP_PRODUCTIVITY_HINTS" value="false" />
     <property name="FileStructure.narrowDown" value="false" />
-    <property name="runConfigurationTab.dividerProportion" value="0.2" />
+    <property name="KEEP_PRODUCTIVITY_HINTS" value="false" />
     <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="runConfigurationTab.dividerProportion" value="0.2" />
     <property name="junit_statistics_table_columnsWidth5" value="75" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="file.colors.enable.non.project" value="ffffe4" />
@@ -109,8 +111,8 @@
     <property name="junit_statistics_table_columnsOrder0" value="0" />
     <property name="file.colors.enable.tests" value="e7fadb" />
     <property name="test_tree_console_proprtion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="junit_statistics_table_columnsOrder5" value="5" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION" value="0.5" />
     <property name="Tests" value="e7fadb" />
     <property name="LayoutCode.optimizeImports" value="true" />

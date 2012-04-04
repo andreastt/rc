@@ -2,18 +2,17 @@
 <application>
   <component name="StatisticsApplicationUsages">
     <group name="run-configuration-type">
-      <project id="webdriver-opera" values="JUnit,Application" />
+      <project id="webdriver-opera" values="Application,JUnit" />
       <project id="WebC" values="Application" />
+    </group>
+    <group name="vcs">
+      <project id="selenium" values="svn" />
+      <project id="webdriver-opera" values="Git" />
     </group>
     <group name="module type">
       <project id="selenium" values="JAVA_MODULE" />
       <project id="webdriver-opera" values="JAVA_MODULE" />
       <project id="WebC" values="JAVA_MODULE" />
-    </group>
-    <group name="vcs">
-      <project id="selenium" values="svn" />
-      <project id="webdriver-opera" values="Git" />
-      <project id="WebC" values="Git" />
     </group>
   </component>
 </application>
