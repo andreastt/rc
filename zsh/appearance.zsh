@@ -17,7 +17,7 @@ done
 # ls colors
 autoload colors
 colors
-export LSCOLORS="xxfxcxdxbxegedabagacad"
+#export LSCOLORS="xxfxcxdxbxegedabagacad"
 
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
