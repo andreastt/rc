@@ -8,3 +8,11 @@ emacs.d/tramp
 emacs.d/ac-comphist.dat
 emacs.d/tmp/savehist
 emacs.d/auto-save-list
+config/Trolltech.conf
+config/autostart
+config/chromium
+config/enchant
+config/gtk-2.0
+config/gwibber
+config/monitors.xml
+emacs.before_ecb_2.40
