@@ -13,7 +13,7 @@ require("debian.menu")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/andreastt/.config/awesome/themes/ato/theme.lua")
+beautiful.init("/home/ato/.config/awesome/themes/ato/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -364,3 +364,9 @@ client.add_signal("unfocus", function(c)
   c.opacity = 0.7
 end)
 -- }}}
+
+
+awful.util.spawn_with_shell("xmodmap ~/.xmodmap")
+awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("gnome-power-manager")
+awful.util.spawn_with_shell("emacsserver")
