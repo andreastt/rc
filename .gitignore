@@ -8,6 +8,7 @@ emacs.d/tramp
 emacs.d/ac-comphist.dat
 emacs.d/tmp/savehist
 emacs.d/auto-save-list
+emacs.d/abbrev_defs
 config/Trolltech.conf
 config/autostart
 config/chromium
@@ -15,4 +16,8 @@ config/enchant
 config/gtk-2.0
 config/gwibber
 config/monitors.xml
+config/google-googletalkplugin
+config/operamobile
+config/spotify
+config/update-notifier
 emacs.before_ecb_2.40
