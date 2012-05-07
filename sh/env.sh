@@ -3,15 +3,15 @@ export EDITOR=emacs
 export PATH="$PATH:$HOME/bin/"
 
 # Grep
-export GREP_OPTIONS='--exclude-dir=".svn"'
+#export GREP_OPTIONS='--exclude-dir=".svn"'
 
 # Number of concurrent make jobs
 export MAKEFLAGS="-j4"
 
 # Set LLVM GCC as the default compiler
-#export CPP?'llvm-gcc-4.2'
-#export CC=$CPP
-#export CXX='llvm-g++'
+export CPP='llvm-gcc-4.2'
+export CC=$CPP
+export CXX='llvm-g++'
 
 # IntelliJ
 export PATH="$PATH:$HOME/bin/idea-IC-103.255/bin"
