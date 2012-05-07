@@ -1,37 +1,49 @@
 [user]
   name = Andreas Tolf Tolfsen
   email = andreastt@opera.com
+
 [github]
   user = andreastt
+
 [color]
   ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
+
 [color "status"]
   added = green
   untracked = black bold
+
+[merge]
+  conflictstyle = diff3
+
 [branch]
   autosetupmerge = true
+
 [alias]
-  a = add
   st = status
   ci = commit
   br = branch
   co = checkout
   df = diff
-  lg = log -p
-  headless = !sh -c 'git symbolic-ref HEAD refs/heads/$0 && rm .git/index && git clean -fdx'
-  d = diff
-  cia = commit -v -a
+  lg = log --oneline --graph --decorate
   cp = cherry-pick
   l = log
   lm = log master..
   llm = log -p master..
   b = branch
+
+[push]
+  default = current

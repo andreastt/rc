@@ -20,6 +20,18 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+(defun setup-frame-hook (frame)
+  "This function will be applied to all new emacs frames."
+  (set-frame-parameter frame 'alpha '(95 95)) ; translucency
+  (mouse-avoidance-mode 'cat-and-mouse) ; avoid mouse
+  (fringe-mode 5)                       ; make fringes smaller
+  (tool-bar-mode 0)                     ; no toolbar
+  (menu-bar-mode 0)                     ; no menubar
+  (scroll-bar-mode 0)                   ; no scrollbar
+  (set-frame-parameter (selected-frame) 'alpha '(95 95)) ; translucency
+  )
+(add-hook 'after-make-frame-functions 'setup-frame-hook)
+
 ;; Go to line
 (global-set-key "\C-l" 'goto-line)
 
@@ -97,12 +109,12 @@
 ;; Theme
 ;; -----
 
-;; (add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
-;; (require 'color-theme)
-;; (eval-after-load "color-theme"
-;;   '(progn
-;;      (color-theme-initialize)
-;;      (color-theme-charcoal-black)))
+(add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-charcoal-black)))
 
 
 ;; --------------------------------------------------------
@@ -164,17 +176,17 @@
 ;; Settings set with the internal Emacs customization panel
 ;; --------------------------------------------------------
 
-;; (custom-set-variables
-;;   ;; custom-set-variables was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
-;;  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))
-;; (put 'upcase-region 'disabled nil)
-;; )
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40")
+ '(nil nil t))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
+ '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))

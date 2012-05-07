@@ -13,6 +13,9 @@ export CPP='llvm-gcc-4.2'
 export CC=$CPP
 export CXX='llvm-g++'
 
+# Depot Tools
+export PATH="$PATH:$HOME/dev/depot_tools"
+
 # IntelliJ
 export PATH="$PATH:$HOME/bin/idea-IC-103.255/bin"
 
