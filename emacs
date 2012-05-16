@@ -66,8 +66,15 @@
 (setq savehist-file "~/.emacs.d/tmp/savehist")
 
 ;; Use Opera as default web browser
-(setq browse-url-generic-program "opera"
-      browse-url-browser-function 'browse-url-generic)
+;; (defun rcy-browse-url-default-macosx-browser (url &optional new-window)
+;;   (interactive (browse-url-interactive-arg "URL: "))
+;;   (let ((url
+;; 	 (if (aref (url-generic-parse-url url) 0)
+;; 	     url
+;; 	   (concat "http://" url))))
+;;     (start-process (concat "open " url) nil "open" url)))
+ 
+;; (setq browse-url-browser-function 'rcy-browse-url-default-macosx-browser)
 
 ;; Enable meta key (OS X)
 (setq mac-option-modifier nil
@@ -77,6 +84,9 @@
 ;; Forward delete in OS X (Fn+Delete)
 (global-set-key [kp-delete] 'delete-char)
 
+;; Default web browser on Mac
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
 
 ;; -----
 ;; Tramp
@@ -84,6 +94,39 @@
 (require 'password-cache)
 (require 'tramp)
 (setq password-cache-expiry nil)
+
+
+;; --------------------------------------------------------
+;; X-face
+;; --------------------------------------------------------
+
+(autoload 'x-face-decode-message-header "x-face-e21")
+
+(autoload 'x-face-insert "x-face-e21" nil t)
+(autoload 'x-face-save "x-face-e21" nil t)
+(autoload 'x-face-show "x-face-e21" nil t)
+(autoload 'x-face-ascii-view "x-face-e21" nil t)
+(autoload 'x-face-turn-off "x-face-e21")
+
+(add-hook 'mime-edit-translate-hook 'x-face-turn-off)
+(add-hook 'mew-make-message-hook 'x-face-turn-off)
+
+
+;; --------------------------------------------------------
+;; Wanderlust
+;; --------------------------------------------------------
+
+(setq load-path (append
+		 (list "~/.emacs.d/vendor/flim"
+		       "~/.emacs.d/vendor/semi"
+		       "~/.emacs.d/vendor/apel"
+		       "~/.emacs.d/vendor/elmo"
+		       "~/.emacs.d/vendor/wl")
+		 load-path))
+
+(autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
 
 
 ;; ------------
@@ -109,12 +152,12 @@
 ;; Theme
 ;; -----
 
-(add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-charcoal-black)))
+;; (add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
+;; (require 'color-theme)
+;; (eval-after-load "color-theme"
+;;   '(progn
+;;      (color-theme-initialize)
+;;      (color-theme-charcoal-black)))
 
 
 ;; --------------------------------------------------------
@@ -176,17 +219,17 @@
 ;; Settings set with the internal Emacs customization panel
 ;; --------------------------------------------------------
 
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
- '(nil nil t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
- '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))
+;; (custom-set-variables
+;;   ;; custom-set-variables was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  '(ecb-options-version "2.40")
+;;  '(nil nil t))
+;; (custom-set-faces
+;;   ;; custom-set-faces was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
+;;  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))

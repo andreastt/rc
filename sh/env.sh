@@ -9,9 +9,9 @@ export PATH="$PATH:$HOME/bin/"
 export MAKEFLAGS="-j4"
 
 # Set LLVM GCC as the default compiler
-export CPP='llvm-gcc-4.2'
-export CC=$CPP
-export CXX='llvm-g++'
+#export CPP='llvm-gcc-4.2'
+#export CC=$CPP
+#export CXX='llvm-g++'
 
 # Depot Tools
 export PATH="$PATH:$HOME/dev/depot_tools"
