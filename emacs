@@ -77,6 +77,19 @@
 ;; Forward delete in OS X (Fn+Delete)
 (global-set-key [kp-delete] 'delete-char)
 
+;; Popup messages to notify
+(defun djcb-popup (title msg &optional icon)
+  "Show a popup if we're on X, or echo it otherwise; TITLE is the
+  title of the message, MSG is the context.  Optionally you can
+  provide an ICON and a sound to beplayed"
+  (interactive)
+  (if (eq window-system 'x)
+      (shell-command (concat "notify-send "
+			     if (icon (concat "-i " icon) "")
+			     " '" title "' '" msg "'"))
+    ;; text only version
+    (message (concat title ": " msg))))
+
 
 ;; -----
 ;; Tramp
@@ -94,6 +107,16 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
 (ac-config-default)
+
+
+;; --------------------------------------------------------
+;; Wanderlust
+;; --------------------------------------------------------
+(custom-set-variables
+ '(wl-init-file "~/.wl"))
+(autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
 
 
 ;; ---
