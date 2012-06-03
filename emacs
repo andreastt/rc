@@ -86,8 +86,22 @@
     ;; text only version
     (message (concat title ": " msg))))
 
-;; Default web browser on Mac
-(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+;; Default web browser
+(if (eq system-type 'darwin)
+    (setq browse-url-browser-function 'browse-url-default-macosx-browser)
+  (setq browse-url-generic-program "opera"))
+
+;; Brace matching with vi-style % jumping
+(show-paren-mode 1)
+(global-set-key "%" 'match-paren)
+
+(defun match-paren (arg)
+  "Go to the matching paren if on a paren; otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+	((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+	(t (self-insert-command (or arg 1)))))
+
 
 ;; -----
 ;; Tramp
@@ -134,20 +148,10 @@
 ;; Autocomplete
 ;; ------------
 
-(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
-(ac-config-default)
-
-
-;; --------------------------------------------------------
-;; Wanderlust
-;; --------------------------------------------------------
-(custom-set-variables
- '(wl-init-file "~/.wl"))
-(autoload 'wl "wl" "Wanderlust" t)
-(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
-(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+;; (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
+;; (ac-config-default)
 
 
 ;; ---
