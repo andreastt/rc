@@ -60,7 +60,7 @@
                                    (semantic-analyze . semantic/analyze)
                                    (semanticdb . semantic/db)
                                    (semanticdb-find . semantic/db-find)
-                                   (semanticdb-mode . semantic/db-mode)
+;                                   (semanticdb-mode . semantic/db-mode)
                                    (semantic-el . semantic/bovine/el)
                                    (eieio . eieio)
                                    (speedbar . speedbar))

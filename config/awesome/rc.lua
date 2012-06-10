@@ -8,9 +8,6 @@ require("beautiful")
 require("naughty")
 require("vicious")
 
--- Load Debian menu entries
-require("debian.menu")
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/home/ato/.config/awesome/themes/ato/theme.lua")
@@ -64,7 +61,6 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian },
                                     { "open terminal", terminal }
                                   }
                         })
@@ -74,22 +70,65 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- }}}
 
 -- {{{ Wibox
--- Network usage widget
-netwidget = widget({ type = "textbox" })
-vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${wlan0 down_kb}</span> <span color="#7F9F7F">${wlan0 up_kb}</span>', 3)
 
--- Memory usage
---memwidget = awful.widget.progressbar()
---memwidget:set_width(8)
---memwidget:set_height(10)
---memwidget:set_vertical(true)
---memwidget:set_background_color("#494B4F")
---memwidget:set_border_color(nil)
---memwidget:set_color("#AECF96")
---memwidget:set_gradient_color({ "#AECF96", "#88A175", "#FF5656" })
---vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
+spacer = widget({type = "textbox"})
+separator = widget({type = "textbox"})
+spacer.text = " "
+separator.text = "|"
 
--- {{{ Wibox
+-- RAM usage widget
+memwidget = awful.widget.progressbar()
+memwidget:set_width(15)
+memwidget:set_height(30)
+memwidget:set_vertical(true)
+memwidget:set_background_color('#494B4F')
+memwidget:set_color('#AECF96')
+memwidget:set_gradient_colors({ '#AECF96', '#88A175', '#FF5656' })
+
+-- RAM usage tooltip
+memwidget_t = awful.tooltip({ objects = { memwidget.widget },})
+
+vicious.cache(vicious.widgets.mem)
+vicious.register(memwidget, vicious.widgets.mem,
+                function (widget, args)
+                    memwidget_t:set_text(" RAM: " .. args[2] .. "MB / " .. args[3] .. "MB ")
+                    return args[1]
+                 end, 13)
+
+-- Network widget
+netwidget = awful.widget.graph()
+netwidget:set_width(50)
+netwidget:set_height(30)
+netwidget:set_background_color("#494B4F")
+netwidget:set_color("#FF5656")
+netwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
+
+netwidget_t = awful.tooltip({ objects = { netwidget.widget },})
+
+-- Register network widget
+vicious.register(netwidget, vicious.widgets.net,
+                    function (widget, args)
+                        netwidget_t:set_text("Network download: " .. args["{wlan00 down_mb}"] .. "mb/s")
+                        return args["{wlan0 down_mb}"]
+                    end)
+
+-- CPU usage widget
+cpuwidget = awful.widget.graph()
+cpuwidget:set_width(50)
+cpuwidget:set_height(30)
+cpuwidget:set_background_color("#494B4F")
+cpuwidget:set_color("#FF5656")
+cpuwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
+
+cpuwidget_t = awful.tooltip({ objects = { cpuwidget.widget },})
+
+-- Register CPU widget
+vicious.register(cpuwidget, vicious.widgets.cpu, 
+                    function (widget, args)
+                        cpuwidget_t:set_text("CPU Usage: " .. args[1] .. "%")
+                        return args[1]
+                    end)
+		 
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
@@ -165,9 +204,26 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
+	
         mytextclock,
-        netwidget,
-        --memwidget,
+	separator,
+	spacer,
+	
+        netwidget.widget,
+	spacer,
+	separator,
+	spacer,
+	
+	cpuwidget.widget,
+	spacer,
+	separator,
+	spacer,
+	
+	memwidget,
+	spacer,
+	separator,
+	spacer,
+	
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -366,8 +422,9 @@ end)
 -- }}}
 
 
-awful.util.spawn_with_shell("xmodmap ~/.xmodmap")
-awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("gnome-power-manager")
-awful.util.spawn_with_shell("gnome-keyring")
-awful.util.spawn_with_shell("emacsserver")
+--awful.util.spawn_with_shell("xmodmap ~/.xmodmap")
+--awful.util.spawn_with_shell("nm-applet")
+--awful.util.spawn_with_shell("gnome-power-manager")
+--awful.util.spawn_with_shell("gnome-keyring")
+-- awful.util.spawn_with_shell("emacsserver")
+awful.util.spawn_with_shell("gnome-session")
