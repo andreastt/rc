@@ -115,6 +115,9 @@
 (global-set-key [C-left] 'next-buffer)
 (global-set-key [C-right] 'previous-buffer)
 
+;; Auto-refresh all buffers when files change on disk
+(global-auto-revert-mode t)
+
 
 ;; ------------------
 ;; Diary and calendar
@@ -387,7 +390,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
+ '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
  '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))
@@ -400,4 +403,6 @@
  '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.html?\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup) ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup) ("\\.tex\\'" flymake-simple-tex-init) ("\\.idl\\'" flymake-simple-make-init))))
  '(jde-compiler (quote (("eclipse java compiler server" "/home/ato/bin/ecj-4.2RC2.jar"))))
  '(jde-global-classpath (quote ("." "/usr/share/java/" "/usr/lib/jvm/java-6-openjdk-amd64/" "~/dev/webdriver-opera/lib/")))
- '(jde-junit-working-directory "~/dev/webdriver-opera"))
+ '(jde-junit-working-directory "~/dev/webdriver-opera")
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
