@@ -1,0 +1,3 @@
+[submodule "emacs.d/vendor/undo-tree"]
+	path = emacs.d/vendor/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git
