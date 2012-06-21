@@ -118,6 +118,9 @@
 (global-set-key [C-left] 'next-buffer)
 (global-set-key [C-right] 'previous-buffer)
 
+;; Auto-refresh all buffers when files change on disk
+(global-auto-revert-mode t)
+
 
 ;; ------------------
 ;; Diary and calendar
@@ -392,7 +395,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "xos4" :family "Terminus"))))
+ '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
  '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "windowBackgroundColor")))))
@@ -406,4 +409,6 @@
  '(jde-compiler (quote (("eclipse java compiler server" "/home/ato/bin/ecj-4.2RC2.jar"))))
  '(jde-global-classpath (quote ("." "/usr/share/java/" "/usr/lib/jvm/java-6-openjdk-amd64/" "~/dev/webdriver-opera/lib/")))
  '(jde-junit-testrunner-type "org.junit.runner.JUnitCore")
- '(jde-junit-working-directory "~/dev/webdriver-opera"))
+ '(jde-junit-working-directory "~/dev/webdriver-opera")
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
