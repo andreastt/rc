@@ -33,6 +33,12 @@
 ;; Ditch them scroll bars
 (scroll-bar-mode -1)
 
+;; Window size
+(setq default-frame-alist '(
+                            (width . 140)
+                            (height . 65)
+                            ))
+
 ;; Make zooming affect frame instead of buffers
 (require 'zoom-frm)
 
