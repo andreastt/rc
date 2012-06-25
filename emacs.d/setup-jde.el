@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/jdee/lisp")
 
 ;; Start JDE when Emacs is started?
-(setq defer-loading-jde nil)
+(setq defer-loading-jde t)
 
 (setq
  jde-bug-debugger-host-address "127.0.0.1"
