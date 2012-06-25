@@ -11,6 +11,9 @@
 ;; Load paths
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+;; Empty scratch buffer
+(setq initial-scratch-message "")
+
 ;; Disable splash screen and startup message
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
@@ -123,8 +126,9 @@
 ;; Diary and calendar
 ;; ------------------
 
-;; Show diary entries automatically
-(setq mark-diary-entries-in-calendar t)
+;; Show diary entries automatically, and week starts on Monday
+(setq mark-diary-entries-in-calendar t
+      calendar-week-start-day 1)
 (add-hook 'diary-display-hook 'fancy-diary-display)
 (add-hook 'today-visible-calendar-hook 'calendar-mark-today)
 
@@ -283,6 +287,7 @@
 			     "./lib/gson-2.2.jar"
 			     "./lib/guava-12.0.jar"
 			     "./lib/ini4j-0.5.2.jar"
+			     "./lib/junit-4.10.jar"
 			     "./lib/netty-3.2.7.Final.jar"
 			     "./lib/operalaunchers-0.8.jar"
 			     "./protobuf-java-2.4.1.jar"
@@ -403,6 +408,7 @@
  '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.html?\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup) ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup) ("\\.tex\\'" flymake-simple-tex-init) ("\\.idl\\'" flymake-simple-make-init))))
  '(jde-compiler (quote (("eclipse java compiler server" "/home/ato/bin/ecj-4.2RC2.jar"))))
  '(jde-global-classpath (quote ("." "/usr/share/java/" "/usr/lib/jvm/java-6-openjdk-amd64/" "~/dev/webdriver-opera/lib/")))
+ '(jde-junit-testrunner-type "org.junit.runner.JUnitCore")
  '(jde-junit-working-directory "~/dev/webdriver-opera")
  '(show-paren-mode t)
  '(tool-bar-mode nil))
