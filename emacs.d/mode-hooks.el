@@ -42,4 +42,8 @@
 ;; JavaScript
 (add-hook 'js2-mode-hook (lambda () (require 'setup-js2-mode)))
 
+;; Markdown
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 (provide 'mode-hooks)

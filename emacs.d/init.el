@@ -63,6 +63,7 @@
 (require 'setup-smex)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
+(require 'setup-markdown-mode)
 
 ;; Map files to modes
 (require 'mode-mappings)
