@@ -21,6 +21,9 @@
 ;; Empty scratch buffer
 (setq initial-scratch-message "")
 
+;; Sync Emacs' clipboard with the X system's
+(setq x-select-enable-clipboard t)
+
 ;; Move files to trash when deleting
 (setq delete-by-moving-to-trash t)
 
