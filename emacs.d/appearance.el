@@ -42,4 +42,7 @@
 ;; Make zooming affect frame instead of buffers
 (require 'zoom-frm)
 
+;; Setup new frames correctly
+(add-hook 'after-make-frame-functions 'setup-frame-hook)
+
 (provide 'appearance)
