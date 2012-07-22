@@ -66,6 +66,7 @@
 (require 'setup-js2-mode)
 (require 'setup-autopair)
 (require 'setup-markdown-mode)
+(require 'setup-yaml-mode)
 
 ;; Map files to modes
 (require 'mode-mappings)
