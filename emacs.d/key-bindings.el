@@ -20,6 +20,7 @@
 
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
+(global-set-key (kbd "C-S-<f10>") 'tool-bar-mode)
 
 ;; Use shell-like backspace C-h, rebind help to F1
 (define-key key-translation-map [?\C-h] [?\C-?])
@@ -103,5 +104,8 @@
 
 ;; Easy-mode fullscreen rgrep
 (global-set-key (kbd "M-s s") 'rgrep-fullscreen)
+
+;; Toggle fullscreen
+(global-set-key (kbd "<f11>") 'toggle-fullscreen)
 
 (provide 'key-bindings)
