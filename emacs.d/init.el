@@ -52,6 +52,8 @@
 (require 'backup)
 
 ;; Setup dependencies
+(require 'setup-c++-mode)
+(require 'setup-gdb)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-xface)
@@ -93,3 +95,15 @@
 ;; Conclude init by setting up specifics for the user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40"))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
