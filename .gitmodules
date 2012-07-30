@@ -25,3 +25,6 @@
 [submodule "emacs.d/vendor/markdown-mode"]
 	path = emacs.d/vendor/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule "emacs.d/vendor/magit"]
+	path = emacs.d/vendor/magit
+	url = https://github.com/magit/magit.git
