@@ -36,7 +36,7 @@
 ;; Window size
 (setq default-frame-alist '(
                             (width . 140)
-                            (height . 65)
+                            (height . 55)
                             ))
 
 ;; Make zooming affect frame instead of buffers

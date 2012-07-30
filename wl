@@ -29,7 +29,7 @@
 (setq mime-edit-split-message nil)
 
 ;; Open links in web browser
-(add-hook 'wl-message-redisplay-hook 'goto-address) 
+(add-hook 'wl-message-redisplay-hook 'goto-address)
 
 ;; If lines are longer than this value, treat it as `large'.
 ;(setq mime-edit-message-default-max-lines 1000)
@@ -47,18 +47,18 @@
 ;; User's mail addresses.
 (setq wl-user-mail-address-list
       (list (wl-address-header-extract-address wl-from)
-	    "andreastt@opera.com"
-	    "andreas.tolf.tolfsen@opera.com"
-	    ))
+            "andreastt@opera.com"
+            "andreas.tolf.tolfsen@opera.com"
+            ))
 
 ;; Subscribed mailing lists.
 (setq wl-subscribed-mailing-list
       '("browser-automation@opera.com"
-	"core@opera.com"
-	"testers@opera.com"
-	"core-systems@opera.com"
-	"selenium-developers@googlegroups.com"
-	))
+        "core@opera.com"
+        "testers@opera.com"
+        "core-systems@opera.com"
+        "selenium-developers@googlegroups.com"
+        ))
 
 ;; Default IMAP4 server
 (setq elmo-imap4-default-server "imap.opera.com")
@@ -74,8 +74,9 @@
 ;; SMTP server
 (setq wl-smtp-posting-server "smtp.opera.com")
 (setq wl-smtp-posting-port '587)
-(setq wl-smtp-authenticate-type "cram-md5") ;"plain")
+(setq wl-smtp-authenticate-type "login") ;"cram-md5") ;"plain")
 (setq wl-smtp-posting-user "andreastt")
+(setq wl-smtp-connection-type "ssl")
 
 
 ;; Default folder for `wl-summary-goto-folder'.
@@ -157,38 +158,38 @@
 ;; Hidden header field in  message buffer
 ;; (setq wl-message-ignored-field-list
 ;;       '(".*Received:"
-;; 	".*Path:"
-;; 	".*Id:"
-;; 	"^References:"
-;; 	"^Replied:"
-;; 	"^Errors-To:"
-;; 	"^Lines:"
-;; 	"^Sender:"
-;; 	".*Host:"
-;; 	"^Xref:"
-;; 	"^Content-Type:"
-;; 	"^Precedence:"
-;; 	"^Status:"
-;; 	"^X-VM-.*:"))
+;;      ".*Path:"
+;;      ".*Id:"
+;;      "^References:"
+;;      "^Replied:"
+;;      "^Errors-To:"
+;;      "^Lines:"
+;;      "^Sender:"
+;;      ".*Host:"
+;;      "^Xref:"
+;;      "^Content-Type:"
+;;      "^Precedence:"
+;;      "^Status:"
+;;      "^X-VM-.*:"))
 
 (setq wl-message-ignored-field-list '("^.*:")
       wl-message-visible-field-list
       '("^\\(To\\|Cc\\):"
-	"^Subject:"
-	"^\\(From\\|Reply-To\\):"
-	"^Organization:"
-	"^Message-Id:"
-	"^\\(Posted\\|Date\\):"
-	"^[xX]-[Ff]ace:"
-	)
+        "^Subject:"
+        "^\\(From\\|Reply-To\\):"
+        "^Organization:"
+        "^Message-Id:"
+        "^\\(Posted\\|Date\\):"
+        "^[xX]-[Ff]ace:"
+        )
       wl-message-sort-field-list
       '("^From"
-	"^Organization:"
-	"^X-Attribution:"
-	"^Subject"
-	"^Date"
-	"^To"
-	"^Cc"))
+        "^Organization:"
+        "^X-Attribution:"
+        "^Subject"
+        "^Date"
+        "^To"
+        "^Cc"))
 
 ;; X-Face
 ;(when window-system

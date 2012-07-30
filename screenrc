@@ -28,8 +28,3 @@ hardstatus alwayslastline
 #hardstatus string "%-w %50=%d/%m/%y"
 hardstatus string "%{.kW}%{.kD}%-w%{.dk}%n %t%{-}%+w %=%{..G} %H (%l) %{..Y} %Y-%m-%d %c:%s "
 
-# Default windows
-screen -t irc 0 irssi
-screen -t mail 1 mutt
-screen -t feed 2 newsbeuter
-screen -t log 3 inotail -f /var/log/apache2/access-roedt.no | ccze -A
