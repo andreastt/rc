@@ -31,3 +31,6 @@
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
 	url = https://github.com/magit/magit.git
+[submodule "emacs.d/vendor/auto-complete-clang"]
+	path = emacs.d/vendor/auto-complete-clang
+	url = https://github.com/brianjcj/auto-complete-clang.git
