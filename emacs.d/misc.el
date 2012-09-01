@@ -7,7 +7,7 @@
       whitespace-line-column 100)
 
 ;; Various superfluous white space
-(add-hook 'before-save-hook 'cleanup-buffer-safe)
+;(add-hook 'before-save-hook 'cleanup-buffer-safe)
 
 ;; Enable console mouse
 (setq xterm-mouse-mode t)
