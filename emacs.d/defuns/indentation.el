@@ -1,5 +1,5 @@
 ;; Indent whole file and clean whitespace
-(defun indent-all ()
+(defun indent-all-disabled ()
   "Indents whole buffer and cleans whitespace."
   (interactive)
   (delete-trailing-whitespace)
