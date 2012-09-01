@@ -13,6 +13,9 @@
 (add-hook 'jde-mode-hook 'google-set-c-style)
 (add-hook 'jde-mode-hook 'google-make-newline-indent)
 
+;; Go
+(add-to-list (quote auto-mode-alist) (cons "\\.go$" (function go-mode)))
+
 ;; Perl
 (fset 'perl-mode 'cperl-mode)
 

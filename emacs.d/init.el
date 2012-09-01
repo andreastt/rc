@@ -67,6 +67,7 @@
 (require 'setup-autopair)
 (require 'setup-markdown-mode)
 (require 'setup-yaml-mode)
+(require 'setup-jinja2-mode)
 
 ;; Map files to modes
 (require 'mode-mappings)
