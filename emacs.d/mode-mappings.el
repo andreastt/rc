@@ -57,4 +57,8 @@
 (add-to-list 'auto-mode-alist '("access\\.conf\\'" . apache-mode))
 (add-to-list 'auto-mode-alist '("sites-\\(available\\|enabled\\)/" . apache-mode))
 
+;; Soy templates
+(autoload 'soy-mode "soy-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.soy\\'" . soy-mode))
+
 (provide 'mode-mappings)
