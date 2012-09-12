@@ -68,6 +68,7 @@
 (require 'setup-markdown-mode)
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
+(require 'setup-auto-complete)
 
 ;; Map files to modes
 (require 'mode-mappings)
