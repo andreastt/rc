@@ -14,6 +14,8 @@
   (add-hook 'css-mode-hook 'ac-css-mode-setup)
   (global-auto-complete-mode t))
 
+(add-to-list 'ac-modes 'go-mode)
+
 (my-ac-config)
 
 (provide 'setup-auto-complete)
