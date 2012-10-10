@@ -69,6 +69,7 @@
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
+(require 'setup-python)
 
 ;; Map files to modes
 (require 'mode-mappings)
