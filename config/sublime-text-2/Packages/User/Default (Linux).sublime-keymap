@@ -1,0 +1,6 @@
+[
+  { "keys": ["ctrl+shift+l"], "command": "run_lint" },
+  { "keys": ["ctrl+shift+u"], "command": "build", "args": {"variant": "unit_tests"} },
+  { "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "browser_tests"} },
+  { "keys": ["shift+f10"], "command": "build", "args": {"variant": "chromedriver"} }
+]
