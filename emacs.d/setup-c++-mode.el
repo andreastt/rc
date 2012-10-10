@@ -5,7 +5,6 @@
   (define-key c++-mode-map (kbd "<S-f10>") 'compile))
 ;  (define-key c++-mode-map (kbd "<f7>") 'gdb-step)
 ;  (define-key c++-mode-map (kbd "<f8>") 'gdb-next))
-
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (require 'auto-complete-clang)
@@ -13,5 +12,7 @@
 (defun my-ac-mode-setup ()
   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
 (add-hook 'c-mode-common-hook 'my-ac-mode-setup)
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
 
 (provide 'setup-c++-mode)
