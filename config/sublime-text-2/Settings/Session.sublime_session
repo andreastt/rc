@@ -1,0 +1,562 @@
+{
+	"folder_history":
+	[
+		"/home/andreastt/dev/opium",
+		"/home/andreastt/dev/opium/chromium/src/chrome",
+		"/home/andreastt/dev/cpptest"
+	],
+	"last_window_id": 7,
+	"settings":
+	{
+		"new_window_height": 1157.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 194.0,
+				"selected_items":
+				[
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 435.0
+			},
+			"console":
+			{
+				"height": 139.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/usr/include/c++/4.6/bits/stl_vector.h",
+				"/home/andreastt/dev/cpptest/main",
+				"/home/andreastt/dev/cpptest/proj",
+				"/home/andreastt/dev/cpptest/main.cc",
+				"/home/andreastt/dev/cpptest/Project.sublime-project",
+				"/home/andreastt/dev/core-work/platforms/build/user/andreastt.mk",
+				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_logging.h",
+				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_logging.cc",
+				"/usr/share/applications/sublime.desktop"
+			],
+			"find":
+			{
+				"height": 37.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"vector"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.clang":
+			{
+				"height": 102.0
+			},
+			"output.exec":
+			{
+				"height": 248.0
+			},
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+					[
+						"webdriver",
+						"test/webdriver/webdriver_server.cc"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 217.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 1311.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "dev/opium/chromium/src/chrome/test/webdriver/webdriver_server.cc",
+					"settings":
+					{
+						"buffer_size": 14084,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": ".config/sublime-text-2/Packages/CTags/CTags.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 430,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": ".config/sublime-text-2/Packages/User/ninja.sublime-build",
+					"settings":
+					{
+						"buffer_size": 397,
+						"line_ending": "Unix",
+						"name": "untitled.sublime-build"
+					}
+				},
+				{
+					"file": "dev/opium/chromium/src/chrome/renderer/chrome_content_renderer_client.h",
+					"settings":
+					{
+						"buffer_size": 7222,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "opium.sublime-project",
+					"settings":
+					{
+						"buffer_size": 317,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": ".config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 393,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/User/ninja.sublime-build",
+			"command_palette":
+			{
+				"height": 56.0,
+				"selected_items":
+				[
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 435.0
+			},
+			"console":
+			{
+				"height": 139.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/usr/include/c++/4.6/bits/stl_vector.h",
+				"/home/andreastt/dev/cpptest/main",
+				"/home/andreastt/dev/cpptest/proj",
+				"/home/andreastt/dev/cpptest/main.cc",
+				"/home/andreastt/dev/cpptest/Project.sublime-project",
+				"/home/andreastt/dev/core-work/platforms/build/user/andreastt.mk",
+				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_logging.h",
+				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_logging.cc",
+				"/usr/share/applications/sublime.desktop"
+			],
+			"find":
+			{
+				"height": 37.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"vector"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 2,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "dev/opium/chromium/src/chrome/test/webdriver/webdriver_server.cc",
+							"settings":
+							{
+								"buffer_size": 14084,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										4227,
+										4227
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1413.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": ".config/sublime-text-2/Packages/CTags/CTags.sublime-settings",
+							"settings":
+							{
+								"buffer_size": 430,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										430,
+										430
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": ".config/sublime-text-2/Packages/User/ninja.sublime-build",
+							"settings":
+							{
+								"buffer_size": 397,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										390,
+										394
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JSON.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "dev/opium/chromium/src/chrome/renderer/chrome_content_renderer_client.h",
+							"settings":
+							{
+								"buffer_size": 7222,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2007,
+										2007
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 855.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "opium.sublime-project",
+							"settings":
+							{
+								"buffer_size": 317,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										305,
+										305
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JSON.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": ".config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+							"settings":
+							{
+								"buffer_size": 393,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										393,
+										393
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.clang":
+			{
+				"height": 102.0
+			},
+			"output.exec":
+			{
+				"height": 242.0
+			},
+			"position": "0,0,0,0,0,210,155,1521,1312,2560,1440",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+					[
+						"webdriver_ser",
+						"chromium/src/chrome/test/webdriver/webdriver_server.cc"
+					],
+					[
+						"webdriver",
+						"test/webdriver/webdriver_server.cc"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 217.0,
+			"status_bar_visible": true,
+			"window_id": 5,
+			"workspace_name": "/home/andreastt/opium.sublime-project"
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+			"/home/andreastt/opium.sublime-project",
+			"/home/andreastt/chrome.sublime-project",
+			"/home/andreastt/dev/cpptest/Project.sublime-project"
+		]
+	}
+}
