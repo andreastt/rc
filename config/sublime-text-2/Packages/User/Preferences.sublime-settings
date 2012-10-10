@@ -1,4 +1,13 @@
 {
+	"translate_tabs_to_spaces": true,
+	"indent_to_bracket": true,
+	"scroll_speed": 4.0,
+	"show_tab_close_buttons": false,
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"tab_completion": true,
+	"draw_white_space": "selection",
+	"trim_trailing_white_space_on_save": true,
 	"additional_language_options":
 	{
 		"c++":
@@ -19,7 +28,5 @@
 	[
 		80
 	],
-	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
-	"trim_trailing_white_space_on_save": true
+	"theme": "Soda Dark.sublime-theme"
 }

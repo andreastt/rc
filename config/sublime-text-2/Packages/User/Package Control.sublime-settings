@@ -3,6 +3,7 @@
 	"installed_packages":
 	[
 		"CTags",
+		"Git",
 		"Open-Include",
 		"Package Control",
 		"Terminal",
