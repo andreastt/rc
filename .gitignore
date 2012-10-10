@@ -21,5 +21,5 @@ config/google-googletalkplugin
 config/operamobile
 config/spotify
 config/update-notifier
-config/sublime-text-2/Settings/Auto Save Session.sublime_session
+config/sublime-text-2/Settings/
 emacs.before_ecb_2.40
