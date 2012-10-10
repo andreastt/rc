@@ -1,13 +1,4 @@
 {
-	"translate_tabs_to_spaces": true,
-	"indent_to_bracket": true,
-	"scroll_speed": 4.0,
-	"show_tab_close_buttons": false,
-	"save_on_focus_lost": true,
-	"tab_size": 2,
-	"tab_completion": true,
-	"draw_white_space": "selection",
-	"trim_trailing_white_space_on_save": true,
 	"additional_language_options":
 	{
 		"c++":
@@ -16,9 +7,11 @@
 		]
 	},
 	"color_scheme": "Packages/Color Scheme - Default/ato.tmTheme",
+	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 10,
+	"font_size": 9,
 	"highlight_line": true,
+	"indent_to_bracket": true,
 	"line_numbers": false,
 	"options":
 	[
@@ -28,5 +21,12 @@
 	[
 		80
 	],
-	"theme": "Soda Dark.sublime-theme"
+	"save_on_focus_lost": true,
+	"scroll_speed": 4.0,
+	"show_tab_close_buttons": false,
+	"tab_completion": true,
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

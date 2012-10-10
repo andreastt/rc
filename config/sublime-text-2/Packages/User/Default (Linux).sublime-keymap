@@ -2,6 +2,9 @@
   // Emulate Emacs
   { "keys": ["alt+enter"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 
+  { "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["super+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+
   { "keys": ["ctrl+shift+l"], "command": "run_lint" },
   { "keys": ["ctrl+shift+u"], "command": "build", "args": {"variant": "unit_tests"} },
   { "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "browser_tests"} },
