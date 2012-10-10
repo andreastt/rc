@@ -193,34 +193,26 @@
 			"buffers":
 			[
 				{
-					"file": "chromium/src/chrome/test/webdriver/webdriver_server.cc",
+					"file": "/home/andreastt/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 					"settings":
 					{
-						"buffer_size": 14084,
+						"buffer_size": 461,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+					"file": "/home/andreastt/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 					"settings":
 					{
-						"buffer_size": 45222,
+						"buffer_size": 31027,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Slush & Poppies.tmTheme",
+					"file": "/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 					"settings":
 					{
-						"buffer_size": 7363,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/ato.tmTheme",
-					"settings":
-					{
-						"buffer_size": 13811,
+						"buffer_size": 602,
 						"line_ending": "Unix"
 					}
 				}
@@ -231,6 +223,14 @@
 				"height": 56.0,
 				"selected_items":
 				[
+					[
+						"git anno",
+						"Git: Toggle Annotations"
+					],
+					[
+						"gis",
+						"Git: Status"
+					],
 					[
 						"install",
 						"Package Control: Install Package"
@@ -261,9 +261,19 @@
 			},
 			"file_history":
 			[
+				"/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/andreastt/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/andreastt/dev/opium/chromium/src/base/basictypes.h",
+				"/home/andreastt/dev/opium/opium.sublime-project",
+				"/home/andreastt/.config/sublime-text-2/Packages/SublimeClang/SublimeClang.sublime-settings",
+				"/home/andreastt/.config/sublime-text-2/Packages/User/SublimeClang.sublime-settings",
+				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_server.cc",
+				"/home/andreastt/dev/opium/chromium/src/base/at_exit.h",
+				"/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/ato.tmTheme",
+				"/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Slush & Poppies.tmTheme",
+				"/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 				"/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/All Hallow's Eve.tmTheme",
 				"/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Eiffel.tmTheme",
-				"/home/andreastt/dev/opium/chromium/src/chrome/test/webdriver/webdriver_server.cc",
 				"/home/andreastt/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/andreastt/.config/sublime-text-2/Packages/User/cpplint.py",
 				"/home/andreastt/dev/opium/chromium/src/chrome/browser/ui/panels/base_panel_browser_test.cc",
@@ -271,9 +281,7 @@
 				"/home/andreastt/.config/sublime-text-2/Packages/Terminal/Default (Linux).sublime-keymap",
 				"/home/andreastt/.config/sublime-text-2/Packages/User/ninja.sublime-build",
 				"/home/andreastt/dev/opium/chromium/src/chrome/browser/chrome_browser_main.h",
-				"/home/andreastt/dev/opium/opium.sublime-project",
 				"/home/andreastt/.config/sublime-text-2/Packages/CTags/CTags.sublime-settings",
-				"/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/andreastt/opium.sublime-project",
 				"/home/andreastt/dev/opium/chromium/src/chrome/renderer/chrome_content_renderer_client.h",
 				"/usr/include/c++/4.6/bits/stl_vector.h",
@@ -302,6 +310,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"include",
 					"bold",
 					"keyword.var",
 					"bold",
@@ -346,114 +355,85 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 2,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "chromium/src/chrome/test/webdriver/webdriver_server.cc",
+							"file": "/home/andreastt/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 							"settings":
 							{
-								"buffer_size": 14084,
+								"buffer_size": 461,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										14084,
-										14084
+										458,
+										458
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/C++/C++.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
+									"syntax": "Packages/JavaScript/JSON.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 5123.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"type": "text"
 						},
 						{
 							"buffer": 1,
-							"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+							"file": "/home/andreastt/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 							"settings":
 							{
-								"buffer_size": 45222,
+								"buffer_size": 31027,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										29779,
-										29779
+										9305,
+										9305
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/XML/XML.tmLanguage",
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 38310.0,
+								"translation.y": 2615.0,
 								"zoom_level": 1.0
 							},
 							"type": "text"
 						},
 						{
 							"buffer": 2,
-							"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/Slush & Poppies.tmTheme",
+							"file": "/home/andreastt/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 							"settings":
 							{
-								"buffer_size": 7363,
+								"buffer_size": 602,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3848,
-										3848
+										190,
+										190
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/XML/XML.tmLanguage",
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 4636.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"file": "/home/andreastt/.config/sublime-text-2/Packages/Color Scheme - Default/ato.tmTheme",
-							"settings":
-							{
-								"buffer_size": 13811,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1515,
-										1515
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/XML/XML.tmLanguage",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 986.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"type": "text"
@@ -494,13 +474,13 @@
 			"menu_visible": true,
 			"output.clang":
 			{
-				"height": 102.0
+				"height": 418.0
 			},
 			"output.exec":
 			{
 				"height": 242.0
 			},
-			"position": "0,0,0,0,0,131,83,1442,1240,2560,1440",
+			"position": "0,0,0,0,0,979,155,2290,1312,2560,1440",
 			"replace":
 			{
 				"height": 0.0
@@ -511,6 +491,10 @@
 				"height": 0.0,
 				"selected_items":
 				[
+					[
+						"basictype",
+						"chromium/src/base/basictypes.h"
+					],
 					[
 						"webdriver",
 						"chromium/src/chrome/test/webdriver/webdriver_server.cc"
@@ -797,8 +781,8 @@
 	{
 		"recent_workspaces":
 		[
-			"/home/andreastt/chrome.sublime-project",
 			"/home/andreastt/dev/opium/opium.sublime-project",
+			"/home/andreastt/chrome.sublime-project",
 			"/home/andreastt/opium.sublime-project",
 			"/home/andreastt/dev/cpptest/Project.sublime-project"
 		]
