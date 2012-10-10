@@ -1,11 +1,12 @@
 {
-	"auto_upgrade_last_run": 1349871703,
+	"auto_upgrade_last_run": 1349885009,
 	"installed_packages":
 	[
 		"CTags",
 		"Git",
 		"Open-Include",
 		"Package Control",
+		"SublimeREPL",
 		"Terminal",
 		"Theme - Soda"
 	]

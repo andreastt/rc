@@ -14,6 +14,8 @@ export ICECC_CXX="icecc $CXX"
 # Depot Tools
 export PATH="$PATH:$HOME/dev/depot_tools"
 
+export GYP_GENERATORS=ninja
+
 # IntelliJ
 export PATH="$PATH:$HOME/bin/idea-IC-103.255/bin"
 
