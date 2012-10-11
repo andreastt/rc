@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 	"auto_upgrade_last_run": 1349885009,
 	"installed_packages":
@@ -8,27 +7,10 @@
 		"Modific",
 		"Open-Include",
 		"Package Control",
+		"SublimeGDB",
 		"SublimeJava",
 		"SublimeREPL",
 		"Terminal",
 		"Theme - Soda"
 	]
 }
-||||||| merged common ancestors
-=======
-{
-	"auto_upgrade_last_run": 1349895058,
-	"installed_packages":
-	[
-		"CTags",
-		"Git",
-		"Modific",
-		"Open-Include",
-		"Package Control",
-		"SublimeJava",
-		"SublimeREPL",
-		"Terminal",
-		"Theme - Soda"
-	]
-}
->>>>>>> 164d819cfeb28dbf3d76e6582ea0a99911883d49
