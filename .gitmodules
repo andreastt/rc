@@ -37,3 +37,6 @@
 [submodule "emacs.d/vendor/soy-mode"]
 	path = emacs.d/vendor/soy-mode
 	url = https://github.com/toomore-such/soy-mode.git
+[submodule "config/sublime-text-2/Packages/SublimeGDB"]
+	path = config/sublime-text-2/Packages/SublimeGDB
+	url = https://github.com/quarnster/SublimeGDB
