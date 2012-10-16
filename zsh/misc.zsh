@@ -13,3 +13,4 @@ export PAGER=less
 export LC_CTYPE=en_US.UTF-8
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \. "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && \. "$HOME/.pythonbrew/etc/bashrc"
