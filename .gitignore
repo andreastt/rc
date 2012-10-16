@@ -22,6 +22,7 @@ config/operamobile
 config/spotify
 config/update-notifier
 config/sublime-text-2/Settings/
+config/sublime-text-2/Backup/
 emacs.before_ecb_2.40
 *.pyc
 *.cache
