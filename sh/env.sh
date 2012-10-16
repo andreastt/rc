@@ -6,10 +6,10 @@ export PATH="$PATH:$HOME/bin/"
 #export GREP_OPTIONS='--exclude-dir=".svn"'
 
 # Compilation
-export CC="ccache clang"
-export CXX="ccache clang++"
-export ICECC_CC="icecc $CC"
-export ICECC_CXX="icecc $CXX"
+#export CC="ccache clang"
+#export CXX="ccache clang++"
+#export ICECC_CC="icecc $CC"
+#export ICECC_CXX="icecc $CXX"
 
 # Depot Tools
 export PATH="$PATH:$HOME/dev/depot_tools"
