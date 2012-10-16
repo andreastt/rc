@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1349895058,
+	"auto_upgrade_last_run": 1350386548,
 	"installed_packages":
 	[
 		"CTags",
@@ -7,6 +7,7 @@
 		"Modific",
 		"Open-Include",
 		"Package Control",
+		"SublimeGDB",
 		"SublimeJava",
 		"SublimeREPL",
 		"Terminal",

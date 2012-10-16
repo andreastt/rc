@@ -164,7 +164,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#21439C</string>
+				<string>#40e0d0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -221,7 +221,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#78ddee</string>
 			</dict>
 		</dict>
 
@@ -288,9 +288,9 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>italic</string>
+				<string></string>
 				<key>foreground</key>
-				<string>#9B5C2E</string>
+				<string>#7fffd4</string>
 			</dict>
 		</dict>
 		<dict>

@@ -5,9 +5,21 @@
   { "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
   { "keys": ["super+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 
+  /*
   { "keys": ["ctrl+shift+l"], "command": "run_lint" },
   { "keys": ["ctrl+shift+u"], "command": "build", "args": {"variant": "unit_tests"} },
   { "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "browser_tests"} },
   { "keys": ["shift+f10"], "command": "build", "args": {"variant": "chromedriver"} }
+  */
+
+  { "keys": ["f10"], "command": "gdb_input"},
+  { "keys": ["shift+f10"], "command": "gdb_launch"},
+  { "keys": ["ctrl+f2"], "command": "gdb_exit" },
+
+  { "keys": ["f8"], "command": "gdb_continue" },
+
+
+  { "keys": ["f9"], "command": "gdb_toggle_breakpoint" }
+
 
 ]
