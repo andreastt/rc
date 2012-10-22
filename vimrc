@@ -57,25 +57,8 @@ set smartcase  " Ignore case when searching lowercase
 set t_Co=256 " 256 colors
 "set background=dark
 syntax on
-" syntax highlighting
-"colorscheme koheler
-"colorscheme Gentooish
-"colorscheme ir_black
-"colorscheme moria
-"colorscheme twilight
-"colorscheme wombat
-"colorscheme zenburn
-"colorscheme darkspectrum
-"colorscheme Dark
-"colorscheme corn
-"colorscheme pyte
-"colorscheme vanzan_color
-"colorscheme xoria256
-"colorscheme algkalv
-"colorscheme ir_black
-"colorscheme inkpot
-"colorscheme green
-"colorscheme bright
+
+colorscheme muon
 
  
 " Status Line *****************************************************************
