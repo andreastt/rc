@@ -28,7 +28,7 @@ export WEBC_HOME=/home/ato/dev/webc-java
 export haltonerror=0
 export haltonfailure=0
 
-export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.15.0.jar
+export SELENIUM_SERVER_JAR=~/selenium-server-standalone-2.25.0.jar
 
 export WATIR_WEBDRIVER_BROWSER=opera
 
