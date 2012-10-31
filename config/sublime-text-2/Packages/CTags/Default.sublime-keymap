@@ -4,6 +4,10 @@
     "keys": ["ctrl+t", "ctrl+t"]
   },
   {
+    "command": "navigate_to_definition",
+    "keys": ["ctrl+shift+period"]
+  },
+  {
     "command": "search_for_definition",
     "keys": ["ctrl+t", "ctrl+y"]
   },
@@ -13,13 +17,17 @@
   },
   {
     "command": "jump_back",
+    "keys": ["ctrl+shift+comma"]
+  },
+  {
+    "command": "jump_back",
     "args": {"to": "last_modification"},
     "keys": ["ctrl+t", "ctrl+m"]
-  }, 
+  },
   {
     "command": "rebuild_tags",
     "keys": ["ctrl+t", "ctrl+r"]
-  }, 
+  },
   {
     "command": "show_symbols",
     "context": [
@@ -29,9 +37,9 @@
         "operand": "source -source.css",
         "operator": "equal"
       }
-    ], 
+    ],
     "keys": ["alt+s"]
-  }, 
+  },
   {
     "command": "show_symbols",
     "args": {"type": "multi"},
@@ -42,7 +50,7 @@
         "operand": "source -source.css",
         "operator": "equal"
       }
-    ], 
+    ],
     "keys": ["alt+shift+s"]
   },
   {
@@ -55,7 +63,7 @@
         "operand": "source -source.css",
         "operator": "equal"
       }
-    ], 
+    ],
     "keys": ["ctrl+alt+shift+s"]
   },
   { // override current default
