@@ -141,6 +141,8 @@ autocmd FileType make set noexpandtab shiftwidth=8
 autocmd FileType python set complete+=k/Users/andreastt/.vim/syntax/python.vim isk+=.,(
 let g:pydiction_location = '/Users/andreastt/.vim/after/ftplugin/pydict/complete-dict'
 
+autocmd FileType json set autoindent formatoptions=tcq21 shiftwidth=2 softtabstop=2 tabstop=8 expandtab foldmethod=syntax
+
 
 " Inser New Line **************************************************************
 map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
