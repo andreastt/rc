@@ -1,0 +1,80 @@
+
+** 2012-11-11 11:26:31.089586 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:26:53.101777 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:26:55.107298 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:26:56.619806 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:26:58.613527 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:26:59.629831 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:00.627848 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:01.425869 **:
+GsFmt: cannot fmt file. error: `MarGo: [Errno 111] Connection refused'
+--------------------------------
+
+** 2012-11-11 11:27:01.459194 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:01.619177 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:04.921675 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:25.985826 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:27.495029 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:28.493491 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:31.502496 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:35.753016 **:
+GsFmt: cannot fmt file. error: `MarGo: [Errno 111] Connection refused'
+--------------------------------
+
+** 2012-11-11 11:27:35.788671 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:27:36.001546 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 11:29:41.247915 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------
+
+** 2012-11-11 14:58:09.811650 **:
+GsDepends: Error while running MarGo: [Errno 2] No such file or directory
+--------------------------------

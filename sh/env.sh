@@ -1,18 +1,15 @@
-# Use Emacs Client by default, fall back to new Emacs session
-export EDITOR=emacs
-export PATH="$PATH:$HOME/bin/"
+export EDITOR=vim
+export PATH="$PATH:$HOME/dev/depot_tools"
 
-# Grep
-#export GREP_OPTIONS='--exclude-dir=".svn"'
+# Go
+export PATH="$HOME/bin/go/bin:$PATH"
+export GOROOT="$HOME/bin/go"
 
 # Compilation
 #export CC="ccache clang"
 #export CXX="ccache clang++"
 #export ICECC_CC="icecc $CC"
 #export ICECC_CXX="icecc $CXX"
-
-# Depot Tools
-export PATH="$PATH:$HOME/dev/depot_tools"
 
 export GYP_GENERATORS=ninja
 export GYP_PARALLEL=1
