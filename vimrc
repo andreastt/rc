@@ -6,9 +6,10 @@
 set nocompatible
  
 " Tabs ************************************************************************
-set expandtab
-"set tabstop=2
-"set shiftwidth=2
+"set tabstop=4      " how many columns a tab counts for, affects look
+set expandtab     " produces the appropriate number of spaces
+set shiftwidth=2  " how many columns on reindent operations
+"set softtabstop   " see http://tedlogan.com/techblog3.html
 
  
 " Indenting ********************************************************************
@@ -17,6 +18,7 @@ set expandtab
 
 set autoindent
 set smartindent
+
 
 " Whitespaces ****************************************************************
 highlight RedundantWhitespace ctermbg=red guibg=red
@@ -59,6 +61,7 @@ set t_Co=256 " 256 colors
 syntax on
 
 colorscheme muon
+"colorscheme beauty256
 
  
 " Status Line *****************************************************************
@@ -125,8 +128,6 @@ autocmd FileType css set smartindent
 " For both CSS and HTML, use spaces instead of tabs, and make tab stop
 " at 2 characters:
 autocmd FileType html,css set expandtab smartindent tabstop=2 "textwidth=78
-
-" HTML mode settings
 let g:html_indent_inctags = "body,head,tbody,p,article,header,footer,section"
 
 " No textwidth on programming files.
@@ -137,11 +138,19 @@ autocmd FileType pl,pm,c,h,rb,php set textwidth=0
 " (despite the mappings later):
 autocmd FileType make set noexpandtab shiftwidth=8
 
-"autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
-autocmd FileType python set complete+=k/Users/andreastt/.vim/syntax/python.vim isk+=.,(
-let g:pydiction_location = '/Users/andreastt/.vim/after/ftplugin/pydict/complete-dict'
+autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
 
 autocmd FileType json set autoindent formatoptions=tcq21 shiftwidth=2 softtabstop=2 tabstop=8 expandtab foldmethod=syntax
+
+" Golang
+autocmd FileType go set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+
+if has("autocmd") && exists("+omnifunc")
+        autocmd Filetype *
+        \ if &omnifunc == "" |
+        \   setlocal omnifunc=syntaxcomplete#Complete |
+        \endif
+endif
 
 
 " Inser New Line **************************************************************

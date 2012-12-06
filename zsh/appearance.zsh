@@ -39,3 +39,4 @@ setopt cdablevarS
 setopt prompt_subst
 
 PS1="$FX[bold]$FG[036]●$FX[reset] "
+#PS1="$FX[bold]$FG[036]%%$FX[reset] "

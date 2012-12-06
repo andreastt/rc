@@ -1,1 +1,7 @@
 emacs.fullscreen: maximized
+
+xterm*background: white
+xterm*foreground: black
+xterm*cursorColor: white
+xterm*metaSendsEscape: true
+xterm*scrollBar: on
