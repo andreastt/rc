@@ -3,9 +3,9 @@
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
 ;; Smart M-x
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;(global-set-key (kbd "M-x") 'smex)
+;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Mark additional regions matching current region
 (global-set-key (kbd "M-æ") 'mark-all-like-this)

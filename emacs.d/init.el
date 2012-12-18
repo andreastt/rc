@@ -17,7 +17,7 @@
 (setq vendor-dir (expand-file-name "vendor" dotfiles-dir))
 
 ;; Replace CEDET with a custom version
-(load-file (concat vendor-dir "/cedet/common/cedet.el"))
+;;(load-file (concat vendor-dir "/cedet/common/cedet.el"))
 
 ;; Load path
 (add-to-list 'load-path dotfiles-dir)
@@ -58,11 +58,11 @@
 (require 'setup-tramp)
 (require 'setup-xface)
 (require 'setup-dired)
-(require 'setup-magit)
-(require 'setup-wl)
-(require 'setup-ecb)
+;;(require 'setup-magit)
+;;(require 'setup-wl)
+;;(require 'setup-ecb)
 (require 'setup-jde)
-(require 'setup-smex)
+;;(require 'setup-smex)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
 (require 'setup-markdown-mode)
