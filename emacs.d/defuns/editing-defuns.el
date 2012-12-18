@@ -242,6 +242,17 @@ region-end is used. Adds the duplicated text to the kill ring."
      ((looking-back ")\\|}\\|\\]") (backward-list))
      (t (backward-char)))))
 
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+
 (defun zap-to-char-exclusive (arg char)
   "Kill up to, but not including ARGth occurrence of CHAR.
 Case is ignored if `case-fold-search' is non-nil in the current buffer.

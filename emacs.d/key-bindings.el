@@ -9,10 +9,6 @@
 (global-set-key (kbd "C-Å") 'mark-more-like-this-extended)
 (global-set-key (kbd "C-Æ") 'mark-more-like-this-extended)
 
-;; Perform local cleanup
-(global-set-key (kbd "C-c n") 'cleanup-buffer)
-(global-set-key (kbd "C-c C-<return>") 'delete-blank-lines)
-
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 (global-set-key (kbd "C-S-<f10>") 'tool-bar-mode)
@@ -36,9 +32,6 @@
 ;; Create new frame
 (define-key global-map (kbd "C-x C-n") 'make-frame-command)
 
-;; Jump to a definition in the current file
-(global-set-key (kbd "C-x C-i") 'ido-menu)
-
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
@@ -47,7 +40,6 @@
 (global-set-key (kbd "C-x M-p") 'find-or-create-file-at-point-other-window)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Edit file with sudo
@@ -62,8 +54,8 @@
 
 ;; Navigation bindings
 (global-set-key (kbd "C-l") 'goto-line)
-(global-set-key (kbd "M-<up>") 'beginning-of-buffer)
-(global-set-key (kbd "M-<down>") 'end-of-buffer)
+(global-set-key (kbd "C-s-<up>") 'beginning-of-buffer)
+(global-set-key (kbd "C-s-<down>") 'end-of-buffer)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "C-e") 'move-end-of-line-or-next-line)
@@ -76,7 +68,7 @@
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
 ;; Create scratch buffer
-(global-set-key (kbd "C-c b") 'create-scratch-buffeR)
+(global-set-key (kbd "C-c b") 'create-scratch-buffer)
 
 ;; Mark all
 (global-set-key (kbd "C-c a") 'mark-whole-buffer)
@@ -91,8 +83,8 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 ;; Line movement
-(global-set-key (kbd "<C-S-down>") 'move-line-down)
-(global-set-key (kbd "<C-S-up>") 'move-line-up)
+(global-set-key (kbd "<M-down>") 'move-line-down)
+(global-set-key (kbd "<M-up>") 'move-line-up)
 
 ;; Browse the kill ring
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
