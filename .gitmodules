@@ -43,9 +43,6 @@
 [submodule "config/sublime-text-2/Packages/SublimeJava"]
 	path = config/sublime-text-2/Packages/SublimeJava
 	url = https://github.com/quarnster/SublimeJava
-[submodule "config/sublime-text-2/Packages/GoSublime"]
-	path = config/sublime-text-2/Packages/GoSublime
-	url = https://github.com/DisposaBoy/GoSublime.git
 [submodule "config/sublime-text-2/Packages/Subclim"]
 	path = config/sublime-text-2/Packages/Subclim
 	url = https://github.com/JulianEberius/Subclim.git
