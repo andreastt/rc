@@ -74,6 +74,7 @@
 (when is-mac (require 'mac))
 
 ;; Emacs server
+(server-start)
 ;; (require 'server)
 ;; (unless (server-running-p)
 ;;   (server-start))

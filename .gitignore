@@ -10,6 +10,7 @@ emacs.d/tmp/savehist
 emacs.d/auto-save-list
 emacs.d/abbrev_defs
 emacs.d/session*
+emacs.d/eshell
 config/Trolltech.conf
 config/autostart
 config/chromium
