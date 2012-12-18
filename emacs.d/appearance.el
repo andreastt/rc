@@ -9,25 +9,11 @@
      (color-theme-initialize)
      (color-theme-charcoal-black)))
 
-;; Pretty font in Emacs 24/Ubuntu
-;(if is-mac nil
-;  (set-face-attribute 'default nil :font "DejaVu Sans Mono")
-;  (set-face-attribute 'default nil :height 90))
-
-(add-to-list 'default-frame-alist '(font . "7x13bold"))
-
 ;; Highlight matching parantheses when the point is on them
 (show-paren-mode 1)
 
 ;; Cursor type
 (setq-default cursor-type 'bar)
-
-;; (when window-system
-;;   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
-;;   (turn-off-tool-bar)
-;;   (tooltip-mode -1))
-
-;; (add-hook 'before-make-frame-hook 'turn-off-tool-bar)
 
 ;; Menu bar looks nice in Unity now
 (menu-bar-mode 1)
@@ -37,8 +23,9 @@
 
 ;; Window size
 (setq default-frame-alist '(
+                            (font . "7x13bold")
                             (width . 140)
-                            (height . 35)
+                            (height . 65)
                             ))
 
 ;; Make zooming affect frame instead of buffers
