@@ -56,6 +56,7 @@
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
+(require 'setup-printing)
 (require 'mark-more-like-this)
 
 ;; Map files to modes
