@@ -4,20 +4,12 @@
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-;; Remove built-in CEDET in Emacs >= 23.2 from load path
-(setq load-path (remove (concat "/usr/share/emacs"
-                                (substring emacs-version 0 -2) "/lisp/cedet")
-                        load-path))
-
 ;; Set path to .emacs.d
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
 ;; Set path to dependencies
 (setq vendor-dir (expand-file-name "vendor" dotfiles-dir))
-
-;; Replace CEDET with a custom version
-(load-file (concat vendor-dir "/cedet/common/cedet.el"))
 
 ;; Load path
 (add-to-list 'load-path dotfiles-dir)
@@ -58,18 +50,12 @@
 (require 'setup-tramp)
 (require 'setup-xface)
 (require 'setup-dired)
-(require 'setup-magit)
-(require 'setup-wl)
-(require 'setup-ecb)
-(require 'setup-jde)
-(require 'setup-smex)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
 (require 'setup-markdown-mode)
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
-(require 'setup-python)
 
 ;; Map files to modes
 (require 'mode-mappings)
@@ -95,19 +81,3 @@
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
-
-;; Conclude init by setting up specifics for the user
-(when (file-exists-p user-settings-dir)
-  (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40"))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
