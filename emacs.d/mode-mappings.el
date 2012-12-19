@@ -1,3 +1,6 @@
+;; C++
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 ;; Java
 (add-to-list 'auto-mode-alist '("\\.java\\'" . jde-mode))
 

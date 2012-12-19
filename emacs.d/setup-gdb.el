@@ -5,9 +5,7 @@
                             (gud-tooltip-mode 1)
                             (gdb-many-windows t)
                             (tool-bar-mode t)
-                            (fullscreen)
                             (gdb-show-changed-values t)))
-(setq gdb-many-windows t)
 
 ;; Key bindings for GUD
 (defun my-gud-mode-hook ()

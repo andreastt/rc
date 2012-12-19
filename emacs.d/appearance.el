@@ -34,4 +34,7 @@
 ;; Setup new frames correctly
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
 
+;; Winner mode allows you to "redo" and "undo" window setups
+(winner-mode)
+
 (provide 'appearance)

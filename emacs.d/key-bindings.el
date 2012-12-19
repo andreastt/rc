@@ -10,8 +10,8 @@
 (global-set-key (kbd "C-Æ") 'mark-more-like-this-extended)
 
 ;; Turn on the menu bar for exploring new modes
-(global-set-key (kbd "C-<f10>") 'menu-bar-mode)
-(global-set-key (kbd "C-S-<f10>") 'tool-bar-mode)
+(global-set-key (kbd "C-<f10>") 'tool-bar-mode)
+(global-set-key (kbd "C-S-<f10>") 'menu-bar-mode)
 
 ;; Use shell-like backspace C-h, rebind help to F1
 (define-key key-translation-map [?\C-h] [?\C-?])
@@ -40,13 +40,13 @@
 (global-set-key (kbd "C-x M-p") 'find-or-create-file-at-point-other-window)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+;(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
 
 ;; Window switching
-(windmove-default-keybindings 'control) ;; Control+direction
+(windmove-default-keybindings 'control)  ;; C-[direction]
 (global-set-key (kbd "C-x -") 'rotate-windows)
 
 ;; Help should search more than just commands
