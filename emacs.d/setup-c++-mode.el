@@ -23,7 +23,7 @@
 
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
-(require 'auto-complete-clang)
+;(require 'auto-complete-clang)
 
 (defun my-ac-mode-setup ()
   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
