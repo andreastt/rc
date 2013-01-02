@@ -58,7 +58,9 @@
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
 (require 'setup-printing)
+(require 'setup-nodejs)
 (require 'mark-more-like-this)
+(require 'go-mode-load)
 
 ;; Map files to modes
 (require 'mode-mappings)
