@@ -46,6 +46,7 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
+(require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-xface)
