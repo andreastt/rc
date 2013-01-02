@@ -31,3 +31,6 @@
 [submodule "emacs.d/vendor/soy-mode"]
 	path = emacs.d/vendor/soy-mode
 	url = https://github.com/toomore-such/soy-mode.git
+[submodule "emacs.d/vendor/nodejs"]
+	path = emacs.d/vendor/nodejs
+	url = https://github.com/emacsmirror/nodejs-mode.git
