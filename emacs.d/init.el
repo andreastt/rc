@@ -46,6 +46,7 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
+(require 'setup-eclim)
 (require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
@@ -57,6 +58,7 @@
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
+;(require 'setup-company)
 (require 'setup-printing)
 (require 'setup-nodejs)
 (require 'mark-more-like-this)

@@ -34,3 +34,6 @@
 [submodule "emacs.d/vendor/nodejs"]
 	path = emacs.d/vendor/nodejs
 	url = https://github.com/emacsmirror/nodejs-mode.git
+[submodule "emacs.d/vendor/eclim"]
+	path = emacs.d/vendor/eclim
+	url = https://github.com/senny/emacs-eclim.git

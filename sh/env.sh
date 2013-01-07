@@ -3,12 +3,13 @@ export TERMINAL=xterm
 export PATH="$PATH:$HOME/dev/depot_tools"
 
 # Plan 9
-PLAN9=/home/ato/Downloads/plan9port export PLAN9
-PATH=$PATH:$PLAN9/bin export PATH
+#PLAN9=/home/ato/Downloads/plan9port export PLAN9
+#PATH=$PATH:$PLAN9/bin export PATH
 
 # Go
-export PATH="$HOME/bin/go/bin:/usr/local/go/bin:$PATH"
-export GOROOT="$HOME/bin/go"
+export PATH="/usr/local/go/bin:$PATH"
+#export PATH="$HOME/bin/go/bin:/usr/local/go/bin:$PATH"
+#export GOROOT="$HOME/bin/go"
 
 # Compilation
 #export CC="ccache clang"
