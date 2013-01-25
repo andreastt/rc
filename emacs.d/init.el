@@ -46,8 +46,8 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
-(require 'setup-eclim)
-(require 'setup-python)
+;(require 'setup-eclim)
+;(require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-xface)
@@ -57,7 +57,7 @@
 (require 'setup-markdown-mode)
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
-(require 'setup-auto-complete)
+;(require 'setup-auto-complete)
 ;(require 'setup-company)
 (require 'setup-printing)
 (require 'setup-nodejs)
@@ -81,7 +81,7 @@
 (when is-mac (require 'mac))
 
 ;; Emacs server
-(server-start)
+;;(server-start)
 ;; (require 'server)
 ;; (unless (server-running-p)
 ;;   (server-start))
