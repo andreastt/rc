@@ -38,5 +38,11 @@ setopt cdablevarS
 # Setup the prompt with pretty colors
 setopt prompt_subst
 
-PS1="$FX[bold]$FG[036]●$FX[reset] "
-#PS1="$FX[bold]$FG[036]%%$FX[reset] "
+_collapse_pwd() {
+        echo $(pwd | perl -pe "s|^$HOME|~|g")
+}
+
+PROMPT='$(_collapse_pwd) $FX[bold]$FG[036]●$FX[reset] '
+
+local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
+RPROMPT='${return_status}%{$reset_color%}'
