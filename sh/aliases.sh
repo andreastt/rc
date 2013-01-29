@@ -26,3 +26,4 @@ alias ls='ls -G'
 alias la='ls -ah'
 alias l='ls -lah'
 alias sl=ls
+alias v=vim

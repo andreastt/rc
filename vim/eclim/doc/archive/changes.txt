@@ -176,8 +176,8 @@ Eclim:
      eclipse instances on the same workspace.
 
 Common:
-   - Added a |:TreeTab| command like |:ProjectTab| but for any
-     arbitrary directory.
+   - Added a :TreeTab command like |:ProjectTab| but for any arbitrary
+     directory.
 
    - Added a |:BuffersToggle| command to toggle whether the eclim
      buffers windows is open or closed.

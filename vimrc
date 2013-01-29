@@ -80,11 +80,6 @@ set textwidth=0
 
  
 " Mappings ********************************************************************
-" Map leader to |
-"let mapleader = "|"
-
-" Map t to NERDtree.
-nmap t :NERDTree<Enter>
 
 " Have Q reformat the current paragraph (or selected text if there is any):
 nnoremap Q gqap
@@ -114,6 +109,8 @@ autocmd FileType c,cpp,slang set cindent
 " characters, if starting a new line in the middle of a comment automatically
 " insert the comment leader characters:
 autocmd FileType c set formatoptions+=ro cindent
+
+autocmd FileType java set textwidth=100
 
 " For Perl programming, have thins in braces indenting themselves:
 autocmd FileType perl set smartindent

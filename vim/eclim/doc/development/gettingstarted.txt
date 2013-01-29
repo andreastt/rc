@@ -21,6 +21,15 @@ Checking out the code and building it.
 <
 
 
+Note: If you are still using Eclipse 3.7 (Indigo) you will need to
+  checkout the eclim indigo branch before attempting to build eclim:>
+
+     $ cd eclim
+     $ git checkout indigo
+
+  <
+
+
 
 2. Build eclim:
 ---------------
