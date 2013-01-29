@@ -93,11 +93,11 @@ vnoremap Q gq
 
 " Directories *****************************************************************
 " Setup backup location and enable
-set backupdir=/tmp/vim/backup
+set backupdir=/tmp
 set backup
  
 " Set Swap directory
-set directory=/tmp/vim/swap
+set directory=/tmp
  
  
 " File Stuff ******************************************************************
