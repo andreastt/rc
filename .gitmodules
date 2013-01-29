@@ -37,3 +37,6 @@
 [submodule "emacs.d/vendor/eclim"]
 	path = emacs.d/vendor/eclim
 	url = https://github.com/senny/emacs-eclim.git
+[submodule "emacs.d/vendor/egit"]
+	path = emacs.d/vendor/egit
+	url = https://github.com/jimhourihan/egit.git

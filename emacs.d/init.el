@@ -46,8 +46,8 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
-;(require 'setup-eclim)
-;(require 'setup-python)
+(require 'setup-eclim)
+(require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-xface)
@@ -57,12 +57,12 @@
 (require 'setup-markdown-mode)
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
-;(require 'setup-auto-complete)
-;(require 'setup-company)
+(require 'setup-auto-complete)
 (require 'setup-printing)
 (require 'setup-nodejs)
 (require 'mark-more-like-this)
 (require 'go-mode-load)
+(require 'setup-egit)
 
 ;; Map files to modes
 (require 'mode-mappings)
