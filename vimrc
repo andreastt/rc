@@ -94,7 +94,12 @@ set backup
 " Set Swap directory
 set directory=/tmp
  
- 
+
+" Exuberant tags **************************************************************
+" Traverse tree up to root until a tags file is found
+set tags=./.tags;/
+
+
 " File Stuff ******************************************************************
 filetype plugin on
 filetype indent on
