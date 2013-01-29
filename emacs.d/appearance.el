@@ -3,11 +3,11 @@
       color-theme-is-global t
       truncate-partial-width-windows nil)
 
-;(require 'color-theme)
-;(eval-after-load "color-theme"
-;  '(progn
-;     (color-theme-initialize)
-;     (color-theme-charcoal-black)))
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-charcoal-black)))
 
 ;; Highlight matching parantheses when the point is on them
 (show-paren-mode 1)
@@ -16,7 +16,7 @@
 (setq-default cursor-type 'bar)
 
 ;; Menu bar looks nice in Unity now
-(menu-bar-mode 1)
+(menu-bar-mode -1)
 
 ;; Ditch them scroll bars
 (scroll-bar-mode -1)
