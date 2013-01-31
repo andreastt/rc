@@ -7,3 +7,6 @@
 # Pipe output into `less', using the same defaults as git
 --pager
 less -RFSX
+
+# Search Everything
+-a
