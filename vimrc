@@ -71,9 +71,10 @@ set textwidth=0
 set cinkeys=!^F
 inoremap <Tab> <C-f>
 
-" Have Q reformat the current paragraph (or selected text if there is any):
-nnoremap Q gqap
-vnoremap Q gq
+" Have Q reform things that look similar to what surrounds the cursor, or just
+" format the paragraph if in visual mode.
+nmap q gqay
+vnoremap q gq
 
 " Insert New Line
 map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode

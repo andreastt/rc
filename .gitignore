@@ -1,4 +1,4 @@
-.DS_Store
+..DS_Store
 vim/.netrwhist
 IdeaIC10/config/componentVersions/*
 IdeaIC10/config/tasks/*
@@ -29,3 +29,4 @@ emacs.before_ecb_2.40
 *.pyc
 *.cache
 *.elc
+vim/.VimballRecord
