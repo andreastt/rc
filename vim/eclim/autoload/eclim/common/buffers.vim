@@ -158,9 +158,12 @@ endfunction " }}}
 function! eclim#common#buffers#GetBuffers(...) " {{{
   let options = a:0 ? a:1 : {}
 
+  let saved_lang = v:lang
+  language C
   redir => list
-  silent exec 'buffers'
+  silent buffers
   redir END
+  execute 'language' saved_lang
 
   let buffers = []
   let maxfilelength = 0
@@ -171,9 +174,8 @@ function! eclim#common#buffers#GetBuffers(...) " {{{
     let buffer.path = fnamemodify(buffer.path, ':p')
     let buffer.file = fnamemodify(buffer.path, ':p:t')
     let buffer.dir = fnamemodify(buffer.path, ':p:h')
-    exec 'let buffer.bufnr = ' . substitute(entry, '\s*\([0-9]\+\).*', '\1', '')
-    exec 'let buffer.lnum = ' .
-      \ substitute(entry, '.*"\s\+line\s\+\([0-9]\+\).*', '\1', '')
+    let buffer.bufnr = str2nr(substitute(entry, '\s*\([0-9]\+\).*', '\1', ''))
+    let buffer.lnum = str2nr(substitute(entry, '.*"\s\+line\s\+\([0-9]\+\).*', '\1', ''))
     call add(buffers, buffer)
 
     if len(buffer.file) > maxfilelength
@@ -254,6 +256,52 @@ function! eclim#common#buffers#TabLastOpenIn() " {{{
   if !exists('b:eclim_tab_id') || !other_tab
     let b:eclim_tab_id = s:GetTabId()
   endif
+endfunction " }}}
+
+function! eclim#common#buffers#OpenNextHiddenTabBuffer(current) " {{{
+  let allbuffers = eclim#common#buffers#GetBuffers()
+
+  " build list of buffers open in other tabs to exclude
+  let tabbuffers = []
+  let lasttab = tabpagenr('$')
+  let index = 1
+  while index <= lasttab
+    if index != tabpagenr()
+      for bnum in tabpagebuflist(index)
+        call add(tabbuffers, bnum)
+      endfor
+    endif
+    let index += 1
+  endwhile
+
+  " build list of buffers not open in any window, and last seen on the
+  " current tab.
+  let hiddenbuffers = []
+  for buffer in allbuffers
+    let bnum = buffer.bufnr
+    if bnum != a:current && index(tabbuffers, bnum) == -1 && bufwinnr(bnum) == -1
+      let eclim_tab_id = getbufvar(bnum, 'eclim_tab_id')
+      if eclim_tab_id != '' && eclim_tab_id != t:eclim_tab_id
+        continue
+      endif
+
+      if bnum < a:current
+        call insert(hiddenbuffers, bnum)
+      else
+        call add(hiddenbuffers, bnum)
+      endif
+    endif
+  endfor
+
+  " we found a hidden buffer, so open it
+  if len(hiddenbuffers) > 0
+    exec 'buffer ' . hiddenbuffers[0]
+    doautocmd BufEnter
+    doautocmd BufWinEnter
+    doautocmd BufReadPost
+    return hiddenbuffers[0]
+  endif
+  return 0
 endfunction " }}}
 
 function! s:BufferDelete() " {{{

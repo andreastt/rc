@@ -3,6 +3,45 @@
 History of Changes
 ******************
 
+*2.2.5* *1.7.13*
+
+
+2.2.5 / 1.7.13 (Nov. 25, 2012)
+==============================
+
+Eclim:
+   - 1.7.13 and above will now support Eclipse 3.8 as well as 3.7.
+
+   - Fix |:ProjectGrep| and |:ProjectTodo| to search in all of the
+     project's links as well.
+
+   - Other minor bug fixes.
+
+*2.2.4* *1.7.12*
+
+
+2.2.4 / 1.7.12 (Nov. 18, 2012)
+==============================
+
+Eclim:
+   - Updated |:ProjectTree| and |:ProjectTab| to support an arbitrary
+     directory as an argument, allowing you to use the command for
+     project's not managed by eclipse/eclim. :TreeTab has been removed
+     since the update to :ProjectTab makes it redundant.
+
+   - Creation of projects in nested directories in the eclipse
+     workspace (vs at the root of the workspace) is now properly
+     supported through eclim.
+
+Android:
+   - Updated for ADT 21.0.0.
+
+C/C++:
+   - Fix placement of some error markers.
+
+Php:
+   - Some indentation fixes.
+
 *2.2.3* *1.7.11*
 
 

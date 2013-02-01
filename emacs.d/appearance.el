@@ -16,7 +16,7 @@
 (setq-default cursor-type 'bar)
 
 ;; Menu bar looks nice in Unity now
-(menu-bar-mode 1)
+(menu-bar-mode -1)
 
 ;; Ditch them scroll bars
 (scroll-bar-mode -1)

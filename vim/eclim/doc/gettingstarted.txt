@@ -344,7 +344,7 @@ maven's built in features to get your project started.
 
    >
       $ vim
-      :MvnRepos
+      :MvnRepo
       :ProjectImport /path/to/new/project
 
    <

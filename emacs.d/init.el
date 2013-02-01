@@ -58,11 +58,11 @@
 (require 'setup-yaml-mode)
 (require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
-;(require 'setup-company)
 (require 'setup-printing)
 (require 'setup-nodejs)
 (require 'mark-more-like-this)
 (require 'go-mode-load)
+(require 'setup-egit)
 
 ;; Map files to modes
 (require 'mode-mappings)
@@ -82,9 +82,6 @@
 
 ;; Emacs server
 (server-start)
-;; (require 'server)
-;; (unless (server-running-p)
-;;   (server-start))
 
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)

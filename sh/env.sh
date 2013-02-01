@@ -7,9 +7,10 @@ export PATH="$PATH:$HOME/dev/depot_tools"
 #PATH=$PATH:$PLAN9/bin export PATH
 
 # Go
-export PATH="/usr/local/go/bin:$PATH"
+#export PATH="/usr/local/go/bin:$PATH"
 #export PATH="$HOME/bin/go/bin:/usr/local/go/bin:$PATH"
-#export GOROOT="$HOME/bin/go"
+export PATH="$HOME/bin/go/bin:$PATH"
+export GOROOT="$HOME/bin/go"
 
 # Compilation
 #export CC="ccache clang"

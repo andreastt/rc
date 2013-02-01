@@ -1,8 +1,8 @@
 emacs.fullscreen: maximized
 
 xterm*boldMode: false
-xterm*background: black
-xterm*foreground: white
+xterm*background: white
+xterm*foreground: black
 xterm*cursorColor: white
 xterm*metaSendsEscape: true
 xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*
