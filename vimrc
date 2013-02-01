@@ -80,6 +80,10 @@ vnoremap q gq
 map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
 map <Enter> o<ESC>
 
+" Map Shift+j to Page Down, and Shift+k to Page Up
+nnoremap <S-j> <PageDown>
+nnoremap <S-k> <PageUp>
+
 
 " Directories *****************************************************************
 " Setup backup location and enable
