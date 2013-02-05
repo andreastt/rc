@@ -16,8 +16,8 @@ set autoindent
 
 
 " Whitespaces ****************************************************************
-set listchars=tab:»·,trail:·
-set list
+"set listchars=tab:»·,trail:·
+"set list
 
 
 " Comments *******************************************************************

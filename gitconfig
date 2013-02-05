@@ -31,7 +31,7 @@
 
 [branch]
   autosetupmerge = true
-	autosetuprebase = always
+  autosetuprebase = always
 
 [alias]
   st = status
