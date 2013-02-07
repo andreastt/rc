@@ -27,3 +27,7 @@ alias la='ls -ah'
 alias l='ls -lah'
 alias sl=ls
 alias v=vim
+
+# Other machines
+alias njord='ssh -XC ato@sny.no'
+alias work='ssh -XC id-6895.users.oslo.osa'
