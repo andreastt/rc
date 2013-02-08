@@ -1,10 +1,11 @@
+export PAGER=more
 export EDITOR=vim
 export TERMINAL=xterm
 export PATH="$PATH:$HOME/dev/depot_tools"
 
 # Plan 9
-#PLAN9=/home/ato/Downloads/plan9port export PLAN9
-#PATH=$PATH:$PLAN9/bin export PATH
+export PLAN9=/usr/local/plan9
+export PATH=$PATH:$PLAN9/bin
 
 # Go
 #export PATH="/usr/local/go/bin:$PATH"

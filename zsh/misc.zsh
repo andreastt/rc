@@ -9,7 +9,6 @@ setopt long_list_jobs
 #setopt No_prompt_cr
 #setopt No_prompt_sp
 
-export PAGER=less
 export LC_CTYPE=en_US.UTF-8
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \. "$HOME/.rvm/scripts/rvm"

@@ -1,8 +1,75 @@
 emacs.fullscreen: maximized
 
+! tangoesque scheme
+!*background: #111111
+!*foreground: #babdb6
+! Black (not tango) + DarkGrey
+!*color0:  #000000
+!*color8:  #555753
+! DarkRed + Red
+!*color1:  #ff6565
+!*color9:  #ff8d8d
+! DarkGreen + Green
+!*color2:  #93d44f
+!*color10: #c8e7a8
+! DarkYellow + Yellow
+!*color3:  #eab93d
+!*color11: #ffc123
+! DarkBlue + Blue
+!*color4:  #204a87
+!*color12: #3465a4
+! DarkMagenta + Magenta
+!*color5:  #ce5c00
+!*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+!*color6:  #89b6e2
+!*color14: #46a4ff
+! LightGrey + White
+!*color7:  #cccccc
+!*color15: #ffffff
+
+! Xft settings ---------------------------------------------------------------
+
+!Xft.dpi:        96
+!xft.antialias:  true
+!Xft.rgba:       rgb
+!Xft.hinting:    true
+!Xft.hintstyle:  hintslight
+
+! Xterm ----------------------------------------------------------------------
 xterm*boldMode: false
+xterm*dynamicColors: true
+xterm*utf8: 2
+xterm*eightBitInput:      true
+xterm*saveLines:          512
+xterm*scrollKey:          true
+xterm*scrollTtyOutput:    false
+xterm*scrollBar:          true
+xterm*jumpScroll:         true
+xterm*multiScroll:        true
+xterm*toolBar:            false
 xterm*background: white
-xterm*foreground: black
-xterm*cursorColor: white
+xterm*vt100*geometry: 80x50
+!xterm*cursorColor: white
 xterm*metaSendsEscape: true
-xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*
+
+!xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-12-*-*
+
+!xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
+xterm*font: -*-lucidatypewriter-*-*-*-*-12-140-*-*-*-*-*-*
+
+!xterm*faceName: DejaVu Sans Mono:pixelsize=12
+!xterm*faceName: Lucida Medium:pixelsize=12
+!xterm*faceName: Droid Sans
+
+!xterm*faceName: LucidaTypewriter Bold
+!xterm*faceSize: 9
+
+
+! xpdf -----------------------------------------------------------------------
+xpdf*enableFreetype:    yes
+xpdf*antialias:         yes
+xpdf*foreground:        black
+xpdf*background:        white
+xpdf*urlCommand:        /usr/bin/firefox %s
+

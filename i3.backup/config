@@ -1,14 +1,13 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-bold--13-120-75-75-C-70-iso10646-1
-font -*-lucidatypewriter-*-*-*-*-12-140-*-*-*-*-*-*
+font -misc-fixed-medium-r-bold--13-120-75-75-C-70-iso10646-1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm #i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+C kill
@@ -130,8 +129,8 @@ bar {
         position top
         mode hide
         colors {
-          background #333333
-          statusline #888888
+          background #000000
+          statusline #ffffff
         }
 }
 
@@ -145,19 +144,3 @@ bindsym XF86AudioMute exec ~/bin/toggle-mute
 
 # Lock
 bindsym $mod+control+L exec i3lock
-
-new_window 1pixel
-new_float 1pixel
-
-floating_minimum_size 75 x 50
-floating_maximum_size 900 x 700
-
-#for_window [class="XTerm"] floating enable
-for_window [class="(?)"] floating enable
-
-# Colors
-# class                 border  bg      fg      indicator
-client.focused          #4c7899 #9eeeee #343434 #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
