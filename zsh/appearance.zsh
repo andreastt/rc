@@ -43,7 +43,7 @@ _collapse_pwd() {
 }
 
 #PROMPT='$(_collapse_pwd) $FX[bold]$FG[036]●$FX[reset] '
-PROMPT='$(_collapse_pwd) $FX[bold]$FG[036]%%$FX[reset] '
+PROMPT='$(_collapse_pwd) $FX[bold]$FG[030]%%$FX[reset] '
 
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
 RPROMPT='${return_status}%{$reset_color%}'

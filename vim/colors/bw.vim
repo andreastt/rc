@@ -33,29 +33,29 @@ hi Search ctermbg=11 ctermfg=0
 hi ModeMsg ctermfg=0 ctermbg=11
 hi MoreMsg gui=bold guifg=ForestGreen
 hi Question gui=bold guifg=ForestGreen
-hi WarningMsg gui=bold guifg=Red
+hi WarningMsg ctermbg=9
 
 hi Comment ctermfg=8 ctermbg=NONE
 hi Special ctermfg=8
 hi Error ctermfg=15 ctermbg=197
-hi Identifier gui=none guifg=Sienna4 ctermfg=12
-hi PreProc gui=none guifg=RoyalBlue3 ctermfg=12
-hi Todo cterm=bold ctermbg=194 ctermfg=28
-hi Type gui=bold guifg=RoyalBlue4 ctermfg=62
+hi Identifier ctermfg=0
+hi PreProc ctermfg=0
+hi Todo cterm=bold ctermfg=21 ctermbg=NONE
+hi Type ctermfg=0
 hi Underlined gui=underline guifg=Blue
 hi Directory ctermfg=132
 hi Pmenu ctermfg=250 ctermbg=238
 hi PmenuSel ctermbg=214 ctermfg=16
 
-hi Boolean ctermfg=76
-hi Constant gui=none guifg=ForestGreen
-hi Number gui=bold guifg=ForestGreen
-hi String ctermfg=8
+hi Boolean ctermfg=0
+hi Constant ctermfg=0
+hi Number ctermfg=0
+hi String ctermfg=0
 hi helpNote ctermbg=220 ctermfg=16
 
 hi Label gui=bold,underline guifg=Sienna4
-hi Statement gui=bold guifg=#bb88bb ctermfg=12
-hi htmlStatement ctermfg=132
+hi Statement ctermfg=0
+hi htmlStatement ctermfg=0
 
 hi htmlBold gui=bold
 hi htmlItalic gui=italic

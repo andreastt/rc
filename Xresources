@@ -49,6 +49,7 @@ xterm*jumpScroll:         true
 xterm*multiScroll:        true
 xterm*toolBar:            false
 xterm*background: white
+xterm*foreground: black
 xterm*vt100*geometry: 80x50
 !xterm*cursorColor: white
 xterm*metaSendsEscape: true
@@ -56,7 +57,7 @@ xterm*metaSendsEscape: true
 !xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-12-*-*
 
 !xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
-xterm*font: -*-lucidatypewriter-*-*-*-*-12-140-*-*-*-*-*-*
+xterm*font: -*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-*-*
 
 !xterm*faceName: DejaVu Sans Mono:pixelsize=12
 !xterm*faceName: Lucida Medium:pixelsize=12
@@ -71,5 +72,5 @@ xpdf*enableFreetype:    yes
 xpdf*antialias:         yes
 xpdf*foreground:        black
 xpdf*background:        white
-xpdf*urlCommand:        /usr/bin/firefox %s
+xpdf*urlCommand:        /usr/bin/chromium-browser %s
 
