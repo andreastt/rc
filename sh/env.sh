@@ -1,4 +1,4 @@
-export PAGER=more
+export PAGER=less
 export EDITOR=vim
 export TERMINAL=xterm
 export PATH="$PATH:$HOME/dev/depot_tools"
