@@ -57,6 +57,9 @@ OBJECT_PUNCTUATORS = {
 
 ENTITY_SCOPE = "entity.name.function, entity.name.type, meta.toc-list"
 
+RUBY_SPECIAL_ENDINGS = "\?|!"
+RUBY_SCOPES = ".*(ruby|rails).*"
+
 ################################# AAA* IMPORTS #################################
 # Inlined 07/26/11 20:39:51#
 ############################
@@ -325,26 +328,11 @@ def commonfolder(m):
 
     return os.path.sep.join(s1)
 
-def tagged_project_files(view, tag_dir):
-    window = view.window()
-    if not window: return []
-    project = None #window.project()
-    fn = view_fn(view)
-
-    if not project or ( project and
-                        not  fn.startswith(dirname(project.fileName())) ):
-        prefix_arg = fn
-        files = glob.glob(join(dirname(fn),"*"))
-    else:
-        prefix_arg = project.fileName()
-        mount_points = project.mountPoints()
-        files = list( chain(*(d['files'] for d in mount_points)) )
-
-    common_prefix = commonfolder([tag_dir, prefix_arg])
-
-    return [fn[len(common_prefix)+1:] for fn in files]
-
 def files_to_search(view, tags_file, multiple=True):
+
+    if multiple:
+        return []
+
     fn = view.file_name()
     if not fn: return
 
@@ -352,11 +340,6 @@ def files_to_search(view, tags_file, multiple=True):
 
     common_prefix = commonfolder([tag_dir, fn])
     files = [fn[len(common_prefix)+1:]]
-
-    if multiple:
-        files.pop()
-        more_files = tagged_project_files(view, tag_dir)
-        files.extend(more_files)
 
     return files
 
@@ -545,13 +528,23 @@ class JumpToDefinition:
 
 class NavigateToDefinition(sublime_plugin.TextCommand):
     is_enabled = check_if_building
+    def __init__(self, args):
+      sublime_plugin.TextCommand.__init__(self,args)
+      self.scopes = re.compile(RUBY_SCOPES)
+      self.endings = re.compile(RUBY_SPECIAL_ENDINGS)
 
     def is_visible(self):
         return setting("show_context_menus")
 
     @ctags_goto_command(jump_directly_if_one=True)
     def run(self, view, args, tags_file):
-        symbol = view.substr(view.word(view.sel()[0]))
+        region = view.sel()[0]
+        if region.begin() == region.end(): #point
+          region = view.word(region)
+          if self.scopes.match(view.syntax_name(view.sel()[0].b)) is not None:
+            if self.endings.match(view.substr(sublime.Region(region.end(), region.end()+1))) is not None:
+              region = sublime.Region(region.begin(), region.end()+1)
+        symbol = view.substr(region)
         return JumpToDefinition.run(symbol, view, tags_file)
 
 
@@ -631,7 +624,7 @@ class ShowSymbols(sublime_plugin.TextCommand):
                 sublime.status_message(
                     'No symbols found **FOR CURRENT FILE**; Try Rebuild?' )
 
-        path_cols = (0, ) if len(files) > 1 else ()
+        path_cols = (0, ) if len(files) > 1 or multi else ()
         formatting = functools.partial( format_tag_for_quickopen,
                                         file = bool(path_cols)  )
 
@@ -677,6 +670,7 @@ class rebuild_tags(sublime_plugin.TextCommand):
 
         command = setting('command', setting('ctags_command'))
         self.build_ctags(command, tag_files)
+        GetAllCTagsList.ctags_list = []  # clear the cached ctags list
 
     @threaded(msg="Already running CTags!")
     def build_ctags(self, cmd, tag_files):
@@ -694,16 +688,41 @@ class rebuild_tags(sublime_plugin.TextCommand):
 
 ################################# AUTOCOMPLETE #################################
 
-# class CTagsAutoComplete(sublime_plugin.EventListener):
-#     def on_query_completions(self, view, prefix, locations):
-#         tags = find_tags_relative_to(view.file_name())
-#         completions = []
+class GetAllCTagsList():
+    ctags_list = []
+    """cache all the ctags list"""
+    def __init__(self, list):
+        self.ctags_list = list
 
-#         if tags:
-#             tag_file = TagFile(tags, SYMBOL, MATCHES_STARTWITH)
-#             completions = [(a,a) for a in sorted(tag_file.get_tags_dict(prefix[0]))]
+class CTagsAutoComplete(sublime_plugin.EventListener):
+    def on_query_completions(self, view, prefix, locations):
+        if setting('autocomplete'):
+            prefix = prefix.strip().lower()
+            tags_path = view.window().folders()[0]+"/.tags"
 
-#         return []
+            sub_results = [v.extract_completions(prefix) for v in sublime.active_window().views()]
+            sub_results = [(item,item) for sublist in sub_results for item in sublist] #flatten
+
+            if GetAllCTagsList.ctags_list:
+                results = [sublist for sublist in GetAllCTagsList.ctags_list if sublist[0].lower().startswith(prefix)]
+                results = list(set(results).union(set(sub_results)))
+                results.sort()
+                return results
+            else:
+                tags = []
+                if (not view.window().folders() or not os.path.exists(tags_path)): #check if a project is open and the .tags file exists
+                    return tags
+                f=os.popen("awk '{ print $1 }' '" + tags_path + "'")
+                for i in f.readlines():
+                    tags.append([i.strip()])
+                tags = [(item,item) for sublist in tags for item in sublist] #flatten
+                tags = list(set(tags)) # make unique
+                tags.sort()
+                GetAllCTagsList.ctags_list = tags
+                results = [sublist for sublist in GetAllCTagsList.ctags_list if sublist[0].lower().startswith(prefix)]
+                results = list(set(results).union(set(sub_results)))
+                results.sort()
+                return results
 
 ##################################### TEST #####################################
 
