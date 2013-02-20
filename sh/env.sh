@@ -31,4 +31,7 @@ export GYP_PARALLEL=1
 export haltonerror=0
 export haltonfailure=0
 
+# Goth
+export GOTH=~/dev/goth/client
+
 export GITHUB_USER="andreastt"
