@@ -135,9 +135,6 @@ bar {
         }
 }
 
-# Bind Caps Lock to Control
-exec_always xmodmap ~/.Xmodmap
-
 # Audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
@@ -161,3 +158,14 @@ client.focused          #4c7899 #9eeeee #343434 #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
+
+exec gnome-settings-daemon
+exec nm-applet
+exec bluetooth-applet
+exec gnome-sound-applet
+
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id xrdb -merge ~/.Xresources
+
+exec --no-startup-id xsetroot -solid "#777777"
+
