@@ -1,7 +1,12 @@
 export PAGER=less
 export EDITOR=vim
 export TERMINAL=xterm
-export PATH="$PATH:$HOME/dev/depot_tools"
+
+# local bin
+export PATH=$PATH:$HOME/bin
+
+# depot tools
+export PATH=$PATH:$HOME/dev/depot_tools
 
 # Plan 9
 export PLAN9=/usr/local/plan9
@@ -22,19 +27,8 @@ export GOROOT="$HOME/bin/go"
 export GYP_GENERATORS=ninja
 export GYP_PARALLEL=1
 
-# IntelliJ
-export PATH="$PATH:$HOME/bin/idea-IC-103.255/bin"
-
-# WebC
-export PATH="$PATH:$HOME/dev/webc-java/bin"
-export WEBC_HOME=/home/ato/dev/webc-java
-
 # Selenium test suites will continue running even if they reach an error or fail
 export haltonerror=0
 export haltonfailure=0
-
-export SELENIUM_SERVER_JAR=~/selenium-server-standalone-2.25.0.jar
-
-export WATIR_WEBDRIVER_BROWSER=opera
 
 export GITHUB_USER="andreastt"
