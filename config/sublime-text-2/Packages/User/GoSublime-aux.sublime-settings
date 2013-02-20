@@ -1,5 +1,5 @@
 {
 	"changelog.rev": "r12.11.28-1",
-	"mg9_install_tokens": "r13.02.08-2",
+	"mg9_install_tokens": "https://gosublime.org/ 96607ef1aca5c793ae2303dfaaea5ed0b510f6b9 28c28bcb790d54f69acfc82f6b28f3fa1db3686a:2029651\nhttps://github.com/nsf/gocode d4c28a0d7a79ddc9d3dbc582b964789a8e213c7c 8f5bc4b6521c499f2b691813d923d4670ee1ebd8:5913622",
 	"version": "r13.02.08-2"
 }

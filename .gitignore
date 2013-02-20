@@ -1,4 +1,4 @@
-..DS_Store
+.DS_Store
 vim/.netrwhist
 IdeaIC10/config/componentVersions/*
 IdeaIC10/config/tasks/*
@@ -30,3 +30,4 @@ emacs.before_ecb_2.40
 *.cache
 *.elc
 vim/.VimballRecord
+config/sublime-text-2/Packages/User/Package\ Control.last-run

@@ -1015,6 +1015,7 @@ MarGo9: Missing environment variable(s): GOPATH
 MarGo9: Missing environment variable(s): GOPATH
 --------------------------------
 
-** 2013-02-20 01:11:56.327414 **:
-MarGo: Missing environment variable(s): GOPATH
+** 2013-02-13 19:28:05.841069 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: gosublime.r13.02.08-2.margo.exe: command not found
 --------------------------------
