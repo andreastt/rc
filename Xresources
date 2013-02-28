@@ -56,8 +56,8 @@ xterm*metaSendsEscape: true
 
 !xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-12-*-*
 
-!xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
-xterm*font: -*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-*-*
+xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
+!xterm*font: -*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-*-*
 
 !xterm*faceName: DejaVu Sans Mono:pixelsize=12
 !xterm*faceName: Lucida Medium:pixelsize=12

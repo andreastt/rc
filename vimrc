@@ -54,7 +54,8 @@ set smartcase  " Ignore case when searching lowercase
 set t_Co=256 " 256 colors
 syntax on
 
-colorscheme bw
+"colorscheme bw
+colorscheme cleanroom
 "colorscheme muon
 "colorscheme beauty256
 

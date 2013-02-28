@@ -169,3 +169,9 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 
 exec --no-startup-id xsetroot -solid "#777777"
 
+# TODO: move this to the Xorg config
+exec synclient TapButton1=1
+exec synclient TapButton2=2
+exec synclient TapButton3=3
+
+exec xset b off
