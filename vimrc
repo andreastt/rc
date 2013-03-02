@@ -70,10 +70,6 @@ set textwidth=0
 
 " Mappings ********************************************************************
 
-" Rebind Tab to call C-f
-set cinkeys=!^F
-inoremap <Tab> <C-f>
-
 " Have Q reform things that look similar to what surrounds the cursor, or just
 " format the paragraph if in visual mode.
 nmap q gqay
