@@ -35,3 +35,6 @@ export haltonfailure=0
 export GOTH=~/dev/goth/client
 
 export GITHUB_USER="andreastt"
+
+# Don't write .pyc files
+export PYTHONDONTWRITEBYTECODE=1
