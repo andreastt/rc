@@ -81,7 +81,7 @@
 (when is-mac (require 'mac))
 
 ;; Emacs server
-(server-start)
+;(server-start)
 
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)
