@@ -28,6 +28,9 @@
 ;;                             (height . 45)
 ;;                             ))
 
+;; Font
+(set-face-attribute 'default nil :font "Ubuntu Mono-12")
+
 ;; Make zooming affect frame instead of buffers
 (require 'zoom-frm)
 
