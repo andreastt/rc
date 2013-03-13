@@ -13,10 +13,8 @@ export PLAN9=/usr/local/plan9
 export PATH=$PATH:$PLAN9/bin
 
 # Go
-#export PATH="/usr/local/go/bin:$PATH"
-#export PATH="$HOME/bin/go/bin:/usr/local/go/bin:$PATH"
-export PATH="$HOME/bin/go/bin:$PATH"
-export GOROOT="$HOME/bin/go"
+export PATH="$HOME/dev/go/bin:$PATH"
+export GOROOT="$HOME/dev/go"
 
 # Compilation
 #export CC="ccache clang"
