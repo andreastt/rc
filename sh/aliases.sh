@@ -13,7 +13,6 @@ alias ...='cd ../..'
 alias md='mkdir -p'
 alias rd=rmdir
 
-alias d='cd ~/Desktop'
 alias h='cd ~/'
 
 alias reload='source ~/.zshrc'

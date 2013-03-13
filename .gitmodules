@@ -40,3 +40,9 @@
 [submodule "emacs.d/vendor/egit"]
 	path = emacs.d/vendor/egit
 	url = https://github.com/jimhourihan/egit.git
+[submodule "emacs.d/vendor/goflymake"]
+	path = emacs.d/vendor/goflymake
+	url = https://github.com/dougm/goflymake.git
+[submodule "emacs.d/vendor/go-errcheck"]
+	path = emacs.d/vendor/go-errcheck
+	url = https://github.com/dominikh/go-errcheck.el.git
