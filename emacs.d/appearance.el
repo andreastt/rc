@@ -15,21 +15,24 @@
 ;; Cursor type
 (setq-default cursor-type 'bar)
 
+;; Show whitespace
+(setq-default show-trailing-whitespace t)
+
 ;; Menu bar looks nice in Unity now
 (menu-bar-mode -1)
 
 ;; Ditch them scroll bars
 (scroll-bar-mode -1)
 
-;; ;; Window size
-(setq default-frame-alist '(
+;; Window size
+;; (setq default-frame-alist '(
 ;;                             (font . "7x13bold")
-                            (width . 90)
-                            (height . 45)
-                            ))
+;;                             (width . 90)
+;;                             (height . 45)
+;;                             ))
 
 ;; Font
-(set-face-attribute 'default nil :font "Ubuntu Mono-11")
+;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
 
 ;; Make zooming affect frame instead of buffers
 (require 'zoom-frm)

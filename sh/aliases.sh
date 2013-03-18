@@ -25,6 +25,9 @@ alias ls='ls -G'
 alias la='ls -ah'
 alias l='ls -lah'
 alias sl=ls
+
+# Commonly used programs
+alias e="emacs -nw"
 alias v=vim
 
 # Other machines

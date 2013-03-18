@@ -56,10 +56,10 @@ xterm*metaSendsEscape: true
 
 !xterm*font: -*-fixed-bold-*-*-*-13-*-*-*-*-12-*-*
 
-!xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
+xterm*font: -*-lucidatypewriter-bold-*-*-*-12-140-*-*-*-*-*-*
 
 !xterm*faceName: DejaVu Sans Mono:pixelsize=12
-xterm*faceName: Ubuntu Mono:pixelsize=14
+!xterm*faceName: Ubuntu Mono:pixelsize=14
 !xterm*faceName: Lucida Medium:pixelsize=12
 !xterm*faceName: Droid Sans
 
