@@ -1,36 +1,26 @@
-;;; go-mode-load.el --- Major mode for the Go programming language
-
+;;; go-mode-load.el --- automatically extracted autoloads
 ;;; Commentary:
 
 ;; To install go-mode, add the following lines to your .emacs file:
 ;;   (add-to-list 'load-path "PATH CONTAINING go-mode-load.el" t)
 ;;   (require 'go-mode-load)
+;;
 ;; After this, go-mode will be used for files ending in '.go'.
-
+;;
 ;; To compile go-mode from the command line, run the following
 ;;   emacs -batch -f batch-byte-compile go-mode.el
-
+;;
 ;; See go-mode.el for documentation.
-
-;;; Code:
-
+;;
 ;; To update this file, evaluate the following form
 ;;   (let ((generated-autoload-file buffer-file-name)) (update-file-autoloads "go-mode.el"))
 
-(defun my-go-mode-hook ()
-  ;; Use godef to jump to definition
-  (define-key go-mode-map (kbd "M-.") 'godef-jump)
+;;; Code:
 
-  ;; On-the-fly compile checking
-  (require 'go-flymake)
-
-  ;; Auto completion
-  (require 'go-autocomplete)
-  (require 'auto-complete-config)
-
-  ;; Error checking
-  (require 'go-errcheck))
-(add-hook 'go-mode-hook 'my-go-mode-hook)
+
+;;;### (autoloads (go-download-play godoc gofmt-before-save go-mode)
+;;;;;;  "go-mode" "go-mode.el" (20767 50749))
+;;; Generated autoloads from go-mode.el
 
 (autoload 'go-mode "go-mode" "\
 Major mode for editing Go source text.
@@ -94,4 +84,13 @@ buffer. Tries to look for a URL at point.
 
 \(fn URL)" t nil)
 
+;;;***
+
 (provide 'go-mode-load)
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; go-mode-load.el ends here
