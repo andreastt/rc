@@ -3,6 +3,52 @@ GoSublime Changes
 
 Note: you may need to restart Sublime Text after GoSublime updates
 
+## r13.03.24-3
+	* wait for mg9.install to finish before attempting to send any request to margo.
+		fixes a false-positive error about the mg binary being missing before installtion completes
+
+## a13.03.24-2
+	* fix call to getcwdu(not in py3k)
+
+## r13.03.24-1
+	* communicate a tag/version between gs and mg so the case where they're out-of-sync can be detected
+
+
+## r13.03.23-2
+	* use getcwdu instead of getcwd in hopes of avoiding python issues
+
+## r13.03.23-1
+	* foreign platform binaries will no longer be cleaned up
+		e.g. where the current platform is linux-x64, a linux-x32 binary (gosublime.margo.r13.03.23-1.linux-x32.exe)
+			will not be cleaned up until you load st2 on linux-x32
+
+## r13.03.20-1
+	* MarGo EXE name has changed to gosublime.margo.[VERSION].[platform]-[arch].exe
+		e.g. gosublime.margo.r13.03.20-1.linux-x64.exe
+
+## r13.03.16-2
+	* use the first action on a line if an action is triggered in the wrong place
+		e.g. if there is a filename and an error message, clicking on the error message will
+		9o will now try find the filename
+
+## r13.03.16-1
+	* add imports to the top of the block. this causes them to be a part of the first group of imports
+		in cases where imports are group by separating them with a space
+
+## r13.03.03-1
+	* reduce false-positives in gs.flag linter
+	* fix margo help/flags (remove gocode flags from the output)
+
+## r13.03.02-1
+	* cap the number of concurrent requests margo will process
+
+## r13.03.01-1
+	* add go/types (like the old gotype) linter
+	* disable go/types linter by default:
+	    to enabled it, set an empty filter list in your user settings e.g. `"lint_filter": []`
+
+## r13.02.24-1
+	* add new setting `lint_filter`. see the default settings for documentation
 
 ## r13.02.09-1
 	*impl 9o `hist` command

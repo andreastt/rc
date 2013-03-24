@@ -54,12 +54,22 @@ class GsLintThread(threading.Thread):
 			fr = ref(fn, False)
 			if fr:
 				reports = {}
-				res, _ = mg9.bcall('lint', {'fn': fn, 'src': fr.src})
+				res, _ = mg9.bcall('lint', {
+					'dir': (os.path.dirname(fn) if fn else ''),
+					'fn': fn,
+					'src': fr.src,
+					'filter': gs.setting('lint_filter', []),
+				})
 				res = gs.dval(res, {})
 				for r in gs.dval(res.get('reports'), []):
-					row = r.get('row', 0)
-					col = r.get('col', 0)
-					msg = r.get('message', '')
+					if fn and fn != '<stdin>' and r.get('Fn') != fn:
+						continue
+
+					kind = r.get('Kind', '')
+					row = r.get('Row', 0)
+					col = r.get('Col', 0)
+					msg = r.get('Message', '')
+					msg = '%s: %s' % (kind, msg)
 					if row >= 0 and msg:
 						reports[row] = Report(row, col, msg)
 

@@ -458,6 +458,10 @@ func check_for_builtin_funcs(typ *ast.Ident, c *ast.CallExpr, scope *scope) (ast
 }
 
 func func_return_type(f *ast.FuncType, index int) ast.Expr {
+	if f.Results == nil {
+		return nil
+	}
+
 	if index == -1 {
 		return f.Results.List[0].Type
 	}
@@ -1095,10 +1099,7 @@ func pretty_print_type_expr(out io.Writer, e ast.Expr) {
 		// and simply discard declarations with BadExpr as a part of their
 		// type
 	default:
-		// should never happen
-		ty := reflect.TypeOf(t)
-		s := fmt.Sprintf("unknown type: %s\n", ty.String())
-		panic(s)
+		// the element has some weird type, just ignore it
 	}
 }
 

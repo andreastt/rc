@@ -16,6 +16,8 @@ import uuid
 DOMAIN = 'MarGo'
 REQUEST_PREFIX = '%s.rqst.' % DOMAIN
 PROC_ATTR_NAME = 'mg9.proc'
+TAG = about.VERSION
+INSTALL_ATTR_NAME = 'mg9.install.%s' % about.VERSION
 
 def gs_init():
 	atexit.register(killSrv)
@@ -34,6 +36,13 @@ class Request(object):
 		else:
 			self.token = 'mg9.autoken.%s' % uuid.uuid4()
 
+	def header(self):
+		return {
+			'method': self.method,
+			'token': self.token,
+		}
+
+
 def _margo_src():
 	return gs.dist_path('margo9')
 
@@ -48,6 +57,7 @@ def sanity_check(env={}):
 
 	return [
 		('version', about.VERSION),
+		('platform', about.PLATFORM),
 		('~bin', '%s' % gs.home_path('bin')),
 		('MarGo', '%s (%s)' % _tp(_margo_bin())),
 		('GOROOT', '%s' % env.get('GOROOT', ns)),
@@ -59,8 +69,10 @@ def _check_changes():
 	def cb():
 		aso = gs.aso()
 		old_version = aso.get('version', '')
-		if about.VERSION > old_version:
+		old_ann = aso.get('ann', '')
+		if about.VERSION > old_version or about.ANN > old_ann:
 			aso.set('version', about.VERSION)
+			aso.set('ann', about.ANN)
 			gs.save_aso()
 			gs.focus(gs.dist_path('CHANGELOG.md'))
 
@@ -100,12 +112,11 @@ def maybe_install():
 		install('', True)
 
 def install(aso_tokens, force_install):
-	k = 'mg9.install.%s' % about.VERSION
-	if gs.attr(k, False):
-		gs.error(DOMAIN, 'Installation aborted. Install command already called for GoSublime %s.' % about.VERSION)
+	if gs.attr(INSTALL_ATTR_NAME, '') != "":
+		gs.notify(DOMAIN, 'Installation aborted. Install command already called for GoSublime %s.' % about.VERSION)
 		return
 
-	gs.set_attr(k, True)
+	gs.set_attr(INSTALL_ATTR_NAME, 'busy')
 
 	init_start = time.time()
 
@@ -164,9 +175,10 @@ def install(aso_tokens, force_install):
 	report_x = lambda: gs.println("GoSublime: Exception while cleaning up old binaries", gs.traceback())
 	try:
 		d = gs.home_path('bin')
+		old_pat = re.compile(r'^gosublime.r\d{2}.\d{2}.\d{2}-\d+.margo.exe$')
 		for fn in os.listdir(d):
 			try:
-				if fn != about.MARGO_EXE and fn.startswith(('gosublime', 'gocode', 'margo')):
+				if fn != about.MARGO_EXE and (about.MARGO_EXE_PAT.match(fn) or old_pat.match(fn)):
 					fn = os.path.join(d, fn)
 					gs.println("GoSublime: removing old binary: %s" % fn)
 					os.remove(fn)
@@ -174,6 +186,8 @@ def install(aso_tokens, force_install):
 				report_x()
 	except Exception:
 		report_x()
+
+	gs.set_attr(INSTALL_ATTR_NAME, 'done')
 
 def _gen_tokens():
 	return about.VERSION
@@ -323,19 +337,30 @@ def _recv():
 				if ln:
 					r, _ = gs.json_decode(ln, {})
 					token = r.get('token', '')
+					tag = r.get('tag', '')
 					k = REQUEST_PREFIX+token
 					req = gs.attr(k)
 					gs.del_attr(k)
 					if req and req.f:
-						gs.debug(DOMAIN, "margo response: method: %s, token: %s, dur: %0.3fs, err: `%s'" % (
-							req.method,
-							req.token,
-							(time.time() - req.tm),
-							r.get('error', ''),
-						))
+						if tag != TAG:
+							gs.notice(DOMAIN, "\n".join([
+								"GoSublime/MarGo appears to be out-of-sync.",
+								"Maybe restart Sublime Text.",
+								"Received tag `%s', expected tag `%s'. " % (tag, TAG),
+							]))
+
+						err = r.get('error', '')
+
+						gs.debug(DOMAIN, "margo response: %s" % {
+							'method': req.method,
+							'tag': tag,
+							'token': token,
+							'dur': '%0.3fs' % (time.time() - req.tm),
+							'err': err,
+							'size': '%0.1fK' % (len(ln)/1024.0),
+						})
 
 						dat = expand_jdata(r.get('data', {}))
-						err = r.get('error', '')
 						try:
 							keep = req.f(dat, err) is not True
 							if keep:
@@ -360,12 +385,17 @@ def _send():
 				proc = gs.attr(PROC_ATTR_NAME)
 				if not proc or proc.poll() is not None:
 					killSrv()
-					maybe_install()
+
+					if gs.attr(INSTALL_ATTR_NAME) != "busy":
+						maybe_install()
 
 					if not gs.checked(DOMAIN, 'launch _recv'):
 						gsq.launch(DOMAIN, _recv)
 
-					proc, _, err = gsshell.proc([_margo_bin(), '-poll=30'], stderr=gs.LOGFILE ,env={
+					while gs.attr(INSTALL_ATTR_NAME) == "busy":
+						time.sleep(0.100)
+
+					proc, _, err = gsshell.proc([_margo_bin(), '-poll', 30, '-tag', TAG], stderr=gs.LOGFILE ,env={
 						'XDG_CONFIG_HOME': gs.home_path(),
 					})
 					gs.set_attr(PROC_ATTR_NAME, proc)
@@ -383,10 +413,18 @@ def _send():
 				req = Request(f=cb, method=method)
 				gs.set_attr(REQUEST_PREFIX+req.token, req)
 
-				gs.debug(DOMAIN, 'margo request: method: %s, token: %s' % (req.method, req.token))
+				header, err = gs.json_encode(req.header())
+				if err:
+					_cb_err('Failed to construct ipc header: ' % err)
+					continue
 
-				header, _ = gs.json_encode({'method': method, 'token': req.token})
-				body, _ = gs.json_encode(arg)
+				body, err = gs.json_encode(arg)
+				if err:
+					_cb_err(cb, 'Failed to construct ipc body: ' % err)
+					continue
+
+				gs.debug(DOMAIN, 'margo request: %s ' % header)
+
 				ln = '%s %s\n' % (header, body)
 
 				if gs.PY3K:
@@ -399,6 +437,11 @@ def _send():
 		except Exception:
 			gs.println(gs.traceback())
 			break
+
+def _cb_err(cb, err):
+	gs.error(DOMAIN, err)
+	cb({}, err)
+
 
 def _read_stdout(proc):
 	try:

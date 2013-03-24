@@ -2,6 +2,7 @@
 	"color_scheme": "Packages/Color Scheme - Default/ato.tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
+	"font_size": 9,
 	"highlight_line": true,
 	"ignored_packages":
 	[
