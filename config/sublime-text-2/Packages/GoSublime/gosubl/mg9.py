@@ -49,13 +49,32 @@ def _margo_src():
 def _margo_bin():
 	return gs.home_path('bin', about.MARGO_EXE)
 
-def sanity_check(env={}):
+def sanity_check_sl(sl):
+	n = 0
+	for p in sl:
+		n = max(n, len(p[0]))
+
+	t = '%d' % n
+	t = '| %'+t+'s: %s'
+	indent = '| %s> ' % (' ' * n)
+
+	a = '~%s' % os.sep
+	b = os.path.expanduser(a)
+
+	return [t % (k, v.replace(b, a).replace('\n', '\n%s' % indent)) for k,v in sl]
+
+def sanity_check(env={}, error_log=False):
 	if not env:
 		env = gs.env()
 
 	ns = '(not set)'
 
-	return [
+	sl = [
+		('install state', gs.attr(INSTALL_ATTR_NAME, '')),
+		('sublime.version', sublime.version()),
+		('sublime.channel', sublime.channel()),
+		('about.ann', gs.attr('about.ann', '')),
+		('about.version', gs.attr('about.version', '')),
 		('version', about.VERSION),
 		('platform', about.PLATFORM),
 		('~bin', '%s' % gs.home_path('bin')),
@@ -65,18 +84,15 @@ def sanity_check(env={}):
 		('GOBIN', '%s (should usually be `%s`)' % (env.get('GOBIN', ns), ns)),
 	]
 
-def _check_changes():
-	def cb():
-		aso = gs.aso()
-		old_version = aso.get('version', '')
-		old_ann = aso.get('ann', '')
-		if about.VERSION > old_version or about.ANN > old_ann:
-			aso.set('version', about.VERSION)
-			aso.set('ann', about.ANN)
-			gs.save_aso()
-			gs.focus(gs.dist_path('CHANGELOG.md'))
+	if error_log:
+		try:
+			with open(gs.home_path('log.txt'), 'r') as f:
+				s = f.read().strip()
+				sl.append(('error log', s))
+		except Exception:
+			pass
 
-	sublime.set_timeout(cb, 0)
+	return sl
 
 def _sb(s):
 	bdir = gs.home_path('bin')
@@ -94,7 +110,7 @@ def _so(out, err, start, end):
 	if ok:
 		out = 'ok %0.3fs' % (end - start)
 	else:
-		out = '%s\n%s' % (out, err)
+		out = u'%s\n%s' % (out, err)
 	return (out.strip(), ok)
 
 def _run(cmd, cwd=None, shell=False):
@@ -131,6 +147,8 @@ def install(aso_tokens, force_install):
 		gs.notify('GoSublime', 'Installing MarGo')
 		start = time.time()
 		m_out, err, _ = _run(['go', 'build', '-o', _margo_bin()], cwd=_margo_src())
+		m_out = gs.ustr(m_out)
+		err = gs.ustr(err)
 		m_out, m_ok = _so(m_out, err, start, time.time())
 
 		if m_ok:
@@ -145,7 +163,6 @@ def install(aso_tokens, force_install):
 
 	# notify this early so we don't mask any notices below
 	gs.notify('GoSublime', 'Ready')
-	_check_changes()
 
 	if err:
 		gs.notice(DOMAIN, 'Cannot run get env vars: %s' % (err))
@@ -156,12 +173,15 @@ def install(aso_tokens, force_install):
 		else:
 			gs.environ9.update(env)
 
+	gs.set_attr(INSTALL_ATTR_NAME, 'done')
+
 	e = gs.env()
 	a = [
 		'GoSublime init (%0.3fs)' % (time.time() - init_start),
-		'| install margo: %s' % m_out,
 	]
-	a.extend(['| %14s: %s' % ln for ln in sanity_check(e)])
+	sl = [('install margo', m_out)]
+	sl.extend(sanity_check(e))
+	a.extend(sanity_check_sl(sl))
 	gs.println(*a)
 
 	missing = [k for k in ('GOROOT', 'GOPATH') if not e.get(k)]
@@ -186,8 +206,6 @@ def install(aso_tokens, force_install):
 				report_x()
 	except Exception:
 		report_x()
-
-	gs.set_attr(INSTALL_ATTR_NAME, 'done')
 
 def _gen_tokens():
 	return about.VERSION
@@ -304,13 +322,16 @@ def acall(method, arg, cb):
 	gs.mg9_send_q.put((method, arg, cb))
 
 def bcall(method, arg):
+	if gs.attr(INSTALL_ATTR_NAME, '') != "done":
+		return {}, 'Blocking call(%s) aborted: Install is not done' % method
+
 	q = gs.queue.Queue()
 	acall(method, arg, lambda r,e: q.put((r, e)))
 	try:
 		res, err = q.get(True, 1)
 		return res, err
 	except:
-		return {}, 'Blocking Call: Timeout'
+		return {}, 'Blocking Call(%s): Timeout' % method
 
 def expand_jdata(v):
 	if gs.is_a(v, {}):
@@ -339,7 +360,7 @@ def _recv():
 					token = r.get('token', '')
 					tag = r.get('tag', '')
 					k = REQUEST_PREFIX+token
-					req = gs.attr(k)
+					req = gs.attr(k, {})
 					gs.del_attr(k)
 					if req and req.f:
 						if tag != TAG:
@@ -386,28 +407,44 @@ def _send():
 				if not proc or proc.poll() is not None:
 					killSrv()
 
-					if gs.attr(INSTALL_ATTR_NAME) != "busy":
+					if gs.attr(INSTALL_ATTR_NAME, '') != "busy":
 						maybe_install()
 
 					if not gs.checked(DOMAIN, 'launch _recv'):
 						gsq.launch(DOMAIN, _recv)
 
-					while gs.attr(INSTALL_ATTR_NAME) == "busy":
+					while gs.attr(INSTALL_ATTR_NAME, '') == "busy":
 						time.sleep(0.100)
 
-					proc, _, err = gsshell.proc([_margo_bin(), '-poll', 30, '-tag', TAG], stderr=gs.LOGFILE ,env={
-						'XDG_CONFIG_HOME': gs.home_path(),
-					})
-					gs.set_attr(PROC_ATTR_NAME, proc)
+					mg_bin = _margo_bin()
+					cmd = [
+						mg_bin,
+						'-oom', gs.setting('margo_oom', 0),
+						'-poll', 30,
+						'-tag', TAG,
+					]
 
-					if not proc:
-						gs.notice(DOMAIN, 'Cannot start MarGo: %s' % err)
+					if os.path.exists(mg_bin):
+						proc, _, err = gsshell.proc(cmd, stderr=gs.LOGFILE ,env={
+							'GOGC': 10,
+							'XDG_CONFIG_HOME': gs.home_path(),
+						})
+					else:
+						proc = None
+						err = "Can't find the MarGo binary at `%s`" % mg_bin
+
+					if err or not proc or proc.poll() is not None:
+						killSrv()
+
+						gs.notice(DOMAIN, 'Cannot start MarGo:\n%s' % err)
 						try:
 							cb({}, 'Abort. Cannot start MarGo')
 						except:
 							pass
+
 						continue
 
+					gs.set_attr(PROC_ATTR_NAME, proc)
 					gsq.launch(DOMAIN, lambda: _read_stdout(proc))
 
 				req = Request(f=cb, method=method)

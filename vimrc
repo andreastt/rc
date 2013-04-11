@@ -55,9 +55,10 @@ set t_Co=256 " 256 colors
 syntax on
 
 "colorscheme bw
-colorscheme cleanroom
+"colorscheme cleanroom
 "colorscheme muon
 "colorscheme beauty256
+colorscheme vylight
 
 
 " Line Wrapping ***************************************************************

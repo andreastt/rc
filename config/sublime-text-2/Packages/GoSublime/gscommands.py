@@ -97,7 +97,7 @@ class GsCreateNewGoFileCommand(sublime_plugin.TextCommand):
 	def run(self, edit, pkg_name, file_name):
 		view = self.view
 		view.set_name(file_name)
-		view.set_syntax_file('Packages/GoSublime/GoSublime.tmLanguage')
+		view.set_syntax_file(gs.dist_path('GoSublime.tmLanguage'))
 		view.replace(edit, sublime.Region(0, view.size()), 'package %s\n' % pkg_name)
 		view.sel().clear()
 		view.sel().add(view.find(pkg_name, 0, sublime.LITERAL))
@@ -132,7 +132,7 @@ class GsShowTasksCommand(sublime_plugin.WindowCommand):
 
 class GsSanityCheckCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		s = 'GoSublime Sanity Check\n\n%s' % '\n'.join(['%7s: %s' % ln for ln in mg9.sanity_check()])
+		s = 'GoSublime Sanity Check\n\n%s' % '\n'.join(mg9.sanity_check_sl(mg9.sanity_check({}, True)))
 		gs.show_output('GoSublime', s)
 
 class GsSetOutputPanelContentCommand(sublime_plugin.TextCommand):
@@ -155,7 +155,7 @@ class GsSetOutputPanelContentCommand(sublime_plugin.TextCommand):
 
 		if syntax_file:
 			if syntax_file == 'GsDoc':
-				panel.set_syntax_file('Packages/GoSublime/GsDoc.hidden-tmLanguage')
+				panel.set_syntax_file(gs.tm_path('doc'))
 				panel.run_command("fold_by_level", { "level": 1 })
 			else:
 				panel.set_syntax_file(syntax_file)

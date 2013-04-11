@@ -3,6 +3,54 @@ GoSublime Changes
 
 Note: you may need to restart Sublime Text after GoSublime updates
 
+## 13.03.31-1
+	* use relative paths when setting syntax files: should fix any errors about not being able to load e.g. 9o.hidden-tmLanguage
+
+## 13.03.30-3
+	* update gocode to https://github.com/nsf/gocode/commit/86e62597306bc1a07d6e64e7d22cd0bb0de78fc3
+
+## 13.03.30-2
+	* restore py3k compat: execfile was removed
+
+## 13.03.30-1
+	* work-around show_call_tip hang when the file starts with a comment
+
+## 13.03.29-4
+	* impl a basic oom killer in MarGo. If MarGo's memory usage reaches 1000m, she? will die
+		you can configure this limit in the user settings ctrl+dot,ctrl+5
+		e.g. to limit the memory use to 500m use:
+
+			"margo_oom": 500
+
+## 13.03.29-3
+	* add support for showing function call tip live in the status bar
+		to enable to add the setting:
+			"autocomplete_live_hint": true
+		to your user settings in ctrl+dot,ctrl+5
+
+		note: the old keybinding ctrl+dot,ctrl+space works as normal
+
+## 13.03.29-2
+	* properly detect when the source(about.py) changes
+	* notify the user of an update if the on-disk vesion differs from the live version
+
+## 13.03.29-1
+	* add bindings for default setting(ctrl+dot,ctrl+4) and user settings(ctrl+dot,ctrl+5)
+
+## 13.03.28-2
+	* more python hacks
+
+## 13.03.28-1
+	* make the sanity check output more verbose
+	* add key bindings for:
+		(replace ctrl with super on os x)
+		README.md: ctrl+dot,ctrl+1
+		USAGE.md: ctrl+dot,ctrl+2
+		run sanity check: ctrl+dot,ctrl+3
+
+## r13.03.25-1
+	* abort blocking calls(completion, fmt) early if the install stage isn't set to "done"
+
 ## r13.03.24-3
 	* wait for mg9.install to finish before attempting to send any request to margo.
 		fixes a false-positive error about the mg binary being missing before installtion completes

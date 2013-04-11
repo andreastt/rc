@@ -15,11 +15,6 @@
   { "keys": ["f10"], "command": "gdb_input"},
   { "keys": ["shift+f10"], "command": "gdb_launch"},
   { "keys": ["ctrl+f2"], "command": "gdb_exit" },
-
   { "keys": ["f8"], "command": "gdb_continue" },
-
-
   { "keys": ["f9"], "command": "gdb_toggle_breakpoint" }
-
-
 ]

@@ -3,14 +3,10 @@
 	"installed_packages":
 	[
 		"CTags",
-		"Git",
 		"GoSublime",
-		"Modific",
-		"Open-Include",
 		"Package Control",
-		"SublimeClang",
 		"SublimeGDB",
-		"Terminal",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Wrap Plus"
 	]
 }

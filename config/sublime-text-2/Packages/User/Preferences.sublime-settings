@@ -14,10 +14,6 @@
 	[
 		"-Wall"
 	],
-	"rulers":
-	[
-		80
-	],
 	"save_on_focus_lost": true,
 	"scroll_speed": 4.0,
 	"show_tab_close_buttons": false,

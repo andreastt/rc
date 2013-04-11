@@ -1,4 +1,7 @@
 {
+	// The maximum amount of memory(MiB) that MarGo is allowed to use
+	"margo_oom": 1000,
+
 	// you may set specific environment variables here
 	// e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
 	// in values, $PATH and ${PATH} are replaced with
@@ -90,6 +93,10 @@
 	// find a match.
 	// note: this feature only comes into effect when autocomplete was triggered after a dot, e.g. `fmt.|`
 	"autocomplete_suggest_imports": false,
+
+	// whether or not to show function call tip in the status bar as you type
+	// the same can be achieved ctrl+dot,ctrl+space using an output panel
+	"autocomplete_live_hint": false,
 
 	// the tcp address on which MarGo listen/should listen
 	// if GoSublime can't connect to `margo_addr` it attempts to start MarGo

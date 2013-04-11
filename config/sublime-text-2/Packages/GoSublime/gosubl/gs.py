@@ -44,6 +44,7 @@ _checked = {}
 environ9 = {}
 _env_lck = threading.Lock()
 _default_settings = {
+	"margo_oom": 0,
 	"_debug": False,
 	"env": {},
 	"gscomplete_enabled": False,
@@ -56,6 +57,7 @@ _default_settings = {
 	"comp_lint_enabled": False,
 	"comp_lint_commands": [],
 	"gslint_timeout": 0,
+	"autocomplete_live_hint": False,
 	"autocomplete_snippets": False,
 	"autocomplete_tests": False,
 	"autocomplete_closures": False,
@@ -651,6 +653,13 @@ def dval(v, d):
 			return v
 
 	return d
+
+def tm_path(name):
+	d = {
+		'9o': '9o.hidden-tmLanguage',
+		'doc': 'GsDoc.hidden-tmLanguage',
+	}
+	return 'Packages/GoSublime/%s' % d[name]
 
 def dist_path(*a):
 	return os.path.join(sublime.packages_path(), 'GoSublime', *a)

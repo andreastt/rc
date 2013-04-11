@@ -35,5 +35,6 @@ export PATH="$PATH:$GOTH/bin"
 
 export GITHUB_USER="andreastt"
 
-# Don't write .pyc files
+# Python
+export PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONDONTWRITEBYTECODE=1
