@@ -15,8 +15,9 @@
 (setq inhibit-startup-message t
       inhibit-splash-screen t)
 
-;; Disable system beep
-(setq visible-bell t)
+;; Disable visual bell; the beep sound should be disabled _outside_ of
+;; Emacs
+(setq visible-bell nil)
 
 ;; Empty scratch buffer
 (setq initial-scratch-message "")
@@ -53,7 +54,7 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 
-;; Lines should be 72 characters wide
+;; By default, lines should be 72 characters wide
 (setq fill-column 72)
 
 ;; Save a list of recent files visited
