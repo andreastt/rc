@@ -60,9 +60,9 @@
 (require 'setup-auto-complete)
 (require 'setup-printing)
 (require 'setup-nodejs)
+(require 'setup-magit)
 (require 'mark-more-like-this)
 (require 'go-mode-load)
-(require 'setup-egit)
 
 ;; Map files to modes
 (require 'mode-mappings)
