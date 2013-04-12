@@ -1,8 +1,8 @@
-(setq visible-bell t
-      font-lock-maximum-decoration t
+(setq font-lock-maximum-decoration t
       color-theme-is-global t
       truncate-partial-width-windows nil)
 
+;; Theme
 ;; (require 'color-theme)
 ;; (eval-after-load "color-theme"
 ;;   '(progn
@@ -18,18 +18,19 @@
 ;; Show whitespace
 (setq-default show-trailing-whitespace t)
 
-;; Menu bar looks nice in Unity now
+;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
 (menu-bar-mode 0)
 
-;; Ditch them scroll bars
+;; Show scroll bar on the left side
 (scroll-bar-mode 1)
+(set-scroll-bar-mode 'right)
 
 ;; Window size
-;; (setq default-frame-alist '(
+(setq default-frame-alist '(
 ;;                             (font . "7x13bold")
-;;                             (width . 90)
-;;                             (height . 45)
-;;                             ))
+                            (width . 102)
+                            (height . 50)
+                            ))
 
 ;; Font
 ;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
@@ -39,6 +40,9 @@
 
 ;; Setup new frames correctly
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
+
+;; Frame focus follows mouse
+(setq mouse-autoselect-window t)
 
 ;; Winner mode allows you to "redo" and "undo" window setups
 (winner-mode)
