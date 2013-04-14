@@ -22,7 +22,7 @@
 (global-set-key (kbd "M-W") '(lambda () (interactive) (save-region-or-current-line 1)))
 
 ;; Make shell more convenient, and suspend frameless
-(global-set-key (kbd "C-z") 'ansi-term)
+(global-set-key (kbd "C-z") '(lambda () (interactive) (ansi-term "/bin/zsh")))
 (global-set-key (kbd "C-x C-z") 'suspend-frame)
 
 ;; Font size
@@ -40,7 +40,7 @@
 (global-set-key (kbd "C-x M-p") 'find-or-create-file-at-point-other-window)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-;(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
