@@ -22,7 +22,7 @@
 (global-set-key (kbd "M-W") '(lambda () (interactive) (save-region-or-current-line 1)))
 
 ;; Make shell more convenient, and suspend frameless
-(global-set-key (kbd "C-z") 'eshell)
+(global-set-key (kbd "C-z") 'ansi-term)
 (global-set-key (kbd "C-x C-z") 'suspend-frame)
 
 ;; Font size

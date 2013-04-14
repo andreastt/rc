@@ -89,4 +89,7 @@
 ;; Follow symlinks automatically, but show a warning
 (setq vc-follow-symlinks nil)
 
+;; Use zsh as default shell
+(setq explicit-shell-file-name "/bin/zsh")
+
 (provide 'sane-defaults)

@@ -16,7 +16,8 @@
 (setq-default cursor-type 'bar)
 
 ;; Show whitespace
-(setq-default show-trailing-whitespace t)
+;; TODO: Enable this only for relevant modes
+;;(setq-default show-trailing-whitespace t)
 
 ;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
 (menu-bar-mode 0)
