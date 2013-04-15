@@ -16,14 +16,15 @@
 (setq-default cursor-type 'bar)
 
 ;; Show whitespace
-(setq-default show-trailing-whitespace t)
+;; TODO: Enable this only for relevant modes
+;;(setq-default show-trailing-whitespace t)
 
 ;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
 (menu-bar-mode 0)
 
 ;; Show scroll bar on the left side
 (scroll-bar-mode 1)
-(set-scroll-bar-mode 'right)
+(set-scroll-bar-mode 'left)
 
 ;; Window size
 (setq default-frame-alist '(
