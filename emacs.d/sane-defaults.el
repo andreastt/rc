@@ -89,4 +89,7 @@
 ;; Follow symlinks automatically, but show a warning
 (setq vc-follow-symlinks nil)
 
+;; Default ctags file should be .tags
+(setq tags-file-name ".tags")
+
 (provide 'sane-defaults)
