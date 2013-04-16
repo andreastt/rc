@@ -27,8 +27,8 @@
 (global-eclim-mode)
 
 (setq eclim-auto-save t
-      eclim-executable "/opt/eclipse/eclim"
-      eclimd-executable "/opt/eclipse/eclimd"
+      eclim-executable "~/.eclipse/org.eclipse.platform_3.8_155965261/eclim"
+      eclimd-executable "~/.eclipse/org.eclipse.platform_3.8_155965261/eclimd"
       eclimd-wait-for-process nil
       elcimd-default-workspace "~/dev"
       help-at-pt-display-when-idle t
