@@ -1,6 +1,6 @@
-(autoload 'auto-complete-config)
+(autoload 'auto-complete-config "auto-complete-config" t)
 
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+
 
 (setq ac-auto-start nil
       ac-quick-help-delay 0.5)
@@ -26,10 +26,9 @@
 
 ;;(my-ac-config)
 
-(ac-config-default)
-
-;; For eclim (Eclipse) integration
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+(eval-after-load "auto-complete-config"
+  '(progn
+     (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+     (ac-config-default)))
 
 (provide 'setup-auto-complete)

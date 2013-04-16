@@ -1,5 +1,5 @@
 ;; Inserts matching braces
-(require 'autopair)
-(autopair-global-mode)
+(autoload 'autopair "autopair" t)
+(eval-after-load "autopair" '(progn (autopair-global-mode)))
 
 (provide 'setup-autopair)

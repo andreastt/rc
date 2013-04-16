@@ -1,4 +1,4 @@
-(autoload 'helm-config)
+(autoload 'helm-config "helm-config" t)
 
 (defun my-helm-multi-all ()
   "multi-occur in all buffers backed by files."
