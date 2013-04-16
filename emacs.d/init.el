@@ -61,6 +61,7 @@
 (require 'setup-printing)
 (require 'setup-nodejs)
 (require 'setup-magit)
+(require 'setup-helm)
 (require 'mark-more-like-this)
 (require 'go-mode-load)
 
