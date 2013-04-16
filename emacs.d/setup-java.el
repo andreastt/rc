@@ -1,3 +1,3 @@
-(require 'compile)
+(autoload 'compile)
 
 (provide 'setup-java)

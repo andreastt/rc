@@ -1,4 +1,4 @@
-(require 'auto-complete-config)
+(autoload 'auto-complete-config)
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 

@@ -1,3 +1,3 @@
-(require 'magit)
+(autoload 'magit)
 
 (provide 'setup-magit)

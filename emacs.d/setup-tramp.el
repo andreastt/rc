@@ -1,5 +1,5 @@
-(require 'password-cache)
-(require 'tramp)
+(autoload 'password-cache)
+(autoload 'tramp)
 (setq password-cache-expiry nil)
 
 (provide 'setup-tramp)
