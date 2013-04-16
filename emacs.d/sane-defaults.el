@@ -76,11 +76,6 @@
 ;; Fontify org-mode code blocks
 (setq org-src-fontify-natively t)
 
-;; Represent undo-history as an actual tree (visualize with C-x u)
-(setq undo-tree-mode-lighter "")
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; Diff's
 (setq ediff-diff-options "-w")
 (setq ediff-split-window-function 'split-window-horizontally)

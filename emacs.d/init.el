@@ -1,5 +1,10 @@
 ;;; init.el --- ato's emacs configuration
 
+;; To byte-compile everything in the ~/.emacs.d directory, run this
+;; from time to time:
+;;
+;;     C-u 0 M-x byte-recompile-directory
+
 ;; Turn off mouse interface early in statup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -34,8 +39,8 @@
     (add-to-list 'load-path project)))
 
 ;; Keep emacs Custom-settings in a separate file
-;; (setq custom-file (expand-file-name "custom.el" dotfiles-dir))
-;; (load-custom-file)
+;(setq custom-file (expand-file-name "custom.el" dotfiles-dir))
+;(load-custom-file)
 
 ;; Let's start with a smattering of sanity
 (require 'sane-defaults)
@@ -46,20 +51,15 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
-(require 'setup-eclim)
+;,(require 'setup-eclim)
 (require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
-(require 'setup-xface)
 (require 'setup-dired)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
-(require 'setup-markdown-mode)
-(require 'setup-yaml-mode)
-(require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
 (require 'setup-printing)
-(require 'setup-nodejs)
 (require 'setup-magit)
 (require 'setup-helm)
 (require 'mark-more-like-this)
@@ -69,14 +69,10 @@
 (require 'mode-mappings)
 (require 'mode-hooks)
 
-;; Browse kill ring
-(require 'browse-kill-ring)
-(setq browse-kill-ring-quit-action 'save-and-restore)
-
-;; Key bindings
+;; ;; Key bindings
 (require 'key-bindings)
 
-;; Appearance
+;; ;; Appearance
 (require 'appearance)
 (require 'misc)
 (when is-mac (require 'mac))
