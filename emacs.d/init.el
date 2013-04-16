@@ -1,5 +1,14 @@
 ;;; init.el --- ato's emacs configuration
 
+;; To byte-compile everything in the ~/.emacs.d directory, run this
+;; from time to time:
+;;
+;;     C-u 0 M-x byte-recompile-directory
+
+;; Startup time metrics
+(require 'cl)
+(defvar *emacs-load-start* (current-time))
+
 ;; Turn off mouse interface early in statup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -34,8 +43,8 @@
     (add-to-list 'load-path project)))
 
 ;; Keep emacs Custom-settings in a separate file
-;; (setq custom-file (expand-file-name "custom.el" dotfiles-dir))
-;; (load-custom-file)
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
 
 ;; Let's start with a smattering of sanity
 (require 'sane-defaults)
@@ -46,33 +55,26 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
-(require 'setup-eclim)
-(require 'setup-python)
+;,(require 'setup-eclim)
 (require 'setup-diary)
 (require 'setup-tramp)
-(require 'setup-xface)
 (require 'setup-dired)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
-(require 'setup-markdown-mode)
-(require 'setup-yaml-mode)
-(require 'setup-jinja2-mode)
 (require 'setup-auto-complete)
 (require 'setup-printing)
-(require 'setup-nodejs)
 (require 'setup-magit)
-(require 'mark-more-like-this)
-(require 'go-mode-load)
+(require 'setup-helm)
+(require 'setup-go)
+
+(autoload 'mark-more-like-this "mark-more-like-this" t)
+
 
 ;; Map files to modes
 (require 'mode-mappings)
 (require 'mode-hooks)
 
-;; Browse kill ring
-(require 'browse-kill-ring)
-(setq browse-kill-ring-quit-action 'save-and-restore)
-
-;; Key bindings
+;; ;; Key bindings
 (require 'key-bindings)
 
 ;; Appearance
@@ -86,20 +88,7 @@
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ac-auto-start nil)
- '(ac-trigger-key "TAB")
- '(ac-use-menu-map t)
- '(column-number-mode t)
- '(show-paren-mode t)
- '(tool-bar-mode nil))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
+
+(message "My .emacs loaded in %ds"
+         (destructuring-bind (hi lo ms) (current-time)
+           (- (+ hi lo) (+ (first *emacs-load-start*) (second *emacs-load-start*)))))

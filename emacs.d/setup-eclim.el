@@ -23,7 +23,7 @@
 
 ;; (provide 'setup-eclim)
 
-(require 'eclim)
+(autoload 'eclim)
 (global-eclim-mode)
 
 (setq eclim-auto-save t
@@ -40,9 +40,9 @@
 (help-at-pt-set-timer)
 
 ;; Hook eclim up with auto complete mode
-(require 'auto-complete-config)
+(autoload 'auto-complete-config)
 (ac-config-default)
-(require 'ac-emacs-eclim-source)
+(autoload 'ac-emacs-eclim-source)
 (ac-emacs-eclim-config)
 
 (provide 'setup-eclim)

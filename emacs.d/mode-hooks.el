@@ -1,5 +1,5 @@
 ;; C and C++
-(require 'google-c-style)
+(autoload 'google-c-style "google-c-style" t)
 (setq c-default-style "linux"
       c-basic-offset 4)
 ;(add-hook 'c-mode-common-hook 'google-make-newline-indent)

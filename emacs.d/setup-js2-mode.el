@@ -12,8 +12,10 @@
 (setq-default js2-include-gears-externs nil)
 (setq-default js2-concat-multiline-strings 'eol)
 
-(require 'js2-mode)
-(require 'js2-imenu-extras)
-(js2-imenu-extras-setup)
+(autoload 'js2-mode "js2-mode" t)
+(autoload 'js2-imenu-extras "js2-imenu-extras" t)
+(eval-after-load "js2-imenu-extras"
+  '(progn
+     (js2-imenu-extras-setup)))
 
 (provide 'setup-js2-mode)
