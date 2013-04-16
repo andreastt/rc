@@ -5,6 +5,10 @@
 ;;
 ;;     C-u 0 M-x byte-recompile-directory
 
+;; Startup time metrics
+(require 'cl)
+(defvar *emacs-load-start* (current-time))
+
 ;; Turn off mouse interface early in statup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -39,8 +43,8 @@
     (add-to-list 'load-path project)))
 
 ;; Keep emacs Custom-settings in a separate file
-;(setq custom-file (expand-file-name "custom.el" dotfiles-dir))
-;(load-custom-file)
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
 
 ;; Let's start with a smattering of sanity
 (require 'sane-defaults)
@@ -61,8 +65,10 @@
 (require 'setup-printing)
 (require 'setup-magit)
 (require 'setup-helm)
-(require 'mark-more-like-this)
-(require 'go-mode-load)
+(require 'setup-go)
+
+(autoload 'mark-more-like-this "mark-more-like-this" t)
+
 
 ;; Map files to modes
 (require 'mode-mappings)
@@ -71,7 +77,7 @@
 ;; ;; Key bindings
 (require 'key-bindings)
 
-;; ;; Appearance
+;; Appearance
 (require 'appearance)
 (require 'misc)
 (when is-mac (require 'mac))
@@ -82,20 +88,6 @@
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ac-auto-start nil)
- '(ac-trigger-key "TAB")
- '(ac-use-menu-map t)
- '(column-number-mode t)
- '(show-paren-mode t)
- '(tool-bar-mode nil))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
+
+(message "My .emacs loaded in %ds" (destructuring-bind (hi lo ms) (current-time)
+                           (- (+ hi lo) (+ (first *emacs-load-start*) (second *emacs-load-start*)))))

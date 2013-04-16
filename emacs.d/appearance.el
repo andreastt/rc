@@ -37,7 +37,7 @@
 ;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
 
 ;; Make zooming affect frame instead of buffers
-(require 'zoom-frm)
+(autoload 'zoom-frm "zoom-frm" t)
 
 ;; Setup new frames correctly
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
