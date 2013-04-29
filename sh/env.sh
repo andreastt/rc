@@ -25,6 +25,8 @@ export GOROOT="$HOME/dev/go"
 export GYP_GENERATORS=ninja
 export GYP_PARALLEL=1
 
+export DISTCC_HOSTS="localhost/4 id-6895.users.oslo.osa/8"
+
 # Selenium test suites will continue running even if they reach an error or fail
 export haltonerror=0
 export haltonfailure=0

@@ -120,7 +120,8 @@ IGNORED_SCOPES = frozenset([
 	'comment.block.go'
 ])
 
-VFN_ID_PAT = re.compile(r'^(?:gs\.)?view://(\d+)$', re.IGNORECASE)
+VFN_ID_PAT = re.compile(r'^(?:gs\.)?view://(\d+)(.*?)$', re.IGNORECASE)
+ROWCOL_PAT = re.compile(r'^[:]*(\d+)(?:[:](\d+))?[:]*$')
 
 def getwd():
 	if PY3K:
@@ -382,6 +383,10 @@ def env(m={}):
 			'/usr/bin',
 		]
 
+	gobin = e.get('GOBIN')
+	if gobin:
+		l.append(gobin)
+
 	for s in l:
 		s = os.path.expanduser(s)
 		if s not in add_path:
@@ -462,22 +467,26 @@ def win_view(vfn=None, win=None):
 			view = win.open_file(vfn)
 	return (win, view)
 
-def do_focus(fn, row, col, win=None, focus_pkg=True):
+def do_focus(fn, row, col, win, focus_pat, cb):
 	win, view = win_view(fn, win)
 	if win is None or view is None:
 		notify(NAME, 'Cannot find file position %s:%s:%s' % (fn, row, col))
+		if cb:
+			cb(False)
 	elif view.is_loading():
-		focus(fn, row, col, win, focus_pkg)
+		focus(fn, row=row, col=col, win=win, focus_pat=focus_pat, cb=cb)
 	else:
 		win.focus_view(view)
-		if row <= 0 and col <= 0 and focus_pkg:
-			r = view.find('^package ', 0)
+		if row <= 0 and col <= 0 and focus_pat:
+			r = view.find(focus_pat, 0)
 			if r:
 				row, col = view.rowcol(r.begin())
 		view.run_command("gs_goto_row_col", { "row": row, "col": col })
+		if cb:
+			cb(True)
 
-def focus(fn, row=0, col=0, win=None, timeout=100, focus_pkg=True):
-	sublime.set_timeout(lambda: do_focus(fn, row, col, win, focus_pkg), timeout)
+def focus(fn, row=0, col=0, win=None, timeout=100, focus_pat='^package ', cb=None):
+	sublime.set_timeout(lambda: do_focus(fn, row, col, win, focus_pat, cb), timeout)
 
 def sm_cb():
 	global sm_text
@@ -490,7 +499,7 @@ def sm_cb():
 		s = sm_text
 		if s:
 			delta = (datetime.datetime.now() - tm)
-			if delta.seconds >= 5:
+			if delta.seconds >= 10:
 				sm_text = ''
 
 	if ntasks > 0:
@@ -658,6 +667,7 @@ def tm_path(name):
 	d = {
 		'9o': '9o.hidden-tmLanguage',
 		'doc': 'GsDoc.hidden-tmLanguage',
+		'go': 'GoSublime.tmLanguage',
 	}
 	return 'Packages/GoSublime/%s' % d[name]
 
@@ -721,10 +731,40 @@ def checked(domain, k):
 	return v
 
 def sel(view, i=0):
+	debug(NAME, 'sel %d' % i)
 	try:
-		return view.sel()[i]
+		s = view.sel()
+		if s is not None and i < len(s):
+			return s[i]
 	except Exception:
-		return sublime.Region(0, 0)
+		pass
+
+	return sublime.Region(0, 0)
+
+def which_ok(fn):
+	try:
+		return os.path.isfile(fn) and os.access(fn, os.X_OK)
+	except Exception:
+		return False
+
+def which(cmd):
+	if os.path.isabs(cmd):
+		return cmd if which_ok(cmd) else ''
+
+	# not supporting PATHEXT. period.
+	if os_is_windows():
+		cmd = '%s.exe' % cmd
+
+	seen = {}
+	for p in getenv('PATH', '').split(os.pathsep):
+		p = os.path.join(p, cmd)
+		if p not in seen and which_ok(p):
+			return p
+
+		seen[p] = True
+
+	return ''
+
 
 try:
 	st2_status_message
@@ -749,7 +789,7 @@ except:
 	DEVNULL = open(os.devnull, 'w')
 	LOGFILE = DEVNULL
 
-def gs_init():
+def gs_init(m={}):
 	global LOGFILE
 	try:
 		LOGFILE = open(home_path('log.txt'), 'a+')

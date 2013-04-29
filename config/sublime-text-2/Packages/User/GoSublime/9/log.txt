@@ -16165,3 +16165,115 @@ MarGo: Missing environment variable(s): GOPATH
 ** 2013-03-31 11:03:45.212481 **:
 MarGo: Missing environment variable(s): GOPATH
 --------------------------------
+
+** 2013-04-18 15:42:28.782652 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.03.31-1.linux-x64.exe: not found
+--------------------------------
+
+** 2013-04-18 15:42:28.785656 **:
+MarGo: Missing environment variable(s): GOROOT, GOPATH
+--------------------------------
+
+** 2013-04-18 15:42:31.712851 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-24 04:00:55.430160 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.03.31-1.linux-x64.exe: not found
+--------------------------------
+
+** 2013-04-24 04:00:55.431575 **:
+MarGo: Missing environment variable(s): GOROOT, GOPATH
+--------------------------------
+
+** 2013-04-25 09:52:08.321463 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.03.31-1.linux-x64.exe: not found
+--------------------------------
+
+** 2013-04-25 09:52:08.326152 **:
+MarGo: Missing environment variable(s): GOROOT, GOPATH
+--------------------------------
+
+** 2013-04-25 09:52:10.775196 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:22.787912 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:35.224175 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:35.224779 **:
+GsComplete: Abort. Cannot start MarGo
+--------------------------------
+
+** 2013-04-25 09:52:35.307467 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:35.308242 **:
+GsComplete: Abort. Cannot start MarGo
+--------------------------------
+
+** 2013-04-25 09:52:35.377941 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:35.378695 **:
+GsComplete: Abort. Cannot start MarGo
+--------------------------------
+
+** 2013-04-25 09:52:35.496796 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:52:35.497674 **:
+GsComplete: Abort. Cannot start MarGo
+--------------------------------
+
+** 2013-04-25 09:52:36.304343 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:55:38.408231 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.03.31-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 09:55:38.410694 **:
+GsComplete: Abort. Cannot start MarGo
+--------------------------------
+
+** 2013-04-25 10:13:38.338044 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.04.24-1.linux-x64.exe: not found
+--------------------------------
+
+** 2013-04-25 10:13:38.344346 **:
+MarGo: Missing required environment variables: GOROOT GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-04-25 10:14:45.879521 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-2/Packages/User/GoSublime/9/bin/gosublime.margo.r13.04.24-1.linux-x64.exe`
+--------------------------------
+
+** 2013-04-25 22:03:38.878799 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------

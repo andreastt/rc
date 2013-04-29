@@ -100,7 +100,10 @@ class GoSublime(sublime_plugin.EventListener):
 
 
 		try:
-			default_pkgname = basename(dirname(view.file_name()))
+			if basename(view.file_name()) == "main.go":
+				default_pkgname = 'main'
+			else:
+				default_pkgname = basename(dirname(view.file_name()))
 		except Exception:
 			default_pkgname = ''
 
@@ -281,135 +284,33 @@ class GsShowCallTip(sublime_plugin.TextCommand):
 
 	def run(self, edit, set_status=False):
 		view = self.view
-		c, err = self.tip(edit)
-		if set_status:
-			if c:
-				s = '%s: %s' % (c['name'], c['type'])
-				view.set_status(HINT_KEY, s)
-			else:
-				view.erase_status(HINT_KEY)
-		else:
-			if c:
-				s = '%s %s\n%s' % (c['name'], c['class'], c['type'])
-			else:
-				s = '// %s' % err
-			gs.show_output(HINT_KEY, s, print_output=False, syntax_file='GsDoc')
 
-	def tip(self, edit):
-		view = self.view
-		pt = gs.sel(view).begin()
-		if view.substr(sublime.Region(pt-1, pt)) == '(':
-			depth = 1
-		else:
-			depth = 0
-		c = ''
+		def f(cl, err):
+			def f2(cl, err):
+				c = {}
+				if len(cl) == 1:
+					c = cl[0]
 
-		_i = 0
-		while _i < 1000:
-			_i += 1
-
-			line = view.line(pt)
-			scope = view.scope_name(pt)
-			if 'string' in scope or 'comment' in scope:
-				pt = view.extract_scope(pt).begin() - 1
-				continue
-
-			c = view.substr(sublime.Region(pt-1, pt))
-			if not c:
-				pt = -1
-				break
-
-			if c.isalpha() and depth >= 0:
-				while c.isalpha() or c == '.':
-					pt += 1
-					c = view.substr(sublime.Region(pt-1, pt))
-
-				# curly braces ftw
-				break # break outer while loop
-			if c == ')':
-				depth -= 1
-			elif c == '(':
-				depth += 1
-				i = pt
-				while True:
-					pc = view.substr(sublime.Region(i-1, i))
-					if pc == '.' or pc.isalpha():
-						i -= 1
-					else:
-						break
-
-				if i != pt:
-					pt = i
-					continue
-
-			pt -= 1
-			if pt <= line.begin():
-				pt = -1
-				break
-
-		while not c.isalpha() and pt > 0:
-			pt -= 1
-			c = view.substr(sublime.Region(pt-1, pt))
-
-		if pt <= 0 or view.scope_name(pt).strip() == 'source.go':
-			return ({}, "can't find selector")
-
-		line = view.line(pt)
-		line_start = line.begin()
-
-		s = view.substr(line)
-		if not s:
-			return ({}, 'no source')
-
-		scopes = [
-			'support.function.any-method.go',
-			'meta.function-call.go',
-			'support.function.builtin.go',
-		]
-		found = False
-		while True:
-			scope = view.scope_name(pt).strip()
-			for s in scopes:
-				if scope.endswith(s):
-					found = True
-					break
-
-			if found or pt <= line_start:
-				break
-
-			pt -= 1
-
-		if not found:
-			return ({}, "can't find function call")
-
-		s = view.substr(sublime.Region(line_start, pt))
-		m = END_SELECTOR_PAT.match(s)
-		if not m:
-			return ({}, "can't match selector")
-
-		offset = (line_start + m.end())
-		sel = m.group(1)
-		name = m.group(2)
-		candidates = []
-		src = view.substr(sublime.Region(0, view.size()))
-		fn = view.file_name()
-		candidates, err = mg9.complete(fn, src, offset)
-		if err:
-			gs.notice(DOMAIN, err)
-		else:
-			c = {}
-			for i in candidates:
-				if i['name'] == name:
+				if set_status:
 					if c:
-						c = None
-						break
-					c = i
+						s = '%s: %s' % (c['name'], c['type'])
+						view.set_status(HINT_KEY, s)
+					else:
+						view.erase_status(HINT_KEY)
+				else:
+					if c:
+						s = '%s %s\n%s' % (c['name'], c['class'], c['type'])
+					else:
+						s = '// %s' % (err or 'No calltips found')
 
-			if c:
-				return (c, '')
+					gs.show_output(HINT_KEY, s, print_output=False, syntax_file='GsDoc')
 
-		return ({}, 'no candidates found')
+			sublime.set_timeout(lambda: f2(cl, err), 0)
 
+		fn = view.file_name()
+		src = gs.view_src(view)
+		pos = gs.sel(view).begin()
+		mg9.calltip(fn, src, pos, set_status, f)
 
 
 if not gs.checked(DOMAIN, '_ct_poller'):

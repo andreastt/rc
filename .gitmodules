@@ -49,3 +49,6 @@
 [submodule "emacs.d/vendor/helm"]
 	path = emacs.d/vendor/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "config/sublime-text-2/Packages/Subclim"]
+	path = config/sublime-text-2/Packages/Subclim
+	url = https://github.com/JulianEberius/Subclim.git

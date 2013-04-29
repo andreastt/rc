@@ -3,6 +3,44 @@ GoSublime Changes
 
 Note: you may need to restart Sublime Text after GoSublime updates
 
+## 13.04.27-1
+	* fix failure to load GoSublime.tmLanguage in st3
+
+## 13.04.24-1
+	* fix gs.which treating directories `$PATH` named `go` as the `go` executable
+
+## 13.04.21-1
+	** WARNING **
+	**
+	** the linter system is being redone
+	** this means comp_lint and all lint-related settings will be removed or renamed
+	** see https://github.com/DisposaBoy/GoSublime/issues/220
+	**
+
+	* only show calltip if the call is on the same line as the cursor:
+		this avoids displaying a calltip for fmt.Println() in the following snippet
+
+			fmt.|
+			fmt.Println("done")
+
+## 13.04.14-2
+	* fix failing to find a calltip for b() in p.a(p.b())
+
+## 13.04.14-1
+	* calltips are now implemented in margo
+
+## 13.04.13-1
+	* pre-compile margo on update (before restart)
+	* detect the go binary's path instead of relying on python
+	* try to work-around odd scrolling in 9o
+
+## 13.04.01-1
+	* when replaying unsaved views you are now able to navigate to src lines inside 9o
+
+## 13.03.31-2
+	* add GOBIIN to PATH
+	* set default package snippet to `package main` if the filename is main.go
+
 ## 13.03.31-1
 	* use relative paths when setting syntax files: should fix any errors about not being able to load e.g. 9o.hidden-tmLanguage
 
