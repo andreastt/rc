@@ -19,12 +19,12 @@
 	[
 		"-Wall"
 	],
-	"save_on_focus_lost": true,
-	"scroll_speed": 4.0,
+	//"save_on_focus_lost": true,
+	"scroll_speed": 8.0,
 	"show_tab_close_buttons": false,
 	"subclim_auto_complete": true,
 	"tab_completion": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
