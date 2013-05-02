@@ -23,11 +23,17 @@ config/operamobile
 config/spotify
 config/update-notifier
 config/sublime-text-2/Settings
+config/sublime-text-3/Settings
 *.sublime_session
 config/sublime-text-2/Backup/
+config/sublime-text-3/Backup/
 emacs.before_ecb_2.40
 *.pyc
 *.cache
 *.elc
 vim/.VimballRecord
 config/sublime-text-2/Packages/User/Package\ Control.last-run
+config/sublime-text-3/Packages/User/Package\ Control.last-run
+config/sublime-text-2/Cache
+config/sublime-text-3/Cache
+config/sublime-text-3/Local

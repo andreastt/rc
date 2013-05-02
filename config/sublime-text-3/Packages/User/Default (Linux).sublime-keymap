@@ -5,6 +5,9 @@
     { "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 
+    // M-B deletes word
+    { "keys": ["alt+backspace"], "command": "delete_word", "args": { "forward": false } },
+
     // Go to line with C-l
     { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
@@ -13,7 +16,17 @@
     { "keys": ["ctrl+'"], "command": "unindent" },
 
     // Toggle sidebar with C-k only
-    { "keys": ["ctrl+k"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+b"], "command": "toggle_side_bar" },
+
+    // Save and indent by default
+    { "keys": ["super+v"], "command": "paste_and_indent" },
+    { "keys": ["super+shift+v"], "command": "paste" },
+
+    // Move up and down with j and k
+    { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false} },
+    { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true} },
+    { "keys": ["ctrl+alt+k"], "command": "move", "args": {"by": "pages", "forward": false} },
+    { "keys": ["ctrl+alt+j"], "command": "move", "args": {"by": "pages", "forward": true} },
 
     /*
     { "keys": ["ctrl+shift+l"], "command": "run_lint" },

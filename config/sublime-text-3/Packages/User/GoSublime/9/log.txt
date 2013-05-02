@@ -18,3 +18,83 @@ Can't find the MarGo binary at `/home/andreastt/.config/sublime-text-3/Packages/
 MarGo: Cannot start MarGo:
 Can't find the MarGo binary at `/home/andreastt/.config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
 --------------------------------
+
+** 2013-05-02 22:06:30.539138 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.05.01-2.linux-x64.exe: not found
+--------------------------------
+
+** 2013-05-02 22:06:30.544895 **:
+MarGo: Missing required environment variables: GOROOT GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-02 22:06:53.544779 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: /bin/sh: 1: gosublime.margo.r13.05.01-2.linux-x64.exe: not found
+--------------------------------
+
+** 2013-05-02 22:06:53.549019 **:
+MarGo: Missing required environment variables: GOROOT GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-02 22:18:33.389565 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:18:33.392963 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:43:53.069331 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:43:53.250550 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:44:17.646894 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:44:17.647676 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:44:33.719995 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:44:33.721981 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:58:15.663582 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-02 22:58:15.667089 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-03 00:38:13.583161 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
+
+** 2013-05-03 00:38:13.606517 **:
+MarGo: Cannot start MarGo:
+Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
+--------------------------------
