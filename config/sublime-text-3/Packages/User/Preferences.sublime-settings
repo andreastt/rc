@@ -4,7 +4,7 @@
 	"ensure_newline_at_eof_on_save": true,
 	"env":
 	{
-		"GOPATH": "~/dev/go",
+		"GOPATH": "~/bin",
 		"PATH": "~/dev/go/bin:$PATH"
 	},
 	"font_size": 9,

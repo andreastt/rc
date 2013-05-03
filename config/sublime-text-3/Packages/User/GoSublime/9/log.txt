@@ -98,3 +98,33 @@ Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text
 MarGo: Cannot start MarGo:
 Can't find the MarGo binary at `/home/andreastt/dev/dotfiles/config/sublime-text-3/Packages/User/GoSublime/9/bin/gosublime.margo.r13.05.01-2.linux-x64.exe`
 --------------------------------
+
+** 2013-05-03 11:07:00.183428 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-03 11:07:50.674655 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-03 11:13:21.972744 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-03 11:13:28.777893 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-03 11:13:41.760837 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-05-03 11:51:07.068018 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------

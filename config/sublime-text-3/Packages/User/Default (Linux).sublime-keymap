@@ -15,7 +15,7 @@
     { "keys": ["ctrl+æ"], "command": "indent" },
     { "keys": ["ctrl+'"], "command": "unindent" },
 
-    // Toggle sidebar with C-k only
+    // Toggle sidebar with C-b only
     { "keys": ["ctrl+b"], "command": "toggle_side_bar" },
 
     // Save and indent by default
