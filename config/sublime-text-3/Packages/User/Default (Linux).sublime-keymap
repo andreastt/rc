@@ -12,8 +12,8 @@
     { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
     // C-æ to indent, C-' to unindent
-    { "keys": ["ctrl+æ"], "command": "indent" },
-    { "keys": ["ctrl+'"], "command": "unindent" },
+    { "keys": ["ctrl+'"], "command": "indent" },
+    { "keys": ["ctrl+æ"], "command": "unindent" },
 
     // Toggle sidebar with C-b only
     { "keys": ["ctrl+b"], "command": "toggle_side_bar" },

@@ -57,8 +57,8 @@ syntax on
 "colorscheme bw
 "colorscheme cleanroom
 "colorscheme muon
-"colorscheme beauty256
-colorscheme vylight
+colorscheme beauty256
+"colorscheme vylight
 
 
 " Line Wrapping ***************************************************************
