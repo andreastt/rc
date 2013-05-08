@@ -73,6 +73,11 @@
 ;; M-- instead to toggle)
 (setq org-replace-disputed-keys t)
 
+;; Focus new frame on splitting buffer
+(defadvice split-window (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
+
 ;; Fontify org-mode code blocks
 (setq org-src-fontify-natively t)
 
