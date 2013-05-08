@@ -3,6 +3,36 @@ GoSublime Changes
 
 Note: you may need to restart Sublime Text after GoSublime updates
 
+## 13.05.06-4
+	* display 9o wd in a simplified manner
+	* impl 9o_instance setting: note: this does not work yet
+
+## 13.05.06-3
+	* add support for setting the 9o color scheme with `9o_color_scheme`
+	* fix completion being shown in gs-next tmlang when the cursor it at the end of the line
+
+## 13.05.06-2
+	* disable completion in gs-next: strings, runes, comments
+
+## 13.05.06-1
+	* A new syntax definition has been created to fix all the short-comings of the existing
+	  syntax highlighting. if you're interested in testing it, please take a look at
+	  https://github.com/DisposaBoy/GoSublime/issues/245
+
+## 13.05.04-4
+	* add new `9o_instance` and `9o_color_scheme`. note: these are not yet implemented
+	  see https://github.com/DisposaBoy/GoSublime/issues/243
+
+## 13.05.04-3
+	* add new `lint_enbaled` and `linters` settings. note: the new linter has not yet been implemented
+	  see https://github.com/DisposaBoy/GoSublime/issues/220
+
+## 13.05.04-2
+	* removed setting: `margo_addr`, if you have a *MarGo* binary in your $PATH, delete it.
+
+## 13.05.04-1
+	* don't sort imports when adding/removing
+
 ## 13.05.01-2
 	* fix mg9 request leak
 

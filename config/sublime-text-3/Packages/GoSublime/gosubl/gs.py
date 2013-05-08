@@ -63,7 +63,6 @@ _default_settings = {
 	"autocomplete_closures": False,
 	"autocomplete_filter_name": "",
 	"autocomplete_suggest_imports": False,
-	"margo_addr": "",
 	"on_save": [],
 	"shell": [],
 	"default_snippets": [],
@@ -72,6 +71,10 @@ _default_settings = {
 	"autosave": True,
 	"build_command": [],
 	"lint_filter": [],
+	"lint_enbled": True,
+	"linters": [],
+	"9o_instance": "",
+	"9o_color_scheme": "",
 }
 _settings = copy.copy(_default_settings)
 
@@ -117,11 +120,24 @@ IGNORED_SCOPES = frozenset([
 	'string.quoted.single.go',
 	'string.quoted.raw.go',
 	'comment.line.double-slash.go',
-	'comment.block.go'
+	'comment.block.go',
+
+	# gs-next
+	'comment.block.go',
+	'comment.line.double-slash.go',
+	'string.quoted.double.go',
+	'string.quoted.raw.go',
+	'constant.other.rune.go',
 ])
 
 VFN_ID_PAT = re.compile(r'^(?:gs\.)?view://(\d+)(.*?)$', re.IGNORECASE)
 ROWCOL_PAT = re.compile(r'^[:]*(\d+)(?:[:](\d+))?[:]*$')
+
+USER_DIR = os.path.expanduser('~')
+USER_DIR_PAT = re.compile(r'^%s/' % (re.escape(USER_DIR.replace('\\', '/').rstrip('/'))))
+
+def simple_fn(fn):
+	return USER_DIR_PAT.sub('~/', '%s/' % fn.replace('\\', '/').rstrip('/'))
 
 def getwd():
 	if PY3K:
@@ -672,6 +688,14 @@ def tm_path(name):
 		'doc': 'GsDoc.hidden-tmLanguage',
 		'go': 'GoSublime.tmLanguage',
 	}
+
+	try:
+		so = sublime.load_settings('GoSublime-next.sublime-settings')
+		if 'go' in so.get('extensions', []):
+			d['go'] = 'GoSublime-next.tmLanguage'
+	except Exception:
+		pass
+
 	return 'Packages/GoSublime/%s' % d[name]
 
 def dist_path(*a):

@@ -61,7 +61,10 @@ def active_wd(win=None):
 	_, v = gs.win_view(win=win)
 	return gs.basedir_or_cwd(v.file_name() if v else '')
 
-def wdid(wd):
+def _wdid(wd):
+	name = gs.setting("9o_instance")
+	if name:
+		return name
 	return '9o://%s' % wd
 
 
@@ -113,7 +116,7 @@ class Gs9oInitCommand(sublime_plugin.TextCommand):
 			wd = vs.get('9o.wd', active_wd(win=v.window()))
 
 		was_empty = v.size() == 0
-		s = '[ %s ] # \n' % wd
+		s = '[ %s ] # \n' % gs.simple_fn(wd)
 
 		if was_empty:
 			v.insert(edit, 0, 'GoSublime %s 9o: type `help` for help and command documentation\n\n' % about.VERSION)
@@ -146,6 +149,16 @@ class Gs9oInitCommand(sublime_plugin.TextCommand):
 		vs.set("scroll_past_end", True)
 		vs.set("indent_guide_options", ["draw_normal", "draw_active"])
 		vs.set("word_separators", "./\\()\"'-:,.;<>~!@#$%&*|+=[]{}`~?")
+
+		color_scheme = gs.setting("9o_color_scheme", "")
+		if color_scheme:
+			if color_scheme == "default":
+				vs.erase("color_scheme")
+			else:
+				vs.set("color_scheme", color_scheme)
+		else:
+			vs.set("color_scheme", "")
+
 		v.set_syntax_file(gs.tm_path('9o'))
 
 		if was_empty:
@@ -164,7 +177,7 @@ class Gs9oOpenCommand(sublime_plugin.TextCommand):
 		if not wd:
 			wd = active_wd(win=win)
 
-		id = wdid(wd)
+		id = _wdid(wd)
 		st = stash.setdefault(wid, {})
 		v = st.get(id)
 		if v is None:
@@ -367,7 +380,7 @@ def _save_all(win, wd):
 
 def _9_begin_call(name, view, edit, args, wd, rkey, cid):
 	dmn = '%s: 9 %s' % (DOMAIN, name)
-	msg = '[ %s ] # 9 %s' % (wd, ' '.join(args))
+	msg = '[ %s ] # 9 %s' % (gs.simple_fn(wd), ' '.join(args))
 	if not cid:
 		cid = '9%s-%s' % (name, uuid.uuid4())
 	tid = gs.begin(dmn, msg, set_status=False, cancel=lambda: mg9.acall('kill', {'cid': cid}, None))
