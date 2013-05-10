@@ -166,7 +166,8 @@ for_window [title="Desktop"] floating disable
 # class                 border  bg      fg      indicator
 client.focused          #4c7899 #9eeeee #343434 #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
+#client.unfocused        #333333 #222222 #888888 #292d2e
+client.unfocused        #777777 #777777 #777777 #777777
 client.urgent           #2f343a #900000 #ffffff #900000
 
 # Useful utilities from gnome
