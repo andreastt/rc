@@ -8,7 +8,7 @@ font -*-lucidatypewriter-*-*-*-*-12-140-*-*-*-*-*-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm #i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal #i3-sensible-terminal
 bindsym $mod+Shift+Return exec ssh -XC andreastt@id-6895.users.oslo.osa xterm
 
 # kill focused window
@@ -133,6 +133,7 @@ bar {
         status_command i3status
         position top
         mode hide
+        font -*-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
         colors {
           background #333333
           statusline #888888

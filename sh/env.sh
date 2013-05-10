@@ -1,5 +1,5 @@
 export PAGER=less
-export EDITOR=vim
+export EDITOR="emacs -nw"
 export TERMINAL=xterm
 
 # local bin
