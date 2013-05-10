@@ -78,6 +78,9 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+#bindsym $mod+q workspace 11
+#bindsym $mod+w workspace 12
+#bindsym $mod+e workspace 13
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move container to workspace 1
@@ -144,14 +147,19 @@ bindsym XF86AudioMute exec ~/bin/toggle-mute
 # Lock
 bindsym $mod+control+L exec i3lock
 
-new_window 1pixel
-new_float 1pixel
+#new_window 1pixel
+#new_float 1pixel
+new_window pixel 3
+new_float pixel 3
 
 floating_minimum_size 75 x 50
-floating_maximum_size 900 x 700
+#floating_maximum_size 900 x 700
 
-#for_window [class="XTerm"] floating enable
 for_window [class="(?)"] floating enable
+for_window [class="(?i)chromium"] border none
+for_window [title="Desktop"] border none
+for_window [title="Desktop"] floating disable
+#for_window [title="Desktop"] move scratchpad
 
 # Colors
 # class                 border  bg      fg      indicator
@@ -160,14 +168,17 @@ client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
+# Useful utilities from gnome
 exec gnome-settings-daemon
 exec nm-applet
 exec bluetooth-applet
 exec gnome-sound-applet
 
+# Load X session configuration
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xrdb -merge ~/.Xresources
 
+# Set background colour
 exec --no-startup-id xsetroot -solid "#777777"
 
 # TODO: move this to the Xorg config
@@ -175,4 +186,5 @@ exec synclient TapButton1=1
 exec synclient TapButton2=2
 exec synclient TapButton3=3
 
+# Disable bell
 exec xset b off

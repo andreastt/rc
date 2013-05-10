@@ -7,9 +7,7 @@ if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRE
 fi
 
 # Start GNOME Keyring
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export `/usr/bin/gnome-keyring-daemon --replace --components=secrets,gpg,pkcs11,ssh`
-#eval `/usr/bin/gnome-keyring-daemon --replace --components=secrets,gpg,pkcs11,ssh`
 
 # You probably need to do this too:
 #export SSH_AUTH_SOCK
