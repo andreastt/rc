@@ -130,14 +130,18 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # findsiout, if available)
 bar {
-        status_command i3status
-        position top
-        mode hide
-        font -*-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
-        colors {
-          background #333333
-          statusline #888888
-        }
+    status_command    i3status
+    position          top
+    mode              hide
+    workspace_buttons yes
+    tray_output       primary
+
+    font              -*-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
+
+    colors {
+        background #333333
+        statusline #888888
+    }
 }
 
 # Audio
