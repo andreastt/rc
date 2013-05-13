@@ -162,6 +162,7 @@ floating_minimum_size 75 x 50
 
 for_window [class="(?)"] floating enable
 for_window [class="(?i)chromium"] border none
+for_window [class="(?i)mozilla thunderbird"] border none
 for_window [title="Desktop"] border none
 for_window [title="Desktop"] floating disable
 #for_window [title="Desktop"] move scratchpad
