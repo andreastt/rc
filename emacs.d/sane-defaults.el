@@ -95,4 +95,12 @@
 ;; Default ctags file should be .tags
 (setq tags-file-name ".tags")
 
+;; Auto save into the same file, which turns off creating backup files
+;; completely
+(setq auto-save-visited-file-name t)
+
+;; Crank up the rate at which Emacs autosaves files
+(setq auto-save-interval 20  ;; twenty keystrokes
+      auto-save-timeout 10)  ;; ten idle seconds
+
 (provide 'sane-defaults)
