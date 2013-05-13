@@ -1,0 +1,3 @@
+#!/bin/sh
+exe=`dmenu_path | dmenu -nb '#333333' -nf '#888888' -sb '#888888' -fn '-*-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
+' ${1+"$@"}` && exec $exe

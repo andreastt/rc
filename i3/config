@@ -162,7 +162,12 @@ floating_minimum_size 110 x 60
 
 for_window [class="(?)"] floating enable
 for_window [class="(?i)chromium"] border none
+<<<<<<< HEAD
 for_window [class="idea"] border none
+||||||| merged common ancestors
+=======
+for_window [class="(?i)mozilla thunderbird"] border none
+>>>>>>> 84ba226c9754445007f0b83335f2c9844919ef9a
 for_window [title="Desktop"] border none
 for_window [title="Desktop"] floating disable
 #for_window [title="Desktop"] move scratchpad
