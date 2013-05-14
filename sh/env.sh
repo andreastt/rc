@@ -1,6 +1,7 @@
 export PAGER=less
 export EDITOR="emacs -nw"
 export TERMINAL=xterm
+export MAILTO=ato@sny.no
 
 # local bin
 export PATH=$PATH:$HOME/bin

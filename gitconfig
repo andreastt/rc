@@ -30,7 +30,6 @@
   conflictstyle = diff3
 
 [branch]
-  autosetupmerge = true
   autosetuprebase = always
 
 [alias]
