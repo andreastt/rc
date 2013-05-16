@@ -66,9 +66,10 @@
 (require 'setup-magit)
 (require 'setup-helm)
 (require 'setup-go)
+(require 'setup-python)
 
-(autoload 'mark-more-like-this "mark-more-like-this" t)
-
+;(autoload 'mark-more-like-this "mark-more-like-this" t)
+(require 'mark-more-like-this)
 
 ;; Map files to modes
 (require 'mode-mappings)
