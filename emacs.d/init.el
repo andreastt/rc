@@ -55,7 +55,8 @@
 ;; Setup dependencies
 (require 'setup-c++-mode)
 (require 'setup-gdb)
-;,(require 'setup-eclim)
+;(require 'setup-eclim)
+(require 'setup-java)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-dired)

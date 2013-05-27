@@ -15,6 +15,7 @@
           (local-file (file-relative-name
                        temp-file
                        (file-name-directory buffer-file-name))))
+     ; --max-line-length=100 --ignore=E302
          (list "pep8" (list "--repeat" local-file))))
 
  (add-to-list 'flymake-allowed-file-name-masks
@@ -26,5 +27,7 @@
       (if help (message "%s" help)))))
 
 (add-hook 'post-command-hook 'my-flymake-show-help)
+
+(add-to-list 'auto-mode-alist '("BUCK" . python-mode))
 
 (provide 'setup-python)
