@@ -7,6 +7,7 @@ import json
 import os
 import re
 import shlex
+import string
 import sublime
 import sublime_plugin
 import uuid
@@ -51,6 +52,7 @@ DEFAULT_COMMANDS = [
 	'share',
 	'hist',
 	'hist erase',
+	'cd',
 ]
 DEFAULT_CL = [(s, s+' ') for s in DEFAULT_COMMANDS]
 
@@ -60,6 +62,12 @@ tid_alias = {}
 def active_wd(win=None):
 	_, v = gs.win_view(win=win)
 	return gs.basedir_or_cwd(v.file_name() if v else '')
+
+def _hkey(wd):
+	name = gs.setting("9o_instance")
+	if name:
+		wd = name
+	return '9o.hist.%s' % wd
 
 def _wdid(wd):
 	name = gs.setting("9o_instance")
@@ -76,10 +84,13 @@ class EV(sublime_plugin.EventListener):
 
 		cl = []
 
-		hkey = '9o.hist.%s' % view.settings().get('9o.wd', '')
+		hkey = _hkey(view.settings().get('9o.wd', ''))
 		for i, cmd in enumerate(reversed(gs.dval(gs.aso().get(hkey), []))):
 			if not cmd in cl:
 				cl.append(('^%d %s' % (i+1, cmd), cmd+' '))
+
+		for k in gs.gs9o:
+			cl.append((k, k+' '))
 
 		cl.extend(DEFAULT_CL)
 
@@ -289,7 +300,7 @@ class Gs9oExecCommand(sublime_plugin.TextCommand):
 			if cmd:
 				vs = view.settings()
 				aso = gs.aso()
-				hkey = '9o.hist.%s' % wd
+				hkey = _hkey(wd)
 				hist = gs.dval(aso.get(hkey), [])
 
 				m = HIST_EXPAND_PAT.match(cmd)
@@ -323,21 +334,28 @@ class Gs9oExecCommand(sublime_plugin.TextCommand):
 			view.run_command('gs9o_init')
 
 			cli = cmd.split(' ', 1)
+			nm = cli[0]
+			ag = cli[1].strip() if len(cli) == 2 else ''
+
+			if nm == "cd":
+				args = [ag] if ag else []
+				cmd_cd(view, edit, args, wd, rkey)
+				return
 
 			# todo: move this into margo
-			if cli[0] == 'sh':
+			if nm == 'sh':
 				def on_done(c):
 					out = gs.ustr('\n'.join(c.consume_outq()))
 					sublime.set_timeout(lambda: push_output(view, rkey, out), 0)
 
-				c = gsshell.Command(cmd=cli[1], shell=True, cwd=wd)
+				c = gsshell.Command(cmd=ag, shell=True, cwd=wd)
 				c.on_done = on_done
 				c.start()
 				return
 
-			f = globals().get('cmd_%s' % cli[0])
+			f = gs.gs9o.get(nm) or globals().get('cmd_%s' % nm)
 			if f:
-				args = shlex.split(gs.astr(cli[1])) if len(cli) == 2 else []
+				args = shlex.split(gs.astr(ag)) if ag else []
 				f(view, edit, args, wd, rkey)
 			else:
 				push_output(view, rkey, 'Invalid command %s' % cli)
@@ -409,7 +427,28 @@ def _9_begin_call(name, view, edit, args, wd, rkey, cid):
 
 	return cid, cb
 
+def cmd_cd(view, edit, args, wd, rkey):
+	try:
+		if args:
+			wd = args[0]
+			wd = string.Template(wd).safe_substitute(gs.env())
+			wd = os.path.expanduser(wd)
+			wd = os.path.abspath(wd)
+		else:
+			fn = view.window().active_view().file_name()
+			if fn:
+				wd = os.path.dirname(fn)
+
+		os.chdir(wd)
+	except Exception as ex:
+		push_output(view, rkey, 'Cannot chdir: %s' % ex)
+		return
+
+	push_output(view, rkey, '')
+	view.run_command('gs9o_init', {'wd': wd})
+
 def cmd_reset(view, edit, args, wd, rkey):
+	push_output(view, rkey, '')
 	view.erase(edit, sublime.Region(0, view.size()))
 	view.run_command('gs9o_init')
 
@@ -543,7 +582,7 @@ def cmd_env(view, edit, args, wd, rkey):
 
 def cmd_hist(view, edit, args, wd, rkey):
 	aso = gs.aso()
-	hkey = '9o.hist.%s' % wd
+	hkey = _hkey(wd)
 
 	s = 'hist: invalid args: %s' % args
 

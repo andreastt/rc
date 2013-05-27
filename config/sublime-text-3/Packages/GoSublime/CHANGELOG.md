@@ -3,6 +3,36 @@ GoSublime Changes
 
 Note: you may need to restart Sublime Text after GoSublime updates
 
+## 13.05.16-1
+	**NOTE**
+	For those who are not aware:
+		GoSublime already supports Sublime Text 3 equally to Sublime Text 2.
+		There is no ST3 branch or separate release this code supports both simultaneously.
+
+## 13.05.12-7
+	* add basic support for injecting commands into 9o.
+		contact me if you intend to make use of this feature
+
+## 13.05.12-6
+	* 9o `hist` now honours `9o_instance`
+
+## 13.05.12-5
+	* more 9o `cd`, always chdir
+
+## 13.05.12-4
+	* fix not being able to properly cd to relative parent directories
+
+## 13.05.12-3
+	* add a basic `cd` command to 9o. see 9o `help` for documentation
+
+## 13.05.12-2
+	* mg/sh now handless binary output
+	* mg/sh now accepts a string `Cmd.Input` that allows passing input the command
+
+## 13.05.12-1
+	* improved GoSublime-next syntax highlighting.
+	  see https://github.com/DisposaBoy/GoSublime/issues/245
+
 ## 13.05.06-4
 	* display 9o wd in a simplified manner
 	* impl 9o_instance setting: note: this does not work yet

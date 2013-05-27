@@ -7,7 +7,7 @@
 		"GOPATH": "~/bin",
 		"PATH": "~/dev/go/bin:$PATH"
 	},
-	"font_size": 9,
+	"font_size": 20,
 	"highlight_line": true,
 	"ignored_packages":
 	[
