@@ -92,15 +92,15 @@
 ;; Use zsh as default shell
 (setq explicit-shell-file-name "/bin/zsh")
 
+;; Use chromium as default browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "chromium-browser")
+
 ;; Default ctags file should be .tags
 (setq tags-file-name ".tags")
 
-;; Auto save into the same file, which turns off creating backup files
-;; completely
-(setq auto-save-visited-file-name t)
-
 ;; Crank up the rate at which Emacs autosaves files
-(setq auto-save-interval 20  ;; twenty keystrokes
+(setq auto-save-interval 20   ;; n keystroke(s)
       auto-save-timeout 10)  ;; ten idle seconds
 
 (provide 'sane-defaults)

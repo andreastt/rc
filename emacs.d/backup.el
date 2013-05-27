@@ -1,3 +1,10 @@
+;; Auto save into the same file, which turns off creating backup files
+;; completely
+(setq auto-save-visited-file-name t)
+
+;; Delete old versions automatically
+(setq delete-old-versions t)
+
 ;; Write backup files to own directory
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))

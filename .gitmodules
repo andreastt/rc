@@ -55,3 +55,9 @@
 [submodule "config/sublime-text-3/Packages/Package Control"]
 	path = config/sublime-text-3/Packages/Package Control
 	url = https://github.com/wbond/sublime_package_control.git
+[submodule "emacs.d/vendor/ant-project-mode"]
+	path = emacs.d/vendor/ant-project-mode
+	url = https://github.com/skeeto/ant-project-mode.git
+[submodule "emacs.d/vendor/javadoc-lookup"]
+	path = emacs.d/vendor/javadoc-lookup
+	url = https://github.com/skeeto/javadoc-lookup.git

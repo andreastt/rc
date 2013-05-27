@@ -6,16 +6,7 @@
 ;(add-hook 'c-mode-common-hook 'google-set-c-style)
 
 ;; Java
-(defun my-java-mode-hook ()
-  (lambda () (auto-fill-mode 1))
-  (set-fill-column 100)
-  ;(set-comment-column 100)
-  (define-key c-mode-base-map "\C-c\C-p" 'show-previous-error)
-  (define-key c-mode-base-map "\C-c\C-n" 'show-next-error)
-  (c-set-offset 'substatement-open 0))
 (add-hook 'java-mode-hook 'my-java-mode-hook)
-(add-hook 'java-mode-hook 'google-set-c-style)
-(add-hook 'java-mode-hook 'google-make-newline-indent)
 
 ;; Perl
 (fset 'perl-mode 'cperl-mode)

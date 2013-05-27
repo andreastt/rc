@@ -9,6 +9,10 @@
 (require 'cl)
 (defvar *emacs-load-start* (current-time))
 
+;; Run at full power, please
+(put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+
 ;; Turn off mouse interface early in statup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -86,10 +90,6 @@
 
 ;; Emacs server
 ;(server-start)
-
-;; Run at full power, please
-(put 'downcase-region 'disabled nil)
-(put 'narrow-to-region 'disabled nil)
 
 (message "My .emacs loaded in %ds"
          (destructuring-bind (hi lo ms) (current-time)
