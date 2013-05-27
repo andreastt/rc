@@ -89,9 +89,6 @@
 ;; Browse the kill ring
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
-;; Easy-mode fullscreen rgrep
-(global-set-key (kbd "M-s s") 'rgrep-fullscreen)
-
 ;; Toggle fullscreen
 (global-set-key (kbd "<f11>") 'toggle-fullscreen)
 

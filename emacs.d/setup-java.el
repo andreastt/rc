@@ -11,8 +11,17 @@
 
   (define-key c-mode-base-map "\C-c\C-p" 'show-previous-error)
   (define-key c-mode-base-map "\C-c\C-n" 'show-next-error)
-  (c-set-offset 'substatement-open 0)
 
+  ;; Locate closest build.xml file, run `ant compile` without any user
+  ;; interaction
+  ;;
+  ;; TODO: Close the new comint buffer if compile succeeds, but keep
+  ;; it open if something goes wrong.
+  (global-set-key (kbd "C-<f9>")
+                  '(lambda () (interactive)
+                     (save-buffer)
+                     (ant-compile-target "compile")))
+  
   (lambda ()
     (auto-fill-mode 1)
 
