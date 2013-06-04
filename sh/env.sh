@@ -1,6 +1,8 @@
+export TERM=xterm
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD}\007"'
+
 export PAGER=less
 export EDITOR="emacs -nw"
-export TERMINAL=xterm
 export MAILTO=ato@sny.no
 
 # local bin

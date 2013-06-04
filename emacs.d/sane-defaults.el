@@ -60,6 +60,11 @@
 ;; Save a list of recent files visited
 (recentf-mode 1)
 
+;; Omit hidden files in dired
+(require 'dired-x)
+(setq dired-omit-files "^\\...+$")
+(add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
+
 ;; Never insert tabs
 (set-default 'indent-tabs-mode nil)
 

@@ -3,7 +3,7 @@
       truncate-partial-width-windows nil)
 
 ;; Theme
-;; (require 'color-theme)
+;;(require 'color-theme)
 ;; (eval-after-load "color-theme"
 ;;   '(progn
 ;;      (color-theme-initialize)
@@ -28,7 +28,7 @@
 
 ;; Window size
 (setq default-frame-alist '(
-;;                             (font . "7x13bold")
+                            (font . "6x13")
                             (width . 102)
                             (height . 50)
                             ))
