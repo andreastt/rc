@@ -27,7 +27,7 @@
 
     ;; JavaDoc lookup
     (require 'javadoc-lookup)
-    (javadoc-add-roots "/usr/share/doc/openjdk-7-jdk/api"
+    (javadoc-add-roots< "/usr/share/doc/openjdk-7-jdk/api"
                        "~/dev/goth/client/docs")
     (global-set-key (kbd "C-h j") 'javadoc-lookup) ;; TODO: Move to keys.el
 
