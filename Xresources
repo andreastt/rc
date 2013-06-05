@@ -10,7 +10,7 @@ rxvt*geometry: 80x50
 rxvt*cursorBlink: true
 rxvt*cursor: i-beam
 rxvt*scrollstyle: xterm
-#rxvt*font: xft:Liberation Mono:pixelsize=12
+!rxvt*font: xft:Liberation Mono:pixelsize=12
 
 ! Xterm ----------------------------------------------------------------------
 xterm*boldMode: false
