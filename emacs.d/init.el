@@ -47,7 +47,7 @@
     (add-to-list 'load-path project)))
 
 ;; Keep emacs Custom-settings in a separate file
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file "~/.emacs.d/my-custom.el")
 (load custom-file 'noerror)
 
 ;; Let's start with a smattering of sanity
@@ -69,9 +69,9 @@
 (require 'setup-auto-complete)
 (require 'setup-printing)
 (require 'setup-magit)
-(require 'setup-helm)
 (require 'setup-go)
 (require 'setup-python)
+(require 'setup-edit-server)
 
 ;(autoload 'mark-more-like-this "mark-more-like-this" t)
 (require 'mark-more-like-this)
@@ -85,7 +85,6 @@
 
 ;; Appearance
 (require 'appearance)
-(require 'misc)
 (when is-mac (require 'mac))
 
 ;; Emacs server
