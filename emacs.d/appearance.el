@@ -40,7 +40,7 @@
 (autoload 'zoom-frm "zoom-frm" t)
 
 ;; Setup new frames correctly
-(add-hook 'after-make-frame-functions 'setup-frame-hook)
+;(add-hook 'after-make-frame-functions 'setup-frame-hook)
 
 ;; Frame focus follows mouse
 (setq mouse-autoselect-window t)
