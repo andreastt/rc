@@ -2,5 +2,5 @@
 (setq mail-user-agent 'mh-e-user-agent
       read-mail-command 'mh-rmail)
 
-;;(setq mh-send-uses-spost-flag t
-(setq mail-header-separator "--------")
+(setq mh-send-uses-spost-flag t
+      mail-header-separator "--------")
