@@ -13,7 +13,6 @@ MoveThreshold 3
 Style * SloppyFocus, MouseFocusClickRaises
 
 Style * TileCascadePlacement, GrabFocusOff
-#Style * NoPPosition, ResizeOpaque
 OpaqueMoveSize -1
 Emulate MWM
 HideGeometryWindow Always
@@ -39,7 +38,6 @@ Style *      SnapAttraction 20
 Style *           IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 MenuStyle *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 
-#MenuStyle * fvwm, Foreground white, Background cornflowerblue, Greyed grey40
 MenuStyle * fvwm, Foreground black, Background #99FFFF, Greyed grey40
 Style * Fore black, Back #669999
 Style * HilightFore black, HilightBack #99ffff
@@ -223,6 +221,9 @@ Key l A C4 Exec exec i3lock
 # Style *           TileCascadePlacement
 # Style *           EWMHUseStackingOrderHints
 
+Style * NoTitle, BorderWidth 2
+
+
 # Styles for various Fvwm modules:
 Style Fvwm*       NoTitle,  Sticky, WindowListSkip
 Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
@@ -236,23 +237,12 @@ Style XTerm       Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
 Style rxvt        Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
 Style rxvt        MWMBorder, MWMButtons
 
-# Styles for various common programs:
-Style *lock       NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus
-Style xbiff       NoTitle, Sticky, WindowListSkip, ClickToFocus
-Style xcalc       Icon xcalc.xpm, NoButton 2,ClickToFocus
-Style xmh         Icon mail1.xpm, NoIconTitle,StickyIcon
-Style xmh         NoButton 2
-Style xman        Icon xman.xpm, ClickToFocus
-Style xmag        Icon mag_glass.xpm, ClickToFocus
-Style xgraph      Icon graphs.xpm, ClickToFocus
-Style xmosaic     Color Green/Yellow, ClickToFocus
-Style libreoffice* NoFuncHint
-
-
-
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
+
+# Iconify window with C-z
+Key Z FSTW A Iconify
 
 # some simple default mouse bindings:
 #   for the root window:
@@ -264,11 +254,6 @@ Mouse 3 R       A       WindowList
 Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
 Mouse 0 2       A       FuncFvwmMaximize
 Mouse 0 4       A       Iconify
-
-# Titlebar
-Mouse 1 T N WindowLeftClick
-Mouse 2 T N Thumbnail
-Mouse 3 T N Popup WindowOpsMenu
 
 # Mouse-grab with alt for various window ops, click anywhere on a window
 Mouse 1 FSTW M WindowLeftClick
@@ -522,12 +507,12 @@ AddToFunc FuncFvwmFocusPolicyChange
 + I Recapture
 
 # Read config files for modules:
-read ConfigFvwmBacker
-read ConfigFvwmButtons
-read ConfigFvwmIconBox
-read ConfigFvwmIconMan
-read ConfigFvwmIdent
-read ConfigFvwmPager
-read ConfigFvwmScroll
-read ConfigFvwmTaskBar
-read ConfigFvwmWinList
+#read ConfigFvwmBacker
+#read ConfigFvwmButtons
+#read ConfigFvwmIconBox
+#read ConfigFvwmIconMan
+#read ConfigFvwmIdent
+#read ConfigFvwmPager
+#read ConfigFvwmScroll
+#read ConfigFvwmTaskBar
+#read ConfigFvwmWinList
