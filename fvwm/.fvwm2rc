@@ -202,27 +202,7 @@ Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 # Lock screen with C-Super-l
 Key l A C4 Exec exec i3lock
 
-
-
-
-# ColormapFocus FollowsMouse
-
-# default Styles:
-# make sure these fonts exist on your system:
-# Style *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-# Style *           IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-# Style *           HilightFore black, HilightBack cornflowerblue
-# Style *           BorderWidth 7, HandleWidth 7
-# Style *           Icon unknown1.xpm, Color lightgrey/dimgrey
-# Style *           MWMFunctions, MWMDecor, HintOverride
-# Style *           DecorateTransient, NoPPosition
-# Style *           IconBox 0 -10 -280 -1
-# Style *           FocusFollowsMouse
-# Style *           TileCascadePlacement
-# Style *           EWMHUseStackingOrderHints
-
 Style * NoTitle, BorderWidth 2
-
 
 # Styles for various Fvwm modules:
 Style Fvwm*       NoTitle,  Sticky, WindowListSkip
@@ -242,7 +222,7 @@ Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
 # Iconify window with C-z
-Key Z FSTW A Iconify
+Key Z FSTW C Iconify
 
 # some simple default mouse bindings:
 #   for the root window:
