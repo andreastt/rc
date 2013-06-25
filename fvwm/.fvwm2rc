@@ -52,8 +52,7 @@ DestroyFunc StartFunction
 AddToFunc StartFunction
   + I Exec xsetroot -solid "#777777"
   + I Module FvwmAnimate
-#  + I Module FvwmBanner
-  + I Module FvwmButtons
+#  + I Module FvwmButtons
 
 AddToFunc SelectWindow
   + I Focus
@@ -136,14 +135,23 @@ AddToFunc FvwmExpose
 IgnoreModifiers L25
 
 # Super-Return gives you a new terminal
-#Key Return A 4 GnomeTerminal
 Key Return A 4 Rxvt
-#Key Return A 4 XTerm
-#Key Return A 4 XTerm RaiseAndFlipFocus
-#GnomeTerminal
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
+
+#DestroyFunc DisplayInfo
+#AddToFunc DisplayInfo
+#  + I Module FvwmButtons
+#  + I KillModule FvwmButtons
+#
+#DestroyFunc ShowOrHideDisplayInfo
+#  + I ThisWindow ("quick_terminal") hide_quick_terminal
+#  + I ThisWindow (!"quick_terminal") raise_or_fire_quick_terminal
+#  + I NoWindow raise_or_fire_quick_terminal
+     
+# Super held down displays window list
+#Key Super_L A A DisplayInfo
 
 # S-Super-c closes window
 Key c A 4S Close
@@ -189,20 +197,22 @@ Key Left  A CMS MoveToPage -1p  0p
 # M-Tab opens window switcher
 Key Tab A 4  FuncSwitchWindow
 
-# Press shift arrow + control anywhere, move window focus in that direction
+# Press arrow + meta + control anywhere, move window focus in that direction
 Key Left	A	4	Direction West	(CurrentPage) SelectWindow
 Key Right	A	4	Direction East	(CurrentPage) SelectWindow
 Key Up		A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
-#Key h		A	4	Direction West	(CurrentPage) SelectWindow
-#Key l		A	4	Direction East	(CurrentPage) SelectWindow
-#Key k		A	4	Direction North	(CurrentPage) SelectWindow
-#Key j		A	4	Direction South	(CurrentPage) SelectWindow
 
 # Lock screen with C-Super-l
 Key l A C4 Exec exec i3lock
 
-Style * NoTitle, BorderWidth 2
+# Maximize window with C-Super-Space
+Key space W 4C Maximize grow grow
+
+# Border styling
+Style * NoTitle, BorderWidth 3
+BorderStyle Active Solid SteelBlue4 -- NoInset HiddenHandles
+BorderStyle Inactive Solid #11236b -- NoInset HiddenHandles
 
 # Styles for various Fvwm modules:
 Style Fvwm*       NoTitle,  Sticky, WindowListSkip
@@ -488,7 +498,7 @@ AddToFunc FuncFvwmFocusPolicyChange
 
 # Read config files for modules:
 #read ConfigFvwmBacker
-#read ConfigFvwmButtons
+read ConfigFvwmButtons
 #read ConfigFvwmIconBox
 #read ConfigFvwmIconMan
 #read ConfigFvwmIdent
