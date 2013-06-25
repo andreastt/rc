@@ -47,3 +47,11 @@ PROMPT='$(_collapse_pwd) $FX[bold]$FG[030]%%$FX[reset] '
 
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
 RPROMPT='${return_status}%{$reset_color%}'
+
+case "$TERM" in
+xterm*|rxvt*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+        ;;
+*)
+        ;;
+esac
