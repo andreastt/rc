@@ -1,3 +1,0 @@
-{
-    "env": { "GOPATH": "$HOME/bin:$GS_GOPATH" }
-}

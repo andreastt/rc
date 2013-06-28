@@ -1,6 +1,0 @@
-{
-  "env": {
-    "PATH": "$HOME/dev/go/bin:$PATH",
-    "GOPATH": "$HOME/bin"
-  }
-}
