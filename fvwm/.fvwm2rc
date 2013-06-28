@@ -232,7 +232,7 @@ Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
 # Iconify window with C-z
-Key Z FSTW C Iconify
+Key Z FSTW SC Iconify
 
 # some simple default mouse bindings:
 #   for the root window:
