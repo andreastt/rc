@@ -12,12 +12,12 @@
   status = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
+  current = black reverse
+  local = black
   remote = green
 
 [color "diff"]
-  meta = yellow bold
+  meta = dim black bold
   frag = magenta bold
   old = red bold
   new = green bold
@@ -51,6 +51,3 @@
 
 [push]
   default = current
-[mergetool "meld"]
-	cmd = meld
-	trustExitCode = true
