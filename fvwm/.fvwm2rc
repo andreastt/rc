@@ -52,7 +52,9 @@ DestroyFunc StartFunction
 AddToFunc StartFunction
   + I Exec xsetroot -solid "#777777"
   + I Module FvwmAnimate
-#  + I Module FvwmButtons
+  + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
+  + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
+  + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
