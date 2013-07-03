@@ -54,21 +54,17 @@ AddToFunc StartFunction
   + I Module FvwmAnimate
 #  + I Module FvwmButtons
 
+DestroyFunc SelectWindow
 AddToFunc SelectWindow
   + I Focus
   + I Iconify false
   + I Raise
   + I WarpToWindow 50 17p
 
-AddToFunc XTerm
-  + I Exec xterm -title Terminal
-  + I Next (AcceptsFocus !Iconic) SelectWindow
-
-AddToFunc GnomeTerminal
-  + I Exec exec gnome-terminal
-
 AddToFunc Rxvt
   + I Exec exec rxvt
+  + I Wait rxvt
+  + I Next (rxvt) WarpToWindow 50 17p
 
 # Window switcher
 InfoStoreAdd DIR Next
@@ -82,14 +78,19 @@ AddToFunc FuncSwitchWindow
                 echo 'InfoStoreAdd NDIR Prev'`
   + I Schedule 700 134000 InfoStoreAdd DIR $[infostore.NDIR]
 
-DestroyFunc SelectWindow
-AddToFunc   SelectWindow
-    + I Iconify false
-    + I Focus
-    + I Raise
-    + I WarpToWindow 50 50
+DestroyFunc CloseWindow
+AddToFunc CloseWindow
+  + I Close
+  + I Previous WarpToWindow 50 17p
 
-# Thumbnailing code
+AddToFunc SwitchWindow
+  + I $[DIR] (CurrentPage, !Iconic, !Sticky) FocusRaiseAndStuff
+  + I Deschedule 134000
+  + I PipeRead `[ "$[DIR]" == "Prev" ] &amp;&amp; \
+      echo 'SetEnv NDIR Next' || \
+      echo 'SetEnv NDIR Prev'`
+  + I Schedule 700 134000 SetEnv DIR $[NDIR]
+ 
 DestroyFunc Thumbnail
 AddToFunc Thumbnail
      + I Raise
@@ -107,7 +108,7 @@ AddToFunc DeThumbnail
      + I Exec rm -f $[FVWM_USERDIR]/icon.tmp.$[w.id].png
      + I DestroyWindowStyle
      + I Iconify no
-
+ 
 #####
 # FvwmExpose - http://www.zensites.net/fvwm/guide/advanced_functions.html
 ###########
@@ -125,7 +126,6 @@ AddToFunc FvwmExpose
     || Nop"
 + I Popup FvwmExposeMenu
 + I Exec exec rm -f $[fvwm_home]/tmp/icon.exp.*
-
 
 #####################################
 # Key bindings
@@ -154,7 +154,8 @@ Key d A 4 Exec exec dmenu_run
 #Key Super_L A A DisplayInfo
 
 # S-Super-c closes window
-Key c A 4S Close
+#Key c A 4S Close
+Key c A 4S CloseWindow
 
 # S-Super-r and S-Super-e to restart and quit fvwm
 Key r A 4S Restart
