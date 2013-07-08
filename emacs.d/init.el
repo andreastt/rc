@@ -73,6 +73,7 @@
 (require 'setup-python)
 (require 'setup-edit-server)
 (require 'setup-org-mode)
+(require 'setup-multi-web-mode)
 
 ;(autoload 'mark-more-like-this "mark-more-like-this" t)
 (require 'mark-more-like-this)
