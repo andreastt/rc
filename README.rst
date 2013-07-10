@@ -12,6 +12,7 @@ get started using it in a comfortable way relatively quickly.
 The typical approach I use is the following:
 
 ::
+
     mkdir dev
     cd dev
     git clone https://github.com/andreastt/dotfiles.git
@@ -20,6 +21,7 @@ The typical approach I use is the following:
 And then iterating with the following command on the files I need:
 
 ::
+
     ln -s ~/dev/dotfiles/FILE
 
 Probably I should write a script to do that work for me automatically.
