@@ -15,12 +15,19 @@
   ;; Locate closest build.xml file, run `ant compile` without any user
   ;; interaction
   ;;
-  ;; TODO: Close the new comint buffer if compile succeeds, but keep
-  ;; it open if something goes wrong.
+  ;; TODO(andreastt): Close the new comint buffer if compile succeeds,
+  ;; but keep it open if something goes wrong.
   (global-set-key (kbd "C-<f9>")
                   '(lambda () (interactive)
                      (save-buffer)
                      (ant-compile-target "compile")))
+
+  (global-set-key (kbd "C-b") 'eclim-java-find-declaration)
+  (global-set-key (kbd "C-u") 'eclim-java-find-references)
+  (global-set-key (kbd "S-<f6>") 'eclim-java-refactor-rename-symbol-at-point)
+  (global-set-key (kbd "C-c d") 'eclim-java-show-documentation-for-current-element)
+  (global-set-key (kbd "C-c h") 'eclim-java-hierarchy)
+  (global-set-key (kbd "C-i") 'eclim-java-import-organize)
   
   (lambda ()
     (auto-fill-mode 1)
@@ -40,5 +47,13 @@
 
 ;; Ant project
 (require 'ant-project-mode)
+
+(require 'flymake)
+(defun my-flymake-init ()
+  (list "my-java-flymake-checks"
+        (list (flymake-init-create-temp-buffer-copy
+               'flymake-create-temp-with-folder-structure))))
+(add-to-list 'flymake-allowed-file-name-masks
+             '("\\.java$" my-flymake-init flymake-simple-cleanup))
 
 (provide 'setup-java)
