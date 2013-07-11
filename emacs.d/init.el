@@ -57,6 +57,7 @@
 (require 'backup)
 
 ;; Setup dependencies
+(require 'setup-c-mode)
 (require 'setup-c++-mode)
 (require 'setup-gdb)
 (require 'setup-eclim)
@@ -74,6 +75,7 @@
 (require 'setup-edit-server)
 (require 'setup-org-mode)
 (require 'setup-multi-web-mode)
+(require 'setup-gtags)
 
 ;(autoload 'mark-more-like-this "mark-more-like-this" t)
 (require 'mark-more-like-this)
@@ -82,7 +84,7 @@
 (require 'mode-mappings)
 (require 'mode-hooks)
 
-;; ;; Key bindings
+;; Key bindings
 (require 'key-bindings)
 
 ;; Appearance
