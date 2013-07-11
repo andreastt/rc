@@ -7,6 +7,6 @@
           (lambda ()
             (require 'gtags)
             (gtags-mode t)
-            (djcb-gtags-create-or-update)))
+            (gtags-create-or-update)))
 
 (provide 'setup-c-mode)
