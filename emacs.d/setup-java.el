@@ -20,7 +20,7 @@
   (global-set-key (kbd "C-<f9>")
                   '(lambda () (interactive)
                      (save-buffer)
-                     (ant-compile-target "compile")))
+                     (ant-compile-target "build")))
 
   (global-set-key (kbd "C-b") 'eclim-java-find-declaration)
   (global-set-key (kbd "C-u") 'eclim-java-find-references)
