@@ -38,8 +38,8 @@
     (load file)))
 
 ;; Current user settings
-(setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
-(add-to-list 'load-path user-settings-dir)
+;(setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
+;(add-to-list 'load-path user-settings-dir)
 
 ;; Add external vendor extensions to load path
 (dolist (project (directory-files vendor-dir t "\\w+"))
@@ -89,7 +89,20 @@
 
 ;; Appearance
 (require 'appearance)
-(when is-mac (require 'mac))
+;(when is-mac (require 'mac))
+
+;(setq mac-option-modifier 'alt)
+;(setq mac-command-modifier 'meta)
+
+(setq mac-option-modifier 'none)
+(setq mac-command-modifier 'meta)
+
+;(setq default-input-method "MacOSX")
+
+;(setq mac-command-modifier 'meta
+;      mac-option-modifier nil
+;      mac-allow-anti-aliasing t
+;      mac-command-key-is-meta t)
 
 ;; Emacs server
 ;(server-start)
