@@ -17,8 +17,8 @@ export PATH="$HOME/dev/go/bin:$PATH"
 export GOROOT="$HOME/dev/go"
 
 # Compilation
-#export CC="ccache clang"
-#export CXX="ccache clang++"
+export CC="ccache clang"
+export CXX="ccache clang++"
 #export ICECC_CC="icecc $CC"
 #export ICECC_CXX="icecc $CXX"
 
