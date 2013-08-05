@@ -13,12 +13,7 @@ alias ...='cd ../..'
 alias md='mkdir -p'
 alias rd=rmdir
 
-alias h='cd ~/'
-
 alias reload='source ~/.zshrc'
-
-# Super user
-alias _='sudo'
 
 # List direcory contents
 alias ls='ls -G'
@@ -28,7 +23,6 @@ alias sl=ls
 
 # Commonly used programs
 alias e="emacs -nw"
-alias v=vim
 
 # Other machines
 alias njord='ssh -XC ato@sny.no'
