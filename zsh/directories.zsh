@@ -10,20 +10,40 @@ setopt pushd_ignore_dups
 # both a .gopath file and a ./src directory in it.  Correspondingly it
 # unsets the variable if the previous condition is not true.
 function update_gopath() {
-    c="$PWD"
+    local cwd=$1
 
-    while [[ "`/bin/readlink -f $c`" != "/" ]];
-    do
+    directories=()
+    elements=(${(s:/:)cwd})
+
+    local total=${#elements}
+    for (( i=0; i <= $total; i++ )); do
+        rest=($elements[0,-$i])
+        directory=(/${(j:/:)rest})
+        directories+=($directory)
+    done
+
+    directories+=("/")
+
+    for local c in $directories; do
         if [ -f $c/.gopath ] && [ -d $c/src ]; then
-            export GOPATH=$PWD
+            local new_gopath=$(/bin/readlink -f $c)
+            if [[ "$GOPATH" != "$new_gopath" ]]; then
+                export GOPATH=$new_gopath
+                echo "GOPATH=$GOPATH"
+            fi
+
             return
         fi
+
         c=${c}/..
     done
 
-    unset GOPATH
+    if [ ! -z $GOPATH ]; then
+        unset GOPATH
+        echo "GOPATH=$GOPATH"
+    fi
 }
 
 function chpwd() {
-    update_gopath
+    update_gopath $PWD
 }
