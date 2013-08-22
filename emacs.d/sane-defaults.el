@@ -112,9 +112,8 @@
 (random t)
 
 ;; Whitespace
-(setq whitespace-style '(trailing lines space-before-tab
-                                  indentation space-after-tab)
-      whitespace-line-column 100)
+(setq show-trailing-whitespace t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Various superfluous white space
 ;(add-hook 'before-save-hook 'cleanup-buffer-safe)
