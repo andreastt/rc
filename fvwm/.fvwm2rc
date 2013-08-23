@@ -47,6 +47,7 @@ DestroyFunc InitFunction
 AddToFunc InitFunction
   + I Exec gnome-settings-daemon
   + I Exec gnome-keyring-daemon
+  + I Exec xset -b
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
@@ -92,7 +93,7 @@ AddToFunc SwitchWindow
       echo 'SetEnv NDIR Next' || \
       echo 'SetEnv NDIR Prev'`
   + I Schedule 700 134000 SetEnv DIR $[NDIR]
- 
+
 DestroyFunc Thumbnail
 AddToFunc Thumbnail
      + I Raise
@@ -104,13 +105,13 @@ AddToFunc Thumbnail
          Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png \
          || echo Nop"
      + I Iconify
- 
+
 DestroyFunc DeThumbnail
 AddToFunc DeThumbnail
      + I Exec rm -f $[FVWM_USERDIR]/icon.tmp.$[w.id].png
      + I DestroyWindowStyle
      + I Iconify no
- 
+
 #####
 # FvwmExpose - http://www.zensites.net/fvwm/guide/advanced_functions.html
 ###########
@@ -151,7 +152,7 @@ Key d A 4 Exec exec dmenu_run
 #  + I ThisWindow ("quick_terminal") hide_quick_terminal
 #  + I ThisWindow (!"quick_terminal") raise_or_fire_quick_terminal
 #  + I NoWindow raise_or_fire_quick_terminal
-     
+
 # Super held down displays window list
 #Key Super_L A A DisplayInfo
 
