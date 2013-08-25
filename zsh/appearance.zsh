@@ -42,7 +42,6 @@ _collapse_pwd() {
         echo $(pwd | perl -pe "s|^$HOME|~|g")
 }
 
-#PROMPT='$(_collapse_pwd) $FX[bold]$FG[036]●$FX[reset] '
 PROMPT='$(_collapse_pwd) $FX[bold]$FG[030]%%$FX[reset] '
 
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
@@ -64,12 +63,12 @@ function title() {
     a=$(print -Pn "%40>...>$a" | tr -d "\n")
     case $TERM in
         screen*)
-            print -Pn "\e]2;$a@$2\a" # plain xterm title
+            print -Pn "\e]2;$a@$2\a"   # plain terminal title
             print -Pn "\ek$a\e\\"      # screen title (in ^A")
             print -Pn "\e_$2   \e\\"   # screen location
             ;;
-        xterm*)
-            print -Pn "\e]2;$a@$2\a" # plain xterm title
+        rxvt*)
+            print -Pn "\e]2;$a@$2\a" # plain terminal title
             ;;
     esac
 }
