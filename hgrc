@@ -1,0 +1,8 @@
+[alias]
+show = log -pr
+
+[extensions]
+color =
+
+[color]
+mode = auto
