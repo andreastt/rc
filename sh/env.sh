@@ -19,13 +19,13 @@ export GOROOT="$HOME/dev/go"
 # Compilation
 export CC="ccache clang"
 export CXX="ccache clang++"
-#export ICECC_CC="icecc $CC"
-#export ICECC_CXX="icecc $CXX"
+export ICECC_CC="icecc $CC"
+export ICECC_CXX="icecc $CXX"
 
 export GYP_GENERATORS=ninja
 export GYP_PARALLEL=1
 
-export DISTCC_HOSTS="localhost/4 id-6895.users.oslo.osa/8"
+# TODO: DISTCC_HOSTS
 
 # Selenium test suites will continue running even if they reach an error or fail
 export haltonerror=0

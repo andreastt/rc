@@ -9,6 +9,9 @@
 (global-set-key (kbd "C-Å") 'mark-more-like-this-extended)
 (global-set-key (kbd "C-Æ") 'mark-more-like-this-extended)
 
+;; Kill whole line (not remainder of line) with C-M-k
+(global-set-key (kbd "C-M-k") 'kill-whole-line)
+
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'tool-bar-mode)
 (global-set-key (kbd "C-S-<f10>") 'menu-bar-mode)

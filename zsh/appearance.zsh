@@ -42,7 +42,6 @@ _collapse_pwd() {
         echo $(pwd | perl -pe "s|^$HOME|~|g")
 }
 
-#PROMPT='$(_collapse_pwd) $FX[bold]$FG[036]●$FX[reset] '
 PROMPT='$(_collapse_pwd) $FX[bold]$FG[030]%%$FX[reset] '
 
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
@@ -54,4 +53,32 @@ xterm*|rxvt*)
         ;;
 *)
         ;;
-esac
+        esac
+
+function title() {
+    # escape '%' chars in $1, make nonprintables visible
+    local a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -Pn "%40>...>$a" | tr -d "\n")
+    case $TERM in
+        screen*)
+            print -Pn "\e]2;$a@$2\a"   # plain terminal title
+            print -Pn "\ek$a\e\\"      # screen title (in ^A")
+            print -Pn "\e_$2   \e\\"   # screen location
+            ;;
+        rxvt*)
+            print -Pn "\e]2;$a@$2\a" # plain terminal title
+            ;;
+    esac
+}
+
+# precmd is called just before the prompt is printed
+function precmd() {
+        title "zsh" "%m:%55<...<%~"
+}
+
+# preexec is called just before any command line is executed
+function preexec() {
+    title "$1" "%m:%35<...<%~"
+}

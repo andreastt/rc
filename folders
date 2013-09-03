@@ -1,6 +1,0 @@
-%Inbox          "Inbox"
-%Sent           "Sent"
-%Trash          "Trash"
-%Drafts         "Drafts"
-+queue          "Queue"
-'flag/important "Important"

@@ -1,0 +1,20 @@
+[ui]
+username = Andreas Tolf Tolfsen <andreastt@opera.com>
+
+[defaults]
+qnew = -Ue
+
+[alias]
+show = log -pr
+
+[extensions]
+mq =
+color =
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8
+
+[color]
+mode = auto

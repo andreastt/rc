@@ -1,8 +1,0 @@
-abstracts = {
-
-  sb_background = "%0%g";
-  sb_default_bg = "%0";
-  sb_info_bg = "%8";
-  sb_topic_bg = "%0";
-
-};
