@@ -1,10 +1,7 @@
 ;; Change command to meta, and ignore option to use weird Norwegian keyboard
-;(setq mac-option-modifier nil
-;      mac-command-modifier 'meta
-;      x-select-enable-clipboard t)
-
-(setq mac-option-key-is-meta t)
-(setq mac-right-option-modifier nil)
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
 
 ;; Mac friendly font
 ;(set-face-attribute 'default nil :font "Monaco-16")

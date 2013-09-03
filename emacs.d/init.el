@@ -89,20 +89,7 @@
 
 ;; Appearance
 (require 'appearance)
-;(when is-mac (require 'mac))
-
-;(setq mac-option-modifier 'alt)
-;(setq mac-command-modifier 'meta)
-
-(setq mac-option-modifier 'none)
-(setq mac-command-modifier 'meta)
-
-;(setq default-input-method "MacOSX")
-
-;(setq mac-command-modifier 'meta
-;      mac-option-modifier nil
-;      mac-allow-anti-aliasing t
-;      mac-command-key-is-meta t)
+(when is-mac (require 'mac))
 
 ;; Emacs server
 ;(server-start)
