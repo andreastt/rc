@@ -4,7 +4,7 @@
       x-select-enable-clipboard t)
 
 ;; Mac friendly font
-;(set-face-attribute 'default nil :font "Monaco-16")
+(set-face-attribute 'default nil :font "Monaco-10")
 
 ;; Make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
