@@ -1,33 +1,31 @@
 (autoload 'compile "compile" t)
 
-;(defvar java-mode-plus-map (make-sparse-keymap)
-;  "Keymap for the java-mode-plus minor mode.")
-
 ;; Make sure ant's output is in a format emacs likes
 (setenv "ANT_ARGS" "-emacs")
 
 (defun my-java-mode-hook ()
   (set-fill-column 100)
 
+  ;; TODO(ato): Use local-key-set
   (define-key c-mode-base-map "\C-c\C-p" 'show-previous-error)
   (define-key c-mode-base-map "\C-c\C-n" 'show-next-error)
 
   ;; Locate closest build.xml file, run `ant compile` without any user
   ;; interaction
   ;;
-  ;; TODO(andreastt): Close the new comint buffer if compile succeeds,
+  ;; TODO(ato): Close the new comint buffer if compile succeeds,
   ;; but keep it open if something goes wrong.
-  (global-set-key (kbd "C-<f9>")
+  (local-set-key (kbd "C-<f9>")
                   '(lambda () (interactive)
                      (save-buffer)
                      (ant-compile-target "build")))
 
-  (global-set-key (kbd "C-b") 'eclim-java-find-declaration)
-  (global-set-key (kbd "C-u") 'eclim-java-find-references)
-  (global-set-key (kbd "S-<f6>") 'eclim-java-refactor-rename-symbol-at-point)
-  (global-set-key (kbd "C-c d") 'eclim-java-show-documentation-for-current-element)
-  (global-set-key (kbd "C-c h") 'eclim-java-hierarchy)
-  (global-set-key (kbd "C-i") 'eclim-java-import-organize)
+  (local-set-key (kbd "C-b") 'eclim-java-find-declaration)
+  (local-set-key (kbd "C-u") 'eclim-java-find-references)
+  (local-set-key (kbd "S-<f6>") 'eclim-java-refactor-rename-symbol-at-point)
+  (local-set-key (kbd "C-c d") 'eclim-java-show-documentation-for-current-element)
+  (local-set-key (kbd "C-c h") 'eclim-java-hierarchy)
+  (local-set-key (kbd "C-i") 'eclim-java-import-organize)
 
   (lambda ()
     (auto-fill-mode 1)
