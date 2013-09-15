@@ -50,6 +50,7 @@ AddToFunc InitFunction
 DestroyFunc StartFunction
 AddToFunc StartFunction
   + I Exec xsetroot -solid "#777777"
+  + I Exec xmodmap ~/.Xmodmap
   + I Module FvwmAnimate
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
