@@ -284,23 +284,19 @@ Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
-+                       "&1. XTerm"             Exec exec xterm
-+                       "&2. Rxvt"              Exec exec rxvt
++                       "&1. Terminal"              Exec exec rxvt
++                       "&2. Firefox"               Exec exec firefox -new-window
 +                       ""              Nop
-+                       "&D. Debian Menu"             Popup "/Debian"
++                       "&D. Debian"             Popup "/Debian"
 +                       ""              Nop
 +                       "&R. $[gt.Remote Logins]"     Popup MenuFvwmLogins
 +                       ""              Nop
 +                       "&U. $[gt.Utilities]"         Popup MenuFvwmUtilities
 +                       ""              Nop
-+                       "&M. $[gt.Fvwm Modules]"      Popup MenuFvwmModules
-+                       "&W. $[gt.Fvwm Window Ops]"   Popup MenuFvwmWindowOps
-+                       "&S. $[gt.Fvwm Config Ops]"   Popup MenuFvwmConfig
-+                       ""              Nop
 +                       "&F. $[gt.Refresh Screen]"   Refresh
 +                       "&C. $[gt.Recapture Screen]" Recapture
 +                       ""              Nop
-+                       "&X. $[gt.Exit Fvwm]" Popup MenuFvwmQuitVerify
++                       "&X. $[gt.fvwm]" Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
@@ -434,20 +430,14 @@ AddToFunc FuncFvwmConfigureIconBox
 + I Module FvwmIconBox
 + I Style     *  NoIcon
 
-DestroyMenu MenuFvwmQuitVerify
-AddToMenu MenuFvwmQuitVerify "$[gt.Really Quit Fvwm?]" Title
-+ "&Q. $[gt.Yes, Really Quit]" Quit
-+ ""                     Nop
+DestroyMenu MenuFvwm
+AddToMenu MenuFvwm
++ "&Q. $[gt.Quit]" Quit
 + "&R. $[gt.Restart]"          Restart
 + ""                     Nop
-+ "&T. $[gt.Start] twm"        Restart twm
-+ "&C. $[gt.Start] ctwm"       Restart ctwm
-+ "&2. $[gt.Start] tvtwm"      Restart tvtwm
-+ "&V. $[gt.Start] vtwm"       Restart vtwm
-+ "&M. $[gt.Start] mwm"        Restart mwm
-+ "&O. $[gt.Start] olwm"       Restart /usr/openwin/bin/olwm
-+ ""                     Nop
-+ "&X. $[gt.Just an Xterm]"    Restart xterm -n '"X Console"' -T '"X Console"'
++                       "&M. $[gt.Fvwm Modules]"      Popup MenuFvwmModules
++                       "&W. $[gt.Fvwm Window Ops]"   Popup MenuFvwmWindowOps
++                       "&S. $[gt.Fvwm Config Ops]"   Popup MenuFvwmConfig
 + ""                     Nop
 + "&N. $[gt.No, Don't Quit]"   Nop
 
