@@ -234,21 +234,21 @@ Style rxvt        MWMBorder, MWMButtons
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
-# Iconify window with C-z
+# Iconify window with C-S-z
 Key Z FSTW SC Iconify
 
-# some simple default mouse bindings:
-#   for the root window:
+# Root window
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
 Mouse 2 R       A       Menu MenuFvwmWindowOps Nop
 Mouse 3 R       A       WindowList
 
-#   for the title bar buttons:
+# Title bar buttons
 Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
 Mouse 0 2       A       FuncFvwmMaximize
 Mouse 0 4       A       Iconify
 
-# Mouse-grab with alt for various window ops, click anywhere on a window
+# Mouse-grab with Super for various window operations, click anywhere
+# on a window
 Mouse 1 FSTW M WindowLeftClick
 Mouse 2 FSTW M Thumbnail
 Mouse 3 FSTW M RaiseAndResize
