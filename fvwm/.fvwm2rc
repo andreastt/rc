@@ -27,16 +27,14 @@ SetAnimation 10 -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
 Style * MwmDecor, SlipperyIcon
 Style * IconBox 0 -10 -280 -1
 
-Style *      BorderWidth 4
-Style *      HandleWidth 4
-Style *      FvwmBorder # turn off 3d bevel
-Style *      FirmBorder # border is not depressable
-Style *      SnapAttraction 20
+Style *     BorderWidth 4
+Style *     HandleWidth 4
+Style *     FvwmBorder # turn off 3d bevel
+Style *     FirmBorder # border is not depressable
+Style *     SnapAttraction 20
 
-#DefaultFont "xft:Liberation Sans:size=9"
-#Style *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-Style *           IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-MenuStyle *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+Style *     IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+MenuStyle * Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 
 MenuStyle * fvwm, Foreground black, Background #99FFFF, Greyed grey40
 Style * Fore black, Back #669999
