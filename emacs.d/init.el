@@ -5,10 +5,6 @@
 ;;
 ;;     C-u 0 M-x byte-recompile-directory
 
-;; Startup time metrics
-(require 'cl)
-(defvar *emacs-load-start* (current-time))
-
 ;; Run at full power, please
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
@@ -38,8 +34,8 @@
     (load file)))
 
 ;; Current user settings
-;(setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
-;(add-to-list 'load-path user-settings-dir)
+(setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
+(add-to-list 'load-path user-settings-dir)
 
 ;; Add external vendor extensions to load path
 (dolist (project (directory-files vendor-dir t "\\w+"))
@@ -57,28 +53,26 @@
 (require 'backup)
 
 ;; Setup dependencies
+(require 'setup-gdb)
 (require 'setup-c-mode)
 (require 'setup-c++-mode)
-(require 'setup-gdb)
 (require 'setup-eclim)
 (require 'setup-java)
-(require 'setup-diary)
+;(require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-dired)
 (require 'setup-js2-mode)
 (require 'setup-autopair)
 (require 'setup-auto-complete)
 (require 'setup-printing)
-(require 'setup-magit)
 (require 'setup-go)
-(require 'setup-python)
+;(require 'setup-python)
 (require 'setup-edit-server)
-(require 'setup-org-mode)
+;(require 'setup-org-mode)
 (require 'setup-multi-web-mode)
 (require 'setup-gtags)
 (require 'setup-tramp)
 
-;(autoload 'mark-more-like-this "mark-more-like-this" t)
 (require 'mark-more-like-this)
 
 ;; Map files to modes
@@ -89,12 +83,8 @@
 (require 'key-bindings)
 
 ;; Appearance
-(require 'appearance)
+(when window-system (require 'appearance))
 (when is-mac (require 'mac))
 
 ;; Emacs server
 ;(server-start)
-
-;; (message "My .emacs loaded in %ds"
-;;          (destructuring-bind (hi lo ms) (current-time)
-;;            (- (+ hi lo) (+ (first *emacs-load-start*) (second *emacs-load-start*)))))
