@@ -71,6 +71,7 @@
 (require 'setup-multi-web-mode)
 (require 'setup-gtags)
 (require 'setup-tramp)
+(require 'setup-git)
 
 (require 'mark-more-like-this)
 
