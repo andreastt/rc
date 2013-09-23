@@ -27,16 +27,14 @@ SetAnimation 10 -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
 Style * MwmDecor, SlipperyIcon
 Style * IconBox 0 -10 -280 -1
 
-Style *      BorderWidth 4
-Style *      HandleWidth 4
-Style *      FvwmBorder # turn off 3d bevel
-Style *      FirmBorder # border is not depressable
-Style *      SnapAttraction 20
+Style *     BorderWidth 4
+Style *     HandleWidth 4
+Style *     FvwmBorder # turn off 3d bevel
+Style *     FirmBorder # border is not depressable
+Style *     SnapAttraction 20
 
-#DefaultFont "xft:Liberation Sans:size=9"
-#Style *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-Style *           IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-MenuStyle *           Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+Style *     IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+MenuStyle * Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 
 MenuStyle * fvwm, Foreground black, Background #99FFFF, Greyed grey40
 Style * Fore black, Back #669999
@@ -45,13 +43,13 @@ Style * HilightFore black, HilightBack #99ffff
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
-  + I Exec gnome-settings-daemon
-  + I Exec gnome-keyring-daemon
+  + I Exec keychain ~/.ssh/id_rsa
   + I Exec xset -b
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
   + I Exec xsetroot -solid "#777777"
+  + I Exec xmodmap ~/.Xmodmap
   + I Module FvwmAnimate
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
@@ -235,21 +233,21 @@ Style rxvt        MWMBorder, MWMButtons
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
-# Iconify window with C-z
+# Iconify window with C-S-z
 Key Z FSTW SC Iconify
 
-# some simple default mouse bindings:
-#   for the root window:
+# Root window
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
 Mouse 2 R       A       Menu MenuFvwmWindowOps Nop
 Mouse 3 R       A       WindowList
 
-#   for the title bar buttons:
+# Title bar buttons
 Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
 Mouse 0 2       A       FuncFvwmMaximize
 Mouse 0 4       A       Iconify
 
-# Mouse-grab with alt for various window ops, click anywhere on a window
+# Mouse-grab with Super for various window operations, click anywhere
+# on a window
 Mouse 1 FSTW M WindowLeftClick
 Mouse 2 FSTW M Thumbnail
 Mouse 3 FSTW M RaiseAndResize
@@ -285,23 +283,19 @@ Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
-+                       "&1. XTerm"             Exec exec xterm
-+                       "&2. Rxvt"              Exec exec rxvt
++                       "&1. Terminal"              Exec exec rxvt
++                       "&2. Firefox"               Exec exec firefox -new-window
 +                       ""              Nop
-+                       "&D. Debian Menu"             Popup "/Debian"
++                       "&D. Debian"             Popup "/Debian"
 +                       ""              Nop
 +                       "&R. $[gt.Remote Logins]"     Popup MenuFvwmLogins
 +                       ""              Nop
 +                       "&U. $[gt.Utilities]"         Popup MenuFvwmUtilities
 +                       ""              Nop
-+                       "&M. $[gt.Fvwm Modules]"      Popup MenuFvwmModules
-+                       "&W. $[gt.Fvwm Window Ops]"   Popup MenuFvwmWindowOps
-+                       "&S. $[gt.Fvwm Config Ops]"   Popup MenuFvwmConfig
-+                       ""              Nop
 +                       "&F. $[gt.Refresh Screen]"   Refresh
 +                       "&C. $[gt.Recapture Screen]" Recapture
 +                       ""              Nop
-+                       "&X. $[gt.Exit Fvwm]" Popup MenuFvwmQuitVerify
++                       "&X. $[gt.fvwm]" Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
@@ -435,20 +429,14 @@ AddToFunc FuncFvwmConfigureIconBox
 + I Module FvwmIconBox
 + I Style     *  NoIcon
 
-DestroyMenu MenuFvwmQuitVerify
-AddToMenu MenuFvwmQuitVerify "$[gt.Really Quit Fvwm?]" Title
-+ "&Q. $[gt.Yes, Really Quit]" Quit
-+ ""                     Nop
+DestroyMenu MenuFvwm
+AddToMenu MenuFvwm
++ "&Q. $[gt.Quit]" Quit
 + "&R. $[gt.Restart]"          Restart
 + ""                     Nop
-+ "&T. $[gt.Start] twm"        Restart twm
-+ "&C. $[gt.Start] ctwm"       Restart ctwm
-+ "&2. $[gt.Start] tvtwm"      Restart tvtwm
-+ "&V. $[gt.Start] vtwm"       Restart vtwm
-+ "&M. $[gt.Start] mwm"        Restart mwm
-+ "&O. $[gt.Start] olwm"       Restart /usr/openwin/bin/olwm
-+ ""                     Nop
-+ "&X. $[gt.Just an Xterm]"    Restart xterm -n '"X Console"' -T '"X Console"'
++                       "&M. $[gt.Fvwm Modules]"      Popup MenuFvwmModules
++                       "&W. $[gt.Fvwm Window Ops]"   Popup MenuFvwmWindowOps
++                       "&S. $[gt.Fvwm Config Ops]"   Popup MenuFvwmConfig
 + ""                     Nop
 + "&N. $[gt.No, Don't Quit]"   Nop
 
