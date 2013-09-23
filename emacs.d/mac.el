@@ -1,10 +1,16 @@
-;; Change command to meta, and ignore option to use weird Norwegian keyboard
+;; Change command to meta, and ignore option to use weird Norwegian
+;; keyboard
 (setq mac-option-modifier nil
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
-;; Mac friendly font
-(set-face-attribute 'default nil :font "Menlo-10")
+;; Enable menu bar on OS X since it's there by default anyways
+(menu-bar-mode 1)
+
+;; Mac friendly font without antialiasing
+;(set-face-attribute 'default nil :font "Menlo-10")
+(set-face-attribute 'default nil :font "Monaco-10")
+(setq mac-allow-anti-aliasing nil)
 
 ;; Make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
