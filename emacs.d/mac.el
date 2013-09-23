@@ -8,9 +8,9 @@
 (menu-bar-mode 1)
 
 ;; Mac friendly font without antialiasing
-;(set-face-attribute 'default nil :font "Menlo-10")
-(set-face-attribute 'default nil :font "Monaco-10")
-(setq mac-allow-anti-aliasing nil)
+(set-face-attribute 'default nil :font "Menlo-10")
+;;(set-face-attribute 'default nil :font "Monaco-10")
+;;(setq mac-allow-anti-aliasing nil)
 
 ;; Make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
