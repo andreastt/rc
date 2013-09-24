@@ -11,18 +11,20 @@
 (setq compilation-scroll-output 'first-error)
 
 (defun my-c-mode-hook ()
-  ;; Compile
-  (define-key c-mode-map (kbd "C-<f9>") 'compile)
+  ;; Compile and recompile
+  (local-key-set (kbd "C-<f9>") 'compile)
+  (local-key-set (kbd "C-S-<f9>") 'recompile)
 
   ;; Kill compilation
-  (define-key c-mode-map (kbd "C-<f2>") 'kill-compilation)
+  (local-key-set (kbd "c-<f2>") 'kill-compilation)
 
   ;; Debug with gud-gdb
-  (define-key c-mode-map (kbd "S-<f9>") 'gdb)
+  (local-key-set (kbd "S-<f9>") 'gdb)
 
   ;; Switch between header and implementation
-  (define-key c-mode-map (kbd "<f12>") 'ff-find-other-file)
+  (local-key-set (kbd "<f12>") 'ff-find-other-file)
 
+  ;; Use GNU global
   (require 'gtags)
   (gtags-mode t)
   (gtags-create-or-update))
