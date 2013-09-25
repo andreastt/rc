@@ -72,6 +72,7 @@
 (require 'setup-gtags)
 (require 'setup-tramp)
 (require 'setup-git)
+(require 'setup-gnus)
 
 (require 'mark-more-like-this)
 
