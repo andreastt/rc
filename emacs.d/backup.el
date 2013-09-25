@@ -5,11 +5,19 @@
 ;; Delete old versions automatically
 ;(setq delete-old-versions t)
 
-(setq backup-by-copying t      ; don't clobber symlinks
+(require 'recentf)
+
+      ;; Don't clobber symlinks
+(setq backup-by-copying t
       delete-old-versions t
       kept-new-versions 6
       kept-old-versions 2
-      version-control t)       ; use versioned backups
+
+      ;; Use versioned backups
+      version-control t
+
+      ;; Put recentf in temporary folder
+      recentf-save-file (expand-file-name "recentf" temporary-file-directory))
 
 ;; Write backup files to own directory
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
