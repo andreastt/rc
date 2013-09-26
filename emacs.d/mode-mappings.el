@@ -12,6 +12,7 @@
 ;; Rust
 (add-to-list 'auto-mode-alist '("\\.rc\\.rs\\'" . rust-mode))
 
+
 ;; Perl
 (fset 'perl-mode 'cperl-mode)
 
