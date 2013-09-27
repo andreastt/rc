@@ -9,6 +9,9 @@
 ;; Go
 (add-to-list (quote auto-mode-alist) (cons "\\.go$" (function go-mode)))
 
+;; Rust
+(add-to-list 'auto-mode-alist '("\\.rc\\.rs\\'" . rust-mode))
+
 ;; Perl
 (fset 'perl-mode 'cperl-mode)
 

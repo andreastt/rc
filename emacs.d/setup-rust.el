@@ -1,2 +1,2 @@
-(require 'rust-mode)
+(autoload 'rust-mode "rust-mode" t)
 (provide 'setup-rust)
