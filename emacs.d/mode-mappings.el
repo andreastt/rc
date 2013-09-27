@@ -4,14 +4,14 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;; Java
-(add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))  ;; jde-mode
+(add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
 
 ;; Go
-(add-to-list (quote auto-mode-alist) (cons "\\.go$" (function go-mode)))
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 ;; Rust
-(add-to-list 'auto-mode-alist '("\\.rc\\.rs\\'" . rust-mode))
-
+(add-to-list 'auto-mode-alist '("\\.rc\\'" . rust-mode))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Perl
 (fset 'perl-mode 'cperl-mode)
