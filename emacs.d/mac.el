@@ -2,7 +2,10 @@
 ;; keyboard
 (setq mac-option-modifier nil
       mac-command-modifier 'meta
-      x-select-enable-clipboard t)
+      x-select-enable-clipboard t
+
+      ;; Use Emacs terminfo, not system terminfo
+      system-uses-terminfo nil)
 
 ;; Enable menu bar on OS X since it's there by default anyways
 (menu-bar-mode 1)
