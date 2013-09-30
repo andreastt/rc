@@ -1,15 +1,8 @@
 ;;; setup-c++-mode.el --- Development setup for C++
 
-;; Change scroll behaviour of compilation
-(setq compilation-scroll-output 'first-error)
+;; TODO(ato): Share many of these with c-mode.
 
 (defun my-c++-mode-hook ()
-  ;; Compile
-  (define-key c++-mode-map (kbd "C-<f9>") 'compile)
-
-  ;; Kill compilation
-  (define-key c++-mode-map (kbd "C-<f2>") 'kill-compilation)
-
   ;; Debug with gud-gdb
   ;;
   ;; Debugging step key bindings are defined in setup-gdb.el.

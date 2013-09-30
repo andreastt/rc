@@ -54,6 +54,7 @@
 
 ;; Setup dependencies
 (require 'setup-gdb)
+(require 'setup-cc)
 (require 'setup-c-mode)
 (require 'setup-c++-mode)
 (require 'setup-eclim)

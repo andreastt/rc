@@ -9,6 +9,9 @@
 (global-set-key (kbd "C-Å") 'mark-more-like-this-extended)
 (global-set-key (kbd "C-Æ") 'mark-more-like-this-extended)
 
+;; Comment or uncomment current line or marked region
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region-or-line)
+
 ;; Kill whole line (not remainder of line) with C-M-k
 (global-set-key (kbd "C-M-k") 'kill-whole-line)
 

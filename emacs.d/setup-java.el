@@ -1,31 +1,29 @@
-(autoload 'compile "compile" t)
-
-;; Make sure ant's output is in a format emacs likes
-(setenv "ANT_ARGS" "-emacs")
+(require 'ant-project-mode)
 
 (defun my-java-mode-hook ()
+  ;; Java is indeed a verbose language, and we no longer live in
+  ;; VT100's.
   (set-fill-column 100)
 
-  ;; TODO(ato): Use local-key-set
-  (define-key c-mode-base-map "\C-c\C-p" 'show-previous-error)
-  (define-key c-mode-base-map "\C-c\C-n" 'show-next-error)
+  ;; Make sure ant's output is in a format Emacs likes.
+  (setenv "ANT_ARGS" "-emacs")
 
   ;; Locate closest build.xml file, run `ant compile` without any user
-  ;; interaction
+  ;; interaction.
   ;;
-  ;; TODO(ato): Close the new comint buffer if compile succeeds,
-  ;; but keep it open if something goes wrong.
-  (local-set-key (kbd "C-<f9>")
-                  '(lambda () (interactive)
-                     (save-buffer)
-                     (ant-compile-target "build")))
+  ;; TODO(ato): Close the new comint buffer if compile succeeds, but
+  ;; keep it open if something goes wrong.
+  (define-key java-mode-map (kbd "C-<f9>")
+    '(lambda () (interactive)
+       (save-buffer)
+       (ant-compile-target "build")))
 
-  (local-set-key (kbd "C-b") 'eclim-java-find-declaration)
-  (local-set-key (kbd "C-u") 'eclim-java-find-references)
-  (local-set-key (kbd "S-<f6>") 'eclim-java-refactor-rename-symbol-at-point)
-  (local-set-key (kbd "C-c d") 'eclim-java-show-documentation-for-current-element)
-  (local-set-key (kbd "C-c h") 'eclim-java-hierarchy)
-  (local-set-key (kbd "C-i") 'eclim-java-import-organize)
+  (define-key java-mode-map (kbd "C-b") 'eclim-java-find-declaration)
+  (define-key java-mode-map (kbd "C-u") 'eclim-java-find-references)
+  (define-key java-mode-map (kbd "S-<f6>") 'eclim-java-refactor-rename-symbol-at-point)
+  (define-key java-mode-map (kbd "C-c d") 'eclim-java-show-documentation-for-current-element)
+  (define-key java-mode-map (kbd "C-c h") 'eclim-java-hierarchy)
+  (define-key java-mode-map (kbd "C-i") 'eclim-java-import-organize)
 
   (lambda ()
     (auto-fill-mode 1)
@@ -41,18 +39,21 @@
     ;;   (speedbar t))))
     ))
 
-(add-hook 'my-java-mode-hook 'google-set-c-style)
-(add-hook 'my-java-mode-hook 'google-make-newline-indent)
+(add-hook 'java-mode-hook 'my-java-mode-hook)
+
+;; Use Google C style to indent Java as well.  It almost mostly okay.
+(add-hook 'java-mode-hook 'google-set-c-style)
+(add-hook 'java-mode-hook 'google-make-newline-indent)
 
 ;; Ant project
-(require 'ant-project-mode)
+;;(require 'ant-project-mode)
 
-(require 'flymake)
-(defun my-flymake-init ()
-  (list "my-java-flymake-checks"
-        (list (flymake-init-create-temp-buffer-copy
-               'flymake-create-temp-with-folder-structure))))
-(add-to-list 'flymake-allowed-file-name-masks
-             '("\\.java$" my-flymake-init flymake-simple-cleanup))
+;; (require 'flymake)
+;; (defun my-flymake-init ()
+;;   (list "my-java-flymake-checks"
+;;         (list (flymake-init-create-temp-buffer-copy
+;;                'flymake-create-temp-with-folder-structure))))
+;; (add-to-list 'flymake-allowed-file-name-masks
+;;              '("\\.java$" my-flymake-init flymake-simple-cleanup))
 
 (provide 'setup-java)

@@ -1,33 +1,20 @@
-;; global is used for looking up tags and symbols.
-(defun my-gtags-hook ()
-  ;; Find a tag
-  (local-set-key (kbd "M-.") 'gtags-find-tag)
+;;; setup-c-mode.el --- Development setup for C
 
-  ;; Find reverse tag
-  (local-set-key (kbd "M-,") 'gtags-find-rtag))
-(add-hook 'gtags-mode-hook 'my-gtags-hook)
-
-;; Change scroll behaviour of compilation
-(setq compilation-scroll-output 'first-error)
+;; TODO(ato): Share many of these with c++-mode.
 
 (defun my-c-mode-hook ()
-  ;; Compile and recompile
-  (local-key-set (kbd "C-<f9>") 'compile)
-  (local-key-set (kbd "C-S-<f9>") 'recompile)
-
-  ;; Kill compilation
-  (local-key-set (kbd "c-<f2>") 'kill-compilation)
-
   ;; Debug with gud-gdb
-  (local-key-set (kbd "S-<f9>") 'gdb)
+  ;;
+  ;; Debugging step key bindings are defined in setup-gdb.el.
+  ;; (local-key-set (kbd "S-<f9>") 'gdb)
+  (define-key c-mode-map (kbd "S-<f9>") 'gdb)
 
   ;; Switch between header and implementation
-  (local-key-set (kbd "<f12>") 'ff-find-other-file)
+  ;; (local-key-set (kbd "<f12>") 'ff-find-other-file))
+  (define-key c-mode-map (kbd "<f12>") 'ff-find-other-file))
+(add-hook 'c-mode-hook 'my-c-mode-hook)
 
-  ;; Use GNU global
-  (require 'gtags)
-  (gtags-mode t)
-  (gtags-create-or-update))
-(add-hook 'c-mode-common-hook 'my-c-mode-hook)
+;; Use Google C style
+(add-hook 'c-mode-common-hook 'google-set-c-style)
 
 (provide 'setup-c-mode)
