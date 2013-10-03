@@ -75,6 +75,7 @@
 (require 'setup-tramp)
 (require 'setup-git)
 (require 'setup-gnus)
+(require 'setup-erc)
 
 (require 'mark-more-like-this)
 
