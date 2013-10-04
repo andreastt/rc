@@ -1,5 +1,9 @@
 (require 'znc)
 
+;; Don't part channels on killing the buffers.
+(setq znc-detach-on-kill nil
+      znc-servers (quote (("sny.no" 6697 t ((sny "ato" ""))))))
+
 ;; Default full name and user ID
 (setq erc-user-full-name "Andreas Tolfsen"
       erc-email-userid "ato@sny.no")
