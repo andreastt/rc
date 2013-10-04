@@ -2,13 +2,6 @@
       color-theme-is-global t
       truncate-partial-width-windows nil)
 
-;; Theme
-;;(require 'color-theme)
-;; (eval-after-load "color-theme"
-;;   '(progn
-;;      (color-theme-initialize)
-;;      (color-theme-charcoal-black)))
-
 ;; Highlight matching parantheses when the point is on them
 (show-paren-mode 1)
 

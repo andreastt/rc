@@ -1,3 +1,14 @@
+;; Mac specific appearance
+(set-face-attribute 'default nil :font "Monaco-12")
+(scroll-bar-mode 0)
+
+;; Theme
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-charcoal-black)))
+
 ;; Change command to meta, and ignore option to use weird Norwegian
 ;; keyboard
 (setq mac-option-modifier nil
