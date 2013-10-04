@@ -99,7 +99,7 @@
 
 ;; Use chromium as default browser
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "chromium-browser")
+      browse-url-generic-program "firefox")
 
 ;; Default ctags file should be .tags
 (setq tags-file-name ".tags")
