@@ -9,6 +9,10 @@
      (color-theme-initialize)
      (color-theme-charcoal-black)))
 
+;; Transparency
+(set-frame-parameter (selected-frame) 'alpha '(90 50))
+(add-to-list 'default-frame-alist '(alpha 90 50))
+
 ;; Change command to meta, and ignore option to use weird Norwegian
 ;; keyboard
 (setq mac-option-modifier nil
