@@ -98,14 +98,17 @@
 (setq explicit-shell-file-name "/bin/zsh")
 
 ;; Use chromium as default browser
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "firefox")
+(setq browse-url-browser-function 'browse-url-generic)
+
+(if is-mac
+    (setq browse-url-generic-program "open")
+  (setq browse-url-generic-program "firefox"))
 
 ;; Default ctags file should be .tags
 (setq tags-file-name ".tags")
 
 ;; Crank up the rate at which Emacs autosaves files
-(setq auto-save-interval 20   ;; n keystroke(s)
+(setq auto-save-interval 20  ;; n keystrokes
       auto-save-timeout 10)  ;; ten idle seconds
 
 ;; Seed the random number generator
