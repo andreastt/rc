@@ -97,12 +97,13 @@
 ;; Use zsh as default shell
 (setq explicit-shell-file-name "/bin/zsh")
 
-;; Use chromium as default browser
+;; Default web browser is governed by operating system.  On Debian one
+;; can use x-www-browser to access the default browser, and the
+;; corresponding program on Mac is called open.
 (setq browse-url-browser-function 'browse-url-generic)
-
 (if is-mac
     (setq browse-url-generic-program "open")
-  (setq browse-url-generic-program "firefox"))
+  (setq browse-url-generic-program "x-www-browser"))
 
 ;; Default ctags file should be .tags
 (setq tags-file-name ".tags")
