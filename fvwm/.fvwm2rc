@@ -94,39 +94,31 @@ AddToFunc SwitchWindow
 
 DestroyFunc Thumbnail
 AddToFunc Thumbnail
-     + I Raise
-     + I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
-         "xwd -silent -id $[w.id] | convert -scale 192 -frame 1x1 \
-         -mattecolor black -quality 0 xwd:- \
-         png:$[FVWM_USERDIR]/icon.tmp.$[w.id].png \
-         &amp;&amp; echo WindowStyle IconOverride, \
-         Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png \
-         || echo Nop"
-     + I Iconify
+  + I Raise
+  + I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
+      "xwd -silent -id $[w.id] | convert -scale 128 -frame 1x1 \
+      -mattecolor black -quality 0 xwd:- \
+      png:$[FVWM_USERDIR]/icon.tmp.$[w.id].png && \
+      echo WindowStyle IconOverride, \
+      Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png || \
+      echo Nop"
+  + I Iconify
 
 DestroyFunc DeThumbnail
 AddToFunc DeThumbnail
-     + I Exec rm -f $[FVWM_USERDIR]/icon.tmp.$[w.id].png
-     + I DestroyWindowStyle
-     + I Iconify no
+  + I Exec rm -f $[FVWM_USERDIR]/icon.tmp.$[w.id].png
+  + I DestroyWindowStyle
 
-#####
-# FvwmExpose - http://www.zensites.net/fvwm/guide/advanced_functions.html
-###########
-DestroyFunc FvwmExpose
-AddToFunc FvwmExpose
-+ I AddToMenu FvwmExposeMenu "e x p o s e" Title
-+ I + DynamicPopDownAction DestroyMenu FvwmExposeMenu
-+ I All (!Iconic !Shaded AcceptsFocus)\
-    PipeRead "echo Raise; \
-        xwd -silent -id $[w.id] | convert -scale $$(($[w.width]/10)) -quality 0 xwd:- \
-        png:$[fvwm_home]/tmp/icon.exp.$[w.id].png \
-	&amp;&amp; echo AddToMenu FvwmExposeMenu \
-	%$[fvwm_home]/tmp/icon.exp.$[w.id].png%\\\'\"$[w.name]\"\\\' WindowID $[w.id] WarpToWindow 50 50 \
-        &amp;&amp; echo AddToMenu FvwmExposeMenu \\\"\\\" Nop \
-    || Nop"
-+ I Popup FvwmExposeMenu
-+ I Exec exec rm -f $[fvwm_home]/tmp/icon.exp.*
+*FvwmEvent: deiconify DeThumbnail
+#AddToFunc StartFunction I Module FvwmEvent
+
+AddToFunc StartFunction I Test (Restart) All (Iconic) \
+  Test (f $[FVWM_USERDIR]/icon.tmp.$[w.id].png) WindowStyle \
+  IconOverride, Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png
+
+DestroyFunc ExitFunction
+  AddToFunc ExitFunction I Test (!ToRestart) \
+  Exec rm -f $[FVWM_USERDIR]/icon.tmp.*
 
 #####################################
 # Key bindings
@@ -234,7 +226,7 @@ Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
 # Iconify window with C-S-z
-Key Z FSTW SC Iconify
+Key Z FSTW SC Thumbnail
 
 # Root window
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
@@ -244,7 +236,7 @@ Mouse 3 R       A       WindowList
 # Title bar buttons
 Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
 Mouse 0 2       A       FuncFvwmMaximize
-Mouse 0 4       A       Iconify
+Mouse 0 4       A       Thumbnail
 
 # Mouse-grab with Super for various window operations, click anywhere
 # on a window
@@ -268,7 +260,7 @@ Mouse 1 I N DeThumbnail
 Mouse 1 F       A       FuncFvwmResizeOrRaise
 Mouse 1 TS      A       FuncFvwmMoveOrRaise
 Mouse 1 I       A       FuncFvwmMoveOrIconify
-Mouse 2 I       A       Iconify
+Mouse 2 I       A       Thumbnail
 Mouse 2 FST     A       Menu MenuFvwmWindowOps2 Nop
 Mouse 3 TSIF    A       RaiseLower
 
@@ -337,7 +329,7 @@ AddToFunc FuncFvwmWindowCommon
 + I AddToMenu $0 "$[gt.&Resize]"            Resize
 + I AddToMenu $0 "$[gt.R&aise]"             Raise
 + I AddToMenu $0 "$[gt.&Lower]"             Lower
-+ I AddToMenu $0 "$[gt.(De)&Iconify]"       Iconify
++ I AddToMenu $0 "$[gt.(De)&Iconify]"       Thumbnail
 + I AddToMenu $0 "$[gt.(Un)&Stick]"         Stick
 + I AddToMenu $0 "$[gt.(Un)Ma&ximize]"      Maximize
 + I AddToMenu $0 ""                 Nop
@@ -465,7 +457,7 @@ DestroyFunc FuncFvwmMoveOrIconify
 AddToFunc FuncFvwmMoveOrIconify
 + I Raise
 + M Move
-+ D Iconify
++ D Thumbnail
 
 DestroyFunc FuncFvwmResizeOrRaise
 AddToFunc FuncFvwmResizeOrRaise
