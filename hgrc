@@ -1,5 +1,5 @@
 [ui]
-username = Andreas Tolf Tolfsen <andreastt@opera.com>
+username = Andreas Tolfsen <andreastt@opera.com>
 
 [defaults]
 qnew = -Ue
@@ -10,6 +10,10 @@ show = log -pr
 [extensions]
 mq =
 color =
+pager =
+progress =
+rebase =
+record =
 
 [diff]
 git = 1
@@ -18,3 +22,6 @@ unified = 8
 
 [color]
 mode = auto
+
+[pager]
+pager = LESS="FRX" less
