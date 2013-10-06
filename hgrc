@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 [ui]
 username = Andreas Tolfsen <andreastt@opera.com>
 
