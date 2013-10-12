@@ -8,6 +8,7 @@ qnew = -Ue
 
 [alias]
 show = log --patch --verbose --rev
+purge = purge --print
 
 [extensions]
 mq =
@@ -16,6 +17,7 @@ pager =
 progress =
 rebase =
 record =
+purge =
 
 [diff]
 git = 1
