@@ -74,8 +74,8 @@
 (require 'setup-gtags)
 (require 'setup-tramp)
 (require 'setup-git)
-(require 'setup-gnus)
 (require 'setup-erc)
+(require 'setup-mu)
 
 (require 'mark-more-like-this)
 
