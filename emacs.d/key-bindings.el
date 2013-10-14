@@ -38,6 +38,9 @@
 ;; Create new frame
 (define-key global-map (kbd "C-x C-n") 'make-frame-command)
 
+;; Cycle through open frames
+(define-key global-map (kbd "C-.") 'other-frame)
+
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
