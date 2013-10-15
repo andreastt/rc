@@ -26,5 +26,5 @@ alias sl=ls
 alias e="emacs -nw"
 
 # Other machines
-alias njord="ssh -XC ato@sny.no"
-alias work="ssh -XC andreastt@id-6895.users.oslo.osa"
+alias njord="ssh -YC ato@sny.no"
+alias work="ssh -YC andreastt@id-6895.users.oslo.osa"
