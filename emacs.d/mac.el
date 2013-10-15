@@ -1,5 +1,5 @@
 ;; Mac specific appearance
-(set-face-attribute 'default nil :font "Monaco-12")
+(set-face-attribute 'default nil :font "Monaco-10")
 (scroll-bar-mode 0)
 
 ;; Theme
@@ -10,8 +10,8 @@
      (color-theme-charcoal-black)))
 
 ;; Transparency
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
+;; (add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; Change command to meta, and ignore option to use weird Norwegian
 ;; keyboard
@@ -27,7 +27,6 @@
 
 ;; Mac friendly font without antialiasing
 ;;(set-face-attribute 'default nil :font "Menlo-10")
-(set-face-attribute 'default nil :font "Monaco-10")
 ;;(setq mac-allow-anti-aliasing nil)
 
 ;; Make sure path is correct when launched as application
