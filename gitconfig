@@ -50,7 +50,7 @@
   lm = log master..
   llm = log -p master..
   b = branch
-  squash = ~/bin/git-squash
+  squash = !git rebase -i --autosquash `git merge-base HEAD origin/master`
 
 [push]
   default = current
