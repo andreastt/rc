@@ -48,6 +48,7 @@
   lm = log master..
   llm = log -p master..
   b = branch
+  squash = ~/bin/git-squash
 
 [push]
   default = current
