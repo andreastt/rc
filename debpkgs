@@ -1,6 +1,7 @@
 a2ps
 ack-grep
 aptitude
+arandr
 automake
 build-essential
 bzr
@@ -54,6 +55,7 @@ python-jinja2
 python-pip
 python-simplejson
 python-sphinx
+python-xapian
 python2.7
 python3
 rdesktop
@@ -80,7 +82,6 @@ whois
 wireless-tools
 x-face-el
 x11vnc
-python-xapian
 xcursor-themes
 xdm
 xfaces
@@ -89,6 +90,7 @@ xfonts-terminus
 xfonts-utils
 xorg-dev
 xpdf
+xrandr
 xserver-xorg
 xtightvncviewer
 xz-utils
