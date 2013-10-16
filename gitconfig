@@ -51,7 +51,7 @@
   llm = log -p master..
   b = branch
   squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
-  fixup = !git commit --fixup=`git log --format='%H %s' | grep -v '[a-b0-9]{7}\\sfixup!\\s' | head -n1 | cut --fields=1 --delimiter=' '`
+  fixup = !git commit --fixup=`git log --format='%H %s' | grep -v '[a-b0-9]{40}\\sfixup!\\s' | head -n1 | cut --fields=1 --delimiter=' '`
 
 [push]
   default = current
