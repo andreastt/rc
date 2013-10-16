@@ -50,7 +50,8 @@
   lm = log master..
   llm = log -p master..
   b = branch
-  squash = !git rebase -i --autosquash `git merge-base HEAD origin/master`
+  squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
+  fixup = !git commit --fixup=$(git log --format="%H" | grep -v 'fixup!\\s' | head -n1)
 
 [push]
   default = current
