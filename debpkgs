@@ -51,6 +51,7 @@ p7zip
 perl
 powertop
 protobuf-compiler
+python-ipdb
 python-jinja2
 python-pip
 python-simplejson
