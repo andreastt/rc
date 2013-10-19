@@ -1,3 +1,5 @@
+# -*- mode: sh -*-
+
 # Changing/making/removing directory
 setopt auto_name_dirs
 setopt auto_pushd
@@ -26,7 +28,7 @@ function update_gopath() {
 
     for c in $directories; do
         if [ -f "$c/.gopath" ] && [ -d "$c/src" ]; then
-            local new_gopath=$(/bin/readlink -f "$c")
+            local new_gopath=$($(whereis readlink) -f "$c")
             if [[ "$GOPATH" != "$new_gopath" ]]; then
                 export GOPATH="$new_gopath"
                 echo "GOPATH=$GOPATH"
