@@ -89,6 +89,7 @@ xfaces
 xfonts-100dpi
 xfonts-terminus
 xfonts-utils
+xinit
 xorg-dev
 xpdf
 xrandr
