@@ -14,6 +14,19 @@
 (setq mu4e-get-mail-command "offlineimap"
       mu4e-update-interval 300)
 
+(setq mu4e-show-images t                                   ;; Show images
+      mu4e-html2text-command "html2text -utf8 -width 72")  ;; Convert HTML to text
+
+;; Fancy characters!
+(setq mu4e-use-fancy-chars t)
+
+;; Break message lines at width of window
+(add-hook 'mu4e-view-mode-hook 'visual-line-mode)
+
+;; Use imagemagick if available
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+
 (require 'smtpmail)
 
 ;; Tell message-mode how to send email.
