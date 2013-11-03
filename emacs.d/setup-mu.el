@@ -18,7 +18,7 @@
       mu4e-html2text-command "html2text -utf8 -width 72")  ;; Convert HTML to text
 
 ;; Fancy characters!
-(setq mu4e-use-fancy-chars t)
+;; (setq mu4e-use-fancy-chars t)
 
 ;; Break message lines at width of window
 (add-hook 'mu4e-view-mode-hook 'visual-line-mode)
@@ -46,6 +46,7 @@
 
 ;; Some more generic mail settings.
 (setq user-mail-address "ato@mozilla.com"
-      user-full-name "Andreas Tolfsen")
+      user-full-name "Andreas Tolfsen"
+      mail-user-agent 'mu4e-user-agent)
 
 (provide 'setup-mu)
