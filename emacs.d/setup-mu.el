@@ -11,24 +11,28 @@
 
 ;; Automatically fetch new mail with offlineimap.  (Consider replacing
 ;; with local exim smarthost or getmail).
-;; (seteq mu4e-get-mail-command "offlineimap"
-;;        mu4e-update-interval 300)
+(setq mu4e-get-mail-command "offlineimap"
+      mu4e-update-interval 300)
+
+(require 'smtpmail)
 
 ;; Tell message-mode how to send email.
 (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-smtp-server "smtp.domeneshop.no"
-      smtpmail-local-domain "sny.no"
+      smtpmail-stream-type 'starttls
+      smtpmail-default-smtp-server "smtp.mozilla.org"
+      smtpmail-smtp-server "smtp.mozilla.org"
+      smtpmail-local-domain "mozilla.com"
+      smtpmail-smtp-service 587)
 
-      ;; Offline imap for replying to emails and putting them in a
-      ;; queue.
-      smtpmail-queue-mail nil
-      smtpmail-queue-dir "~/Mail/queue/cur"
+;; Queue messages in separate IMAP folder for later sending.
+(setq smtpmail-queue-mail nil
+      smtpmail-queue-dir "~/Mail/queue/cur")
 
-      ;; Don't keep message buffers around.
-      message-kill-buffer-on-exit t)
+;; Don't keep message buffers around.
+(setq message-kill-buffer-on-exit t)
 
 ;; Some more generic mail settings.
-(setq user-mail-address "ato@sny.no"
+(setq user-mail-address "ato@mozilla.com"
       user-full-name "Andreas Tolfsen")
 
 (provide 'setup-mu)
