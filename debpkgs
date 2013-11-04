@@ -61,6 +61,7 @@ python-jinja2
 python-pip
 python-simplejson
 python-sphinx
+python-virtualenv
 python-xapian
 python2.7
 python3
