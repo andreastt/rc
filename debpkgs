@@ -1,5 +1,6 @@
 a2ps
 ack-grep
+acpi
 aptitude
 arandr
 automake
@@ -70,6 +71,7 @@ rxvt-unicode
 screen
 sed
 sloccount
+sqlite
 ssh-import-id
 sshfs
 strace
