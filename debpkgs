@@ -33,8 +33,10 @@ htop
 icecc
 icecc-monitor
 keychain
+libgmime-2.6-dev
 libgtk2.0-dev
 libtool
+libxapian-dev
 lshw
 lzma
 make
