@@ -4,10 +4,10 @@
 (require 'mu4e)
 
 (setq mu4e-maildir       "~/Mail"     ;; top-level Maildir
-      mu4e-sent-folder   "/sent"      ;; folder for sent messages
-      mu4e-drafts-folder "/drafts"    ;; unfinished messages
-      mu4e-trash-folder  "/trash"     ;; trashed messages
-      mu4e-refile-folder "/archive")  ;; saved messages
+      mu4e-sent-folder   "/Sent"      ;; folder for sent messages
+      mu4e-drafts-folder "/Drafts"    ;; unfinished messages
+      mu4e-trash-folder  "/Trash"     ;; trashed messages
+      mu4e-refile-folder "/Archive")  ;; saved messages
 
 ;; Automatically fetch new mail with offlineimap.  (Consider replacing
 ;; with local exim smarthost or getmail).
