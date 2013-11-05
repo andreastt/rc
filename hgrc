@@ -1,7 +1,7 @@
 # -*- mode: conf -*-
 
 [ui]
-username = Andreas Tolfsen <andreastt@opera.com>
+username = Andreas Tolfsen <ato@mozilla.com>
 
 [defaults]
 qnew = -Ue
