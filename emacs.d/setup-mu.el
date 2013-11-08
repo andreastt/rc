@@ -9,8 +9,7 @@
       mu4e-trash-folder  "/Trash"     ;; trashed messages
       mu4e-refile-folder "/Archive")  ;; saved messages
 
-;; Automatically fetch new mail with offlineimap.  (Consider replacing
-;; with local exim smarthost or getmail).
+;; Automatically fetch new mail with offlineimap.
 (setq mu4e-get-mail-command "offlineimap"
       mu4e-update-interval 300)
 
@@ -48,5 +47,23 @@
 (setq user-mail-address "ato@mozilla.com"
       user-full-name "Andreas Tolfsen"
       mail-user-agent 'mu4e-user-agent)
+
+;; Attaching files to messages.
+(require 'gnus-dired)
+;; make the `gnus-dired-mail-buffers' function also work on
+;; message-mode derived modes, such as mu4e-compose-mode
+(defun gnus-dired-mail-buffers ()
+  "Return a list of active message buffers."
+  (let (buffers)
+    (save-current-buffer
+      (dolist (buffer (buffer-list t))
+        (set-buffer buffer)
+        (when (and (derived-mode-p 'message-mode)
+                   (null message-sent-message-via))
+          (push (buffer-name buffer) buffers))))
+    (nreverse buffers)))
+
+(setq gnus-dired-mail-mode 'mu4e-user-agent)
+(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
 (provide 'setup-mu)
