@@ -1,6 +1,10 @@
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
+;; To work around the dead-tilde problem with locale suffixes on
+;; Ubuntu.
+(require 'iso-transl)
+
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 

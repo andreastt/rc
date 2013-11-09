@@ -1,3 +1,5 @@
+# -*- mode: sh -*-
+
 typeset -Ag FX FG BG
 
 FX=(
@@ -67,7 +69,7 @@ function title() {
             print -Pn "\ek$a\e\\"      # screen title (in ^A")
             print -Pn "\e_$2   \e\\"   # screen location
             ;;
-        rxvt*)
+        xterm | gnome-terminal)
             print -Pn "\e]2;$a@$2\a" # plain terminal title
             ;;
     esac

@@ -1,14 +1,12 @@
 # -*- mode: conf -*-
 
 [ui]
-username = Andreas Tolfsen <andreastt@opera.com>
+username = Andreas Tolfsen <ato@mozilla.com>
 
 [defaults]
-qnew = -Ue
 
 [alias]
 show = log --patch --verbose --rev
-purge = purge --print
 
 [extensions]
 mq =
@@ -21,8 +19,8 @@ purge =
 
 [diff]
 git = 1
-showfunc = 1
 unified = 8
+showfunc = 1
 
 [color]
 mode = auto
