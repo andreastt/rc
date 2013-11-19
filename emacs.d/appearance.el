@@ -3,11 +3,11 @@
       truncate-partial-width-windows nil)
 
 ;; Theme
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-charcoal-black)))
+;; (require 'color-theme)
+;; (eval-after-load "color-theme"
+;;   '(progn
+;;      (color-theme-initialize)
+;;      (color-theme-charcoal-black)))
 
 ;; Highlight matching parantheses when the point is on them
 (show-paren-mode 1)
@@ -27,11 +27,11 @@
 ;; (set-scroll-bar-mode 'left)
 
 ;; Window size
-;; (setq default-frame-alist '(
-;;                             (font . "6x13")
-;;                             (width . 102)
-;;                             (height . 50)
-;;                             ))
+(setq default-frame-alist '(
+                            (font . "6x13")
+                            (width . 102)
+                            (height . 50)
+                            ))
 
 ;; Font
 ;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
