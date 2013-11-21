@@ -1,3 +1,6 @@
+;; On Mac it sometimes mistakes / for the CWD directory.
+(setq default-directory "~/")
+
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
