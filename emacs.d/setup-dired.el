@@ -36,14 +36,11 @@
        (interactive)
        (end-of-buffer)
        (next-line -1)
-       (dired-back-to-start-of-files))
+       (dired-back-to-start-of-files))))
 
-     (define-key dired-mode-map (kbd "C-x C-k") 'dired-do-delete)
-
-     (eval-after-load "wdired"
-       '(progn
-          (define-key wdired-mode-map (kbd "C-a") 'dired-back-to-start-of-files)
-          (define-key wdired-mode-map (kbd "M-<up>") 'dired-back-to-top)
-          (define-key wdired-mode-map (kbd "M-<down>") 'dired-jump-to-bottom)))))
+(defun my-dired-hook ()
+  ;; Press r to enter wdired mode, C-c exit and save changes.
+  (define-key dired-mode-map (kbd "r") 'wdired-change-to-wdired-mode))
+(add-hook 'dired-mode-hook 'my-dired-hook)
 
 (provide 'setup-dired)
