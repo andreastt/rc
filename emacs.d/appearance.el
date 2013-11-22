@@ -33,6 +33,10 @@
                             (height . 50)
                             ))
 
+;; Disable 1 character border, or "fringe" on either side of every
+;; buffer.
+(set-fringe-mode 0)
+
 ;; Font
 ;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
 
