@@ -1,13 +1,13 @@
 ;; Mac specific appearance
-(set-face-attribute 'default nil :font "Monaco-10")
+;; (set-face-attribute 'default nil :font "Monaco-10")
 (scroll-bar-mode 0)
 
 ;; Theme
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-charcoal-black)))
+;; (require 'color-theme)
+;; (eval-after-load "color-theme"
+;;   '(progn
+;;      (color-theme-initialize)
+;;      (color-theme-charcoal-black)))
 
 ;; Transparency
 ;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
