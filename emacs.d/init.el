@@ -75,7 +75,7 @@
 (require 'setup-tramp)
 (require 'setup-git)
 (require 'setup-erc)
-(require 'setup-mu)
+;; (require 'setup-mu)
 
 (require 'mark-more-like-this)
 
