@@ -23,8 +23,11 @@ alias l="ls -lah"
 alias sl=ls
 
 # Commonly used programs
-alias e="emacs -nw"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias e="emacs -c"
+alias en="emacs -nw"
+alias ew="emacs --no-wait -c"
 
 # Other machines
 alias njord="ssh -YC ato@sny.no"
-alias work="ssh -YC andreastt@id-6895.users.oslo.osa"
+alias eir="ssh -YC ato@eir.corp.lon1.mozilla.com"
