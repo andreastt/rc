@@ -15,10 +15,6 @@
 ;; Cursor type
 (setq-default cursor-type 'bar)
 
-;; Show whitespace
-;; TODO: Enable this only for relevant modes
-;;(setq-default show-trailing-whitespace t)
-
 ;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
 (menu-bar-mode 0)
 
@@ -27,18 +23,15 @@
 ;; (set-scroll-bar-mode 'left)
 
 ;; Window size
-(setq default-frame-alist '(
-                            (font . "6x13")
-                            (width . 102)
-                            (height . 50)
-                            ))
+;; (setq default-frame-alist '(
+;;                             (font . "6x13")
+;;                             (width . 102)
+;;                             (height . 50)
+;;                             ))
 
 ;; Disable 1 character border, or "fringe" on either side of every
 ;; buffer.
 (set-fringe-mode 0)
-
-;; Font
-;;(set-face-attribute 'default nil :font "Ubuntu Mono-11")
 
 ;; Make zooming affect frame instead of buffers
 (autoload 'zoom-frm "zoom-frm" t)
