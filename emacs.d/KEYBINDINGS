@@ -1,0 +1,2 @@
+C-x C-j   Activates term-line-mode, for example when using ansi-term.
+C-c C-k   Switches back to character mode.
