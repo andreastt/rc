@@ -28,4 +28,4 @@ remoteuser = atolfsen@mozilla.com
 remotehost = mail.mozilla.com
 
 ssl = yes
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /etc/ssl/certs/mozilla.crt
