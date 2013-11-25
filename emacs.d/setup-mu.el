@@ -30,11 +30,12 @@
 
 ;; Tell message-mode how to send email.
 (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls
+      smtpmail-stream-type 'ssl
       smtpmail-default-smtp-server "smtp.mozilla.org"
       smtpmail-smtp-server "smtp.mozilla.org"
       smtpmail-local-domain "mozilla.com"
-      smtpmail-smtp-service 587)
+      smtpmail-smtp-service 587
+      tls-program "gnutls-cli --x509cafile /etc/ssl/certs/mozilla.crt --insecure -p %p %h")
 
 ;; Queue messages in separate IMAP folder for later sending.
 (setq smtpmail-queue-mail nil
