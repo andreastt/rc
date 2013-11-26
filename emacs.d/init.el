@@ -60,7 +60,7 @@
 (require 'setup-eclim)
 (require 'setup-java)
 (require 'setup-rust)
-(require 'setup-js2-mode)
+(require 'setup-js2)
 (require 'setup-go)
 ;; (require 'setup-python)
 (require 'setup-diary)
@@ -75,7 +75,7 @@
 (require 'setup-tramp)
 (require 'setup-git)
 (require 'setup-erc)
-;; (require 'setup-mu)
+(require 'setup-mu)
 
 (require 'mark-more-like-this)
 
