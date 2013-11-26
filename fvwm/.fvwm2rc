@@ -43,7 +43,6 @@ Style * HilightFore black, HilightBack #99ffff
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
-  + I Exec keychain ~/.ssh/id_rsa
   + I Exec xset -b
 
 DestroyFunc StartFunction
