@@ -88,7 +88,9 @@
 
 ;; Appearance
 (when window-system (require 'appearance))
-(when is-mac (require 'mac))
+(if is-mac
+    (require 'mac)
+  (require 'linux))
 
 ;; Emacs server
 ;(server-start)

@@ -1,3 +1,7 @@
+;; Note that some appearance related options are set in linux.el and
+;; mac.el.
+
+;; Enable syntax highlighting
 (setq font-lock-maximum-decoration t
       color-theme-is-global t
       truncate-partial-width-windows nil)
@@ -17,17 +21,6 @@
 
 ;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
 (menu-bar-mode 0)
-
-;; Show scroll bar on the left side
-;; (scroll-bar-mode 1)
-;; (set-scroll-bar-mode 'left)
-
-;; Window size
-;; (setq default-frame-alist '(
-;;                             (font . "6x13")
-;;                             (width . 102)
-;;                             (height . 50)
-;;                             ))
 
 ;; Disable 1 character border, or "fringe" on either side of every
 ;; buffer.
