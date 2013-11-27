@@ -30,7 +30,14 @@
                                    "setInterval"
                                    "clearInterval"
                                    "location"
-                                   "__dirname")
+                                   "__dirname"
+
+                                   ;; XPCOM specific
+                                   "content"
+                                   "Components"
+                                   "FileUtils"
+                                   "NetUtil"
+                                   "XPCOMUtils")
               js2-idle-timer-delay 0.1
               js2-indent-on-enter-key nil
               js2-mirror-mode nil

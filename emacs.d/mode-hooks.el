@@ -25,7 +25,7 @@
 (setq css-indent-offset 2)
 
 ;; JavaScript
-(add-hook 'js2-mode-hook (lambda () (require 'setup-js2-mode)))
+(add-hook 'js2-mode-hook (lambda () (require 'setup-js2)))
 
 ;; Markdown
 (setq auto-mode-alist
