@@ -76,6 +76,7 @@
 (require 'setup-git)
 (require 'setup-erc)
 (require 'setup-mu)
+(require 'setup-helm)
 
 (require 'mark-more-like-this)
 

@@ -2,6 +2,9 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
+;; C-SPC to launch the magic function
+(global-set-key (kbd "C-SPC") 'my-helm-multi-all)
+
 ;; Mark additional regions matching current region
 (global-set-key (kbd "M-æ") 'mark-all-like-this)
 (global-set-key (kbd "C-å") 'mark-previous-like-this)
@@ -18,10 +21,6 @@
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'tool-bar-mode)
 (global-set-key (kbd "C-S-<f10>") 'menu-bar-mode)
-
-;; Use shell-like backspace C-h, rebind help to F1
-;(define-key key-translation-map [?\C-h] [?\C-?])
-;(global-set-key (kbd "<f1>") 'help-command)
 
 ;; Use M-w for copy-line if no active region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
