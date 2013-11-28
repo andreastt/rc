@@ -25,10 +25,10 @@ alias l="ls -lah"
 alias sl=ls
 
 # Commonly used programs
-alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
-alias e="emacs -c"
-alias en="emacs -nw"
-alias ew="emacs --no-wait -c"
+#alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias e="emacsclient -c"
+alias en="emacsclient -nw"
+alias ew="emacsclient --no-wait -c"
 
 # Other machines
 alias njord="ssh -YC ato@sny.no"
