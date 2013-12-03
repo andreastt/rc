@@ -8,6 +8,9 @@ export PATH=$PATH:$HOME/bin
 # depot tools
 export PATH=$PATH:$HOME/dev/depot_tools
 
+# moz-git-tools
+export PATH=$PATH:$HOME/dev/moz-git-tools
+
 # Plan 9
 export PLAN9=/usr/local/plan9
 export PATH=$PATH:$PLAN9/bin
