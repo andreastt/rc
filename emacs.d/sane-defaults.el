@@ -132,4 +132,7 @@
 ;; Enable console mouse
 (setq xterm-mouse-mode t)
 
+;; Enable upcase-region
+(put 'upcase-region 'disabled nil)
+
 (provide 'sane-defaults)
