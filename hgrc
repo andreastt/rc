@@ -8,6 +8,9 @@ username = Andreas Tolfsen <ato@mozilla.com>
 [alias]
 show = log --patch --verbose --rev
 
+[paths]
+try = ssh://hg.mozilla.org/try
+
 [extensions]
 mq =
 color =
