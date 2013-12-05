@@ -48,7 +48,7 @@
 (global-set-key (kbd "C-x M-p") 'find-or-create-file-at-point-other-window)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "C-i") 'ibuffer)
+(global-set-key (kbd "<f12>") 'ibuffer)
 
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
