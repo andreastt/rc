@@ -135,4 +135,9 @@
 ;; Enable upcase-region
 (put 'upcase-region 'disabled nil)
 
+;; Kill processes when exiting emacs without asking
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+  (flet ((process-list ())) ad-do-it))
+
 (provide 'sane-defaults)
