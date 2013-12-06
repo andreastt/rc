@@ -78,7 +78,7 @@
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
 
 ;; Mark all
-(global-set-key (kbd "C-c a") 'mark-whole-buffer)
+(global-set-key (kbd "C-c C-a") 'mark-whole-buffer)
 
 ;; Magit
 (global-set-key (kbd "C-x m") 'magit-status)
