@@ -66,6 +66,11 @@ AddToFunc Rxvt
   + I Wait rxvt
   + I Next (rxvt) WarpToWindow 50 17p
 
+AddToFunc EmacsTerm
+  + I Exec exec emacs -f multi-term
+  + I Wait emacs
+  + I Next (emacs) WarpToWindow 50 17p
+
 # Window switcher
 InfoStoreAdd DIR Next
 
@@ -126,8 +131,10 @@ DestroyFunc ExitFunction
 # Ignore NumLock key
 IgnoreModifiers L25
 
-# Super-Return gives you a new terminal
+# Super-Return gives you a new terminal, Super-Shift-Return gives you
+# a new emacs instance running a terminal emulator
 Key Return A 4 Rxvt
+Key Return A 4S EmacsTerm
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
