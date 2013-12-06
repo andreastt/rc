@@ -39,6 +39,7 @@ libgtk2.0-dev
 libtool
 libxapian-dev
 lshw
+lxappearance
 lzma
 make
 meld
