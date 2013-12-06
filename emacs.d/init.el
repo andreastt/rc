@@ -77,6 +77,7 @@
 (require 'setup-erc)
 (require 'setup-mu)
 (require 'setup-helm)
+(require 'setup-multi-term)
 
 (require 'mark-more-like-this)
 
