@@ -10,4 +10,4 @@ xpdf*enableFreetype:    yes
 xpdf*antialias:         yes
 xpdf*foreground:        black
 xpdf*background:        white
-xpdf*urlCommand:        /usr/bin/chromium-browser %s
+xpdf*urlCommand:        /usr/bin/firefox-trunk %s
