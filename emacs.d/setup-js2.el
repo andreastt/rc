@@ -1,19 +1,19 @@
-(defun my-gtags-hook ()
-  ;; Find a tag
-  (local-set-key (kbd "M-.") 'gtags-find-tag)
+;; (defun my-gtags-hook ()
+;;   ;; Find a tag
+;;   (local-set-key (kbd "M-.") 'gtags-find-tag)
 
-  ;; Find reverse tag
-  (local-set-key (kbd "M-,") 'gtags-find-rtag))
-(add-hook 'gtags-mode-hook 'my-gtags-hook)
+;;   ;; Find reverse tag
+;;   (local-set-key (kbd "M-,") 'gtags-find-rtag))
+;; (add-hook 'gtags-mode-hook 'my-gtags-hook)
 
-(defun my-js-hook ()
-  (require 'gtags)
-  (gtags-mode t)
-  (gtags-create-or-update))
-(add-hook 'js-mode-hook 'my-js-hook)
+;; (defun my-js-hook ()
+;;   (require 'gtags)
+;;   (gtags-mode t)
+;;   (gtags-create-or-update))
+;; (add-hook 'js-mode-hook 'my-js-hook)
 
-(require 'gtags)
-(gtags-mode t)
+;; (require 'gtags)
+;; (gtags-mode t)
 
 (setq-default js2-allow-rhino-new-expr-initializer nil
               js2-auto-indent-p nil
