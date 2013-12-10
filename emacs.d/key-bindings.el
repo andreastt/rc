@@ -35,9 +35,6 @@
 (define-key global-map (kbd "C-+") 'zoom-frm-in)
 (define-key global-map (kbd "C--") 'zoom-frm-out)
 
-;; Create new frame
-(define-key global-map (kbd "C-x C-n") 'make-frame-command)
-
 ;; Cycle through open frames
 (define-key global-map (kbd "C-.") 'other-frame)
 
