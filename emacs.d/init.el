@@ -73,7 +73,6 @@
 (require 'setup-gtags)
 (require 'setup-tramp)
 (require 'setup-git)
-(require 'setup-erc)
 (require 'setup-mu)
 (require 'setup-helm)
 (require 'setup-multi-term)
