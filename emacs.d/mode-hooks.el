@@ -15,27 +15,7 @@
       cperl-continued-statement-offset 2
       cperl-indent-parens-as-block t)
 
-;; HTML
-(add-hook 'sgml-mode-hook
-          (lambda ()
-            (require 'rename-sgml-tag)
-            (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
-
-;; CSS
-(setq css-indent-offset 2)
-
 ;; JavaScript
 (add-hook 'js2-mode-hook (lambda () (require 'setup-js2)))
-
-;; Markdown
-(setq auto-mode-alist
-      (cons '("\\.md" . markdown-mode) auto-mode-alist))
-
-;; Disable autopair in term-mode
-(add-hook 'term-mode-hook
-          #'(lambda ()
-              (setq autopair-dont-activate t) ;; for emacsen < 24
-              (autopair-mode -1))             ;; for emacsen >= 24
-)
 
 (provide 'mode-hooks)
