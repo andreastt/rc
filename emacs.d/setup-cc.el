@@ -14,12 +14,6 @@
 ;; (add-hook 'gtags-mode-hook 'my-gtags-hook)
 
 (defun my-c-common-hook ()
-  ;; Compile and recompile
-  ;; (local-key-set (kbd "C-<f9>") 'compile)
-  ;; (local-key-set (kbd "C-S-<f9>") 'recompile)
-  (define-key c-mode-base-map (kbd "C-<f9>") 'compile)
-  (define-key c-mode-base-map (kbd "C-S-<f9>") 'compile)
-
   ;; Kill compilation
   ;; (local-key-set (kbd "C-<f2>") 'kill-compilation)
   (define-key c-mode-base-map (kbd "C-<f2>") 'kill-compilation)
