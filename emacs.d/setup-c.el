@@ -1,4 +1,4 @@
-;;; setup-c-mode.el --- Development setup for C
+;;; setup-c.el --- Development setup for C
 
 ;; TODO(ato): Share many of these with c++-mode.
 
@@ -17,4 +17,4 @@
 ;; Use Google C style
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 
-(provide 'setup-c-mode)
+(provide 'setup-c)

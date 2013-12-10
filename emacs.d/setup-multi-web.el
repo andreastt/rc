@@ -12,4 +12,4 @@
 
 (multi-web-global-mode 1)
 
-(provide 'setup-multi-web-mode)
+(provide 'setup-multi-web)
