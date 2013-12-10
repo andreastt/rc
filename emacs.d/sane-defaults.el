@@ -141,6 +141,6 @@
   (flet ((process-list ())) ad-do-it))
 
 ;; Compile command should count in number of cores available
-(setq compile-command "make -j8 -k %s")
+(setq compile-command "make -j8 -k")
 
 (provide 'sane-defaults)
