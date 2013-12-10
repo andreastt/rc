@@ -140,4 +140,7 @@
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
   (flet ((process-list ())) ad-do-it))
 
+;; Compile command should count in number of cores available
+(setq compile-command "make -j8 -k %s")
+
 (provide 'sane-defaults)

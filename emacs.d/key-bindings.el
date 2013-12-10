@@ -97,6 +97,6 @@
 ;; Compile and recompile, which are useful no matter what file type
 ;; you're in
 (global-set-key (kbd "C-<f9>") 'compile)
-(global-set-key (kbd "C-S-<f9>") 'recompile)
+(global-set-key (kbd "<f9>") 'recompile)
 
 (provide 'key-bindings)
