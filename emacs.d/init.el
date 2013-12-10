@@ -69,7 +69,6 @@
 (require 'setup-autopair)
 (require 'setup-auto-complete)
 (require 'setup-printing)
-(require 'setup-edit-server)
 (require 'setup-multi-web-mode)
 (require 'setup-gtags)
 (require 'setup-tramp)
