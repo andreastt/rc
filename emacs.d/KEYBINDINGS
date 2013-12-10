@@ -8,3 +8,5 @@ C-x 8 1 / 2 gives ½
 C-x 8 * C   gives ©
 C-x 8 ^ 1   gives superscript ¹, ‘C-x 8 ^ 2’ gives superscript ²
 C-x 8 ^ 3   gives superscript ³
+
+C-c RET C-a   Attaches file in dired to mu4e compose buffer
