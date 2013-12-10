@@ -78,9 +78,6 @@
 ;; Mark all
 (global-set-key (kbd "C-c C-a") 'mark-whole-buffer)
 
-;; Magit
-(global-set-key (kbd "C-x m") 'magit-status)
-
 ;; Clever newlines
 (global-set-key (kbd "<C-return>") 'new-line-below)
 (global-set-key (kbd "<C-S-return>") 'new-line-above)
