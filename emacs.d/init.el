@@ -70,7 +70,7 @@
 (require 'setup-auto-complete)
 (require 'setup-printing)
 (require 'setup-multi-web-mode)
-(require 'setup-gtags)
+;; (require 'setup-gtags)
 (require 'setup-tramp)
 (require 'setup-git)
 (require 'setup-mu)
