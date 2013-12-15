@@ -22,10 +22,11 @@
   (define-key c-mode-base-map (kbd "C-c C-p") 'show-previous-error)
   (define-key c-mode-base-map (kbd "C-c C-n") 'show-next-error)
 
-  ;; Use GNU global
-  (require 'gtags)
-  (gtags-mode t)
-  (gtags-create-or-update))
+  ;; ;; Use GNU global
+  ;; (require 'gtags)
+  ;; (gtags-mode t)
+  ;; (gtags-create-or-update))
+  )
 (add-hook 'c-mode-common-hook 'my-c-common-hook)
 ;; (add-hook 'c-initialization-hook 'my-c-initialization-hook)
 
