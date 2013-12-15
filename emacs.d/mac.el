@@ -1,17 +1,4 @@
 ;; Mac specific appearance
-;; (set-face-attribute 'default nil :font "Monaco-10")
-(scroll-bar-mode 0)
-
-;; Theme
-;; (require 'color-theme)
-;; (eval-after-load "color-theme"
-;;   '(progn
-;;      (color-theme-initialize)
-;;      (color-theme-charcoal-black)))
-
-;; Transparency
-;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
-;; (add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; Change command to meta, and ignore option to use weird Norwegian
 ;; keyboard
@@ -25,16 +12,15 @@
 ;; Enable menu bar on OS X since it's there by default anyways
 (menu-bar-mode 1)
 
+;; Enable scroll bars
+(scroll-bar-mode 1)
+
 ;; Mac friendly font without antialiasing
-;;(set-face-attribute 'default nil :font "Menlo-10")
-;;(setq mac-allow-anti-aliasing nil)
+(set-face-attribute 'default nil :font "Menlo-12")
 
 ;; Make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (push "/usr/local/bin" exec-path)
-
-;; Keybinding to toggle full screen mode
-(global-set-key (quote [M-f10]) (quote ns-toggle-fullscreen))
 
 ;; Move to trash when deleting stuff
 (setq delete-by-moving-to-trash t
