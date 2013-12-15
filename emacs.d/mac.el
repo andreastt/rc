@@ -1,4 +1,4 @@
-;; Mac specific appearance
+;; Mac specific preferences
 
 ;; Change command to meta, and ignore option to use weird Norwegian
 ;; keyboard
