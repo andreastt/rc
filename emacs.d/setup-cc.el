@@ -26,6 +26,7 @@
   ;; (require 'gtags)
   ;; (gtags-mode t)
   ;; (gtags-create-or-update))
+  )
 (add-hook 'c-mode-common-hook 'my-c-common-hook)
 ;; (add-hook 'c-initialization-hook 'my-c-initialization-hook)
 
