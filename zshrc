@@ -3,6 +3,7 @@
 #for lib (~/.sh/*.sh) source $lib
 source ~/.sh/env.sh
 source ~/.sh/aliases.sh
+source ~/.sh/sshuttle_helpers.sh
 
 for lib (~/.zsh/*.zsh) source $lib
 unset lib
