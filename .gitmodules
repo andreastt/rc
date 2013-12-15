@@ -58,3 +58,6 @@
 [submodule "emacs.d/vendor/helm"]
 	path = emacs.d/vendor/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "emacs.d/vendor/zlc"]
+	path = emacs.d/vendor/zlc
+	url = https://github.com/mooz/emacs-zlc.git

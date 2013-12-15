@@ -74,9 +74,10 @@
 ;; (require 'setup-gtags)
 (require 'setup-tramp)
 (require 'setup-git)
-(require 'setup-mu)
+;; (require 'setup-mu)
 (require 'setup-helm)
 (require 'setup-multi-term)
+(require 'setup-zlc)
 
 (require 'mark-more-like-this)
 
