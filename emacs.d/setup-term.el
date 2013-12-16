@@ -65,14 +65,14 @@
 
 (setq term-unbind-key-list '("C-x" "<ESC>")
       term-bind-key-alist
-      '(("C-c" . term-interrupt-subobj)
+      '(("C-c" . term-send-raw)
         ("C-p" . term-send-up)
         ("C-n" . term-send-down)
         ("C-s" . isearch-forward)
         ("C-r" . term-send-reverse-search-history)
         ("C-m" . term-send-raw)
         ("C-k" . term-send-kill-whole-line)
-        ("C-y" . yank)
+        ("C-y" . term-paste)
         ("C-_" . term-send-raw)
         ("M-f" . term-send-forward-word)
         ("M-b" . term-send-backward-word)
@@ -81,10 +81,13 @@
         ("M-y" . yank-pop)
         ("M-." . term-send-raw-meta)))
 
+;; More history, defaults to 2048 lines
+(setq term-buffer-maximum-size 8192)
+
 ;; Disable autopair in term-mode
 (add-hook 'term-mode-hook
           #'(lambda ()
-              (setq autopair-dont-activate t) ;; for emacsen < 24
-              (autopair-mode -1)))            ;; for emacsen >= 24
+              (setq yas-dont-activate t)
+              (autopair-mode -1)))
 
 (provide 'setup-term)
