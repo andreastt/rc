@@ -30,6 +30,7 @@ alias en="emacsclient -nw"
 alias ew="emacsclient --no-wait -c"
 
 if [[ "$(uname)" = "Darwin" ]]; then
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 fi
 
