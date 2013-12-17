@@ -140,6 +140,11 @@
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
   (flet ((process-list ())) ad-do-it))
 
+;; Don't nag when killing buffers either
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function
+            kill-buffer-query-functions))
+
 ;; Compile command should count in number of cores available
 (setq compile-command "make -k -j8 ")
 
