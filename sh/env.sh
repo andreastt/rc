@@ -1,5 +1,5 @@
 export PAGER=less
-export EDITOR="emacs -nw"
+export EDITOR="e"
 export MAILTO=ato@sny.no
 
 # local bin

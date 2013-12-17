@@ -1,5 +1,8 @@
 # -*- mode: conf -*-
 
+[core]
+  editor = emacsclient -c
+
 [user]
   name = Andreas Tolfsen
   email = ato@mozilla.com
