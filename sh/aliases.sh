@@ -38,4 +38,4 @@ fi
 alias njord="ssh -YC ato@sny.no"
 alias eir="ssh -YC ato@eir.corp.lon1.mozilla.com"
 
-alias date="date --iso-8601='seconds'"
+alias date="date --iso-8601='seconds' | rev | cut -c 1- | rev"
