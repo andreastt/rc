@@ -76,7 +76,7 @@
 ;; (require 'setup-mu)
 (require 'setup-helm)
 (require 'setup-term)
-(require 'setup-zlc)
+;; (require 'setup-zlc)
 
 (require 'mark-more-like-this)
 
