@@ -75,7 +75,8 @@
 (require 'setup-git)
 ;; (require 'setup-mu)
 (require 'setup-helm)
-(require 'setup-term)
+;; (require 'setup-term)
+(require 'setup-eshell)
 ;; (require 'setup-zlc)
 
 (require 'mark-more-like-this)
@@ -95,3 +96,4 @@
 
 ;; Emacs server
 ;(server-start)
+(put 'erase-buffer 'disabled nil)

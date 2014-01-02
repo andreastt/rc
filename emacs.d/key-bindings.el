@@ -23,9 +23,10 @@
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
 (global-set-key (kbd "M-W") '(lambda () (interactive) (save-region-or-current-line 1)))
 
-;; Make accessing shell more convenient, and allow suspending
-;; frameless emacs
-(global-set-key (kbd "C-z") 'multi-term)
+;; Make accessing shell more convenient
+(global-set-key (kbd "C-z") 'eshell)
+
+;; Suspend frameless emacs
 (global-set-key (kbd "C-x C-z") 'suspend-frame)
 
 ;; Font size
