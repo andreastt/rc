@@ -73,6 +73,10 @@
 ;; Query replace regex key binding
 (global-set-key (kbd "M-&") 'query-replace-regexp)
 
+;; Use regular expressions by default
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+
 ;; Create scratch buffer
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
 
