@@ -73,9 +73,6 @@
 ;; Query replace regex key binding
 (global-set-key (kbd "M-&") 'query-replace-regexp)
 
-;; Comment/uncomment block
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
-
 ;; Create scratch buffer
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
 
