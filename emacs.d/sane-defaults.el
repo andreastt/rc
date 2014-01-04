@@ -35,7 +35,13 @@
 (setq initial-scratch-message "")
 
 ;; Sync Emacs' clipboard with the X system's
-(setq x-select-enable-clipboard t)
+(setq x-select-enable-clipboard t
+      x-select-enable-primary t
+      save-interprogram-paste-before-kill t
+      mouse-yank-at-point t)
+
+;; More extensive apropos lookups
+(setq apropos-do-all t)
 
 ;; Move files to trash when deleting
 (setq delete-by-moving-to-trash t)
@@ -77,11 +83,8 @@
 (setq dired-omit-files "^\\...+$")
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
 
-;; Never insert tabs
-(set-default 'indent-tabs-mode nil)
-
-;; Don't break lines
-(setq-default truncate-lines t)
+(setq-default indent-tabs-mode nil  ;; Never insert tabs
+              truncate-lines t)     ;; Don't break lines
 
 ;; Keep cursor away from edges when scrolling up and down
 (require 'smooth-scrolling)
