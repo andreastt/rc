@@ -26,6 +26,11 @@
 ;; Emacs
 (setq visible-bell nil)
 
+;; More clever buffer names when visiting two files with the same name
+;; in different directories
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
 ;; Empty scratch buffer
 (setq initial-scratch-message "")
 
