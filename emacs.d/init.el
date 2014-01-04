@@ -75,9 +75,8 @@
 (require 'setup-git)
 ;; (require 'setup-mu)
 (require 'setup-helm)
-;; (require 'setup-term)
 (require 'setup-eshell)
-;; (require 'setup-zlc)
+(require 'setup-ido)
 
 (require 'mark-more-like-this)
 
