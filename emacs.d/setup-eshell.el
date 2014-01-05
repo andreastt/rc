@@ -16,10 +16,6 @@
       eshell-hist-ignoredups t
       eshell-cmpl-cycle-completions nil)
 
-;; Scroll to bottom
-(setq eshell-scroll-to-bottom-on-output t
-      eshell-scroll-show-maximum-output t)
-
 ;; Visual commands
 (setq eshell-visual-subcommands '(("git" "log" "show" "diff" "help")
                                   ("bzr" "log" "show" "diff" "help"))
