@@ -13,7 +13,7 @@
 (setq-default cursor-type 'bar)
 
 ;; Hide menu bar (enable with toggle-menu-bar-mode-from-frame)
-(menu-bar-mode 0)
+;; (menu-bar-mode 0)
 
 ;; Disable 1 character border, or "fringe" on either side of every
 ;; buffer.

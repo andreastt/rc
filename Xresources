@@ -1,15 +1,14 @@
-! emacs
 Emacs.menuBar: off
 Emacs.toolBar: off
+Emacs.font: 6x13
+Emacs.geometry: 102x50
 
-! rxvt -----------------------------------------------------------------------
 rxvt*geometry: 80x50
 rxvt*cursorBlink: true
 rxvt*cursor: i-beam
 rxvt*scrollstyle: xterm
 rxvt*termName: rxvt-256color
 
-! xpdf -----------------------------------------------------------------------
 xpdf*enableFreetype:    yes
 xpdf*antialias:         yes
 xpdf*foreground:        black
