@@ -1,3 +1,7 @@
+! emacs
+Emacs.menuBar: off
+Emacs.toolBar: off
+
 ! rxvt -----------------------------------------------------------------------
 rxvt*geometry: 80x50
 rxvt*cursorBlink: true
