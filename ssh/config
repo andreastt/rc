@@ -1,5 +1,3 @@
-ForwardAgent yes
-
 Host *
   ControlMaster auto
   ControlPath ~/.ssh/connections/%r@%h:%p
@@ -8,9 +6,15 @@ Host *
 Host hg.mozilla.org
   User atolfsen@mozilla.com
 
-Host eir
-  HostName %h.corp.lon1.mozilla.com
+# Host eir
+#   HostName %h.corp.lon1.mozilla.com
 
-Host *.corp.lon1.mozilla.com !eir?
+# Host *.corp.lon1.mozilla.com !eir?
+#   ForwardAgent yes
+#   User ato
+#   ProxyCommand ssh atolfsen@office.mozilla.org exec nc %h %p
+
+Host eir.corp.lon1.mozilla.com
+  ForwardAgent yes
   User ato
   ProxyCommand ssh atolfsen@office.mozilla.org exec nc %h %p
