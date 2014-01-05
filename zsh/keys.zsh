@@ -1,5 +1,3 @@
-bindkey "\e[3~" delete-char # Del
-bindkey "\e[5C" forward-word
-bindkey "\e0c" emacs-forward-word
-bindkey "\e[5D" backward-word
-bindkey "\e0d" emacs-backward-word
+bindkey "[D" emacs-backward-word  # Meta-<Left>
+bindkey "[C" emacs-forward-word   # Meta-<Right>
+bindkey "^[[3^" delete-word       # C-<Delete>
