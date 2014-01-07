@@ -73,7 +73,7 @@
 (require 'setup-multi-web)
 (require 'setup-tramp)
 (require 'setup-git)
-;; (require 'setup-mu)
+(require 'setup-mu)
 (require 'setup-helm)
 (require 'setup-eshell)
 (require 'setup-ido)
