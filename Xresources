@@ -1,3 +1,5 @@
+! -*- xrdb -*-
+
 Emacs.menuBar: off
 Emacs.toolBar: off
 Emacs.font: 6x13
