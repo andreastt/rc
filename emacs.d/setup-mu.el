@@ -3,11 +3,14 @@
 
 (require 'mu4e)
 
-(setq mu4e-maildir       "~/Mail"     ;; top-level Maildir
-      mu4e-sent-folder   "/Sent"      ;; folder for sent messages
-      mu4e-drafts-folder "/Drafts"    ;; unfinished messages
-      mu4e-trash-folder  "/Trash"     ;; trashed messages
-      mu4e-refile-folder "/Archive")  ;; saved messages
+(setq mu4e-mu-binary "/usr/local/bin/mu")
+
+(setq mu4e-maildir       "~/Mail"    ;; top-level Maildir
+      mu4e-sent-folder   "/Sent"     ;; folder for sent messages
+      mu4e-drafts-folder "/Drafts"   ;; unfinished messages
+      mu4e-trash-folder  "/Trash"    ;; trashed messages
+      mu4e-refile-folder "/Archive"  ;; saved messages
+      mu4e-split-view    'vertical)  ;; split message list/message view vertically
 
 ;; Automatically fetch new mail with offlineimap.
 (setq mu4e-get-mail-command "offlineimap"
