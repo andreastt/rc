@@ -7,7 +7,10 @@
       x-select-enable-clipboard t
 
       ;; Use Emacs terminfo, not system terminfo
-      system-uses-terminfo nil)
+      system-uses-terminfo nil
+
+      ;; Mighty Mouse on Mac is very sensitive
+      mouse-wheel-scroll-amount '(0.01))
 
 (setq default-frame-alist '(
                             (font . "Menlo 12")
