@@ -124,8 +124,8 @@
 (setq tags-file-name ".tags")
 
 ;; Crank up the rate at which Emacs autosaves files
-(setq auto-save-interval 20  ;; n keystrokes
-      auto-save-timeout 10)  ;; ten idle seconds
+;; (setq auto-save-interval 20  ;; n keystrokes
+;;       auto-save-timeout 10)  ;; ten idle seconds
 
 ;; Seed the random number generator
 (random t)
