@@ -44,6 +44,7 @@ Style * HilightFore black, HilightBack #99ffff
 DestroyFunc InitFunction
 AddToFunc InitFunction
   + I Exec xset -b
+  + I Exec xrdb .Xresources
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
