@@ -71,7 +71,6 @@
 (require 'setup-printing)
 (require 'setup-css)
 (require 'setup-multi-web)
-(require 'setup-tramp)
 (require 'setup-git)
 (require 'setup-mu)
 (require 'setup-helm)
