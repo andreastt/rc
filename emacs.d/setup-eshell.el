@@ -20,6 +20,7 @@
 (setq eshell-visual-subcommands '(("git" "log" "show" "diff" "help")
                                   ("bzr" "log" "show" "diff" "help"))
       eshell-visual-options '(("git" "--help")))
+  ;; missing pydoc and godoc
 
 ;; Find file when using emacs
 (defun eshell/emacs (file)
