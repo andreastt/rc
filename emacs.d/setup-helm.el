@@ -30,14 +30,11 @@
 (add-hook 'c++-mode-hook (lambda () (helm-gtags-mode)))
 (add-hook 'java-mode-hook (lambda () (helm-gtags-mode)))
 
-
-
-
 (eval-after-load "helm-regexp"
   '(helm-attrset 'follow 1 helm-source-moccur))
 
 (defun my-helm-multi-all ()
-  "multi-occur in all buffers backed by files."
+  "multi-occur in all buffers backed by files"
   (interactive)
   (helm-multi-occur
    (delq nil
