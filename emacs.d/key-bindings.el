@@ -45,8 +45,8 @@
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 
-;; Replace show-buffers with ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+;; Replace show-buffers with helm-buffers-list (previously ibuffer)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
 ;; Replace dabbrev-expand with hippie-expand, which by many are
 ;; considered a more powerful equivalent
