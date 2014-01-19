@@ -41,4 +41,8 @@
   (define-key eshell-mode-map (kbd "C-l") 'eshell/clear))
 (add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
 
+;; open opens file, openo opens file in the other window
+(defalias 'open 'find-file)
+(defalias 'openo 'find-file-other-window)
+
 (provide 'setup-eshell)
