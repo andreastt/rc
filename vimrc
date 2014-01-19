@@ -57,7 +57,7 @@ syntax on
 "colorscheme bw
 "colorscheme cleanroom
 "colorscheme muon
-colorscheme beauty256
+"colorscheme beauty256
 "colorscheme vylight
 
 
