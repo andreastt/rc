@@ -6,11 +6,9 @@
   ;; Debug with gud-gdb
   ;;
   ;; Debugging step key bindings are defined in setup-gdb.el.
-  ;; (local-key-set (kbd "S-<f9>") 'gdb)
   (define-key c-mode-map (kbd "S-<f9>") 'gdb)
 
   ;; Switch between header and implementation
-  ;; (local-key-set (kbd "<f12>") 'ff-find-other-file))
   (define-key c-mode-map (kbd "<f12>") 'ff-find-other-file))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 

@@ -23,12 +23,12 @@
 ;;         (read-file-name . nil)))
 
 ;; helm gtags
-(setq helm-c-gtags-path-style 'relative
-      helm-c-gtags-ignore-case t
-      helm-c-gtags-read-only t)
-(add-hook 'c-mode-hook (lambda () (helm-gtags-mode)))
-(add-hook 'c++-mode-hook (lambda () (helm-gtags-mode)))
-(add-hook 'java-mode-hook (lambda () (helm-gtags-mode)))
+;; (setq helm-c-gtags-path-style 'relative
+;;       helm-c-gtags-ignore-case t
+;;       helm-c-gtags-read-only t)
+;; (add-hook 'c-mode-hook (lambda () (helm-gtags-mode)))
+;; (add-hook 'c++-mode-hook (lambda () (helm-gtags-mode)))
+;; (add-hook 'java-mode-hook (lambda () (helm-gtags-mode)))
 
 (eval-after-load "helm-regexp"
   '(helm-attrset 'follow 1 helm-source-moccur))
