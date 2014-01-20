@@ -62,7 +62,7 @@
 (require 'setup-rust)
 (require 'setup-js2)
 (require 'setup-go)
-;; (require 'setup-python)
+(require 'setup-python)
 (require 'setup-diary)
 (require 'setup-tramp)
 (require 'setup-dired)
