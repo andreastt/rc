@@ -1,7 +1,7 @@
 # -*- mode: conf -*-
 
 [core]
-  editor = emacsclient -c
+  #editor = emacsclient -c
 
 [user]
   name = Andreas Tolfsen
@@ -61,3 +61,4 @@
   b = branch
   squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
   fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut --fields=1 --delimiter=' '`
+  format-last-patch = format-patch HEAD~1..HEAD
