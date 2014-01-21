@@ -1,4 +1,7 @@
+(setq ido-everywhere t
+      ido-enable-flex-matching t
+      ido-create-new-buffer 'always)
+
 (ido-mode t)
-(setq ido-enable-flex-matching t)
 
 (provide 'setup-ido)
