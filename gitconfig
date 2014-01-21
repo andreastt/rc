@@ -32,7 +32,7 @@
   untracked = black bold
 
 [mergetool "mymeld"]
-  cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE $MERGED
+  cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
 
 [branch]
   autosetuprebase = always
