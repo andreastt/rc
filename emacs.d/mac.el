@@ -42,4 +42,7 @@
 ;; Use aspell for spell checking (`brew install aspell --lang=en`)
 (setq ispell-program-name "/usr/local/bin/aspell")
 
+;; Use Mac OS' default browser
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
 (provide 'mac)
