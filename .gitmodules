@@ -61,3 +61,6 @@
 [submodule "emacs.d/vendor/zlc"]
 	path = emacs.d/vendor/zlc
 	url = https://github.com/mooz/emacs-zlc.git
+[submodule "emacs.d/vendor/flymake-python"]
+	path = emacs.d/vendor/flymake-python
+	url = https://github.com/rpatterson/flymake-python.git
