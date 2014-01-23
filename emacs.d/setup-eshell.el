@@ -1,13 +1,13 @@
 (setenv "EDITOR" "emacsclient")
-(setenv "PATH" (concat "/home/ato/bin" ":"
-                       "/home/ato/dev/go/bin" ":"
+(setenv "PATH" (concat "~/bin" ":"
+                       "~/dev/go/bin" ":"
                        (getenv "PATH")))
 
 (require 'eshell)
 (require 'em-term)
 
 ;; Path
-(setq eshell-path-env (concat "/home/ato/dev/go/bin" ":"
+(setq eshell-path-env (concat "~/dev/go/bin" ":"
                               eshell-path-env))
 
 ;; History size, saving history on exit
