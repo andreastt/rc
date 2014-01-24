@@ -12,7 +12,7 @@ export PATH=$PATH:$HOME/dev/depot_tools
 export PATH=$PATH:$HOME/dev/moz-git-tools
 
 # Plan 9
-export PLAN9=/usr/local/plan9
+export PLAN9=$HOME/bin/plan9
 export PATH=$PATH:$PLAN9/bin
 
 # Go
