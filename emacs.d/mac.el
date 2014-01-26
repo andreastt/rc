@@ -20,7 +20,7 @@
                             ))
 
 ;; Enable menu bar on OS X since it's there by default anyways
-(menu-bar-mode 1)
+;; (menu-bar-mode 1)
 
 ;; Enable scroll bars
 (scroll-bar-mode 1)
