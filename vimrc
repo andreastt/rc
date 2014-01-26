@@ -3,73 +3,37 @@
 " Better safe than sorry
 set nocompatible
 
+" Faster redraw
+set ttyfast
 
-" Tabs ************************************************************************
-"set tabstop=4      " how many columns a tab counts for, affects look
 set expandtab     " produces the appropriate number of spaces
 set shiftwidth=2  " how many columns on reindent operations
-"set softtabstop   " see http://tedlogan.com/techblog3.html
 
-
-" Indenting ********************************************************************
 set autoindent
 
-
-" Whitespaces ****************************************************************
-"set listchars=tab:»·,trail:·
-"set list
-
-
-" Comments *******************************************************************
-"set comments=b:#,:%,n:>,n:\|
-
-
-" Scrollbars ******************************************************************
 set sidescrolloff=2
 set numberwidth=4
 
-
-" Windows *********************************************************************
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
-"Vertical split then hop to new buffer
+" Vertical split then hop to new buffer
 noremap ,v :vsp^M^W^W<cr>
 noremap ,h :split^M^W^W<cr>
 
-
-" Cursor highlights ***********************************************************
-"set cursorline
-"set cursorcolumn
-
-
-" Searching *******************************************************************
 set hlsearch   " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching
 set smartcase  " Ignore case when searching lowercase
 
-
-" Colors **********************************************************************
 set t_Co=256 " 256 colors
 syntax on
 
-"colorscheme bw
-"colorscheme cleanroom
-"colorscheme muon
-"colorscheme beauty256
-"colorscheme vylight
-
-
-" Line Wrapping ***************************************************************
 set nowrap
 set linebreak  " Wrap at word
 set joinspaces " Sane space operation
 "set textwidth=72
 set textwidth=0
-
-
-" Mappings ********************************************************************
 
 " Have Q reform things that look similar to what surrounds the cursor, or just
 " format the paragraph if in visual mode.
@@ -84,8 +48,6 @@ map <Enter> o<ESC>
 nnoremap <S-j> <PageDown>
 nnoremap <S-k> <PageUp>
 
-
-" Directories *****************************************************************
 " Setup backup location and enable
 set backupdir=/tmp
 set backup
@@ -93,13 +55,9 @@ set backup
 " Set Swap directory
 set directory=/tmp
 
-
-" Exuberant tags **************************************************************
 " Traverse tree up to root until a tags file is found
 set tags=./.tags;/
 
-
-" File Stuff ******************************************************************
 filetype on
 filetype plugin on
 filetype indent on
@@ -129,8 +87,6 @@ autocmd FileType json set formatoptions=tcq21 shiftwidth=2 softtabstop=2 tabstop
 " Use tabs, but visually represent them using 4 columns
 autocmd FileType go set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
-
-" Misc ************************************************************************
 set backspace=indent,eol,start
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
@@ -138,13 +94,9 @@ set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure 
 " Sets what is saved when you save a session
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
-
-" Mouse ***********************************************************************
 set mouse=a          " Enable the mouse
 set selectmode=mouse " Behave xterm
 
-
-" Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
 map <up> gk
 map k gk
@@ -154,3 +106,11 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
+function! RunGoFile()
+  if (&ft == "go")
+    exec ":new|0read ! go run " . bufname("%")
+  endif
+endfunction
+
+let mapleader=","
+nnoremap <leader>g :call RunGoFile()<CR>
