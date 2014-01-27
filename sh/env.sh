@@ -5,11 +5,11 @@ export MAILTO=ato@sny.no
 # local bin
 export PATH=$PATH:$HOME/bin
 
-# depot tools
-export PATH=$PATH:$HOME/dev/depot_tools
-
 # moz-git-tools
 export PATH=$PATH:$HOME/dev/moz-git-tools
+
+# depot tools
+export PATH=$PATH:$HOME/dev/depot_tools
 
 # Plan 9
 export PLAN9=$HOME/bin/plan9
@@ -20,8 +20,8 @@ export PATH="$HOME/dev/go/bin:$PATH"
 export GOROOT="$HOME/dev/go"
 
 # Compilation
-#export CC="clang"
-#export CXX="clang++"
+#export CC="ccache clang"
+#export CXX="ccache clang++"
 export ICECC_CC="icecc $CC"
 export ICECC_CXX="icecc $CXX"
 
