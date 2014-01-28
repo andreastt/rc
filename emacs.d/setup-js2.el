@@ -15,6 +15,9 @@
 ;; (require 'gtags)
 ;; (gtags-mode t)
 
+;; Mozilla uses 2 spaces for indentation
+(setq js-indent-level 2)
+
 (setq-default js2-allow-rhino-new-expr-initializer nil
               js2-auto-indent-p nil
               js2-enter-indents-newline nil
