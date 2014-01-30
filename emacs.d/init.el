@@ -17,11 +17,12 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
-;; Set path to dependencies
+;; Path for setup and dependency code
+(setq lisp-dir (expand-file-name "lisp" dotfiles-dir))
 (setq vendor-dir (expand-file-name "vendor" dotfiles-dir))
 
 ;; Load path
-(add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path lisp-dir)
 (add-to-list 'load-path vendor-dir)
 
 ;; Are we on a Mac?
