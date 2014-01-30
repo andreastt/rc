@@ -210,6 +210,15 @@ Key l A C4 Exec exec i3lock -c 000000
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
 
+# Vertically maximize/grow window with S-Super-Up and S-Super-Down
+Key Up A 4S Maximize 0 grow
+Key Down A 4S Maximize 0 grow
+
+# Horizontally maximize/grow window with S-Super-Left and
+# S-Super-Right
+Key Left A 4S Maximize grow 0
+Key Right A 4S Maximize grow 0
+
 # Border styling
 Style * NoTitle, BorderWidth 3
 BorderStyle Active Solid SteelBlue4 -- NoInset HiddenHandles
@@ -332,17 +341,18 @@ AddToMenu MenuFvwmConfig "$[gt.Fvwm Config Ops]" Title
 # things.  Here is the "common" part:
 DestroyFunc FuncFvwmWindowCommon
 AddToFunc FuncFvwmWindowCommon
-+ I AddToMenu $0 "$[gt.&Move]"              Move
-+ I AddToMenu $0 "$[gt.&Resize]"            Resize
-+ I AddToMenu $0 "$[gt.R&aise]"             Raise
-+ I AddToMenu $0 "$[gt.&Lower]"             Lower
-+ I AddToMenu $0 "$[gt.(De)&Iconify]"       Thumbnail
-+ I AddToMenu $0 "$[gt.(Un)&Stick]"         Stick
-+ I AddToMenu $0 "$[gt.(Un)Ma&ximize]"      Maximize
++ I AddToMenu $0 "$[gt.&Move]"                Move
++ I AddToMenu $0 "$[gt.&Resize]"              Resize
++ I AddToMenu $0 "$[gt.R&aise]"               Raise
++ I AddToMenu $0 "$[gt.&Lower]"               Lower
++ I AddToMenu $0 "$[gt.(De)&Iconify]"         Thumbnail
++ I AddToMenu $0 "$[gt.(Un)&Stick]"           Stick
++ I AddToMenu $0 "$[gt.(Un)Ma&ximize]"        Maximize
++ I AddToMenu $0 "$[gt.(Un)&Grow vertically]" Maximize 0 grow
 + I AddToMenu $0 ""                 Nop
-+ I AddToMenu $0 "$[gt.&Delete]"            Delete
-+ I AddToMenu $0 "$[gt.&Close]"             Close
-+ I AddToMenu $0 "$[gt.Destroy]"            Destroy
++ I AddToMenu $0 "$[gt.&Delete]"              Delete
++ I AddToMenu $0 "$[gt.&Close]"               Close
++ I AddToMenu $0 "$[gt.Destroy]"              Destroy
 + I AddToMenu $0 ""                 Nop
 
 # First windowops menu, bound to:
