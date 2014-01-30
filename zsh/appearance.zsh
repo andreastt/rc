@@ -69,7 +69,7 @@ function title() {
             print -Pn "\ek$a\e\\"      # screen title (in ^A")
             print -Pn "\e_$2   \e\\"   # screen location
             ;;
-        xterm | gnome-terminal)
+        *)
             print -Pn "\e]2;$a@$2\a" # plain terminal title
             ;;
     esac
