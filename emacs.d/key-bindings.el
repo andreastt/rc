@@ -3,6 +3,7 @@
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
 ;; Allow acme-styled search by right-clicking search term
+(require 'acme-search)
 (global-set-key [(mouse-3)] 'acme-search-forward)
 (global-set-key [(shift mouse-3)] 'acme-search-forward)
 
