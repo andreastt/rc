@@ -53,6 +53,9 @@
 ;; Replace show-buffers with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)  ;; 'helm-buffers-list
 
+;; Remap C-x C-d to ido-dired, which is the same as C-x d
+(global-set-key (kbd "C-x C-d") 'ido-dired)
+
 ;; Replace dabbrev-expand with hippie-expand, which by many are
 ;; considered a more powerful equivalent
 (global-set-key (kbd "M-/") 'hippie-expand)
