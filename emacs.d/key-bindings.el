@@ -2,6 +2,10 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
+;; Allow acme-styled search by right-clicking search term
+(global-set-key [(mouse-3)] 'acme-search-forward)
+(global-set-key [(shift mouse-3)] 'acme-search-forward)
+
 ;; C-SPC to launch the magic function
 (global-set-key (kbd "C-SPC") 'my-helm-multi-all)
 
