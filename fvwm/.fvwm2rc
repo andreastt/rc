@@ -210,14 +210,14 @@ Key l A C4 Exec exec i3lock -c 000000
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
 
-# Vertically maximize/grow window with S-Super-Up and S-Super-Down
-Key Up A 4S Maximize 0 grow
-Key Down A 4S Maximize 0 grow
+# Vertically maximize/grow window with C-Super-Up and C-Super-Down
+Key Up A 4C Maximize 0 grow
+Key Down A 4C Maximize 0 grow
 
-# Horizontally maximize/grow window with S-Super-Left and
-# S-Super-Right
-Key Left A 4S Maximize grow 0
-Key Right A 4S Maximize grow 0
+# Horizontally maximize/grow window with C-Super-Left and
+# C-Super-Right
+Key Left A 4C Maximize grow 0
+Key Right A 4C Maximize grow 0
 
 # Border styling
 Style * NoTitle, BorderWidth 3
