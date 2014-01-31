@@ -292,7 +292,7 @@ Read menudefs.hook Quiet
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
 +                       "&1. Terminal"              Exec exec rxvt
-+                       "&2. Firefox"               Exec exec firefox -new-window
++                       "&2. Firefox"               Exec exec firefox-trunk -new-window
 +                       ""              Nop
 +                       "&D. Debian"             Popup "/Debian"
 +                       ""              Nop
