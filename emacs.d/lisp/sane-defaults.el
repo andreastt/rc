@@ -1,3 +1,6 @@
+;; Enter ELisp debugger on error
+(setq debug-on-error t)
+
 ;; On Mac it sometimes mistakes / for the CWD directory.
 (setq default-directory "~/")
 
