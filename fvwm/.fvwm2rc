@@ -205,7 +205,8 @@ Key Up		A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 
 # Lock screen with C-Super-l
-Key l A C4 Exec exec i3lock -c 000000
+#Key l A C4 Exec exec i3lock -c 000000
+Key l A C4 Exec exec xscreensaver-command -lock
 
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
