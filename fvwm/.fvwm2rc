@@ -294,8 +294,6 @@ AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
 +                       "&1. Terminal"              Exec exec rxvt
 +                       "&2. Firefox"               Exec exec firefox-trunk -new-window
 +                       ""              Nop
-+                       "&D. Debian"             Popup "/Debian"
-+                       ""              Nop
 +                       "&R. $[gt.Remote Logins]"     Popup MenuFvwmLogins
 +                       ""              Nop
 +                       "&U. $[gt.Utilities]"         Popup MenuFvwmUtilities
