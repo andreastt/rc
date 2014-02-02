@@ -18,7 +18,8 @@ The typical approach I use is the following:
     git clone https://github.com/andreastt/dotfiles.git
     cd
 
-And then iterating with the following command on the files I need:
+And then iterating with the following command on the files I need for
+the current system:
 
 ::
 
