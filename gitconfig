@@ -7,6 +7,9 @@
   name = Andreas Tolfsen
   email = ato@mozilla.com
 
+[help]
+  autocorrect = 1
+
 [github]
   user = andreastt
 
