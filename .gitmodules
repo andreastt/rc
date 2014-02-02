@@ -1,9 +1,6 @@
 [submodule "emacs.d/vendor/undo-tree"]
 	path = emacs.d/vendor/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
-[submodule "emacs.d/vendor/js2-mode"]
-	path = emacs.d/vendor/js2-mode
-	url = https://github.com/magnars/js2-mode.git
 [submodule "emacs.d/vendor/yaml-mode"]
 	path = emacs.d/vendor/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
