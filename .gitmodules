@@ -1,51 +1,9 @@
-[submodule "emacs.d/vendor/undo-tree"]
-	path = emacs.d/vendor/undo-tree
-	url = http://www.dr-qubit.org/git/undo-tree.git
-[submodule "emacs.d/vendor/yaml-mode"]
-	path = emacs.d/vendor/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "emacs.d/vendor/browse-kill-ring"]
-	path = emacs.d/vendor/browse-kill-ring
-	url = https://github.com/T-J-Teru/browse-kill-ring.git
-[submodule "emacs.d/vendor/js2-refactor"]
-	path = emacs.d/vendor/js2-refactor
-	url = https://github.com/magnars/js2-refactor.el.git
 [submodule "emacs.d/vendor/mark-multiple"]
 	path = emacs.d/vendor/mark-multiple
 	url = https://github.com/magnars/mark-multiple.el.git
-[submodule "emacs.d/vendor/yasnippet"]
-	path = emacs.d/vendor/yasnippet
-	url = https://github.com/capitaomorte/yasnippet.git
-[submodule "emacs.d/vendor/markdown-mode"]
-	path = emacs.d/vendor/markdown-mode
-	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/vendor/jinja2-mode"]
-	path = emacs.d/vendor/jinja2-mode
-	url = https://github.com/paradoxxxzero/jinja2-mode.git
-[submodule "emacs.d/vendor/magit"]
-	path = emacs.d/vendor/magit
-	url = https://github.com/magit/magit.git
-[submodule "emacs.d/vendor/soy-mode"]
-	path = emacs.d/vendor/soy-mode
-	url = https://github.com/toomore-such/soy-mode.git
-[submodule "emacs.d/vendor/nodejs"]
-	path = emacs.d/vendor/nodejs
-	url = https://github.com/emacsmirror/nodejs-mode.git
 [submodule "emacs.d/vendor/eclim"]
 	path = emacs.d/vendor/eclim
 	url = https://github.com/senny/emacs-eclim.git
-[submodule "emacs.d/vendor/egit"]
-	path = emacs.d/vendor/egit
-	url = https://github.com/jimhourihan/egit.git
-[submodule "config/sublime-text-2/Packages/Subclim"]
-	path = config/sublime-text-2/Packages/Subclim
-	url = https://github.com/JulianEberius/Subclim.git
-[submodule "config/sublime-text-3/Packages/Subclim"]
-	path = config/sublime-text-3/Packages/Subclim
-	url = https://github.com/JulianEberius/Subclim.git
-[submodule "config/sublime-text-3/Packages/Package Control"]
-	path = config/sublime-text-3/Packages/Package Control
-	url = https://github.com/wbond/sublime_package_control.git
 [submodule "emacs.d/vendor/javadoc-lookup"]
 	path = emacs.d/vendor/javadoc-lookup
 	url = https://github.com/skeeto/javadoc-lookup.git
@@ -55,9 +13,6 @@
 [submodule "emacs.d/vendor/helm"]
 	path = emacs.d/vendor/helm
 	url = https://github.com/emacs-helm/helm.git
-[submodule "emacs.d/vendor/zlc"]
-	path = emacs.d/vendor/zlc
-	url = https://github.com/mooz/emacs-zlc.git
 [submodule "emacs.d/vendor/flymake-python"]
 	path = emacs.d/vendor/flymake-python
 	url = https://github.com/rpatterson/flymake-python.git
