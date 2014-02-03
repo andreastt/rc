@@ -65,6 +65,8 @@
 
 ;; Window switching
 (windmove-default-keybindings 'control)  ;; C-[direction]
+(global-set-key (kbd "C-<next>") 'next-buffer)  ;; Control + PgUp
+(global-set-key (kbd "C-<prior>") 'previous-buffer) ;; Control + PgDn
 
 ;; Help should search more than just commands
 (global-set-key (kbd "<f1> a") 'apropos)
