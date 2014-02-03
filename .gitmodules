@@ -16,3 +16,6 @@
 [submodule "emacs.d/vendor/flymake-python"]
 	path = emacs.d/vendor/flymake-python
 	url = https://github.com/rpatterson/flymake-python.git
+[submodule "emacs.d/vendor/helm-ls-git"]
+	path = emacs.d/vendor/helm-ls-git
+	url = https://github.com/emacs-helm/helm-ls-git.git
