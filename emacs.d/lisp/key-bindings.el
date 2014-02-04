@@ -7,9 +7,9 @@
 (global-set-key [(mouse-3)] 'acme-search-forward)
 (global-set-key [(shift mouse-3)] 'acme-search-forward)
 
-;; Bind magic functions to C-SPC and C-p
+;; Bind magic functions to C-SPC and C-o
 (global-set-key (kbd "C-SPC") 'my-helm-multi-all)
-(global-set-key (kbd "C-p") 'helm-ls-git-ls)
+(global-set-key (kbd "C-o") 'helm-ls-git-ls)
 
 ;; Mark additional regions matching current region
 (global-set-key (kbd "M-æ") 'mark-all-like-this)
