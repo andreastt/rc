@@ -19,8 +19,8 @@
   (define-key c-mode-base-map (kbd "C-<f2>") 'kill-compilation)
 
   ;; Traverse compile errors
-  (define-key c-mode-base-map (kbd "C-c C-p") 'show-previous-error)
-  (define-key c-mode-base-map (kbd "C-c C-n") 'show-next-error))
+  (define-key c-mode-base-map (kbd "C-c n") 'next-error)
+  (define-key c-mode-base-map (kbd "C-c p") 'previous-error))
 (add-hook 'c-mode-common-hook 'my-c-common-hook)
 
 (provide 'setup-cc)
