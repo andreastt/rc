@@ -6,7 +6,6 @@
 # Description:       This file should be placed in /etc/init.d.
 ### END INIT INFO
 
-#change this
 USERNAME=ato
 DESC="emacs daemon"
 NAME=emacs
@@ -15,7 +14,6 @@ DAEMON=/usr/bin/$NAME
 DAEMON_ARGS="--daemon"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
-#change this
 EMACSCLIENT=/usr/bin/emacsclient
 EVALEXIT="(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
 
@@ -131,7 +129,6 @@ case "$1" in
 	esac
 	;;
   *)
-	#echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
 	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
 	exit 3
 	;;
