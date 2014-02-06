@@ -19,16 +19,14 @@ export PATH=$PATH:$PLAN9/bin
 export PATH="$HOME/dev/go/bin:$PATH"
 export GOROOT="$HOME/dev/go"
 
-# Compilation
-#export CC="ccache clang"
-#export CXX="ccache clang++"
-export ICECC_CC="icecc $CC"
-export ICECC_CXX="icecc $CXX"
+# Compilation and distributed compilation
+#export CC="clang"
+#export CXX="clang++"
+#export CCACHE_PREFIX="distcc"
+export DISTCC_HOSTS="+zeroconfig"
 
 export GYP_GENERATORS=ninja
 export GYP_PARALLEL=1
-
-# TODO: DISTCC_HOSTS
 
 # Selenium test suites will continue running even if they reach an error or fail
 export haltonerror=0
