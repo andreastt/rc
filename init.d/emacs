@@ -8,7 +8,7 @@
 
 #change this
 USERNAME=ato
-DESC="Run the emacs daemon."
+DESC="emacs daemon"
 NAME=emacs
 #change this
 DAEMON=/usr/bin/$NAME
@@ -108,15 +108,6 @@ case "$1" in
 		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
 	esac
 	;;
-  #reload|force-reload)
-	#
-	# If do_reload() is not implemented then leave this commented out
-	# and leave 'force-reload' as an alias for 'restart'.
-	#
-	#log_daemon_msg "Reloading $DESC" "$NAME"
-	#do_reload
-	#log_end_msg $?
-	#;;
   restart|force-reload)
 	#
 	# If the "reload" option is implemented then remove the
