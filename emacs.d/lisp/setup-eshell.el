@@ -39,7 +39,14 @@
 ;;  (autopair-newline))
 
 (defun my-eshell-mode-hook ()
-  (define-key eshell-mode-map (kbd "C-l") 'eshell/clear))
+  ;; Clear buffer history with C-l
+  (define-key eshell-mode-map (kbd "C-l") 'eshell/clear)
+
+  ;; Reclaim C-[direction] bindings for moving to windows
+  (define-key eshell-mode-map (kbd "C-<up>") 'windmove-up)
+  (define-key eshell-mode-map (kbd "C-<down>") 'windmove-down)
+  (define-key eshell-mode-map (kbd "C-<right>") 'windmove-right)
+  (define-key eshell-mode-map (kbd "C-<left>") 'windmove-left))
 (add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
 
 ;; open opens file, openo opens file in the other window
