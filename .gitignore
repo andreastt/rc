@@ -1,33 +1,7 @@
 *.cache
 *.elc
 *.pyc
-*.sublime_session
 .DS_Store
-IdeaIC10/config/componentVersions/*
-IdeaIC10/config/options/*
-IdeaIC10/config/tasks/*
-IdeaIC10/system
-config/Trolltech.conf
-config/autostart
-config/chromium
-config/enchant
-config/google-googletalkplugin
-config/gtk-2.0
-config/gwibber
-config/monitors.xml
-config/operamobile
-config/spotify
-config/sublime-text-2/Backup/
-config/sublime-text-2/Cache
-config/sublime-text-2/Packages/User/Package Control.last-run
-config/sublime-text-2/Settings
-config/sublime-text-3/Backup/
-config/sublime-text-3/Cache
-config/sublime-text-3/Local
-config/sublime-text-3/Packages/User/Package Control.last-run
-config/sublime-text-3/Settings
-config/update-notifier
-emacs.before_ecb_2.40
 emacs.d/abbrev_defs
 emacs.d/ac-comphist.dat
 emacs.d/auto-save-list
@@ -39,5 +13,4 @@ emacs.d/session*
 emacs.d/tmp/savehist
 emacs.d/tramp
 fvwm/icon.tmp.*
-vim/.VimballRecord
 vim/.netrwhist
