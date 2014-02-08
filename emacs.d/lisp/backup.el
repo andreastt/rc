@@ -23,6 +23,9 @@
 (setq backup-directory-alist '((".*" . "~/.emacs.d/backups/"))
       auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
+;; Create autosave directory if necessary, since emacs won't
+(make-directory "~/.emacs.d/autosaves/" t)
+
 ;; Save minibuffer history
 (setq savehist-file (expand-file-name "savehist" temporary-file-directory)
       savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
