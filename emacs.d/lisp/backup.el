@@ -7,7 +7,7 @@
 
 (require 'recentf)
 
-      ;; Don't clobber symlinks
+;; Don't clobber symlinks
 (setq backup-by-copying t
       delete-old-versions t
       kept-new-versions 6
@@ -20,8 +20,8 @@
       recentf-save-file (expand-file-name "recentf" temporary-file-directory))
 
 ;; Write backup files to own directory
-(setq backup-directory-alist `((".*" . ,temporary-file-directory))
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+(setq backup-directory-alist '((".*" . "~/.emacs.d/backups/"))
+      auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
 ;; Save minibuffer history
 (setq savehist-file (expand-file-name "savehist" temporary-file-directory)
