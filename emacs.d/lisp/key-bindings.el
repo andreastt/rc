@@ -74,8 +74,6 @@
 
 ;; Navigation bindings
 (global-set-key (kbd "C-l") 'goto-line)
-(global-set-key (kbd "C-s-<up>") 'beginning-of-buffer)
-(global-set-key (kbd "C-s-<down>") 'end-of-buffer)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "C-e") 'move-end-of-line-or-next-line)
