@@ -5,10 +5,10 @@
 
 (setq mu4e-mu-binary "/usr/local/bin/mu")
 
-(setq mu4e-maildir       "~/Mail"    ;; top-level Maildir
-      mu4e-sent-folder   "/Sent"     ;; folder for sent messages
-      mu4e-drafts-folder "/Drafts"   ;; unfinished messages
-      mu4e-trash-folder  "/Trash"    ;; trashed messages
+(setq mu4e-maildir       "~/Mail"     ;; top-level Maildir
+      mu4e-sent-folder   "/Sent"      ;; folder for sent messages
+      mu4e-drafts-folder "/Drafts"    ;; unfinished messages
+      mu4e-trash-folder  "/Trash"     ;; trashed messages
       mu4e-refile-folder "/Archive")  ;; saved messages
       ;;mu4e-split-view    'vertical)  ;; split message list/message view vertically
 
@@ -34,12 +34,11 @@
 
 ;; Tell message-mode how to send email.
 (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls ;;ssl
+      smtpmail-stream-type 'starttls
       smtpmail-default-smtp-server "smtp.mozilla.org"
       smtpmail-smtp-server "smtp.mozilla.org"
       smtpmail-local-domain "mozilla.com"
       smtpmail-smtp-service 587)
-;;      tls-program "gnutls-cli --x509cafile /etc/ssl/certs/mozilla.crt --insecure -p %p %h")
 
 ;; Queue messages in separate IMAP folder for later sending.
 (setq smtpmail-queue-mail nil
