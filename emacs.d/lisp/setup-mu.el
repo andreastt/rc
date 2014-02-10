@@ -18,8 +18,7 @@
 
 ;; Show images and convert HTML to text
 (setq mu4e-show-images t
-      mu4e-html2text-command "w3m -T text/html")
-      ;; mu4e-html2text-command "html2text -utf8 -width 72")
+      mu4e-html2text-command "html2text -utf8 -nobs -width 72")
 
 ;; Fancy characters!
 ;; (setq mu4e-use-fancy-chars t)
