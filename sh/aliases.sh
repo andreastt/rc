@@ -29,13 +29,11 @@ alias e="emacsclient -c"
 alias en="emacsclient -nw"
 alias ew="emacsclient --no-wait -c"
 
+# Set correct location to system Emacs on OS X
 if [[ "$(uname)" = "Darwin" ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 fi
 
-# Other machines
-alias njord="ssh -YC ato@sny.no"
-alias eir="ssh -YC ato@eir.corp.lon1.mozilla.com"
-
+# `date` should always display ISO-8601 format
 alias date="date --iso-8601='seconds' | rev | cut -c 1- | rev"
