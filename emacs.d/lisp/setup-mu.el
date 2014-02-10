@@ -16,8 +16,10 @@
 (setq mu4e-get-mail-command "offlineimap"
       mu4e-update-interval 300)
 
-(setq mu4e-show-images t                                   ;; Show images
-      mu4e-html2text-command "html2text -utf8 -width 72")  ;; Convert HTML to text
+;; Show images and convert HTML to text
+(setq mu4e-show-images t
+      mu4e-html2text-command "w3m -T text/html")
+      ;; mu4e-html2text-command "html2text -utf8 -width 72")
 
 ;; Fancy characters!
 ;; (setq mu4e-use-fancy-chars t)
