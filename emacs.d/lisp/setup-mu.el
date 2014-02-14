@@ -16,9 +16,19 @@
 (setq mu4e-get-mail-command "offlineimap"
       mu4e-update-interval 300)
 
-;; Show images and convert HTML to text
+;; Apply god dammit, apply!
+(setq mu4e-headers-leave-behavior 'apply)
+
+;; Display pretty pictures of cats in my emacs
 (setq mu4e-show-images t
-      mu4e-html2text-command "html2text -utf8 -nobs -width 72")
+      mu4e-view-image-max-width 800)
+
+;; And so so using imagemagick, if available
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+
+;; Convert HTML messages to plain text
+(setq mu4e-html2text-command "html2text -utf8 -nobs -width 72")
 
 ;; Fancy characters!
 ;; (setq mu4e-use-fancy-chars t)
@@ -26,13 +36,24 @@
 ;; Break message lines at width of window
 (add-hook 'mu4e-view-mode-hook 'visual-line-mode)
 
-;; Use imagemagick if available
-(when (fboundp 'imagemagick-register-types)
-  (imagemagick-register-types))
+;; Don't confirm quitting
+(setq my4e-confirm-quit nil)
 
-(require 'smtpmail)
+;; Don't keep message buffers around.
+(setq message-kill-buffer-on-exit t)
+
+;; Restore previous window configuration
+(defun mu4e-quit-session ()
+  "Restores the previous window configuration."
+  (interactive)
+  (kill-buffer)
+  (jump-to-register :mu4e-fullscreen))
+
+(define-key mu4e-main-mode-map (kbd "q") 'mu4e-quit-session)
+(define-key mu4e-headers-mod-map (kbd "M-u") 'mu4e-update-mail-show-window)
 
 ;; Tell message-mode how to send email.
+(require 'smtpmail)
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-stream-type 'starttls
       smtpmail-default-smtp-server "smtp.mozilla.org"
@@ -43,9 +64,6 @@
 ;; Queue messages in separate IMAP folder for later sending.
 (setq smtpmail-queue-mail nil
       smtpmail-queue-dir "~/Mail/queue/cur")
-
-;; Don't keep message buffers around.
-(setq message-kill-buffer-on-exit t)
 
 ;; Some more generic mail settings.
 (setq user-mail-address "ato@mozilla.com"
