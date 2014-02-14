@@ -1,6 +1,9 @@
 ;; Enter ELisp debugger on error
 (setq debug-on-error t)
 
+;; Seed the random number generator
+(random t)
+
 ;; On Mac it sometimes mistakes / for the CWD directory.
 (setq default-directory "~/")
 
@@ -158,5 +161,10 @@
 
 ;; Compile command should count in number of cores available
 (setq compile-command "make -k -j8 ")
+
+;; Whitespace-style
+(setq whitespace-style '(trailing lines space-before-tab
+                                  indentation space-after-tab)
+      whitespace-line-column 100)
 
 (provide 'sane-defaults)
