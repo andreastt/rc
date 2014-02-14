@@ -31,4 +31,7 @@
 ;; Winner mode allows you to "redo" and "undo" window setups
 (winner-mode)
 
+;; A bit of misc cargo culting in misc.el
+(setq xterm-mouse-mode t)
+
 (provide 'appearance)
