@@ -50,7 +50,7 @@
   (jump-to-register :mu4e-fullscreen))
 
 (define-key mu4e-main-mode-map (kbd "q") 'mu4e-quit-session)
-(define-key mu4e-headers-mod-map (kbd "M-u") 'mu4e-update-mail-show-window)
+(define-key mu4e-headers-mode-map (kbd "M-u") 'mu4e-update-mail-show-window)
 
 ;; Tell message-mode how to send email.
 (require 'smtpmail)
