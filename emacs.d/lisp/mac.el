@@ -31,7 +31,7 @@
 
 ;; Mac friendly font
 (when window-system
-  (setq ato/default-font "-apple-Monaco-medium-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+  (setq ato/default-font "-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
   (setq ato/presentation-font "-apple-Monaco-medium-normal-normal-*-28-*-*-*-m-0-iso10646-1")
   (set-face-attribute 'default nil :font ato/default-font))
 
