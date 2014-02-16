@@ -19,6 +19,9 @@ export PATH=$PATH:$PLAN9/bin
 export PATH="$HOME/dev/go/bin:$PATH"
 export GOROOT="$HOME/dev/go"
 
+# Android Development Kit
+export PATH="$PATH:$HOME/bin/adt/sdk/platform-tools"
+
 # Compilation and distributed compilation
 #export CC="clang"
 #export CXX="clang++"
