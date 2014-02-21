@@ -54,6 +54,7 @@
 (require 'backup)
 
 ;; Setup dependencies
+(require 'setup-package)
 (require 'setup-gdb)
 (require 'setup-cc)
 (require 'setup-c)
