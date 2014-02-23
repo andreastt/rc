@@ -94,7 +94,3 @@
 (if is-mac
     (require 'mac)
   (require 'linux))
-
-;; Emacs server
-;(server-start)
-(put 'erase-buffer 'disabled nil)
