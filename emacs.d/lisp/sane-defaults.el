@@ -1,5 +1,5 @@
 ;; Enter ELisp debugger on error
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 ;; Seed the random number generator
 (random t)
