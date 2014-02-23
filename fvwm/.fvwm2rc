@@ -220,6 +220,18 @@ Key Down A 4C Maximize 0 grow
 Key Left A 4C Maximize grow 0
 Key Right A 4C Maximize grow 0
 
+# Change keyboard layouts between Norwegian QWERTY and Dvorak
+AddToFunc KeymapToNorwegianQwerty
+  + I Exec exec setxkbmap no
+  + I Exec exec xmodmap ~/.Xmodmap
+
+AddToFunc KeymapToDvorak
+  + I Exec exec setxkbmap dvorak
+  + I Exec exec xmodmap ~/.Xmodmap
+
+Key Page_Up A 4S KeymapToNorwegianQwerty
+Key Page_Down A 4S KeymapToDvorak
+
 # Border styling
 Style * NoTitle, BorderWidth 3
 BorderStyle Active Solid SteelBlue4 -- NoInset HiddenHandles
