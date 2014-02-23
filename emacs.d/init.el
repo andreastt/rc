@@ -25,7 +25,7 @@
 (add-to-list 'load-path lisp-dir)
 (add-to-list 'load-path vendor-dir)
 
-;; Are we on a Mac?
+;; Are we on Mac OS?
 (setq is-mac (equal system-type 'darwin))
 
 ;; Functions (load all files in defuns-directory)
