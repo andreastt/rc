@@ -28,7 +28,7 @@
   (imagemagick-register-types))
 
 ;; Convert HTML messages to plain text
-(setq mu4e-html2text-command "html2text -utf8 -nobs -width 72")
+(setq mu4e-html2text-command "html2text -utf8 -width 72 -nobs")
 
 ;; Fancy characters!
 ;; (setq mu4e-use-fancy-chars t)
