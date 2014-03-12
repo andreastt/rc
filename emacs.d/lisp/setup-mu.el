@@ -55,7 +55,10 @@
 ;; Tell message-mode how to send email.
 (require 'smtpmail)
 (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls
+      starttls-use-gnutls t ;; <----
+      ;; smtpmail-debug-info t
+      ;;smtpmail-starttls-credentials '(("smtp.mozilla.org" 587 nil nil))
+      ;;smtpmail-stream-type 'starttls
       smtpmail-default-smtp-server "smtp.mozilla.org"
       smtpmail-smtp-server "smtp.mozilla.org"
       smtpmail-local-domain "mozilla.com"

@@ -12,5 +12,6 @@ emacs.d/ido.last
 emacs.d/session*
 emacs.d/tmp/savehist
 emacs.d/tramp
+emacs.d/elpa
 fvwm/icon.tmp.*
 vim/.netrwhist
