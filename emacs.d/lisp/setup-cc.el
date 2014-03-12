@@ -20,7 +20,11 @@
 
   ;; Traverse compile errors
   (define-key c-mode-base-map (kbd "C-c n") 'next-error)
-  (define-key c-mode-base-map (kbd "C-c p") 'previous-error))
+  (define-key c-mode-base-map (kbd "C-c p") 'previous-error)
+
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list 'achead:include-directories '" /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"))
 (add-hook 'c-mode-common-hook 'my-c-common-hook)
 
 (provide 'setup-cc)
