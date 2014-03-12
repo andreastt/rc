@@ -1,5 +1,11 @@
 (require 'package)
-;; (require 'dash)
+
+(setq my-packages
+      '(
+        auto-complete-c-headers
+        js2-mode
+        clojure-mode
+        ))
 
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -11,24 +17,20 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; (defun packages-install (packages)
-;;   (--each packages
-;;           (when (not (package-installed-p nil))
-;;             (package-install it)))
-;;   (delete-other-windows))
+(dolist (pkg my-packages)
+  (when (and (not (package-installed-p pkg))
+             (assoc pkg package-archive-contents))
+    (package-install pkg)))
 
-;; ;; On-demand package installation
-
-;; (defun require-package (package &optional min-version no-frefresh)
-;;   "Install given PACKAGE, optionally requiring MIN-VERSION.
-;; If NO-REFRESH is non-nil, the available package lists will not be
-;; re-downloaded in order to locate PACKAGE."
-;;   (if (package-installed-p package min-version)
-;;       t
-;;     (if (or (assoc package package-archive-contents) no-refresh)
-;;         (package-install package)
-;;       (progn
-;;         (package-refresh-contents)
-;;         (require-package package min-version t)))))
+(defun package-list-unaccounted-packages ()
+  "Like `package-list-packages', but shows only the packages that
+are installed and are not in `my-packages`.  Useful for cleaning
+out unwanted packages."
+  (interactive)
+  (package-show-package-list
+   (remove-if-not (lambda (x) (and (not (memq x my-packages))
+                                   (not (package-built-in-p x))
+                                   (package-installed-p x)))
+                  (mapcar 'car package-archive-contents))))
 
 (provide 'setup-package)
