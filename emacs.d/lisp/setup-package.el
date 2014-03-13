@@ -5,6 +5,7 @@
         auto-complete-c-headers
         js2-mode
         clojure-mode
+        go-mode
         ))
 
 (add-to-list 'package-archives
