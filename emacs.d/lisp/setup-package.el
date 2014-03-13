@@ -7,6 +7,7 @@
         clojure-mode
         go-mode
         google-c-style
+        multi-term
         ))
 
 (add-to-list 'package-archives
