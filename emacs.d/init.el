@@ -34,10 +34,6 @@
   (when (file-regular-p file)
     (load file)))
 
-;; Current user settings
-(setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
-(add-to-list 'load-path user-settings-dir)
-
 ;; Add external vendor extensions to load path
 (dolist (project (directory-files vendor-dir t "\\w+"))
   (when (file-directory-p project)
