@@ -13,7 +13,6 @@
         git
         autopair
         zoom-frm
-        smooth-scrolling
         multi-web-mode
         mark-multiple
         javadoc-lookup
