@@ -20,6 +20,7 @@
         gtags
         frame-cmds
         frame-fns
+        dired-details
         ))
 
 (add-to-list 'package-archives
