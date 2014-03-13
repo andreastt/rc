@@ -47,4 +47,4 @@ out unwanted packages."
                                    (package-installed-p x)))
                   (mapcar 'car package-archive-contents))))
 
-(provide 'setup-package)
+(provide 'packages)

@@ -13,35 +13,34 @@
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-;; Set path to .emacs.d
-(setq dotfiles-dir (file-name-directory
-                    (or (buffer-file-name) load-file-name)))
-
-;; Path for setup and dependency code
-(setq lisp-dir (expand-file-name "lisp" dotfiles-dir))
-(setq vendor-dir (expand-file-name "vendor" dotfiles-dir))
+;; Set path to dependencies
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Load path
-(add-to-list 'load-path lisp-dir)
-(add-to-list 'load-path vendor-dir)
-
-;; Are we on Mac OS?
-(setq is-mac (equal system-type 'darwin))
+(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path site-lisp-dir)
 
 ;; Functions (load all files in defuns-directory)
-(setq defuns-dir (expand-file-name "defuns" dotfiles-dir))
+(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
 (dolist (file (directory-files defuns-dir t "\\w+"))
   (when (file-regular-p file)
     (load file)))
 
 ;; Add external vendor extensions to load path
+(setq vendor-dir (expand-file-name "vendor" user-emacs-directory))
+(add-to-list 'load-path vendor-dir)
 (dolist (project (directory-files vendor-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
 ;; Keep emacs Custom-settings in a separate file
-(setq custom-file "~/.emacs.d/my-custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
+;; Set up appearance early
+(setq is-mac (equal system-type 'darwin))
+(when window-system (require 'appearance))
 
 ;; Let's start with a smattering of sanity
 (require 'sane-defaults)
@@ -49,8 +48,11 @@
 ;; Backup and temporary storage
 (require 'backup)
 
-;; Setup dependencies
-(require 'setup-package)
+;; Pull in desired packages if they don't exist on the local file
+;; system.
+(require 'packages)
+
+;; Individual mode setups
 (require 'setup-gdb)
 (require 'setup-cc)
 (require 'setup-c)
@@ -85,8 +87,7 @@
 ;; Key bindings
 (require 'key-bindings)
 
-;; Appearance
-(when window-system (require 'appearance))
+;; OS specific tweaks
 (if is-mac
     (require 'mac)
   (require 'linux))
