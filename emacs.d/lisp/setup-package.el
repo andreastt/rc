@@ -8,6 +8,7 @@
         go-mode
         google-c-style
         multi-term
+        helm-ls-git
         ))
 
 (add-to-list 'package-archives
