@@ -3,22 +3,22 @@
 (setq my-packages
       '(
         auto-complete-c-headers
-        js2-mode
-        clojure-mode
-        go-mode
-        google-c-style
-        multi-term
-        helm-ls-git
-        git
         autopair
-        zoom-frm
-        multi-web-mode
-        mark-multiple
-        javadoc-lookup
-        gtags
+        clojure-mode
+        dired-details
         frame-cmds
         frame-fns
-        dired-details
+        git
+        go-mode
+        google-c-style
+        gtags
+        helm-ls-git
+        javadoc-lookup
+        js2-mode
+        mark-multiple
+        multi-term
+        multi-web-mode
+        zoom-frm
         ))
 
 (add-to-list 'package-archives
