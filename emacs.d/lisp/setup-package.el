@@ -19,6 +19,7 @@
         javadoc-lookup
         gtags
         frame-cmds
+        frame-fns
         ))
 
 (add-to-list 'package-archives
