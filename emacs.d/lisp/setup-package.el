@@ -16,6 +16,7 @@
         smooth-scrolling
         multi-web-mode
         mark-multiple
+        javadoc-lookup
         ))
 
 (add-to-list 'package-archives
