@@ -12,6 +12,7 @@
         helm
         git
         autopair
+        zoom-frm
         ))
 
 (add-to-list 'package-archives
