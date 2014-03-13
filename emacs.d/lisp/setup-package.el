@@ -15,6 +15,7 @@
         zoom-frm
         smooth-scrolling
         multi-web-mode
+        mark-multiple
         ))
 
 (add-to-list 'package-archives

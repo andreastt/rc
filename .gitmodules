@@ -1,6 +1,3 @@
-[submodule "emacs.d/vendor/mark-multiple"]
-	path = emacs.d/vendor/mark-multiple
-	url = https://github.com/magnars/mark-multiple.el.git
 [submodule "emacs.d/vendor/eclim"]
 	path = emacs.d/vendor/eclim
 	url = https://github.com/senny/emacs-eclim.git
