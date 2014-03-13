@@ -10,6 +10,7 @@
         multi-term
         helm-ls-git
         helm
+        git
         ))
 
 (add-to-list 'package-archives
