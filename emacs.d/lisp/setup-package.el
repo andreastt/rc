@@ -18,6 +18,7 @@
         mark-multiple
         javadoc-lookup
         gtags
+        frame-cmds
         ))
 
 (add-to-list 'package-archives
