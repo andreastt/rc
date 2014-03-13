@@ -17,6 +17,7 @@
         multi-web-mode
         mark-multiple
         javadoc-lookup
+        gtags
         ))
 
 (add-to-list 'package-archives
