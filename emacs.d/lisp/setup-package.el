@@ -13,6 +13,7 @@
         git
         autopair
         zoom-frm
+        smooth-scrolling
         ))
 
 (add-to-list 'package-archives
