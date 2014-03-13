@@ -11,6 +11,7 @@
         helm-ls-git
         helm
         git
+        autopair
         ))
 
 (add-to-list 'package-archives
