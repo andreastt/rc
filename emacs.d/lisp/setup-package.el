@@ -14,6 +14,7 @@
         autopair
         zoom-frm
         smooth-scrolling
+        multi-web-mode
         ))
 
 (add-to-list 'package-archives
