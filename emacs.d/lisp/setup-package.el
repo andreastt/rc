@@ -6,6 +6,7 @@
         js2-mode
         clojure-mode
         go-mode
+        google-c-style
         ))
 
 (add-to-list 'package-archives
