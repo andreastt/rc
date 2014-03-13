@@ -22,6 +22,14 @@
   (define-key c-mode-base-map (kbd "C-c n") 'next-error)
   (define-key c-mode-base-map (kbd "C-c p") 'previous-error)
 
+  ;; Auto complete with default config
+  (require 'auto-complete)
+  (require 'auto-complete-config)
+  (ac-config-default)
+
+  ;; Allow auto completion (using auto-complete) of C and C++ headers.
+  ;; One can ask clang to search for include directories using `clang
+  ;; -xc++ -E -v -`.
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
   (add-to-list 'achead:include-directories '" /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"))
