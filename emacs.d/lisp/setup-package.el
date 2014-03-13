@@ -9,6 +9,7 @@
         google-c-style
         multi-term
         helm-ls-git
+        helm
         ))
 
 (add-to-list 'package-archives

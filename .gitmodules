@@ -10,9 +10,6 @@
 [submodule "emacs.d/vendor/mu"]
 	path = emacs.d/vendor/mu
 	url = git://github.com/djcb/mu.git
-[submodule "emacs.d/vendor/helm"]
-	path = emacs.d/vendor/helm
-	url = https://github.com/emacs-helm/helm.git
 [submodule "emacs.d/vendor/flymake-python"]
 	path = emacs.d/vendor/flymake-python
 	url = https://github.com/rpatterson/flymake-python.git
