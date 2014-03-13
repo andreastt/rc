@@ -9,7 +9,6 @@
         google-c-style
         multi-term
         helm-ls-git
-        helm
         git
         autopair
         zoom-frm
