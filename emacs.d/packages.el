@@ -9,6 +9,7 @@
         frame-cmds
         frame-fns
         git
+        git-blame
         go-mode
         google-c-style
         gtags
