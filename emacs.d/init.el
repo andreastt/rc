@@ -58,6 +58,7 @@
 ;; Set up appearance early
 (setq is-mac (equal system-type 'darwin))
 (when window-system (require 'appearance))
+(require 'tiling)
 
 ;; Let's start with a smattering of sanity
 (require 'sane-defaults)

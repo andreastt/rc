@@ -106,7 +106,8 @@
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
 ;; Toggle fullscreen
-(global-set-key (kbd "<f11>") 'toggle-fullscreen)
+(global-set-key (kbd "<S-M-return>") 'toggle-fullscreen)
+
 
 ;; Compile and recompile, which are useful no matter what file type
 ;; you're in
