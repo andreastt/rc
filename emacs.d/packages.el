@@ -19,6 +19,7 @@
         mark-multiple
         multi-term
         multi-web-mode
+        smex
         zoom-frm
         ))
 

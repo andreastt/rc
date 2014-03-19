@@ -113,4 +113,9 @@
 (global-set-key (kbd "C-<f9>") 'compile)
 (global-set-key (kbd "<f9>") 'recompile)
 
+(autoload 'smex "smex"
+  "Smex is an M-x enhancement that provides a convenient
+interface to your recently and most frequently used commands.")
+(global-set-key (kbd "M-x") 'smex)
+
 (provide 'key-bindings)
