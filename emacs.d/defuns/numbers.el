@@ -1,3 +1,6 @@
+;; Thanks to Lars Magne Ingebrigtsen!
+;; http://lars.ingebrigtsen.no/2014/03/10/offensive-code/
+
 (defvar roman-numeral-mapping
   '((1000 . "M") (500 . "D") (100 . "C") (50 . "L")
     (10 . "X") (5 . "V") (1 . "I")))
