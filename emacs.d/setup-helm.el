@@ -42,4 +42,8 @@
                    (when (buffer-file-name b) (buffer-name b)))
                  (buffer-list)))))
 
+;; helm-ls-git is bound to C-o and allows you to navigate to any file
+;; in the current git repository.
+(require 'helm-ls-git)
+
 (provide 'setup-helm)

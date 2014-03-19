@@ -93,7 +93,6 @@
 (require 'setup-helm)
 (require 'setup-eshell)
 (require 'setup-ido)
-(require 'setup-helm-ls-git)
 
 (require 'mark-more-like-this)
 
