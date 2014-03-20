@@ -57,6 +57,7 @@ AddToFunc StartFunction
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
   + I Exec compton -cC -r 16 -o 0.4 -l -25 -t -10 -f -D 1 -e 0.5 -b
+  + I Exec xscreensaver -no-splash
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
