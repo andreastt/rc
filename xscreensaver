@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 # XScreenSaver Preferences File
 # Written by xscreensaver-demo 5.15 for ato on Fri Jan 31 14:46:24 2014.
 # http://www.jwz.org/xscreensaver/
@@ -19,7 +21,7 @@ nice:		10
 memoryLimit:	0
 fade:		True
 unfade:		False
-fadeSeconds:	0:00:03
+fadeSeconds:	0:00:01
 fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
@@ -32,14 +34,14 @@ dpmsOff:	4:00:00
 grabDesktopImages:  True
 grabVideoFrames:    False
 chooseRandomImages: False
-imageDirectory:	
+imageDirectory:
 
 mode:		one
 selected:	103
 
 textMode:	url
 textLiteral:	XScreenSaver
-textFile:	
+textFile:
 textProgram:	fortune
 textURL:	http://fridge.ubuntu.com/node/feed
 
@@ -255,4 +257,3 @@ GetViewPortIsFullOfLies:False
 procInterrupts:	True
 xinputExtensionDev: False
 overlayStderr:	True
-
