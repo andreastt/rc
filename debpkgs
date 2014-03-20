@@ -10,6 +10,7 @@ ccache
 chromium-browser
 clang
 cmake
+compton
 curl
 cvs
 dmenu
@@ -94,7 +95,6 @@ wireless-tools
 x-face-el
 x11-xserver-utils
 x11vnc
-xcompmgr
 xcursor-themes
 xdm
 xfaces
