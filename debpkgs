@@ -71,6 +71,7 @@ realpath
 rsync
 rxvt-unicode
 screen
+scrot
 sed
 sloccount
 sqlite
@@ -93,6 +94,7 @@ wireless-tools
 x-face-el
 x11-xserver-utils
 x11vnc
+xcompmgr
 xcursor-themes
 xdm
 xfaces
