@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 # Virtual desktops
 DesktopSize 3x3
 DesktopName 0 Main
@@ -54,6 +56,7 @@ AddToFunc StartFunction
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+  + I Exec compton -cC -r 16 -o 0.4 -l -25 -t -10 -f -D 1 -e 0.5 -b
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
@@ -276,6 +279,7 @@ Mouse 3 FSTW M RaiseAndResize
 # Move window with Super-{button 1} and resize with Super-{button 3},
 # just like i3
 Mouse 1 FSTW 4 FuncFvwmMoveOrRaise
+Mouse 2 FSTW 4 FuncFvwmResizeOrRaise
 Mouse 3 FSTW 4 FuncFvwmResizeOrRaise
 
 # Shades and unshades active window
