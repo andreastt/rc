@@ -2,6 +2,18 @@
 export PLAN9=/usr/local/plan9
 export PATH=$PATH:$PLAN9/bin
 
+# Local bin
+export PATH=$PATH:$HOME/bin
+
+# moz-git-tools
+export PATH=$PATH:$HOME/dev/moz-git-tools
+
+# Go
+export GOROOT=$HOME/dev/go
+
+# Android
+export PATH=$PATH:/usr/local/adt/sdk/platform-tools
+
 # Plumb files instead of starting new editor
 export EDITOR=E
 unset FCEDIT VISUAL
@@ -18,19 +30,6 @@ export font=$PLAN9/font/lucsans/euro.8.font
 export home=$HOME
 export prompt="$H=;          "
 export user=$USER
-
-# local bin
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/Code/dotfiles/bin
-
-# moz-git-tools
-export PATH=$PATH:$HOME/dev/moz-git-tools
-
-# Go
-export GOROOT="$HOME/dev/go"
-
-# Android Development Kit
-export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 
 # Compilation and distributed compilation
 #export CC="clang"
