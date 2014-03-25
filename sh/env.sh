@@ -37,9 +37,6 @@ export user=$USER
 #export CCACHE_PREFIX="distcc"
 export DISTCC_HOSTS="+zeroconfig"
 
-export GYP_GENERATORS=ninja
-export GYP_PARALLEL=1
-
 # Selenium test suites will continue running even if they reach an error or fail
 export haltonerror=0
 export haltonfailure=0
