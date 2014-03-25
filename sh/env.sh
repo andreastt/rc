@@ -26,9 +26,6 @@ export PATH=$PATH:$HOME/Code/dotfiles/bin
 # moz-git-tools
 export PATH=$PATH:$HOME/dev/moz-git-tools
 
-# depot tools
-export PATH=$PATH:$HOME/dev/depot_tools
-
 # Go
 export GOROOT="$HOME/dev/go"
 
