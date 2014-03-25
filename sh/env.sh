@@ -30,7 +30,6 @@ export PATH=$PATH:$HOME/dev/moz-git-tools
 export PATH=$PATH:$HOME/dev/depot_tools
 
 # Go
-export PATH="$HOME/dev/go/bin:$PATH"
 export GOROOT="$HOME/dev/go"
 
 # Android Development Kit
