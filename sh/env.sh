@@ -1,19 +1,33 @@
-export PAGER=less
-export EDITOR="e"
-export MAILTO=ato@sny.no
+# Plan 9
+export PLAN9=/usr/local/plan9
+export PATH=$PATH:$PLAN9/bin
+
+# Plumb files instead of starting new editor
+export EDITOR=E
+unset FCEDIT VISUAL
+
+# Get rid of backspace characters in UNIX man output
+export PAGER=nobs
+
+export BROWSER=FirefoxNightly
+
+# acme font
+export font=$PLAN9/font/lucsans/euro.8.font
+
+# Equivalent variables for rc(1)
+export home=$HOME
+export prompt="$H=;          "
+export user=$USER
 
 # local bin
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/Code/dotfiles/bin
 
 # moz-git-tools
 export PATH=$PATH:$HOME/dev/moz-git-tools
 
 # depot tools
 export PATH=$PATH:$HOME/dev/depot_tools
-
-# Plan 9
-export PLAN9=$HOME/bin/plan9
-export PATH=$PATH:$PLAN9/bin
 
 # Go
 export PATH="$HOME/dev/go/bin:$PATH"
