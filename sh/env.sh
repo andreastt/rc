@@ -41,10 +41,6 @@ export DISTCC_HOSTS="+zeroconfig"
 export haltonerror=0
 export haltonfailure=0
 
-# Goth
-export GOTH=~/dev/goth/client
-export PATH="$PATH:$GOTH/bin"
-
 export GITHUB_USER="andreastt"
 
 # Python
