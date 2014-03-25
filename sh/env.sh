@@ -30,7 +30,7 @@ export PATH=$PATH:$HOME/dev/moz-git-tools
 export GOROOT="$HOME/dev/go"
 
 # Android Development Kit
-export PATH="$PATH:$HOME/bin/adt/sdk/platform-tools"
+export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 
 # Compilation and distributed compilation
 #export CC="clang"
