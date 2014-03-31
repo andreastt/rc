@@ -1,0 +1,18 @@
+# to update: cat $HOME/lib/plumbing | 9p write plumb/rules
+
+editor = acme
+
+# Bugzilla
+type is text
+data matches 'Bug ([0-9]+)'
+plumb to web
+plumb start web https://bugzil.la/$1
+
+# Pictures
+type is text
+data matches '[a-zA-Z0-9_-./]+'
+data matches '([a-zA-Z�-?0-9_\-./]+) \.(jpe?g|JPE?G|gif|GIF|tiff?|TIFF?|ppm|bit|png|PNG)'
+arg isfile $0
+plumb start open $file
+
+include basic
