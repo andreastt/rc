@@ -10,12 +10,17 @@ export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 export EDITOR=E
 unset FCEDIT VISUAL
 export PAGER=nobs
-export BROWSER=FirefoxNightly
+
+if [[ `uname` == "Linux" ]]; then
+	export BROWSER=firefox-trunk
+else
+	export BROWSER=FirefoxNightly
+fi
 
 # acme
 export font=$PLAN9/font/lucsans/euro.8.font
 export home=$HOME
-export prompt="$H=;          "
+export prompt="$H=% "
 export user=$USER
 
 # Compilation and distributed compilation
