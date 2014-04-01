@@ -44,7 +44,7 @@ export GITHUB_USER="andreastt"
 # directories with .pyc files.
 export PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONDONTWRITEBYTECODE=1
-export GOROOT=$HOME/dev/go
+export GOROOT=/usr/local/go
 
 # Mozilla's try server shortcuts because these are almost impossible to
 # remember.
