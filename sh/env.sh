@@ -18,7 +18,8 @@ else
 fi
 
 # acme
-export font=$PLAN9/font/lucsans/euro.8.font
+export varfont=$PLAN9/font/lucsans/unicode.7.font
+export fixfont=$PLAN9/font/fixed/unicode.6x13.font
 export home=$HOME
 export prompt="$H=% "
 export user=$USER
