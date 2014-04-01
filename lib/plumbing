@@ -6,7 +6,7 @@ editor = acme
 type is text
 data matches 'Bug ([0-9]+)'
 plumb to web
-plumb start web https://bugzil.la/$1
+plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
 
 # Pictures
 type is text
