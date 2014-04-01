@@ -1,11 +1,12 @@
 #!/usr/bin/env rc
 
 TERM=dumb
-plumber
-
-fn cd { builtin cd $1 && awd $sysname }
-tabstop=4
-
 SHELL=rc
 PATH=$PATH:/usr/local/plan9/bin
-exec acme -a $*
+
+plumber
+
+tabstop=4
+font=$PLAN9/font/lucsans/unicode.7.font
+
+exec acme -a -f $font $*
