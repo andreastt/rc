@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+if(~ $#* 0){
+  * = '    '    # four spaces
+}
+9 sed 's☺^☺'^$1^☺
