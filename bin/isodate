@@ -4,4 +4,4 @@ if [ `uname` == "Darwin" ]; then
 	p="gdate"
 fi
 
-$p "+%Y-%m-%dT%H:%M%S%:z"
+date "+%Y-%m-%dT%H:%M%S%:z"
