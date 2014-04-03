@@ -6,6 +6,9 @@ Host *
 Host hg.mozilla.org
   User atolfsen@mozilla.com
 
+Host people.mozilla.com
+  User atolfsen
+
 Host eir
   HostName %h.corp.lon1.mozilla.com
 
