@@ -1,4 +1,0 @@
-pointer = 1 2 3 4 5 6 7 8 9 10 11 12
-keycode 66 = Control_L Control_L Control_L Control_L Control_L Control_L Control_L Control_L
-clear lock
-add Control = Control_L
