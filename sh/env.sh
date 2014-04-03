@@ -8,8 +8,6 @@ export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 # Plumb files instead of starting new editor, get rid of backspace characters
 # in UNIX man output, and use a free browser!
 export EDITOR=E
-unset FCEDIT VISUAL
-export PAGER=nobs
 
 if [[ `uname` == "Linux" ]]; then
 	export BROWSER=firefox-trunk
