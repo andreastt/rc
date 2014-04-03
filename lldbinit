@@ -1,5 +1,3 @@
-# -*- mode: conf -*-
-
 # Mozilla's use of UNIFIED_SOURCES to include multiple source files
 # into a compiled file breaks lldb breakpoint setting (similar to
 # Opera's jumbo compiles).
