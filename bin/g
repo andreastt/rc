@@ -1,3 +1,3 @@
 #!/bin/sh
 
-grep --exclude-dir=.svn --exclude-dir=.git --exclude-dir=.hg -rin $(pwd) "$@"
+grep --exclude-dir=.svn --exclude-dir=.git --exclude-dir=.hg -rin "$*" .
