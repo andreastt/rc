@@ -1,19 +1,7 @@
-*.com
 *.class
-*.dll
-*.exe
 *.o
 *.so
 *.pyc
-
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
 
 *.log
 *.sql
@@ -21,6 +9,3 @@
 *.egg-info
 
 .DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
