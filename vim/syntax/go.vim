@@ -1,1 +1,0 @@
-/Users/ato/dev/go/misc/vim/syntax/go.vim

@@ -1,1 +1,0 @@
-/Users/ato/dev/go/misc/vim/ftplugin/go.vim
