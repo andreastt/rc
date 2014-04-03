@@ -10,7 +10,7 @@ plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
 
 # Selenium
 type is text
-data matches '[Ii]ssue ([0-9+)'
+data matches '[Ii]ssue ([0-9]+)'
 plumb to web
 plumb start web https://code.google.com/p/selenium/issues/detail?id=$1
 
