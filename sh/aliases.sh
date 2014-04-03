@@ -1,8 +1,3 @@
-# ack is named ack-grep in Debian.  Assume that Linux == Debian here.
-if [[ `uname` == "Linux" ]]; then
-    alias ack="ack-grep"
-fi
-
 # Push and pop directories on directory stack
 alias pu="pushd"
 alias po="'popd"
