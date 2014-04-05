@@ -2,3 +2,5 @@
 - Search rewrap automatically and highlight occurances
 - mu4e: Map mu4e-quit to mu4e-quit-session to properly quit
 - Investigate if time-stamp can be used for updating META tags
+- combine git and non-git tools bin/ by recursively looking for
+   .git directory above us in the tree
