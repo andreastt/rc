@@ -1,4 +1,4 @@
 #!/bin/sh
 
-git grep -n "$@"
+git grep -niI "$@"
 
