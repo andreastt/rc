@@ -9,3 +9,5 @@
    - Possible alternatives are: predefine it (.go = tab, .js = 2, .py = 4,
       etc.) or to write an algorithm to guess it with sensible fallbacks
       for each language (e.g. a new file) based on file ending
+      - Need for reading the AST, or can we make cruder
+         assumptions?
