@@ -57,7 +57,6 @@ AddToFunc StartFunction
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
   + I Exec compton -cC -r 16 -o 0.4 -l -25 -t -10 -f -D 1 -e 0.5 -b
-  + I Exec xscreensaver -no-splash
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
@@ -209,8 +208,7 @@ Key Up		A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 
 # Lock screen with C-Super-l
-#Key l A C4 Exec exec i3lock -c 000000
-Key l A C4 Exec exec xscreensaver-command -lock
+Key l A C4 Exec exec i3lock -c 000000
 
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
