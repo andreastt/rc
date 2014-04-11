@@ -39,23 +39,23 @@ Style *     IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 MenuStyle * Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 
 MenuStyle * fvwm, Foreground black, Background #99FFFF, Greyed grey40
-Style * Fore black, Back #669999
-Style * HilightFore black, HilightBack #99ffff
+#Style * Fore black, Back #669999
+#Style * HilightFore black, HilightBack #99ffff
 
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
   + I Exec xset -b
   + I Exec xrdb .Xresources
-
-DestroyFunc StartFunction
-AddToFunc StartFunction
   + I Exec xsetroot -solid "#777777"
   + I Exec xmodmap ~/.Xmodmap
   + I Module FvwmAnimate
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+
+DestroyFunc StartFunction
+AddToFunc StartFunction
   + I Exec compton -cC -r 16 -o 0.4 -l -25 -t -10 -f -D 1 -e 0.5 -b
 
 DestroyFunc SelectWindow
