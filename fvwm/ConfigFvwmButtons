@@ -6,10 +6,10 @@
 *----------------*----*----*-----------*
 KillModule FvwmButtons
 DestroyModuleConfig FvwmButtons: *
-*FvwmButtons: Geometry 485x110-1-1
+*FvwmButtons: Geometry 415x110-1-1
 *FvwmButtons: Back gainsboro 
 *FvwmButtons: (Frame 1, Padding 2 2, Container(Rows 2 Columns 8 Frame 1 Padding 10 0))
-*FvwmButtons: (5x2, Frame 1, Swallow "FvwmIconMan" "Module FvwmIconMan")
+*FvwmButtons: (4x2, Frame 1, Swallow "FvwmIconMan" "Module FvwmIconMan")
 *FvwmButtons: (2x2, Frame 0, Container(Rows 2 Columns 2 Frame 0))
 #*FvwmButtons: (Frame 2, Swallow(UseOld,NoHints,Respawn) "xbiff" `Exec exec xbiff -bg bisque3`)
 *FvwmButtons: (Frame 3, Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg silver -fg black -hd black -hl black -padding 0 -update 1`)
