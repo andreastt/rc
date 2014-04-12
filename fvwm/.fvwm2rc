@@ -9,12 +9,19 @@ EdgeScroll 100 100
 EdgeResistance 150 150
 EdgeThickness 1
 
+Style * GrabFocusOff
+
+# SmartPlacement makes new windows pop-up in blank regions of screen.  If
+# SmartPlacement fails, RandomPlacement places it randomly instead of making
+# you do it.
+Style * SmartPlacement
+Style * RandomPlacement
+
 # Mouse and focus behaviour
 ClickTime 750
 MoveThreshold 3
 Style * SloppyFocus, MouseFocusClickRaises
 
-Style * TileCascadePlacement, GrabFocusOff
 OpaqueMoveSize -1
 Emulate MWM
 HideGeometryWindow Always
@@ -31,17 +38,18 @@ Style * IconBox 0 -10 -280 -1
 
 Style *     BorderWidth 4
 Style *     HandleWidth 4
-Style *     FvwmBorder # turn off 3d bevel
-Style *     FirmBorder # border is not depressable
+#Style *     FvwmBorder # turn off 3d bevel
+#Style *     FirmBorder # border is not depressable
 Style *     SnapAttraction 20
 
 Style *     IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 MenuStyle * Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+MenuStyle * fvwm, Foreground black, Background gainsboro, Greyed grey40
 
-MenuStyle * fvwm, Foreground black, Background #99FFFF, Greyed grey40
-#Style * Fore black, Back #669999
-#Style * HilightFore black, HilightBack #99ffff
-
+# Style specific to programs 
+Style "xload" 		NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "xconsole"	NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "Fvwm*"		NoTitle, Sticky, WindowListSkip
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -53,6 +61,7 @@ AddToFunc InitFunction
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+  + I Exec xload xload -geometry 136x136-0-0
 
 DestroyFunc StartFunction
 AddToFunc StartFunction

@@ -18,6 +18,6 @@ DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: FocusButton          up yellow firebrick
 *FvwmIconMan: FocusAndSelectButton down yellow firebrick
 *FvwmIconMan: DontShow icon=Untitled resource=Untitled
-#*FvwmIconMan: DrawIcons true
-*FvwmIconMan: ButtonGeometry  300x0
+*FvwmIconMan: DrawIcons true
+*FvwmIconMan: ButtonGeometry  400x0
 *FvwmIconMan: ManagerGeometry 1x5
