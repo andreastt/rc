@@ -8,4 +8,13 @@ PAGER=cat
 
 plumber
 
+if [ -z $RETINA ]; then
+	exec devdrawretina=1
+	varfont=/mnt/HelveticaNeue-Medium/28a/font
+	fixfont=mnt/Menlo-Regular/26a/font
+else
+	varfont=$PLAN9/font/lucsans/unicode.7.font
+	fixfont=$PLAN9/font/fixed/unicode.6x13.font
+fi
+
 exec acme -a -f $varfont -F $fixfont $*
