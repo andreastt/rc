@@ -47,5 +47,5 @@ function update_gopath() {
 }
 
 function chpwd() {
-    update_gopath $PWD
+    #update_gopath $PWD
 }
