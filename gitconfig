@@ -31,6 +31,7 @@
 
 [mergetool "mymeld"]
   cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
+  keepBackup = false
 
 [branch]
   autosetuprebase = always
