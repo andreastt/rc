@@ -1,8 +1,12 @@
-# Paths.
+# Environments and workspaces.
 export PLAN9=/usr/local/plan9
+export GOPATH=$HOME/Code
+
+# Paths.
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/dev/moz-git-tools
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/Code/moz-git-tools
 export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 
 # Plumb files instead of starting new editor, get rid of backspace characters
@@ -43,7 +47,6 @@ export GITHUB_USER="andreastt"
 export PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONDONTWRITEBYTECODE=1
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/Code
 
 # Mozilla's try server shortcuts because these are almost impossible to
 # remember.
