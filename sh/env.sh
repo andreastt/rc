@@ -26,7 +26,7 @@ export user=$USER
 #export CC="clang"
 #export CXX="clang++"
 #export CCACHE_PREFIX="distcc"
-export DISTCC_HOSTS="+zeroconfig"
+#export DISTCC_HOSTS="+zeroconfig"
 
 # Selenium test suites will continue running even if they reach an error or
 # fail.
