@@ -33,6 +33,9 @@
   cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
   keepBackup = false
 
+[difftool]
+  prompt = false
+
 [branch]
   autosetuprebase = always
 
