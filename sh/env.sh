@@ -43,6 +43,7 @@ export GITHUB_USER="andreastt"
 export PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONDONTWRITEBYTECODE=1
 export GOROOT=/usr/local/go
+export GOPATH=$HOME/Code
 
 # Mozilla's try server shortcuts because these are almost impossible to
 # remember.
