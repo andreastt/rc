@@ -29,8 +29,10 @@ export user=$USER
 # Compilation and distributed compilation
 #export CC="clang"
 #export CXX="clang++"
-#export CCACHE_PREFIX="distcc"
-#export DISTCC_HOSTS="+zeroconfig"
+export CCACHE_PREFIX="distcc"
+export CCACHE_DIR=$HOME/.config/ccache
+export CCACHE_UMASK=002
+export DISTCC_HOSTS="+zeroconfig"
 
 # Selenium test suites will continue running even if they reach an error or
 # fail.
