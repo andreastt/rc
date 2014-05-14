@@ -8,6 +8,7 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/Code/moz-git-tools
 export PATH=$PATH:/usr/local/adt/sdk/platform-tools
+export PATH=$PATH:$HOME/Code/buck/bin
 
 # Plumb files instead of starting new editor, get rid of backspace characters
 # in UNIX man output, and use a free browser!
