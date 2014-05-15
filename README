@@ -24,6 +24,6 @@ I set them up like this when I'm on a new machine:
 
 I then symlink the files I need on the current system:
 
-    ln -s ~/dev/dotfiles/SRC DEST
+    ln -s ~/Code/dotfiles/SRC DEST
 
 Feel free to reuse any part and let them serve as inspiration.
