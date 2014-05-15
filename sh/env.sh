@@ -11,7 +11,7 @@ export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 export PATH=$PATH:$HOME/Code/buck/bin
 
 # Plumb files instead of starting new editor, get rid of backspace characters
-# in UNIX man output, and use a free browser!
+# in Unix man output, and use a free browser!
 export EDITOR=E
 
 if [[ `uname` == "Linux" ]]; then
