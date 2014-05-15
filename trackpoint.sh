@@ -1,7 +1,5 @@
 #!/bin/sh
 
-## Trackpoint settings
-
 # When run from a udev rule, DEVPATH should be set
 if [ ! -z $DEVPATH ] ; then
     TPDEV=/sys/$( echo "$DEVPATH" | sed 's/\/input\/input[0-9]*//' )
