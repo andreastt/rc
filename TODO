@@ -1,9 +1,3 @@
-- mu4e: Compose mail in new frame
-- Search rewrap automatically and highlight occurances
-- mu4e: Map mu4e-quit to mu4e-quit-session to properly quit
-- Investigate if time-stamp can be used for updating META tags
-- combine git and non-git tools bin/ by recursively looking for
-   .git directory above us in the tree
 - Combine various tabbing program, which would entail deducing
    the tabbing style (tab/2 spaces/4 spaces) from the input file
    - Possible alternatives are: predefine it (.go = tab, .js = 2, .py = 4,
