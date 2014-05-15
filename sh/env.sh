@@ -28,9 +28,9 @@ export prompt="$H=% "
 export user=$USER
 
 # Compilation and distributed compilation
-#export CC="clang"
-#export CXX="clang++"
-export CCACHE_PREFIX="distcc"
+#export CC=clang
+#export CXX=clang++
+export CCACHE_PREFIX=distcc
 export CCACHE_DIR=$HOME/.config/ccache
 export CCACHE_UMASK=002
 export DISTCC_HOSTS="+zeroconfig"
@@ -41,7 +41,7 @@ export haltonerror=0
 export haltonfailure=0
 
 # I go by a different name on Githoob.
-export GITHUB_USER="andreastt"
+export GITHUB_USER=andreastt
 
 # Language specificness.
 #
