@@ -1,9 +1,0 @@
-# workspace dir
-osgi.instance.area.default=@user.home/dev
-
-# increase heap size
--Xmx512M
-
-# increase perm gen size
--XX:PermSize=128m
--XX:MaxPermSize=256m
