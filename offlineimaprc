@@ -1,5 +1,3 @@
-# -*- mode: conf -*-
-
 [general]
 accounts = mozilla
 maxsyncaccounts = 2
