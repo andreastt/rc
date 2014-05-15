@@ -14,9 +14,9 @@ as I continously strive to improve my workflow.
 
 I set them up like this when I'm on a new machine:
 
-	mkdir dev
-	cd dev
-	git clone https://github.com/andreastt/dotfiles.git
+	mkdir Code
+	cd Code
+	git clone git@github.com:andreastt/dotfiles.git
 	cd
 
 I then symlink the files I need on the current system:
