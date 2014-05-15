@@ -29,6 +29,3 @@ if [[ "$(uname)" = "Darwin" ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 fi
-
-# `date` should always display ISO-8601 format
-alias date="date --iso-8601='seconds' | rev | cut -c 1- | rev"
