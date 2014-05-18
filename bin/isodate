@@ -1,6 +1,7 @@
 #!/bin/sh
 
-if [ $(uname) == "Darwin" ]; then
+p=date
+if [ "$(uname)" = "Darwin" ]; then
 	p="gdate"
 fi
 
