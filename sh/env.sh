@@ -51,6 +51,9 @@ export PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONDONTWRITEBYTECODE=1
 export GOROOT=/usr/local/go
 
+# Have mach play nicely with dumb terminals, like mine.
+export MACH_NO_TERMINAL_FOOTER=1
+
 # Mozilla's try server shortcuts because these are almost impossible
 # to remember.
 export TRY_ALL="-b do -p all -u all -t none"
