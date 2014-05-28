@@ -1,67 +1,67 @@
 [user]
-  name = Andreas Tolfsen
-  email = ato@mozilla.com
+	name = Andreas Tolfsen
+	email = ato@mozilla.com
 
 [help]
-  autocorrect = 1
+	autocorrect = 1
 
 [github]
-  user = andreastt
+	user = andreastt
 
 [color]
-  ui = auto
-  branch = auto
-  diff = auto
-  status = auto
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
 
 [color "branch"]
-  current = black reverse
-  local = black
-  remote = green
+	current = black reverse
+	local = black
+	remote = green
 
 [color "diff"]
-  meta = dim black bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+	meta = dim black bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [color "status"]
-  added = green
-  untracked = black bold
+	added = green
+	untracked = black bold
 
 [mergetool "mymeld"]
-  cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
-  keepBackup = false
+	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
+	keepBackup = false
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 
 [merge]
-  tool = mymeld
-  conflictstyle = diff3
+	tool = mymeld
+	conflictstyle = diff3
 
 [push]
-  default = current
+	default = current
 
 [pull]
-  rebase = preserve
+	rebase = preserve
 
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  lg = log --oneline --graph --decorate
-  cp = cherry-pick
-  l = log
-  lm = log master..
-  llm = log -p master..
-  b = branch
-  squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
-  fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut --fields=1 --delimiter=' '`
-  format-last-patch = format-patch HEAD~1..HEAD
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log --oneline --graph --decorate
+	cp = cherry-pick
+	l = log
+	lm = log master..
+	llm = log -p master..
+	b = branch
+	squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
+	fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut --fields=1 --delimiter=' '`
+	format-last-patch = format-patch HEAD~1..HEAD
