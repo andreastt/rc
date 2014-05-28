@@ -1,3 +1,6 @@
+[core]
+	whitespace = tab-in-indent
+
 [user]
 	name = Andreas Tolfsen
 	email = ato@mozilla.com
