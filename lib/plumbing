@@ -14,6 +14,12 @@ data matches '[Ii]ssue ([0-9]+)'
 plumb to web
 plumb start web https://code.google.com/p/selenium/issues/detail?id=$1
 
+# critic reviews
+type is text
+data matches 'r/([0-9]+)'
+plumb to web
+plumb start web https://critic.hoppipolla.co.uk/r/$1
+
 # Pictures
 type is text
 data matches '[a-zA-Z0-9_-./]+'
