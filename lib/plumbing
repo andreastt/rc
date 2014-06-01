@@ -4,9 +4,14 @@ editor = acme
 
 # Bugzilla
 type is text
-data matches '[Bb]ug ([0-9]+)'
+data matches '([0-9]{6,7})'
 plumb to web
 plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
+
+# Git SHAs
+type is text
+data matches '([abcdef0-9]+)\s'
+plumb start git show $0
 
 # Selenium
 type is text
