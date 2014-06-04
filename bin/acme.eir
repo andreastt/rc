@@ -1,3 +1,4 @@
 #!/bin/sh
 
 dialdevdraw 'ssh eir $PLAN9/bin/dial -e unix!/tmp/devdrawserver'
+
