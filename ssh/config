@@ -1,8 +1,3 @@
-#Host *
-#	ControlMaster auto
-#	ControlPath ~/.ssh/connections/%r@%h:%p
-#	ControlPersist 1h
-
 Host hg.mozilla.org
 	User atolfsen@mozilla.com
 
