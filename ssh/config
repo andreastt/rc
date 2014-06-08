@@ -7,7 +7,3 @@ Host people.mozilla.com
 Host eir
 	HostName %h.corp.lon1.mozilla.com
 
-#Host eir.corp.lon1.mozilla.com
-#	ForwardAgent yes
-#	User ato
-#	ProxyCommand ssh atolfsen@office.mozilla.org exec nc %h %p
