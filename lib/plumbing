@@ -10,8 +10,8 @@ plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
 
 # Git SHAs
 type is text
-data matches '([abcdef0-9]+)\s'
-plumb start git show $0
+data matches '([abcdef0-9]+)'
+plumb start rc -c 'git show $1'
 
 # Selenium
 type is text
