@@ -1,5 +1,7 @@
 #!/usr/bin/env rc
 
+# To start fontsrv: /usr/local/plan9/src/cmd/fontsrv/o.fontsrv -m /mnt
+
 . $PLAN9/lib/acme.rc
 
 TERM=dumb
