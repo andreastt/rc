@@ -1,5 +1,3 @@
-# -*- mode: sh -*-
-
 typeset -Ag FX FG BG
 
 FX=(
