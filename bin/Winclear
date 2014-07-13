@@ -1,0 +1,3 @@
+#!/bin/bash
+echo -n , | 9p write acme/$winid/addr
+9p write acme/$winid/data </dev/null
