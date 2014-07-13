@@ -1,0 +1,3 @@
+#!/bin/zsh
+echo -n , | 9p write acme/$winid/addr
+9p read acme/$winid/body | expand -t4 | 9p write acme/$winid/data
