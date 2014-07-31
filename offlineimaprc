@@ -17,7 +17,6 @@ localfolders = ~/Mail
 [Repository mozilla-remote]
 type = IMAP
 
-maxconnections = 1
 keepalive = 60
 holdconnectionopen = yes
 
