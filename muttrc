@@ -20,6 +20,7 @@ set fast_reply
 
 unhdr_order *
 hdr_order From: To: Reply-To: CC: BCC: Date: Subject: X-Mailer: User-Agent:
+my_hdr Bcc: Andreas Tolfsen <ato@mozilla.com>
 
 set edit_headers
 ignore *
