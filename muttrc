@@ -50,6 +50,7 @@ set timeout = 60
 set mail_check = 3
 set nomark_old
 unset mark_old
+set read_inc=10000
 
 auto_view *
 mime_lookup application/octet-stream
