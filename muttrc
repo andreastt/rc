@@ -103,7 +103,7 @@ auto_view image/*
 
 # Look
 set index_format = "%Z %{%b %d} %-30.30L %s"
-set attribution = "%n <%a>:"
+set attribution = "↪ %n <%a>:"
 set markers = no  # + sign if lines are too longer for pager
 
 set sidebar_visible = no
