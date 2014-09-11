@@ -1,2 +1,2 @@
 #!/bin/sh
-perl -CS -pe 's/\s+$//g'
+perl -CS -pe 's/\s+$/\n/g'
