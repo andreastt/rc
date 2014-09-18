@@ -30,7 +30,7 @@ export user=$USER
 # Compilation and distributed compilation
 #export CC=clang
 #export CXX=clang++
-export CCACHE_PREFIX=distcc
+#export CCACHE_PREFIX=distcc
 export CCACHE_DIR=$HOME/.config/ccache
 export CCACHE_UMASK=002
 export DISTCC_HOSTS="+zeroconfig"

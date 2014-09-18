@@ -1,6 +1,8 @@
 #CCACHE_PREFIX="distcc"
-CXX="clang++"
-CC="clang"
+#CXX="clang++"
+#CC="clang"
+CXX=g++
+CC=gcc
 
 #mk_add_options MOZ_MAKE_FLAGS="-j`distcc -j` -s"
 mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
