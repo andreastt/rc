@@ -106,23 +106,8 @@ set index_format = "%Z %{%b %d} %-30.30L %s"
 set attribution = "↪ %n <%a>:"
 set markers = no  # + sign if lines are too longer for pager
 
-set sidebar_visible = no
-set sidebar_width = 20
-set sidebar_sort = no
-set sidebar_delim = " "
-macro index b "<enter-command>toggle sidebar_visible<enter><refresh>"
-macro pager b "<enter-command>toggle sidebar_visible<enter><refresh>"
-
+# Press c to change to another mailbox
 mailboxes `echo ~/Mail/*`
-
-color sidebar_new yellow default
-
-bind index \Cp sidebar-prev
-bind index \Cn sidebar-next
-bind index \Co sidebar-open
-bind pager \Cp sidebar-prev
-bind pager \Cn sidebar-next
-bind pager \Co sidebar-open
 
 # Derived from: ataualpa.altervista.org (Il nirvana con mutt)
 # COLORS FOR BLACK BACKGROUND
