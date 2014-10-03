@@ -5,7 +5,7 @@ CXX=g++
 CC=gcc
 
 #mk_add_options MOZ_MAKE_FLAGS="-j`distcc -j` -s"
-mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
+mk_add_options MOZ_MAKE_FLAGS="-j8 -s"
 mk_add_options AUTOCLOBBER=1
 
 ac_add_options --disable-libjpeg-turbo
