@@ -8,7 +8,6 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/Code/moz-git-tools
 export PATH=$PATH:/usr/local/adt/sdk/platform-tools
-export PATH=$PATH:$HOME/Code/buck/bin
 
 # Plumb files instead of starting new editor, get rid of backspace
 # characters in Unix man output, and use a free browser!
@@ -33,7 +32,7 @@ export user=$USER
 #export CCACHE_PREFIX=distcc
 export CCACHE_DIR=$HOME/.config/ccache
 export CCACHE_UMASK=002
-export DISTCC_HOSTS="+zeroconfig"
+#export DISTCC_HOSTS="+zeroconfig"
 
 # Selenium test suites will continue running even if they reach an
 # error or fail.
