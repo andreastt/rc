@@ -38,6 +38,7 @@ setenv TRY_MOBILE "-b do -p emulator,panda -u marionette-webapi -t none"
 setenv TRY_DESKTOP "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
 
 set prompt = "% "
+bindkey "^R" i-search-back
 
 alias . "pwd"
 alias .. "cd .."
