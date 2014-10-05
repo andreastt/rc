@@ -1,7 +1,0 @@
-# Mozilla's use of UNIFIED_SOURCES to include multiple source files
-# into a compiled file breaks lldb breakpoint setting (similar to
-# Opera's jumbo compiles).
-#
-# This works around that.  See
-# http://lldb.llvm.org/troubleshooting.html for more info.
-settings set target.inline-breakpoint-strategy always
