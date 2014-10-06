@@ -20,5 +20,7 @@ if not {
 	fixfont=/mnt/Menlo-Regular/12a/font
 }
 
+fn l { ls | mc }
+
 exec acme -a -f $varfont -F $fixfont $*
 
