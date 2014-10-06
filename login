@@ -45,6 +45,6 @@ alias .. "cd .."
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ls "ls -G"
-alias l "ls -lah"
+alias l "ls | mc"
 alias sl ls
 
