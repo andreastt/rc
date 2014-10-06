@@ -40,7 +40,6 @@ setenv TRY_DESKTOP "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marione
 set prompt = "% "
 set autolist
 set autoexpand
-set autocorrect
 set complete = enhance
 set printexitvalue
 set savehist = 10000 merge
