@@ -33,9 +33,9 @@ setenv MACH_NO_TERMINAL_FOOTER 1
 
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
-setenv TRY_ALL "-b do -p all -u all -t none"
-setenv TRY_MOBILE "-b do -p emulator,panda -u marionette-webapi -t none"
-setenv TRY_DESKTOP "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
+setenv tryall "-b do -p all -u all -t none"
+setenv trymobile "-b do -p emulator,panda -u marionette-webapi -t none"
+setenv trydesktop "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
 
 set prompt = "% "
 set autolist
