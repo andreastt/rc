@@ -38,6 +38,14 @@ setenv TRY_MOBILE "-b do -p emulator,panda -u marionette-webapi -t none"
 setenv TRY_DESKTOP "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
 
 set prompt = "% "
+set autolist
+set autoexpand
+set autocorrect
+set complete = enhance
+set printexitvalue
+set savehist = 10000 merge
+
+bindkey -v
 bindkey "^R" i-search-back
 
 alias . "pwd"
