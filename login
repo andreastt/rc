@@ -1,3 +1,5 @@
+# This combines .cshrc, .login, and .profile.
+
 setenv GOROOT /usr/local/go
 setenv GOPATH $HOME/Code
 
@@ -37,16 +39,6 @@ setenv tryall "-b do -p all -u all -t none"
 setenv trymobile "-b do -p emulator,panda -u marionette-webapi -t none"
 setenv trydesktop "-b linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
 
-set prompt = "% "
-set autolist
-set autoexpand
-set complete = enhance
-set printexitvalue
-set savehist = 10000 merge
-
-bindkey -v
-bindkey "^R" i-search-back
-
 alias . "pwd"
 alias .. "cd .."
 alias ... "cd ../.."
@@ -55,3 +47,21 @@ alias ls "ls -G"
 alias l "ls | mc"
 alias sl ls
 
+if ($?prompt) then
+	set prompt = "% "
+	set promptchars = "%#"
+
+	set complete = enhance
+	set printexitvalue
+	set history = 10000
+	set savehist = (10000 merge)
+	set autolist = ambigeous
+	set autoexpand
+	set autorehash
+	
+	if ( $?tcsh ) then
+		bindkey -v
+		bindkey "^R" i-search-back
+		bindkey "^W" backward-delete-word
+	endif
+endif
