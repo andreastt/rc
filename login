@@ -43,7 +43,11 @@ alias . "pwd"
 alias .. "cd .."
 alias ... "cd ../.."
 alias .... "cd ../../.."
-alias ls "ls -G"
+if (`uname` == "Linux") then
+	alias ls "ls --color"
+else
+	alias ls "ls -G"
+endif
 alias l "ls | mc"
 alias sl ls
 
