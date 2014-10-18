@@ -19,6 +19,7 @@ ignore = Name .DS_Store
 ignore = Name *.swp
 
 path = Code
+ignore = Path Code/bin
 ignore = Path Code/gecko/build
 ignore = Path Code/servo/cargo
 ignore = Path Code/servo/rust
