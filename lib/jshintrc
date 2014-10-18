@@ -1,4 +1,16 @@
 {
 	"esnext": true,
-	"globalstrict": true
+	"globalstrict": true,
+	"globals": {
+		"Components": true,
+		"Log": true,
+		"Services": true,
+		"XPCOMUtils": true,
+		"libcutils": true,
+
+		"DebuggerTransport": true,  // toolkit/devtools
+		"MarionetteChrome": true,
+		"ServerSocket": true,
+		"Dispatcher": true
+	}
 }
