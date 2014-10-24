@@ -11,6 +11,8 @@ links = true
 root = /Users/ato
 root = ssh://eir//home/ato
 
+path = scratch
+
 path = .ssh
 
 ignore = Name *~
