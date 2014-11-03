@@ -19,6 +19,7 @@ ignore = Name *~
 ignore = Name .*~
 ignore = Name .DS_Store
 ignore = Name *.swp
+ignore = Name *.egg-info
 
 path = Code
 ignore = Path Code/bin
