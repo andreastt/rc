@@ -63,7 +63,6 @@ if ($?prompt) then
 	set autorehash
 	
 	if ( $?tcsh ) then
-		bindkey -v
 		bindkey "^R" i-search-back
 		bindkey "^W" backward-delete-word
 	endif
