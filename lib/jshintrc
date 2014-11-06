@@ -11,6 +11,7 @@
 		"DebuggerTransport": true,  // toolkit/devtools
 		"MarionetteChrome": true,
 		"ServerSocket": true,
-		"Dispatcher": true
+		"Dispatcher": true,
+		"CommandProcessor": true
 	}
 }
