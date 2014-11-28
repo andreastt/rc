@@ -15,12 +15,12 @@ path = scratch
 
 path = .ssh
 
+ignore = Name *.egg-info
+ignore = Name *.pyc
+ignore = Name *.swp
 ignore = Name *~
 ignore = Name .*~
 ignore = Name .DS_Store
-ignore = Name *.swp
-ignore = Name *.egg-info
-ignore = Name *.pyc
 
 path = Code
 ignore = Path Code/bin
