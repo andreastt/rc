@@ -25,10 +25,10 @@ ignore = Name .DS_Store
 path = Code
 ignore = Path Code/bin
 ignore = Path Code/gecko/build
+ignore = Path Code/selenium/third_party/gecko-*
 ignore = Path Code/servo/cargo
 ignore = Path Code/servo/rust
 ignore = Path Code/servo/target
-ignore = Path Code/selenium/third_party/gecko-*
 
 path = Documents
 ignore = Path Documents/Parallels
