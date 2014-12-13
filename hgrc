@@ -13,6 +13,7 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 [extensions]
 histedit = 
 rebase = 
+purge =
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 hgwatchman = ~/Code/hgwatchman/hgwatchman
