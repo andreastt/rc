@@ -1,11 +1,12 @@
 # This combines .cshrc, .login, and .profile.
 
+setenv PLAN9  /usr/local/plan9
 setenv GOROOT /usr/local/go
 setenv GOPATH $HOME/Code
 
 set path=($path \
-          /usr/local/plan9/bin \
           $home/bin \
+          $PLAN9/bin \
           $GOPATH/bin \
           $home/Code/moz-git-tools \
           /usr/local/adt/sdk/platform-tools)
