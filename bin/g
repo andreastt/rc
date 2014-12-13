@@ -1,3 +1,2 @@
 #!/bin/sh
-
-grep --exclude-dir=.svn --exclude-dir=.git --exclude-dir=.hg -rin "$*" .
+grep --exclude-dir=.svn --exclude-dir=.git --exclude-dir=.hg -rn $* .
