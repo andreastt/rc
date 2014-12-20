@@ -14,6 +14,7 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 histedit = 
 rebase = 
 purge =
+shelve =
 mq =
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
