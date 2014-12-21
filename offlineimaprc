@@ -1,0 +1,28 @@
+[general]
+accounts = mozilla
+maxsyncaccounts = 1
+maxconnections = 6
+ignorereadonly = no
+quick = 10
+
+[Account mozilla]
+localrepository = mozilla-local
+remoterepository = mozilla-remote
+status_backend = sqlite
+
+[Repository mozilla-local]
+type = Maildir
+localfolders = ~/Mail
+
+[Repository mozilla-remote]
+#type = IMAP
+type = Gmail
+
+nametrans = lambda f: re.sub("^\[Gmail\]", "Lists", f)
+folderfilter = lambda f: f not in ["[Gmail]/All Mail", "[Gmail]/Spam"]
+
+remoteuser = ato@sny.no
+remotehost = imap.gmail.com
+
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
