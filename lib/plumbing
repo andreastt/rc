@@ -32,4 +32,9 @@ data matches '([a-zA-Z�-?0-9_\-./]+) \.(jpe?g|JPE?G|gif|GIF|tiff?|TIFF?|ppm|bi
 arg isfile $0
 plumb start open $file
 
+# Email
+type is text
+data matches '([a-zA-Z0-9_-+]+@[a-zA-Z-.]+)'
+plumb start mail-find $1
+
 include basic
