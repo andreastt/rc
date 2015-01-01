@@ -1,5 +1,3 @@
-# ato's dotfiles
-
 So you've lost your way on the internet
 and accidentally come across my dotfiles?
 Don't panic.
