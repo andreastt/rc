@@ -26,8 +26,10 @@ setenv CCACHE_UMASK 002
 setenv haltonerror 0
 setenv haltonfailure 0
 
-# I go by a different name on Githoob
+# I go by a different name on Githoob,
+# and use custom HGRCPATH to not clutter up $home.
 setenv GITHUB_USER andreastt
+setenv HGRCPATH $home/.config
 
 # Language specificness
 setenv PYTHONSTARTUP $home/.config/pythonrc.py
