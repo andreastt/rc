@@ -9,7 +9,7 @@
 		"libcutils": true,
 
 		"DebuggerTransport": true,  // toolkit/devtools
-		"MarionetteChrome": true,
+		"GeckoDriver": true,
 		"ServerSocket": true,
 		"Dispatcher": true,
 		"CommandProcessor": true
