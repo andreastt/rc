@@ -20,7 +20,7 @@ mq =
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 trychooser = ~/Code/trychooser
-hgwatchman = ~/Code/hgwatchman/hgwatchman
+#hgwatchman = ~/Code/hgwatchman/hgwatchman
 
 [diff]
 git = 1
