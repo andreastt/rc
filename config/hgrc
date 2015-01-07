@@ -5,6 +5,7 @@ username = Andreas Tolfsen <ato@mozilla.com>
 
 [alias]
 show = log --patch --verbose --rev
+st = !hg status $($HG root) $HG_ARGS
 
 [paths]
 try = ssh://hg.mozilla.org/try
