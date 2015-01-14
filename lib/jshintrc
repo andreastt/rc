@@ -7,6 +7,7 @@
 		"Services": true,
 		"XPCOMUtils": true,
 		"libcutils": true,
+		"dump": true,
 
 		"DebuggerTransport": true,  // toolkit/devtools
 		"GeckoDriver": true,
