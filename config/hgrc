@@ -7,6 +7,7 @@ username = Andreas Tolfsen <ato@mozilla.com>
 show = log --patch --verbose --rev
 st = !hg status $($HG root) $HG_ARGS
 wip = log --graph --rev=wip --template=wip
+blame = annotate --user --number
 
 [paths]
 try = ssh://hg.mozilla.org/try
