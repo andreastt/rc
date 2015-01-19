@@ -13,6 +13,7 @@
 		"GeckoDriver": true,
 		"ServerSocket": true,
 		"Dispatcher": true,
-		"CommandProcessor": true
+		"CommandProcessor": true,
+		"MarionetteServer": true
 	}
 }
