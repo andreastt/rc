@@ -9,3 +9,6 @@ Host people.mozilla.com
 
 Host eir
 	HostName %h.corp.lon1.mozilla.com
+
+Host sny.no
+	Port 33138
