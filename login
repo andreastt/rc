@@ -21,20 +21,19 @@ setenv CCACHE_DIR $home/.config/ccache
 setenv CCACHE_UMASK 002
 #setenv DISTCC_HOSTS +zeroconfig
 
-# Selenium test suites will continue running
-# even if they reach an error or fail.
-setenv haltonerror 0
-setenv haltonfailure 0
-
 # I go by a different name on Githoob,
 # and use custom HGRCPATH to not clutter up $home.
 setenv GITHUB_USER andreastt
 setenv HGRCPATH $home/.config/hgrc
 
-# Language specificness
-setenv PYTHONSTARTUP $home/.config/pythonrc.py
+# Other configuration options
 setenv PYTHONDONTWRITEBYTECODE 1
 setenv MACH_NO_TERMINAL_FOOTER 1
+setenv GAIATEST_SKIP_WARNING 1
+# Selenium test suites will continue running
+# even if they reach an error or fail.
+setenv haltonerror 0
+setenv haltonfailure 0
 
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
