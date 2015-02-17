@@ -12,12 +12,12 @@ plumber
 
 if(~ $RETINA 1) {
 	devdrawretina=1
-	varfont=/mnt/LucidaGrande/28a/font
-	fixfont=/mnt/Menlo-Regular/24a/font
+	varfont=/mnt/LucidaGrande-RegularW/28a/font
+	fixfont=/mnt/LucidaGrandeMono/24a/font
 }
 if not {
-	varfont=/mnt/LucidaGrande/13a/font
-	fixfont=/mnt/Menlo-Regular/12a/font
+	varfont=/mnt/LucidaGrande-RegularW/13a/font
+	fixfont=/mnt/LucidaGrandeMono/12a/font
 }
 
 fn l { ls | mc }
