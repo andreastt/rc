@@ -12,7 +12,6 @@ set path=($path \
           /usr/local/adt/sdk/platform-tools)
 
 setenv EDITOR E
-setenv BROWSER FirefoxNightly
 
 setenv CCACHE_DIR $home/.config/ccache
 setenv CCACHE_UMASK 002
