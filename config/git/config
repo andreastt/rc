@@ -8,19 +8,8 @@
 [github]
 	user = andreastt
 
-[mergetool "mymeld"]
-	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
-	keepBackup = false
-
-[difftool]
-	prompt = false
-
 [branch]
 	autosetuprebase = always
-
-[merge]
-	tool = mymeld
-	conflictstyle = diff3
 
 [push]
 	default = current
