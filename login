@@ -14,11 +14,9 @@ set path=($path \
 setenv EDITOR E
 setenv BROWSER FirefoxNightly
 
-#setenv CC clang
-#setenv CXX clang++
-#setenv CCACHE_PREFIX distcc
 setenv CCACHE_DIR $home/.config/ccache
 setenv CCACHE_UMASK 002
+#setenv CCACHE_PREFIX distcc
 #setenv DISTCC_HOSTS +zeroconfig
 
 # I go by a different name on Githoob,
