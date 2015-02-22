@@ -1,3 +1,0 @@
-#!/bin/sh
-
-cat $* | pr -t -e8 | awk 'length($0) > 79 { print NR ": " $0 }'
