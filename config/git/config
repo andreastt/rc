@@ -8,28 +8,6 @@
 [github]
 	user = andreastt
 
-[color]
-	ui = auto
-	branch = auto
-	diff = auto
-	status = auto
-
-[color "branch"]
-	current = black reverse
-	local = black
-	remote = green
-
-[color "diff"]
-	meta = dim black bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-
-[color "status"]
-	added = green
-	untracked = black bold
-
 [mergetool "mymeld"]
 	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
 	keepBackup = false
