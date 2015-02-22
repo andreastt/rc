@@ -27,6 +27,8 @@ setenv HGRCPATH $home/.config/hgrc
 setenv PYTHONDONTWRITEBYTECODE 1
 setenv MACH_NO_TERMINAL_FOOTER 1
 setenv GAIATEST_SKIP_WARNING 1
+setenv GECKO_PATH $home/Code/gecko/src
+setenv GECKO_OBJDIR $home/Code/gecko/build/b2g
 
 # Selenium test suites will continue running
 # even if they reach an error or fail.
