@@ -51,6 +51,7 @@ else
 endif
 alias l "ls | mc"
 alias sl ls
+alias pyfmt autopep8
 
 if ($?prompt) then
 	set prompt = "% "

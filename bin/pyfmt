@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Dependencies:
-#
-#     sudo pip install autopep8
-
-autopep8 -
