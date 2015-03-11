@@ -2,9 +2,6 @@
 	name = Andreas Tolfsen
 	email = ato@mozilla.com
 
-[github]
-	user = andreastt
-
 [branch]
 	autosetuprebase = always
 
