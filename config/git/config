@@ -19,16 +19,11 @@
 
 [alias]
 	st = status
-	ci = commit
-	br = branch
 	co = checkout
-	df = diff
 	lg = log --oneline --graph --decorate
 	cp = cherry-pick
-	l = log
 	lm = log master..
 	llm = log -p master..
-	b = branch
 	squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
 	fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut -f 1 -d ' '`
 	patch = format-patch -n 'HEAD^'
