@@ -21,7 +21,7 @@ setenv CCACHE_UMASK 002
 # I go by a different name on Githoob,
 # and use custom HGRCPATH to not clutter up $home.
 setenv EMAIL ato@mozilla.com
-setenv GIT_AUTHOR_EMAIL Andreas Tolfsen
+setenv GIT_AUTHOR_EMAIL "Andreas Tolfsen"
 setenv GITHUB_USER andreastt
 setenv HGRCPATH $home/.config/hgrc
 
