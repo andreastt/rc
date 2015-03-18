@@ -1,5 +1,6 @@
 {
 	"esnext": true,
+	"maxerr": 10000,
 	"globalstrict": true,
 	"globals": {
 		"Components": true,
@@ -14,6 +15,35 @@
 		"ServerSocket": true,
 		"Dispatcher": true,
 		"CommandProcessor": true,
-		"MarionetteServer": true
+		"MarionetteServer": true,
+		"WebDriverError": true,
+		"UnsupportedOperationError": true,
+		"NoAlertOpenError": true,
+		"FrameManager": true,
+		"ElementNotVisibleError": true,
+		"UnknownError": true,
+		"NoSuchFrameError": true,
+		"XPCNativeWrapper": true,
+		"ElementManager": true,
+		"NoSuchWindowError": true,
+		"ScriptTimeoutError": true,
+		"JavaScriptError": true,
+		"EmulatorCallback": true,
+		"Emulator": true,
+		"Task": true,
+		"Context": true,
+		"Marionette": true,
+		"NetUtil": true,
+		"FileUtils": true,
+		"TimeoutError": true,
+		"BrowserObj": true,
+		"FrameSendFailureError": true,
+		"MarionetteLogObj": true,
+		"FrameSendNotInitializedError": true,
+		"NAME": true,
+		"LINK_TEXT": true,
+		"PARTIAL_LINK_TEXT": true,
+		"cookieManager": true,
+		"error": true
 	}
 }
