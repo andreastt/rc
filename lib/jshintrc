@@ -1,5 +1,7 @@
 {
 	"esnext": true,
+	"noyield": true,
+	"curly": true,
 	"maxerr": 10000,
 	"globalstrict": true,
 	"globals": {
@@ -44,6 +46,9 @@
 		"LINK_TEXT": true,
 		"PARTIAL_LINK_TEXT": true,
 		"cookieManager": true,
-		"error": true
+		"error": true,
+		"modal": true,
+		"NoSuchElementError": true,
+		"SessionNotCreatedError": true
 	}
 }
