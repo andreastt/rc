@@ -16,8 +16,8 @@ if(~ $RETINA 1) {
 	fixfont=/mnt/LucidaGrandeMono/24a/font
 }
 if not {
-	varfont=/mnt/LucidaGrande-RegularW/13a/font
-	fixfont=/mnt/LucidaGrandeMono/12a/font
+	varfont=/mnt/LucidaGrande/13a/font
+	fixfont=/mnt/Menlo-Regular/12a/font
 }
 
 fn l { ls | mc }
