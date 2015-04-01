@@ -8,9 +8,9 @@ set path=($path \
           $home/bin \
           $PLAN9/bin \
           $GOPATH/bin \
+          $home/Code/git-remote-hg \
           $home/Code/moz-git-tools \
           /usr/local/adt/sdk/platform-tools)
-
 setenv EDITOR E
 
 setenv CCACHE_DIR $home/.config/ccache
@@ -20,8 +20,7 @@ setenv CCACHE_UMASK 002
 
 # I go by a different name on Githoob,
 # and use custom HGRCPATH to not clutter up $home.
-setenv EMAIL ato@mozilla.com
-setenv GIT_AUTHOR_EMAIL "Andreas Tolfsen"
+setenv GIT_AUTHOR_EMAIL ato@mozilla.com
 setenv GITHUB_USER andreastt
 setenv HGRCPATH $home/.config/hgrc
 
