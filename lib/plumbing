@@ -4,7 +4,7 @@ editor = acme
 
 # Bugzilla
 type is text
-data matches '([0-9]{6,7})'
+data matches '[Bb]ug ([0-9]+)'
 plumb to web
 plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
 
