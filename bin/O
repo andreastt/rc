@@ -1,3 +1,2 @@
 #!/bin/sh
-file=$(f "$1")
-B $file
+B $(f "$1")
