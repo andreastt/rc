@@ -24,6 +24,7 @@ firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 trychooser = ~/Code/trychooser
 #hgwatchman = ~/Code/hgwatchman/hgwatchman
+qbackout = ~/.mozbuild/version-control-tools/hgext/qbackout
 
 [diff]
 git = 1
