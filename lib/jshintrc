@@ -49,6 +49,25 @@
 		"error": true,
 		"modal": true,
 		"NoSuchElementError": true,
-		"SessionNotCreatedError": true
+		"SessionNotCreatedError": true,
+		"IllegalArgumentError": true,
+		"InvalidArgumentError": true,
+		"SpecialPowers": true,
+		"sendSyncMessage": true,
+		"InvalidCookieDomainError": true,
+		"UnableToSetCookieError": true,
+		"Listener": true,
+		"File": true,
+		"InvalidElementStateError": true,
+		"addEventListener": true,
+		"removeEventListener": true,
+		"content": true,
+		"ScriptTimeoutError": true,
+		"ActionChain": true,
+		"Accessibility": true,
+		"sendAsyncMessage": true,
+		"removeMessageListener": true,
+		"addMessageListener": true,
+		"UnknownCommandError": true
 	}
 }
