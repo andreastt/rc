@@ -39,9 +39,7 @@ setenv haltonfailure 0
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
 setenv tryall "-b o -p all -u all -t none"
-setenv trybasic "-b o -p linux64,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
-setenv trymobile "-b o -p emulator,panda -u marionette-webapi -t none"
-setenv trydesktop "-b o -p linux,macosx64,win32,linux_gecko,linux64_gecko -u marionette,marionette-webapi,gaia-ui-test -t none"
+setenv trymarionette "-b o -p linux,linux64_gecko -u marionette,marionette-e10s,web-platform-tests-1,marionette-webapi,gaia-ui-test,gaia-integration -t none"
 
 alias . "pwd"
 alias .. "cd .."
