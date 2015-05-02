@@ -30,6 +30,8 @@ ignore = Path Code/servo/cargo
 ignore = Path Code/servo/rust
 ignore = Path Code/servo/components/*/target
 ignore = Path Code/hgwatchman
+ignore = Path Code/B2G
+ignore = Path Code/gaia
 
 path = Documents
 ignore = Path Documents/Parallels
