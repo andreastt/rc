@@ -14,9 +14,9 @@ try = ssh://hg.mozilla.org/try
 review = ssh://reviewboard-hg.mozilla.org/gecko
 
 [extensions]
-histedit = 
-rebase = 
+rebase =
 purge =
+histedit =
 shelve =
 mq =
 extdiff =
