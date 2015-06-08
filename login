@@ -50,7 +50,6 @@ if (`uname` == "Linux") then
 else
 	alias ls "ls -G"
 endif
-alias l "ls | mc"
 alias sl ls
 alias pyfmt autopep8
 
