@@ -1,23 +1,15 @@
 #!/usr/bin/env rc
 
-# To start fontsrv: fontsrv -m /mnt
-
 . $PLAN9/lib/acme.rc
 
 TERM=dumb
 SHELL=rc
-PAGER=cat
+PAGER=nobs
 
 plumber
 
-if(~ $RETINA 1) {
-	devdrawretina=1
-	varfont=/mnt/LucidaGrande/28a/font
-	fixfont=/mnt/Menlo-Regular/24a/font
-}
-if not {
-	varfont=/mnt/LucidaGrande/13a/font
-	fixfont=/mnt/Menlo-Regular/12a/font
-}
+devdrawretina=1
+varfont=/mnt/LucidaGrande/28a/font
+fixfont=/mnt/Menlo-Regular/24a/font
 
 exec acme -a -f $varfont -F $fixfont $*
