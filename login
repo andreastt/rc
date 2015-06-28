@@ -58,6 +58,7 @@ if ($?prompt) then
 	set promptchars = "%#"
 
 	set complete = enhance
+	set histdup=prev
 	set history = 10000
 	set savehist = (10000 merge)
 	set autolist = ambigeous
