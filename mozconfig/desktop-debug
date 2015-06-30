@@ -4,4 +4,6 @@ ac_add_options --enable-application=browser
 ac_add_options --enable-debug
 ac_add_options --disable-optimize
 
+ac_add_options --enable-rust
+
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/desktop-debug
