@@ -15,4 +15,4 @@ devdrawretina=1
 varfont=/mnt/LucidaGrande/28a/font
 fixfont=/mnt/Menlo-Regular/24a/font
 
-exec acme -f $varfont -F $fixfont $*
+exec acme -a -f $varfont -F $fixfont $*
