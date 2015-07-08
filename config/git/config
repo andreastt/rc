@@ -17,7 +17,6 @@
 [alias]
 	st = status
 	co = checkout
-	lg = log --oneline --graph --decorate
 	cp = cherry-pick
 	bdiff = log -p master..
 	fdiff = diff --name-status master..
