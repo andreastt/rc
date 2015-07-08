@@ -19,7 +19,6 @@
 	co = checkout
 	lg = log --oneline --graph --decorate
 	cp = cherry-pick
-	lm = log master..
 	bdiff = log -p master..
 	fdiff = diff --name-status master..
 	squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
