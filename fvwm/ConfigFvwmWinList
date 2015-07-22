@@ -2,7 +2,7 @@
 DestroyModuleConfig FvwmWinList: *
 *FvwmWinList: Back #908090
 *FvwmWinList: Fore Black
-*FvwmWinList: Font -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*FvwmWinList: Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 *FvwmWinList: Action Click1 Iconify false, Focus
 *FvwmWinList: Action Click2 Iconify toggle
 *FvwmWinList: Action Click3 Module FvwmIdent

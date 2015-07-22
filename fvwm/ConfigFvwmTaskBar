@@ -7,9 +7,9 @@ DestroyModuleConfig FvwmTaskBar: *
 *FvwmTaskBar: TipsBack bisque
 *FvwmTaskBar: TipsFore black
 *FvwmTaskBar: Geometry +0-0
-*FvwmTaskBar: Font -adobe-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*
-*FvwmTaskBar: SelFont -adobe-helvetica-bold-r-*-*-14-*-*-*-*-*-*-*
-*FvwmTaskBar: StatusFont fixed
+*FvwmTaskBar: Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
+*FvwmTaskBar: SelFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
+*FvwmTaskBar: StatusFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 
 *FvwmTaskBar: Action Click1 Iconify false, Raise
 *FvwmTaskBar: Action Click2 Iconify true,  Lower

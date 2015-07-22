@@ -42,8 +42,6 @@ Style *     HandleWidth 4
 #Style *     FirmBorder # border is not depressable
 Style *     SnapAttraction 20
 
-#Style *     IconFont -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
-#MenuStyle * Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 Style * IconFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 MenuStyle * Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 MenuStyle * fvwm, Foreground black, Background gainsboro, Greyed grey40
@@ -149,7 +147,6 @@ IgnoreModifiers L25
 # Super-Return gives you a new terminal, Super-Shift-Return gives you
 # a new emacs instance running a terminal emulator
 Key Return A 4 Rxvt
-Key Return A 4S EmacsClient
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run

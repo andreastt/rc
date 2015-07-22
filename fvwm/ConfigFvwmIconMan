@@ -5,7 +5,7 @@ DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: Resolution  page
 *FvwmIconMan: Background  bisque3
 *FvwmIconMan: Foreground  black
-*FvwmIconMan: Font        7x13bold
+*FvwmIconMan: Font        -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 *FvwmIconMan: Format      "%t"
 *FvwmIconMan: Action      Mouse   1 N sendcommand Focus, sendcommand "Iconify"
 *FvwmIconMan: Action      Mouse   2 N sendcommand "Iconify 1"
