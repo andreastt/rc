@@ -14,7 +14,6 @@ DestroyModuleConfig FvwmButtons: *
 *FvwmButtons: (Frame 3, Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg silver -fg black -hd black -hl black -padding 0 -update 1`)
 *FvwmButtons: (2x1, Frame 1, Swallow(UseOld,NoHints,Respawn) "xload" `Exec exec xload -fg black -update 5 -nolabel`)
 *FvwmButtons: (End)
-#*FvwmButtons: (1x2, Panel(up, indicator, position Root 46 -108p) FvwmPagerSubPanel "Module FvwmPager FvwmPagerSubPanel 1 5")
 *FvwmButtons: (2x2, Frame 1, Swallow(UseOld) "Inline" "Module FvwmPager Inline 0 0")
 *FvwmButtons: (End)
 
