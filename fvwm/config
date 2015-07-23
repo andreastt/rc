@@ -44,7 +44,7 @@ Style *     SnapAttraction 20
 
 Style * IconFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 MenuStyle * Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
-MenuStyle * fvwm, Foreground black, Background gainsboro, Greyed grey40
+MenuStyle * Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
 Style "xload" 		NoTitle, Sticky, WindowListSkip, ClickToFocus
@@ -216,7 +216,7 @@ Key Up		A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 
 # Lock screen with C-Super-l
-Key l A C4 Exec exec i3lock -c 000000
+Key l A C4 Exec exec xscreensaver-command -lock
 
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
@@ -229,15 +229,6 @@ Key Down A 4C Maximize 0 grow
 # C-Super-Right
 Key Left A 4C Maximize grow 0
 Key Right A 4C Maximize grow 0
-
-# Change keyboard layouts between Norwegian QWERTY and Dvorak
-AddToFunc KeymapToNorwegianQwerty
-  + I Exec exec setxkbmap no
-  + I Exec exec xmodmap ~/.Xmodmap
-
-AddToFunc KeymapToDvorak
-  + I Exec exec setxkbmap dvorak
-  + I Exec exec xmodmap ~/.Xmodmap
 
 Key Page_Up A 4S KeymapToNorwegianQwerty
 Key Page_Down A 4S KeymapToDvorak
@@ -253,12 +244,6 @@ Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
 Style FvwmPager   StaysOnTop
 Style FvwmBanner  StaysOnTop
 Style FvwmButtons Icon toolbox.xpm, ClickToFocus
-
-# Styles for your common terminal emulator programs.
-# xterms and rxvts in a separate icon box:
-Style XTerm       Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
-Style rxvt        Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
-Style rxvt        MWMBorder, MWMButtons
 
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
@@ -320,7 +305,7 @@ Read menudefs.hook Quiet
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
 +                       "&1. Terminal"              Exec exec rxvt
-+                       "&2. Firefox"               Exec exec firefox-trunk -new-window
++                       "&2. Firefox"               Exec exec firefox -new-window
 +                       ""              Nop
 +                       "&R. $[gt.Remote Logins]"     Popup MenuFvwmLogins
 +                       ""              Nop
@@ -328,6 +313,7 @@ AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
 +                       ""              Nop
 +                       "&F. $[gt.Refresh Screen]"   Refresh
 +                       "&C. $[gt.Recapture Screen]" Recapture
++                       "&L. Lock Screen"     Exec exec xscreensaver-command -lock
 +                       ""              Nop
 +                       "&X. $[gt.fvwm]" Popup MenuFvwm
 
@@ -338,11 +324,6 @@ AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
 +                       "&M. Xman"      Exec exec xman
 +                       "&G. Xmag"      Exec exec xmag
 +                       "&R. Editres"   Exec exec editres
-+                       ""              Nop
-+                       "&E. XEmacs"    Exec exec xemacs
-+                       "&A. Xmh Mail"  FuncFvwmMailXmh xmh "-font fixed"
-+                       ""              Nop
-+                       "&L. XLock"     Exec exec xlock -mode random
 +                       ""              Nop
 +                       "&D. $[gt.Reset X defaults]" Exec xrdb -load $HOME/.Xdefaults
 
@@ -413,8 +394,7 @@ AddToFunc FuncFvwmRloginSshRxvt \
 # be sure to fill these in with your correct machine names:
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
-+ &dopey  FuncFvwmRloginXterm dopey
-+ &snoopy FuncFvwmRloginXterm snoopy
++ &sny.no  FuncFvwmRloginXterm sny.no
 + s&ignal Exec rxterm signal
 
 DestroyMenu MenuFvwmModules
@@ -434,19 +414,6 @@ AddToMenu MenuFvwmModules "$[gt.Fvwm Modules]"        Title
 + "&T. FvwmTaskBar"       Module FvwmTaskBar
 + "&U. AutoRaise"         Module FvwmAuto 200 Raise Nop
 + "&W. WinList"           Module FvwmWinList
-+ "&X. $[gt.Stop Module Menu]"  Popup  MenuFvwmStopModule
-
-DestroyMenu MenuFvwmStopModule
-AddToMenu MenuFvwmStopModule "$[gt.Stop Fvwm Modules]" Title
-+ "&B. $[gt.Stop] Button-Bar"  KillModule FvwmButtons
-+ "&O. $[gt.Stop] IconBox"     KillModule FvwmIconBox
-+ "&M. $[gt.Stop] IconMan"     KillModule FvwmIconMan
-+ "&P. $[gt.Stop] Pager"       KillModule FvwmPager
-+ "&R. $[gt.Stop] Backer"      KillModule FvwmBacker
-+ "&S. $[gt.Stop] ScrollBar"   KillModule FvwmScroll
-+ "&T. $[gt.Stop] FvwmTaskBar" KillModule FvwmTaskBar
-+ "&U. $[gt.Stop] AutoRaise"   KillModule FvwmAuto
-+ "&W. $[gt.Stop] WinList"     KillModule FvwmWinList
 
 DestroyMenu MenuFvwmForms
 AddToMenu MenuFvwmForms
@@ -475,14 +442,6 @@ AddToMenu MenuFvwm
 + ""                     Nop
 + "&N. $[gt.No, Don't Quit]"   Nop
 
-######################## Sample Functions ##########################
-
-DestroyFunc FuncFvwmMailXmh
-AddToFunc FuncFvwmMailXmh
-+ I Next [$0] Iconify false
-+ I Next [$0] Focus
-+ I None [$0] Exec $0 $1
-
 DestroyFunc FuncFvwmMoveOrRaise
 AddToFunc FuncFvwmMoveOrRaise
 + I Raise
@@ -508,28 +467,10 @@ AddToFunc FuncFvwmResizeOrRaise
 + M Resize
 + D Lower
 
-DestroyFunc FuncFvwmPrint
-AddToFunc FuncFvwmPrint
-+ I Raise
-+ I Exec xdpr -id $w
-
-DestroyFunc FuncFvwmPrintReverse
-AddToFunc FuncFvwmPrintReverse
-+ I Raise
-+ I Exec xdpr 1/2 -h -rv -id $w
-
 DestroyFunc FuncFvwmFocusPolicyChange
 AddToFunc FuncFvwmFocusPolicyChange
 + I Style * $0
 + I Recapture
 
 # Read config files for modules:
-#read ConfigFvwmBacker
 read ConfigFvwmButtons
-#read ConfigFvwmIconBox
-#read ConfigFvwmIconMan
-#read ConfigFvwmIdent
-#read ConfigFvwmPager
-#read ConfigFvwmScroll
-#read ConfigFvwmTaskBar
-#read ConfigFvwmWinList
