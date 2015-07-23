@@ -115,9 +115,9 @@ AddToFunc Thumbnail
   + I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
       "xwd -silent -id $[w.id] | convert -scale 128 -frame 1x1 \
       -mattecolor black -quality 0 xwd:- \
-      png:$[FVWM_USERDIR]/icon.tmp.$[w.id].png && \
+      png: /tmp/icon.tmp.$[w.id].png && \
       echo WindowStyle IconOverride, \
-      Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png || \
+      Icon /tmp/icon.tmp.$[w.id].png || \
       echo Nop"
   + I Iconify
 
@@ -131,7 +131,7 @@ AddToFunc DeThumbnail
 
 AddToFunc StartFunction I Test (Restart) All (Iconic) \
   Test (f $[FVWM_USERDIR]/icon.tmp.$[w.id].png) WindowStyle \
-  IconOverride, Icon $[FVWM_USERDIR]/icon.tmp.$[w.id].png
+  IconOverride, Icon /tmp/icon.tmp.$[w.id].png
 
 DestroyFunc ExitFunction
   AddToFunc ExitFunction I Test (!ToRestart) \
