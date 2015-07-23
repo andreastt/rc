@@ -11,8 +11,10 @@ pgrep plumber > /dev/null || plumber &
 
 fn cd { builtin cd $1 && awd $sysname }
 
-devdrawretina=1
-varfont=/mnt/LucidaGrande/28a/font
-fixfont=/mnt/Menlo-Regular/24a/font
+#devdrawretina=1
+#varfont=/mnt/LucidaGrande/28a/font
+#fixfont=/mnt/Menlo-Regular/24a/font
+varfont=/mnt/LucidaGrande/13a/font
+fixfont=/mnt/Menlo-Regular/12a/font
 
 exec acme -a -f $varfont -F $fixfont $*
