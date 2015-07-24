@@ -38,8 +38,6 @@ Style * IconBox 0 -10 -280 -1
 
 Style *     BorderWidth 4
 Style *     HandleWidth 4
-#Style *     FvwmBorder # turn off 3d bevel
-#Style *     FirmBorder # border is not depressable
 Style *     SnapAttraction 20
 
 Style * IconFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
@@ -127,7 +125,6 @@ AddToFunc DeThumbnail
   + I DestroyWindowStyle
 
 *FvwmEvent: deiconify DeThumbnail
-#AddToFunc StartFunction I Module FvwmEvent
 
 AddToFunc StartFunction I Test (Restart) All (Iconic) \
   Test (f $[FVWM_USERDIR]/icon.tmp.$[w.id].png) WindowStyle \
@@ -151,21 +148,7 @@ Key Return A 4 Rxvt
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
 
-#DestroyFunc DisplayInfo
-#AddToFunc DisplayInfo
-#  + I Module FvwmButtons
-#  + I KillModule FvwmButtons
-#
-#DestroyFunc ShowOrHideDisplayInfo
-#  + I ThisWindow ("quick_terminal") hide_quick_terminal
-#  + I ThisWindow (!"quick_terminal") raise_or_fire_quick_terminal
-#  + I NoWindow raise_or_fire_quick_terminal
-
-# Super held down displays window list
-#Key Super_L A A DisplayInfo
-
 # S-Super-c closes window
-#Key c A 4S Close
 Key c A 4S CloseWindow
 
 # S-Super-r and S-Super-e to restart and quit fvwm
