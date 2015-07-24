@@ -47,16 +47,16 @@ MenuStyle * Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
 MenuStyle * Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
-Style "xload" 		NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "xload"	NoTitle, Sticky, WindowListSkip, ClickToFocus
 Style "xconsole"	NoTitle, Sticky, WindowListSkip, ClickToFocus
-Style "Fvwm*"		NoTitle, Sticky, WindowListSkip
+Style "Fvwm*"	NoTitle, Sticky, WindowListSkip
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
   + I Exec xset -b
   + I Exec xrdb .Xresources
   + I Exec xsetroot -solid "#777777"
-  + I Exec xmodmap ~/.Xmodmap
+  + I Exec xmodmap ~/.config/Xmodmap
   + I Module FvwmAnimate
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
@@ -212,7 +212,7 @@ Key Tab A 4  FuncSwitchWindow
 # Press arrow + meta + control anywhere, move window focus in that direction
 Key Left	A	4	Direction West	(CurrentPage) SelectWindow
 Key Right	A	4	Direction East	(CurrentPage) SelectWindow
-Key Up		A	4	Direction North	(CurrentPage) SelectWindow
+Key Up	A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 
 # Lock screen with C-Super-l
@@ -260,38 +260,37 @@ Mouse	8	R	A	WindowList
 Mouse	10	R	A	Menu MenuFvwmWindowOps Nop
 
 # Title bar buttons
-Mouse 0	1       A       Menu MenuFvwmWindowOps2 Close
-Mouse 0 2       A       FuncFvwmMaximize
-Mouse 0 4       A       Thumbnail
+Mouse	0	1       A       Menu MenuFvwmWindowOps2 Close
+Mouse	0	2       A       FuncFvwmMaximize
+Mouse	0	4       A       Thumbnail
 
 # Mouse-grab with Super for various window operations, click anywhere
 # on a window
-Mouse 1 FSTW M WindowLeftClick
-Mouse 2 FSTW M Thumbnail
-Mouse 3 FSTW M RaiseAndResize
+Mouse	1	FSTW	M	WindowLeftClick
+Mouse	2	FSTW	M	Thumbnail
+Mouse	3	FSTW	M	RaiseAndResize
 
-# Move window with Super-{button 1} and resize with Super-{button 3},
-# just like i3
-Mouse 1 FSTW 4 FuncFvwmMoveOrRaise
-Mouse 2 FSTW 4 FuncFvwmResizeOrRaise
-Mouse 3 FSTW 4 FuncFvwmResizeOrRaise
+# Move window with Super-{button 1} and resize with Super-{button 3}
+Mouse	1	FSTW	4	FuncFvwmMoveOrRaise
+Mouse	2	FSTW	4	FuncFvwmResizeOrRaise
+Mouse	3	FSTW	4	FuncFvwmResizeOrRaise
 
 # Shades and unshades active window
-Mouse 4 T A FvwmWindowShade True
-Mouse 5 T A FvwmWindowShade False
+Mouse	4	T	A	FvwmWindowShade True
+Mouse	5	T	A	FvwmWindowShade False
 
 # Resize the thumbnail
 Mouse 1 I N DeThumbnail
 
 #   for other parts of the window/borders/icons:
-Mouse 1		F	A	FuncFvwmResizeOrRaise
-Mouse 1		TS	A	FuncFvwmMoveOrRaise
-Mouse 1		I	A	FuncFvwmMoveOrIconify
-Mouse 2		I	A	Thumbnail
-Mouse 2		FST	A	Menu MenuFvwmWindowOps2 Nop
-Mouse 3		TSIF	A	RaiseLower
+Mouse 1		F		A	FuncFvwmResizeOrRaise
+Mouse 1		TS		A	FuncFvwmMoveOrRaise
+Mouse 1		I		A	FuncFvwmMoveOrIconify
+Mouse 2		I		A	Thumbnail
+Mouse 2		FST		A	Menu MenuFvwmWindowOps2 Nop
+Mouse 3		TSIF		A	RaiseLower
 Mouse 8		WTSIF	A	WindowList
-Mouse 10	WTSIF	A	Menu MenuFvwmWindowOps Nop
+Mouse 10		WTSIF	A	Menu MenuFvwmWindowOps Nop
 
 ######################## Menus ###################
 # Make sure that the Debian menus, and the icons they reference, are
