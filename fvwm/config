@@ -121,18 +121,18 @@ AddToFunc Thumbnail
 
 DestroyFunc DeThumbnail
 AddToFunc DeThumbnail
-  + I Exec rm -f $[FVWM_USERDIR]/icon.tmp.$[w.id].png
+  + I Exec rm -f /tmp/icon.tmp.$[w.id].png
   + I DestroyWindowStyle
 
 *FvwmEvent: deiconify DeThumbnail
 
 AddToFunc StartFunction I Test (Restart) All (Iconic) \
-  Test (f $[FVWM_USERDIR]/icon.tmp.$[w.id].png) WindowStyle \
+  Test (f /tmp/icon.tmp.$[w.id].png) WindowStyle \
   IconOverride, Icon /tmp/icon.tmp.$[w.id].png
 
 DestroyFunc ExitFunction
   AddToFunc ExitFunction I Test (!ToRestart) \
-  Exec rm -f $[FVWM_USERDIR]/icon.tmp.*
+  Exec rm -f /tmp/icon.tmp.*
 
 #####################################
 # Key bindings
