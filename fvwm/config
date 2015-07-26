@@ -288,6 +288,8 @@ DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "&1. Terminal"			Exec exec rxvt
 	+ "&2. Firefox" 				Exec exec firefox -new-window
+	+ "&3. acme"				Exec exec ~/bin/acme.rc -l acme.dump
+	+ "&4. acme@eir"			Exec exec ~/bin/acme.eir
 	+ ""						Nop
 	+ "&R. $[gt.Remote Logins]"	Popup MenuFvwmLogins
 	+ ""						Nop
