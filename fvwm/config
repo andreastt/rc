@@ -285,19 +285,19 @@ Read /etc/X11/fvwm/menudefs.hook Quiet
 Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
-AddToMenu MenuFvwmRoot  "$[gt.Root Menu]"             Title
-+                       "&1. Terminal"              Exec exec rxvt
-+                       "&2. Firefox"               Exec exec firefox -new-window
-+                       ""              Nop
-+                       "&R. $[gt.Remote Logins]"     Popup MenuFvwmLogins
-+                       ""              Nop
-+                       "&U. $[gt.Utilities]"         Popup MenuFvwmUtilities
-+                       ""              Nop
-+                       "&F. $[gt.Refresh Screen]"   Refresh
-+                       "&C. $[gt.Recapture Screen]" Recapture
-+                       "&L. Lock Screen"     Exec exec xscreensaver-command -lock
-+                       ""              Nop
-+                       "&X. $[gt.fvwm]" Popup MenuFvwm
+AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
+	+ "&1. Terminal"			Exec exec rxvt
+	+ "&2. Firefox" 				Exec exec firefox -new-window
+	+ ""						Nop
+	+ "&R. $[gt.Remote Logins]"	Popup MenuFvwmLogins
+	+ ""						Nop
+	+ "&U. $[gt.Utilities]"			Popup MenuFvwmUtilities
+	+ ""						Nop
+	+ "&F. $[gt.Refresh Screen]"	Refresh
+	+ "&C. $[gt.Recapture Screen]"	Recapture
+	+ "&L. Lock Screen"			Exec exec xscreensaver-command -lock
+	+ ""						Nop
+	+ "&X. $[gt.fvwm]"			Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
