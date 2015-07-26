@@ -378,8 +378,8 @@ AddToFunc FuncFvwmRloginSshRxvt \
 # be sure to fill these in with your correct machine names:
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
-+ &sny.no  FuncFvwmRloginXterm sny.no
-+ s&ignal Exec rxterm signal
++ &sny.no		FuncFvwmRloginXterm sny.no
++ &eir		FuncFvwmRLoginXterm eir
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "$[gt.Fvwm Modules]"        Title
