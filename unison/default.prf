@@ -8,7 +8,7 @@ rshargs = -C
 prefer = newer
 links = true
 
-root = /Users/ato
+root = /home/ato
 root = ssh://eir//home/ato
 
 path = scratch
@@ -38,4 +38,4 @@ ignore = Path Documents/Parallels
 
 path = Patches
 
-path = Pictures
+#path = Pictures
