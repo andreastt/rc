@@ -1,8 +1,8 @@
-. $topsrcdir/b2g/config/mozconfigs/linux64_gecko/nightly
+. $topsrcdir/../mozconfig/common
+
+ac_add_options --enable-application=b2g
 
 GAIADIR=$home/Code/gaia
 MOZTTDIR=$home/Code/moztt
-
-. $topsrcdir/../mozconfig/common
 
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/b2g-release
