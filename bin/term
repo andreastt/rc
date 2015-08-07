@@ -1,0 +1,3 @@
+#!/bin/sh
+SHELL=bash
+9term -f /mnt/LucidaGrande/13a/font -W 600x650
