@@ -1,10 +1,7 @@
-# This combines .cshrc, .login, and .profile.
-
 export PLAN9=/usr/local/plan9
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Code
 
-export PATH=$PATH
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$GOPATH/bin
