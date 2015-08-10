@@ -285,21 +285,21 @@ Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
-	+ "&X terminal"			Exec exec rxvt
 	+ "Plan &9 terminal"			Exec exec term
+	+ "&X terminal"				Exec exec rxvt
 	+ "&Firefox" 				Exec exec firefox -new-window
-	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
-	+ "acme@&eir"			Exec exec ssh eir -YC 'acme.rc -l acme.dump'
+	+ "&acme"					Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
+	+ "acme@&eir"				Exec exec ssh eir -YC 'acme.rc -l acme.dump'
 	+ ""						Nop
-	+ "$[gt.Remote &Logins]"	Popup MenuFvwmLogins
+	+ "$[gt.Remote &Logins]"		Popup MenuFvwmLogins
 	+ ""						Nop
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""						Nop
-	+ "$[gt.&Refresh Screen]"	Refresh
+	+ "$[gt.&Refresh Screen]"		Refresh
 	+ "$[gt.Re&capture Screen]"	Recapture
 	+ "&Lock Screen"			Exec exec xscreensaver-command -lock
 	+ ""						Nop
-	+ "$[gt.fv&wm]"			Popup MenuFvwm
+	+ "$[gt.fv&wm]"				Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
