@@ -1,3 +1,8 @@
+# This file gets symlinked to:
+# /etc/profiles.d/env.sh
+# $HOME/.bashrc
+# $HOME/.xsessionrc
+
 export PLAN9=/usr/local/plan9
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Code
