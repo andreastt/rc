@@ -1,8 +1,5 @@
 # Virtual desktops
 DesktopSize 3x3
-DesktopName 0 Main
-DesktopName 1 Work
-DesktopName 2 Games
 EdgeScroll 100 100
 EdgeResistance 150 150
 EdgeThickness 1
