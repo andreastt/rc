@@ -12,6 +12,7 @@ root = /home/ato
 root = ssh://eir//home/ato
 
 path = scratch
+path = notes
 
 path = .ssh
 
