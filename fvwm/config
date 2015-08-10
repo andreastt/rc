@@ -1,5 +1,3 @@
-# -*- mode: conf -*-
-
 # Virtual desktops
 DesktopSize 3x3
 DesktopName 0 Main
