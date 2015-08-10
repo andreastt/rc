@@ -78,12 +78,6 @@ AddToFunc 9term
   + I Wait 9term
   + I Next (9term) WarpToWindow 50 17p
 
-
-AddToFunc EmacsClient
-  + I Exec exec emacsclient -nc
-  + I Wait emacs
-  + I Next (emacs) WarpToWindow 50 17p
-
 # Window switcher
 InfoStoreAdd DIR Next
 
