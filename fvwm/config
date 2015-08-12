@@ -288,6 +288,7 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "Plan &9 terminal"			Exec exec term
 	+ "&X terminal"				Exec exec rxvt
 	+ "&Firefox" 				Exec exec firefox -new-window
+	+ "&Firefox (private)"			Exec exec firefox -private-window
 	+ "&acme"					Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme@&eir"				Exec exec ssh eir -YC 'acme.rc -l acme.dump'
 	+ ""						Nop
