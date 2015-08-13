@@ -22,17 +22,17 @@ export CCACHE_UMASK=002
 #export DISTCC_HOSTS=+zeroconfig
 
 # I go by a different name on Githoob,
-# and use custom HGRCPATH to not clutter up $home.
+# and use custom HGRCPATH to not clutter up $HOME.
 export GIT_AUTHOR_EMAIL=ato@mozilla.com
 export GITHUB_USER=andreastt
-export HGRCPATH=$home/.config/hgrc
+export HGRCPATH=$HOME/.config/hgrc
 
 # Other configuration options
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 export GAIATEST_SKIP_WARNING=1
-export GECKO_PATH=$home/Code/gecko/src
-export GECKO_OBJDIR=$home/Code/gecko/build/b2g
+export GECKO_PATH=$HOME/Code/gecko/src
+export GECKO_OBJDIR=$HOME/Code/gecko/build/b2g
 
 # Selenium test suites will continue running
 # even if they reach an error or fail.
