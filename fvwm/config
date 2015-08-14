@@ -36,7 +36,7 @@ Style *     HandleWidth 4
 Style *     SnapAttraction 20
 
 Style		*	IconFont	"xft:Lucida Sans:size=10"
-MenuStyle	*	Font		"xft:Lucida sans:size=10"
+MenuStyle	*	Font		"xft:Lucida Sans:size=10"
 MenuStyle * Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
