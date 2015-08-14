@@ -35,8 +35,8 @@ Style *     BorderWidth 4
 Style *     HandleWidth 4
 Style *     SnapAttraction 20
 
-Style * IconFont -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
-MenuStyle * Font -*-lucida-medium-r-*-*-*-120-*-*-*-71-*-*
+Style		*	IconFont	"xft:Lucida Sans:size=10"
+MenuStyle	*	Font		"xft:Lucida sans:size=10"
 MenuStyle * Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
