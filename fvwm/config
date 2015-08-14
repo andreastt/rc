@@ -228,8 +228,8 @@ Style FvwmButtons Icon toolbox.xpm, ClickToFocus
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
-# Iconify window with C-S-z
-Key Z FSTW SC Thumbnail
+# Iconify window with S-z
+Key Z FSTW 4 Thumbnail
 
 # Root window
 Mouse	1	R	A	Menu MenuFvwmRoot Nop
