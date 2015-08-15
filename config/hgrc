@@ -1,8 +1,6 @@
 [ui]
 username = Andreas Tolfsen <ato@mozilla.com>
 
-[defaults]
-
 [progress]
 disable = 1
 
