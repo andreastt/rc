@@ -3,6 +3,9 @@ username = Andreas Tolfsen <ato@mozilla.com>
 
 [defaults]
 
+[progress]
+disable = 1
+
 [alias]
 show = log --patch --verbose --rev
 st = !hg status $($HG root) $HG_ARGS
