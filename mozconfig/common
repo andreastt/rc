@@ -1,6 +1,9 @@
 #CCACHE_PREFIX="distcc"
-CXX=clang++
-CC=clang
+
+# clang-3.5 is broken on Debian stable ("jessie"),
+# use clang-3.4 for now
+CXX=clang++-3.4
+CC=clang-3.4
 
 mk_add_options AUTOCLOBBER=1
 
