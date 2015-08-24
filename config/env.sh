@@ -21,11 +21,10 @@ export CCACHE_UMASK=002
 #export CCACHE_PREFIX=distcc
 #export DISTCC_HOSTS=+zeroconfig
 
-# I go by a different name on Githoob,
-# and use custom HGRCPATH to not clutter up $HOME.
 export GIT_AUTHOR_EMAIL=ato@mozilla.com
 export GITHUB_USER=andreastt
 export HGRCPATH=$HOME/.config/hgrc
+export I_PREFER_A_SUBOPTIMAL_MERCURIAL_EXPERIENCE=1
 
 # Other configuration options
 export PYTHONDONTWRITEBYTECODE=1
