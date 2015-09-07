@@ -41,7 +41,7 @@ export haltonfailure=0
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
 export tryall="-b o -p all -u all -t none"
-export trymarionette="-b o -p linux,linux64_gecko -u marionette,marionette-e10s,web-platform-tests-1,marionette-webapi,gaia-ui-test-functional,gaia-integration -t none"
+export trymarionette="-b o -p linux,linux64_gecko -u marionette,marionette-e10s,web-platform-tests-1,marionette-webapi,gaia-ui-test-functional,gaia-js-integration -t none"
 
 alias .="pwd"
 alias ..="cd .."
