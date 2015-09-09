@@ -34,8 +34,9 @@ ignore = Path Code/hgwatchman
 ignore = Path Code/B2G
 
 path = Documents
-ignore = Path Documents/Parallels
 
 path = Patches
 
-#path = Pictures
+path = Pictures
+
+path = Desktop
