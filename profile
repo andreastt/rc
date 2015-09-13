@@ -17,9 +17,6 @@ export GITHUB_USER=andreastt
 # Other configuration options
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
-export GAIATEST_SKIP_WARNING=1
-export GECKO_PATH=$HOME/Code/gecko/src
-export GECKO_OBJDIR=$HOME/Code/gecko/build/b2g
 
 # Selenium test suites will continue running
 # even if they reach an error or fail.
