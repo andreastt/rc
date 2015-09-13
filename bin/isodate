@@ -1,8 +1,0 @@
-#!/bin/sh
-
-p=date
-if [ "$(uname)" = "Darwin" ]; then
-	p="gdate"
-fi
-
-$p "+%Y-%m-%dT%H:%M:%S%:z" | tr -d "\n"
