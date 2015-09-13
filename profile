@@ -21,6 +21,5 @@ alias .="pwd"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias sl=ls
 
 PS1="% "
