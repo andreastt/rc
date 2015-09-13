@@ -10,8 +10,6 @@ export EDITOR=E
 
 export CCACHE_DIR=$HOME/.config/ccache
 export CCACHE_UMASK=002
-#export CCACHE_PREFIX=distcc
-#export DISTCC_HOSTS=+zeroconfig
 
 export GIT_AUTHOR_EMAIL=ato@mozilla.com
 export GITHUB_USER=andreastt
