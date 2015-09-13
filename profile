@@ -5,9 +5,6 @@ export GOPATH=$HOME/Code
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/Code/git-remote-hg
-export PATH=$PATH:$HOME/Code/moz-git-tools
-export PATH=$PATH:/usr/local/adt/sdk/platform-tools
 
 export EDITOR=E
 
