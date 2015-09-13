@@ -18,7 +18,5 @@ export trymarionette="-b o -p linux,linux64_gecko -u marionette,marionette-e10s,
 
 alias .="pwd"
 alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
 
 PS1="% "
