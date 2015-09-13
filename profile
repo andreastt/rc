@@ -12,11 +12,6 @@ export EDITOR=E
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 
-# Selenium test suites will continue running
-# even if they reach an error or fail.
-export haltonerror=0
-export haltonfailure=0
-
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
 export tryall="-b o -p all -u all -t none"
