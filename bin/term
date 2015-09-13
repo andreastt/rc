@@ -1,3 +1,0 @@
-#!/bin/sh
-SHELL=bash
-9term -s -f /usr/share/fonts/plan9/LucidaGrande/13a/font -W 600x650
