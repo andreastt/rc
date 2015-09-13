@@ -13,7 +13,6 @@ export CCACHE_UMASK=002
 
 export GIT_AUTHOR_EMAIL=ato@mozilla.com
 export GITHUB_USER=andreastt
-export HGRCPATH=$HOME/.config/hgrc
 export I_PREFER_A_SUBOPTIMAL_MERCURIAL_EXPERIENCE=1
 
 # Other configuration options
