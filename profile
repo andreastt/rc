@@ -8,9 +8,6 @@ export PATH=$PATH:$GOPATH/bin
 
 export EDITOR=E
 
-export GIT_AUTHOR_EMAIL=ato@mozilla.com
-export GITHUB_USER=andreastt
-
 # Other configuration options
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
