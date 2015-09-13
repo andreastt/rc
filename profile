@@ -8,7 +8,6 @@ export PATH=$PATH:$GOPATH/bin
 
 export EDITOR=E
 
-# Other configuration options
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 
