@@ -24,4 +24,3 @@ alias ....="cd ../../.."
 alias sl=ls
 
 PS1="% "
-export HISTCONTROL=ignoreboth
