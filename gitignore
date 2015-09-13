@@ -1,12 +1,10 @@
 *.class
-*.o
-*.so
-*.pyc
-
+*.egg-info
 *.log
+*.o
+*.pyc
+*.so
 *.sql
 *.sqlite
-*.egg-info
-.unison.*.unison.tmp
-
 .DS_Store
+.unison.*.unison.tmp
