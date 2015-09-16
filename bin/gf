@@ -1,3 +1,2 @@
 #!/bin/sh
-
 git ls-files | grep -i "$@"
