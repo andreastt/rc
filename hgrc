@@ -16,15 +16,16 @@ try = ssh://hg.mozilla.org/try
 review = ssh://reviewboard-hg.mozilla.org/gecko
 
 [extensions]
-rebase =
-purge =
 histedit =
-shelve =
 mq =
+purge =
+rebase =
+shelve =
+bookbinder = ~/Code/bookbinder
 firefoxtree = ~/Code/version-control-tools/hgext/firefoxtree
+qbackout = ~/Code/version-control-tools/hgext/qbackout
 reviewboard = ~/Code/version-control-tools/hgext/reviewboard/client.py
 trychooser = ~/Code/trychooser
-qbackout = ~/Code/version-control-tools/hgext/qbackout
 
 [diff]
 git = 1
