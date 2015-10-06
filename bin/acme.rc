@@ -2,9 +2,9 @@
 
 #. $PLAN9/lib/acme.rc
 
-TERM=dumb
-SHELL=rc
-PAGER=nobs
+export TERM=dumb
+export SHELL=rc
+export PAGER=nobs
 
 pgrep plumber > /dev/null || plumber &
 
