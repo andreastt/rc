@@ -1,5 +1,6 @@
 [ui]
 username = Andreas Tolfsen <ato@mozilla.com>
+merge = internal:merge
 
 [progress]
 disable = 1
