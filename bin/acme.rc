@@ -15,7 +15,7 @@ devdrawretina=1
 if [ $(system_profiler SPDisplaysDataType | grep Resolution | grep -Eo '([0-9]{4})' | head -1) -gt 1920 ]
 then
 	fixfont=/mnt/LucidaGrandeMono/24a/font
-	varfont=/mnt/LucidaGrande-RegularW/28a/font
+	varfont=/mnt/HelveticaNeue-Medium/27a/font
 else
 	fixfont=/mnt/LucidaGrandeMono/12a/font
 	varfont=/mnt/LucidaGrande-RegularW/13a/font
