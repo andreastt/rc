@@ -6,9 +6,10 @@ merge = internal:merge
 disable = 1
 
 [alias]
+blame = annotate --user --number
+blog = log --rev 'feature(tip)'
 show = log --patch --verbose --rev
 st = !hg status $($HG root) $HG_ARGS
-blame = annotate --user --number
 
 [paths]
 try = ssh://hg.mozilla.org/try
