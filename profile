@@ -14,7 +14,7 @@ export MACH_NO_TERMINAL_FOOTER=1
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
 export tryall="-b o -p all -u all -t none"
-export trymn="-b o -e -p linux64,linux64-mulet,macosx64,win64,linux64_gecko -u marionette,marionette-e10s,web-platform-tests-1,marionette-webapi,gaia-ui-test-functional,gaia-js-integration -t none"
+export trymn="-b o -e -p linux64,linux64-mulet,macosx64,win64,linux64_gecko -u marionette,marionette-e10s,luciddream,web-platform-tests,marionette-webapi,gaia-ui-test-functional,gaia-js-integration -t none"
 
 alias .="pwd"
 alias ..="cd .."
