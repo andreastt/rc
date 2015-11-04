@@ -1,0 +1,50 @@
+[ui]
+username = Andreas Tolfsen <ato@mozilla.com>
+
+[progress]
+disable = 1
+
+[alias]
+show = log --patch --verbose --rev
+st = !hg status $($HG root) $HG_ARGS
+wip = log --graph --rev=wip --template=wip
+blame = annotate --user --number
+blog = log -r 'reverse(::. and not ::central)'
+
+[paths]
+try = ssh://hg.mozilla.org/try
+review = ssh://reviewboard-hg.mozilla.org/gecko
+
+[extensions]
+rebase =
+purge =
+histedit =
+shelve =
+mq =
+firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
+reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
+trychooser = ~/Code/trychooser
+#hgwatchman = ~/Code/hgwatchman/hgwatchman
+qbackout = ~/.mozbuild/version-control-tools/hgext/qbackout
+
+[diff]
+git = 1
+unified = 8
+showfunc = 1
+
+[revsetalias]
+wip = (parents(not public()) or not public() or . or head()) and (not obsolete() or unstable()^) and not closed()
+b($1) = reverse(only($1) and draft())
+
+[templates]
+wip = '{label("log.branch", branches)} {label("changeset.{phase}", rev)} {label("grep.user", author|user)}{label("log.tag", if(tags," {tags}"))} {label("log.bookmark", if(bookmarks," {bookmarks}"))}\n{label(ifcontains(rev, revset('.'), 'desc.here'),desc|firstline)}'
+
+[mozilla]
+ircnick = ato
+
+[bugzilla]
+username = ato@mozilla.com
+apikey = vWVG1B1b1WgGWowKE216tB2qr5E9Px3dWbgZuT5j
+
+[watchman]
+mode = on
