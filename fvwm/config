@@ -285,8 +285,8 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "Plan &9 terminal"			Exec exec term
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
-	+ "&acme"					Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
-	+ "acme@&eir"				Exec exec ssh -YC eir 'acme.rc -l acme.dump'
+	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump 2>stderr.log >stdout.log
+	+ "acme@&eir"				Exec exec ssh -YC eir 'acme.rc -l acme.dump' 2>/stderr.log >/stdout.log
 	+ "&Spotify"				Exec exec spotify
 	+ ""						Nop
 	+ "$[gt.Remote &Logins]"		Popup MenuFvwmLogins

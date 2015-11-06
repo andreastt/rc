@@ -20,3 +20,4 @@ alias .="pwd"
 alias ..="cd .."
 
 PS1="% "
+
