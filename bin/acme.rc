@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# hack:
+. /etc/profile
+
 export TERM=dumb
 export SHELL=rc
 export PAGER=nobs
@@ -7,3 +10,4 @@ export PAGER=nobs
 pgrep plumber > /dev/null || plumber &
 
 exec acme -a $*
+
