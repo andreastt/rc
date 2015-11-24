@@ -68,6 +68,9 @@
 		"sendAsyncMessage": true,
 		"removeMessageListener": true,
 		"addMessageListener": true,
-		"UnknownCommandError": true
+		"UnknownCommandError": true,
+		"evaluate": true,
+		"capture": true,
+		"sandbox": true
 	}
 }
