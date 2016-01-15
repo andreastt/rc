@@ -17,19 +17,18 @@ try = ssh://hg.mozilla.org/try
 review = ssh://reviewboard-hg.mozilla.org/gecko
 
 [extensions]
-bookbinder = ~/Code/bookbinder
+bookbinder = ~/1/bookbinder
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 hgwatchman = ~/.mozbuild/hgwatchman/hgwatchman
 histedit = 
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 mq = 
 purge = 
-push-to-try = ~/.mozbuild/version-control-tools/hgext/push-to-try
 qbackout = ~/Code/version-control-tools/hgext/qbackout
 rebase = 
-reviewboard = ~/Code/version-control-tools/hgext/reviewboard/client.py
+reviewboard = ~/1/version-control-tools/hgext/reviewboard/client.py
 shelve = 
-trychooser = ~/Code/trychooser
+trychooser = ~/1/trychooser
 
 [experimental]
 clonebundles = true
