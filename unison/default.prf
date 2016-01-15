@@ -23,15 +23,15 @@ ignore = Name *~
 ignore = Name .*~
 ignore = Name .DS_Store
 
-path = Code
-ignore = Path Code/bin
-ignore = Path Code/gecko/build
-ignore = Path Code/selenium/third_party/gecko-*
-ignore = Path Code/servo/cargo
-ignore = Path Code/servo/rust
-ignore = Path Code/servo/target
-ignore = Path Code/hgwatchman
-ignore = Path Code/B2G
+path = 1
+ignore = Path 1/bin
+ignore = Path 1/gecko/build
+ignore = Path 1/selenium/third_party/gecko-*
+ignore = Path 1/servo/cargo
+ignore = Path 1/servo/rust
+ignore = Path 1/servo/target
+ignore = Path 1/hgwatchman
+ignore = Path 1/B2G
 
 path = Documents
 
