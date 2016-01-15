@@ -20,14 +20,14 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 bookbinder = ~/1/bookbinder
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 hgwatchman = ~/.mozbuild/hgwatchman/hgwatchman
-histedit = 
+histedit =
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
-mq = 
-purge = 
+mq =
+purge =
 qbackout = ~/Code/version-control-tools/hgext/qbackout
-rebase = 
+rebase =
 reviewboard = ~/1/version-control-tools/hgext/reviewboard/client.py
-shelve = 
+shelve =
 trychooser = ~/1/trychooser
 
 [experimental]
