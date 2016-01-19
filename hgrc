@@ -10,7 +10,6 @@ blame = annotate --user --number
 blog = log --rev 'feature(tip)'
 show = log --patch --verbose --rev
 st = !hg status $($HG root) $HG_ARGS
-wip = log --graph --rev=wip --template=wip
 
 [paths]
 try = ssh://hg.mozilla.org/try
@@ -18,15 +17,14 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 
 [extensions]
 bookbinder = ~/1/bookbinder
-firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
-hgwatchman = ~/.mozbuild/hgwatchman/hgwatchman
+#firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 histedit =
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 mq =
 purge =
-qbackout = ~/Code/version-control-tools/hgext/qbackout
+qbackout = ~/.mozbuild/version-control-tools/hgext/qbackout
 rebase =
-reviewboard = ~/1/version-control-tools/hgext/reviewboard/client.py
+reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 shelve =
 trychooser = ~/1/trychooser
 
@@ -43,4 +41,3 @@ ircnick = ato
 
 [bugzilla]
 username = ato@mozilla.com
-
