@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DISPLAY=:99
+
+Xvfb $DISPLAY -ac +extension RANDR &
+matchbox-window-manager &
+exec $@
+
