@@ -5,16 +5,16 @@ editor = acme
 # Toolkit modules
 type is text
 data matches 'resource:\/\/gre\/modules\/(.+)\.jsm(:([0-9]+))?'
-arg isfile /home/ato/Code/gecko/src/toolkit/modules/$1.jsm
-data set /home/ato/Code/gecko/src/toolkit/modules/$1.jsm
+arg isfile /home/ato/1/gecko/src/toolkit/modules/$1.jsm
+data set /home/ato/1/gecko/src/toolkit/modules/$1.jsm
 attr add addr=$3
 plumb to edit
 
 # Marionette
 type is text
 data matches 'chrome:\/\/marionette\/content\/(.+)\.js(:([0-9]+))?'
-arg isfile /home/ato/Code/gecko/src/testing/marionette/$1.js
-data set /home/ato/Code/gecko/src/testing/marionette/$1.js
+arg isfile /home/ato/1/gecko/src/testing/marionette/$1.js
+data set /home/ato/1/gecko/src/testing/marionette/$1.js
 attr add addr=$3
 plumb to edit
 
