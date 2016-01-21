@@ -17,7 +17,7 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 
 [extensions]
 bookbinder = ~/1/bookbinder
-#firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
+firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 histedit =
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 mq =
