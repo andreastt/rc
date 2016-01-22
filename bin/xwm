@@ -2,7 +2,7 @@
 
 DISPLAY=:99
 
-Xvfb $DISPLAY -ac +extension RANDR &
-matchbox-window-manager &
+Xvfb $DISPLAY -ac +extension RANDR 1>&2 2>/dev/null &
+matchbox-window-manager 1>&2 2>/dev/null &
 exec $@
 
