@@ -1,5 +1,8 @@
 #CCACHE_PREFIX="distcc"
 
+export CC=clang
+export CXX=clang++
+
 mk_add_options AUTOCLOBBER=1
 
 ac_add_options --with-ccache
