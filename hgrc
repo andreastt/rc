@@ -19,14 +19,11 @@ review = ssh://reviewboard-hg.mozilla.org/gecko
 bookbinder = ~/1/bookbinder
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 histedit =
-mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 mq =
-purge =
 qbackout = ~/.mozbuild/version-control-tools/hgext/qbackout
 rebase =
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 shelve =
-trychooser = ~/1/trychooser
 
 [experimental]
 clonebundles = true
