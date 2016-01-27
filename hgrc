@@ -24,6 +24,7 @@ qbackout = ~/.mozbuild/version-control-tools/hgext/qbackout
 rebase =
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 shelve =
+purge =
 
 [experimental]
 clonebundles = true
