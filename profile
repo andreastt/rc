@@ -2,7 +2,7 @@ export PLAN9=/usr/local/plan9
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Code
 
-export PATH=$PATH:$HOME/bin
+export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$GOPATH/bin
 
