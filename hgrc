@@ -25,6 +25,7 @@ rebase =
 reviewboard = ~/.mozbuild/version-control-tools/hgext/reviewboard/client.py
 shelve =
 purge =
+trychooser = ~/1/trychooser
 
 [experimental]
 clonebundles = true
