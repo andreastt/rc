@@ -71,6 +71,11 @@
 		"UnknownCommandError": true,
 		"evaluate": true,
 		"capture": true,
-		"sandbox": true
+		"sandbox": true,
+		"event": true,
+		"interactions": true,
+		"window": true,
+		"navigator": true,
+		"Element": true
 	}
 }
