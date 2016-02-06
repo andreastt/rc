@@ -5,6 +5,8 @@ export GOPATH=$HOME/Code
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/1/git-cinnabar
+export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
 
 export EDITOR=E
 
