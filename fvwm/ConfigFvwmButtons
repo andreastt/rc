@@ -6,14 +6,14 @@
 *----------------*----*----*-----------*
 KillModule FvwmButtons
 DestroyModuleConfig FvwmButtons: *
-*FvwmButtons: Geometry 215x110-1-1
+*FvwmButtons: Geometry 110x110-1-1
 *FvwmButtons: Back gainsboro 
-*FvwmButtons: (Frame 1, Padding 2 2, Container(Rows 2 Columns 4 Frame 1 Padding 10 0))
+*FvwmButtons: (Frame 1, Padding 2 2, Container(Rows 2 Columns 2 Frame 1 Padding 10 0))
 *FvwmButtons: (2x2, Frame 0, Container(Rows 2 Columns 2 Frame 0))
-#*FvwmButtons: (Frame 2, Swallow(UseOld,NoHints,Respawn) "xbiff" `Exec exec xbiff -bg bisque3`)
-*FvwmButtons: (Frame 3, Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg silver -fg black -hd black -hl black -padding 0 -update 1`)
-*FvwmButtons: (2x1, Frame 1, Swallow(UseOld,NoHints,Respawn) "xload" `Exec exec xload -fg black -update 5 -nolabel`)
-*FvwmButtons: (End)
+##*FvwmButtons: (Frame 2, Swallow(UseOld,NoHints,Respawn) "xbiff" `Exec exec xbiff -bg bisque3`)
+#*FvwmButtons: (Frame 3, Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg silver -fg black -hd black -hl black -padding 0 -update 1`)
+#*FvwmButtons: (2x1, Frame 1, Swallow(UseOld,NoHints,Respawn) "xload" `Exec exec xload -fg black -update 5 -nolabel`)
+#*FvwmButtons: (End)
 *FvwmButtons: (2x2, Frame 1, Swallow(UseOld) "Inline" "Module FvwmPager Inline 0 0")
 *FvwmButtons: (End)
 
