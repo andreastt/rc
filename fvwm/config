@@ -152,8 +152,8 @@ Key Return A 4 9term
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
 
-# S-Super-c closes window
-Key c A 4S CloseWindow
+# Super-c closes window
+Key c A 4 CloseWindow
 
 # S-Super-r and S-Super-e to restart and quit fvwm
 Key r A 4S Restart
