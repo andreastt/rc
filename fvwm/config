@@ -239,8 +239,8 @@ Key Z FSTW 4 Thumbnail
 # Root window
 Mouse	1	R	A	Menu MenuFvwmRoot Nop
 Mouse	2	R	A	Menu MenuFvwmWindowOps Nop
-Mouse	3	R	A	WindowList
-Mouse	8	R	A	WindowList
+Mouse	3	R	A	WindowList NoGeometry
+Mouse	8	R	A	WindowList NoGeometry
 Mouse	10	R	A	Menu MenuFvwmWindowOps Nop
 
 # Title bar buttons
