@@ -144,10 +144,8 @@ DestroyFunc ExitFunction
 # Ignore NumLock key
 IgnoreModifiers L25
 
-# Super-Return gives you a new Plan 9 terminal,
-# Super-Shift-Return gives you a new X terminal.
-Key Return A 4S Xterm
-Key Return A 4 9term
+# Super-Return gives you a new X terminal
+Key Return A 4 Xterm
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
@@ -287,7 +285,7 @@ Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
-	+ "Plan &9 terminal"			Exec exec term
+	+ "&Terminal"				Xterm
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
