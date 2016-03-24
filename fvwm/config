@@ -70,6 +70,11 @@ AddToFunc SelectWindow
   + I Raise
   + I WarpToWindow 50 17p
 
+AddToFunc Xterm
+	+ I Exec exec xterm
+	+ I Wait xterm
+	+ I Next (xterm) WarpToWindow 50 17p
+
 AddToFunc Rxvt
   + I Exec exec rxvt
   + I Wait rxvt
@@ -141,7 +146,7 @@ IgnoreModifiers L25
 
 # Super-Return gives you a new Plan 9 terminal,
 # Super-Shift-Return gives you a new X terminal.
-Key Return A 4S Rxvt
+Key Return A 4S Xterm
 Key Return A 4 9term
 
 # Super-d runs dmenu
@@ -176,17 +181,17 @@ Key 7 FSTW 4S MoveToPage 0 2
 Key 8 FSTW 4S MoveToPage 1 2
 Key 9 FSTW 4S MoveToPage 2 2
 
-# Go to page with C-M-{Left,Up,Down,Right} arrow keys
-Key Down  A CM GotoPage  0p +1p
-Key Up    A CM GotoPage  0p -1p
-Key Right A CM GotoPage +1p  0p
-Key Left  A CM GotoPage -1p  0p
+# Go to page with C-{Left,Up,Down,Right} arrow keys
+Key Down  A C GotoPage  0p +1p
+Key Up    A C GotoPage  0p -1p
+Key Right A C GotoPage +1p  0p
+Key Left  A C GotoPage -1p  0p
 
-# Move focused window to another page with C-M-S-{Left,Right,Down,Right} arrow keys
-Key Down  A CMS MoveToPage  0p +1p
-Key Up    A CMS MoveToPage  0p -1p
-Key Right A CMS MoveToPage +1p  0p
-Key Left  A CMS MoveToPage -1p  0p
+# Move focused window to another page with C-S-{Left,Right,Down,Right} arrow keys
+Key Down  A CS MoveToPage  0p +1p
+Key Up    A CS MoveToPage  0p -1p
+Key Right A CS MoveToPage +1p  0p
+Key Left  A CS MoveToPage -1p  0p
 
 # M-Tab opens window switcher
 Key Tab A 4  FuncSwitchWindow
