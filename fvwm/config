@@ -46,11 +46,10 @@ Style "Fvwm*"	NoTitle, Sticky, WindowListSkip
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
-  + I Exec compton -cC -r 16 -o 0.4 -l -25 -t -10 -f -D 1 -e 0.5 -b
   + I Exec xset -b
   + I Exec xrdb .Xresources
   + I Exec xsetroot -solid "#777777"
-  + I Exec xmodmap ~/.config/Xmodmap
+  + I Exec xmodmap ~/.Xmodmap
   + I Exec xbindkeys -f .config/xbindkeysrc.scm
   + I Exec xscreensaver -no-splash
   + I Module FvwmAnimate
@@ -200,8 +199,8 @@ Key Right	A	4	Direction East	(CurrentPage) SelectWindow
 Key Up	A	4	Direction North	(CurrentPage) SelectWindow
 Key Down	A	4	Direction South	(CurrentPage) SelectWindow
 
-# Lock screen with C-Super-l
-Key l A C4 Exec exec xscreensaver-command -lock
+# Lock screen with Super-l
+Key l A 4 Exec exec xscreensaver-command -lock
 
 # Maximize window with C-Super-Space
 Key space W 4C Maximize grow grow
