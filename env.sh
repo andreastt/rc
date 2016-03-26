@@ -23,6 +23,3 @@ export trymn="-b do -e -p linux64,macosx64,win64 -u xpcshell,marionette,marionet
 alias .="pwd"
 alias ..="cd .."
 
-PS1="% "
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-
