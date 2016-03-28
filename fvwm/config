@@ -1,7 +1,8 @@
 # Virtual desktops
 DesktopSize 3x3
 EdgeScroll 100 100
-EdgeResistance 150 150
+EdgeMoveDelay 150
+EdgeMoveResistance 150
 EdgeThickness 1
 
 Style * GrabFocusOff
