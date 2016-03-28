@@ -51,7 +51,6 @@ AddToFunc InitFunction
   + I Exec xrdb .Xresources
   + I Exec xsetroot -solid "#777777"
   + I Exec xmodmap ~/.Xmodmap
-  + I Exec xbindkeys -f .config/xbindkeysrc.scm
   + I Exec xscreensaver -no-splash
   + I Module FvwmAnimate
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
