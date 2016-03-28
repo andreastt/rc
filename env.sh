@@ -1,5 +1,3 @@
-#!/bin/sh
-
 export PLAN9=/usr/local/plan9
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Code
