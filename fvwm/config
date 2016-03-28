@@ -34,7 +34,7 @@ Style * IconBox 0 -10 -280 -1
 
 Style *     BorderWidth 4
 Style *     HandleWidth 4
-Style *     SnapAttraction 20
+Style *     SnapAttraction 20 SameType Screen
 
 Style		*	IconFont	"xft:Lucida Sans:size=10"
 MenuStyle	*	Font		"xft:Lucida Sans:size=10"
