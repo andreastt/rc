@@ -1,2 +1,2 @@
 #!/bin/sh
-ls "$@" | mc
+ls --color "$@" | mc
