@@ -5,6 +5,9 @@ EdgeMoveDelay 150
 EdgeMoveResistance 150
 EdgeThickness 1
 
+# Allow IPC calls to this fvwm session
+Module FvwmCommandS
+
 Style * GrabFocusOff
 
 # SmartPlacement makes new windows pop-up in blank regions of screen.  If
