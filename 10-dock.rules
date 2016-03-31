@@ -1,0 +1,3 @@
+# /etc/udev/rules.d/10-dock.rules
+ACTION=="change", SUBSYSTEM=="drm", KERNEL=="card0", ENV{DISPLAY}=":0.0", ENV{XAUTHORITY}="/home/ato/.Xauthority", RUN+="/home/ato/1/dotfiles/dock.sh"
+
