@@ -379,9 +379,6 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 DestroyFunc FuncFvwmRloginXterm
 AddToFunc FuncFvwmRloginXterm \
   I Exec xterm -name $0 -title "$USER @ $0" -e rlogin $0
-DestroyFunc FuncFvwmRloginRxvt
-AddToFunc FuncFvwmRloginRxvt \
-  I Exec rxvt -name $0 -n $0 -title $USER@$0 -e rlogin $0
 DestroyFunc FuncFvwmRloginSshRxvt
 AddToFunc FuncFvwmRloginSshRxvt \
   I Exec Exec ssh $0 rxvt -display $HOSTDISPLAY
