@@ -314,14 +314,14 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
-AddToMenu MenuFvwmUtilities     "$[gt.Utilities]" Title
-+                       "&T. Top"       Exec exec xterm -T Top -n Top -e top
-+                       "&C. Calculator" Exec exec xcalc
-+                       "&M. Xman"      Exec exec xman
-+                       "&G. Xmag"      Exec exec xmag
-+                       "&R. Editres"   Exec exec editres
-+                       ""              Nop
-+                       "&D. $[gt.Reset X defaults]" Exec xrdb -load $HOME/.Xdefaults
+AddToMenu MenuFvwmUtilities
+	+ "&T. Top"			Exec exec xterm -T Top -n Top -e top
+	+ "&C. Calculator"		Exec exec xcalc
+	+ "&M. Xman"			Exec exec xman
+	+ "&G. Xmag"			Exec exec xmag
+	+ "&R. Editres"			Exec exec editres
+	+ ""				Nop
+	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
 DestroyMenu MenuFvwmConfig
 AddToMenu MenuFvwmConfig "$[gt.Fvwm Config Ops]" Title
