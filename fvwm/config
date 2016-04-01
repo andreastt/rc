@@ -72,11 +72,13 @@ AddToFunc SelectWindow
 	+ I Raise
 	+ I WarpToWindow 50 17p
 
+DestroyFunc Xterm
 AddToFunc Xterm
 	+ I Exec exec xterm
 	+ I Wait xterm
 	+ I Next (xterm) WarpToWindow 50 17p
 
+DestroyFunc Rxvt
 AddToFunc Rxvt
 	+ I Exec exec rxvt
 	+ I Wait rxvt
