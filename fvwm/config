@@ -47,9 +47,9 @@ MenuStyle	*	Font		"xft:Lucida Sans:size=10"
 MenuStyle * Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
-Style "xload"	NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "xload"		NoTitle, Sticky, WindowListSkip, ClickToFocus
 Style "xconsole"	NoTitle, Sticky, WindowListSkip, ClickToFocus
-Style "Fvwm*"	NoTitle, Sticky, WindowListSkip
+Style "Fvwm*"		NoTitle, Sticky, WindowListSkip
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -63,9 +63,11 @@ AddToFunc InitFunction
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+	+ I Module FvwmDebug --log /var/log/fvwm --events --xconsole -d7
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
+	+ I Exec xconsole -file /dev/console -geometry 550x110-120-1 -notify
 	+ I Nop
 
 DestroyFunc SelectWindow
