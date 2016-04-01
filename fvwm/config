@@ -308,11 +308,9 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "&Spotify"				Exec exec spotify
 	+ ""					Nop
 	+ "$[gt.Remote &logins]"		Popup MenuFvwmLogins
-	+ ""					Nop
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
 	+ "&Lock screen"			Exec exec xscreensaver-command -lock
-	+ ""					Nop
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
