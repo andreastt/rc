@@ -60,7 +60,6 @@ AddToFunc InitFunction
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   + I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
-  + I Exec xload xload -geometry 136x136-0-0
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
