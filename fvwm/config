@@ -365,7 +365,6 @@ AddToFunc FuncFvwmWindowCommon
 DestroyMenu MenuFvwmWindowOps
 AddToMenu MenuFvwmWindowOps     "$[gt.Window Ops]"    Title
 FuncFvwmWindowCommon MenuFvwmWindowOps
-+ "$[gt.Re&fresh Window]" RefreshWindow
 + "$[gt.Take screens&hot]" RootScreenshot
 
 # Second windowops menu, bound to:
@@ -374,9 +373,6 @@ FuncFvwmWindowCommon MenuFvwmWindowOps
 DestroyMenu MenuFvwmWindowOps2
 AddToMenu MenuFvwmWindowOps2
 FuncFvwmWindowCommon MenuFvwmWindowOps2
-+ Scroll&Bar       Module FvwmScroll 2 2
-+ "&$[gt.Print]"           FuncFvwmPrint
-+ "$[gt.Print Re&verse]" FuncFvwmPrintReverse
 + "$[gt.Take screens&hot]" WindowScreenshot
 
 # 3 different ways to log on, take your pick:
