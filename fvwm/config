@@ -306,13 +306,13 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme@&eir"				Exec exec ssh -YC eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
 	+ "&Spotify"				Exec exec spotify
-	+ ""						Nop
-	+ "$[gt.Remote &Logins]"		Popup MenuFvwmLogins
-	+ ""						Nop
+	+ ""					Nop
+	+ "$[gt.Remote &logins]"		Popup MenuFvwmLogins
+	+ ""					Nop
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
-	+ ""						Nop
-	+ "&Lock Screen"			Exec exec xscreensaver-command -lock
-	+ ""						Nop
+	+ ""					Nop
+	+ "&Lock screen"			Exec exec xscreensaver-command -lock
+	+ ""					Nop
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
