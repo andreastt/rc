@@ -299,7 +299,7 @@ Read /etc/X11/fvwm/menudefs.hook Quiet
 Read menudefs.hook Quiet
 
 DestroyMenu MenuFvwmRoot
-AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
+AddToMenu MenuFvwmRoot
 	+ "&Terminal"				Xterm
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
