@@ -16,5 +16,5 @@ case "$dock" in
 esac
 
 FvwmCommand -f "/var/tmp/FvwmCommand-i${DISPLAY}" Restart
-xmodmap ~/.Xmodmap
+xmodmap /home/ato/.Xmodmap
 
