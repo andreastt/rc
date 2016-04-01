@@ -311,8 +311,6 @@ AddToMenu MenuFvwmRoot	"$[gt.Root Menu]"	Title
 	+ ""						Nop
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""						Nop
-	+ "$[gt.&Refresh Screen]"		Refresh
-	+ "$[gt.Re&capture Screen]"		Recapture
 	+ "&Lock Screen"			Exec exec xscreensaver-command -lock
 	+ ""						Nop
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
