@@ -21,6 +21,9 @@ ClickTime 750
 MoveThreshold 3
 Style * SloppyFocus, MouseFocusClickRaises
 
+# Window switcher
+InfoStoreAdd DIR Next
+
 OpaqueMoveSize -1
 Emulate MWM
 HideGeometryWindow Always
@@ -88,9 +91,6 @@ AddToFunc 9term
 	+ I Exec exec /home/ato/bin/term
 	+ I Wait 9term
 	+ I Next (9term) WarpToWindow 50 17p
-
-# Window switcher
-InfoStoreAdd DIR Next
 
 DestroyFunc FuncSwitchWindow
 AddToFunc FuncSwitchWindow
