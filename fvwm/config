@@ -307,7 +307,7 @@ AddToMenu MenuFvwmRoot
 	+ "acme@&eir"				Exec exec ssh -YC eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
 	+ "&Spotify"				Exec exec spotify
 	+ ""					Nop
-	+ "$[gt.Remote &logins]"		Popup MenuFvwmLogins
+	+ "$[gt.&Remote logins]"		Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
 	+ "&Lock screen"			Exec exec xscreensaver-command -lock
