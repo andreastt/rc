@@ -33,9 +33,6 @@ ignore = Path 1/servo/target
 ignore = Path 1/hgwatchman
 ignore = Path 1/B2G
 
-path = 2
-ignore = Path 2/gecko/build
-
 path = Documents
 
 path = Patches
