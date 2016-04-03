@@ -34,9 +34,8 @@ ignore = Path 1/hgwatchman
 ignore = Path 1/B2G
 
 path = Documents
-
 path = Patches
-
 #path = Pictures
-
 path = Desktop
+path = Mail
+
