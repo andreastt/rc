@@ -286,7 +286,7 @@ Mouse 1		I	A	FuncFvwmMoveOrIconify
 Mouse 2		I	A	Thumbnail
 Mouse 2		FST	A	Menu MenuFvwmWindowOps2 Nop
 Mouse 3		TSIF	A	RaiseLower
-Mouse 8		WTSIF	A	WindowList
+Mouse 8		WTSIF	A	WindowList NoGeometry, NoCurrentDeskTitle
 Mouse 10	WTSIF	A	Menu MenuFvwmWindowOps Nop
 
 ######################## Menus ###################
