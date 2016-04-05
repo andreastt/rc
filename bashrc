@@ -1,3 +1,6 @@
+# non-login shells do not source /etc/profile.d/*
+. /etc/profile.d/env.sh
+
 alias .="pwd"
 alias ..="cd .."
 alias ls="ls --color"
