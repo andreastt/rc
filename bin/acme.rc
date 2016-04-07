@@ -6,6 +6,5 @@ export PAGER=nobs
 
 pgrep plumber >/dev/null || plumber &
 
-echo $PATH
 exec acme -a $*
 
