@@ -308,6 +308,7 @@ AddToMenu MenuFvwmRoot
 	+ "&Calendar"				Exec exec gnome-calendar
 	+ "C&ontacts"				Exec exec gnome-contacts
 	+ "&Spotify"				Exec exec spotify
+	+ "P&hotos"				Exec exec shotwell
 	+ ""					Nop
 	+ "$[gt.&Remote logins]"		Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
