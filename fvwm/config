@@ -317,11 +317,12 @@ AddToMenu MenuFvwmRoot
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
-	+ "&T. Top"			Exec exec xterm -T Top -n Top -e top
-	+ "&C. Calculator"		Exec exec xcalc
-	+ "&M. Xman"			Exec exec xman
-	+ "&G. Xmag"			Exec exec xmag
-	+ "&R. Editres"			Exec exec editres
+	+ "&Top"			Exec exec xterm -T Top -n Top -e top
+	+ "&Arandr"			Exec exec arandr
+	+ "&Calculator"			Exec exec xcalc
+	+ "X&man"			Exec exec xman
+	+ "Xma&g"			Exec exec xmag
+	+ "Edit&res"			Exec exec editres
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
