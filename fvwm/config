@@ -320,6 +320,7 @@ DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Arandr"			Exec exec arandr
+	+ "&Wicd"			Exec exec wicd-gtk
 	+ "&Calculator"			Exec exec xcalc
 	+ "X&man"			Exec exec xman
 	+ "Xma&g"			Exec exec xmag
