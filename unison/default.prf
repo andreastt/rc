@@ -13,6 +13,7 @@ root = ssh://eir//home/ato
 
 path = scratch
 path = notes
+path = .bash_history
 
 path = .ssh
 
@@ -34,4 +35,3 @@ path = Patches
 #path = Pictures
 path = Desktop
 path = Mail
-
