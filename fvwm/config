@@ -145,12 +145,12 @@ DestroyFunc ExitFunction
 
 DestroyFunc RootScreenshot
 AddToFunc RootScreenshot
-+ I Exec xwd -root | convert xwd:- $HOME/screenshot-`date +%F-%H%M%S`.png
++ I Exec xwd -root | convert xwd:- $HOME/Desktop/screenshot-`date +%F-%H%M%S`.png
 
 DestroyFunc WindowScreenshot
 AddToFunc WindowScreenshot
 + I ThisWindow (!Shaded !Iconic Iconifiable) \
-  Exec xwd -frame -id $[w.id] | convert xwd:- $HOME/screenshot-`date +%F-%H%M%S`.png
+  Exec xwd -frame -id $[w.id] | convert xwd:- $HOME/Desktop/screenshot-`date +%F-%H%M%S`.png
 
 #####################################
 # Key bindings
