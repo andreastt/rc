@@ -306,7 +306,6 @@ AddToMenu MenuFvwmRoot
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme@&eir"				Exec exec ssh -YC eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
 	+ "&Mail"				Exec exec sylpheed
-	+ "&Fastmail"				Exec exec firefox --new-window https://www.fastmail.com
 	+ "&Calendar"				Exec exec gnome-calendar
 	+ "C&ontacts"				Exec exec gnome-contacts
 	+ "&Spotify"				Exec exec spotify
