@@ -35,4 +35,5 @@ path = Patches
 #path = Pictures
 path = Desktop
 path = Mail
-path = .sylpheed-2.0
+path = .icedove
+
