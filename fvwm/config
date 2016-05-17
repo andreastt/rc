@@ -96,7 +96,7 @@ AddToFunc 9term
 
 DestroyFunc FuncSwitchWindow
 AddToFunc FuncSwitchWindow
-  + I $[infostore.DIR] (CurrentDesk, !Iconic, !Sticky) SelectWindow
+  + I $[infostore.DIR] (CurrentPage, AcceptsFocus, !Shaded !Iconic, !Sticky) SelectWindow
   + I Deschedule 134000
   + I PipeRead `[ "$[infostore.DIR]" == "Prev" ] && \
                 echo 'InfoStoreAdd NDIR Next' || \
