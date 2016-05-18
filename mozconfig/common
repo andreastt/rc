@@ -1,7 +1,7 @@
 #CCACHE_PREFIX="distcc"
 
-export CC=clang-3.4
-export CXX=clang++-3.4
+export CC=clang
+export CXX=clang++
 
 mk_add_options AUTOCLOBBER=1
 
