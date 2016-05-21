@@ -1,0 +1,11 @@
+[Unit]
+Description=Lock X session using xscreensaver
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/xuserrun /usr/bin/xscreensaver-command -lock
+
+[Install]
+WantedBy=sleep.target
+
