@@ -57,7 +57,7 @@ AddToFunc InitFunction
 	+ I Exec xrdb .Xresources
 	+ I Exec xsetroot -solid "#777777"
 	+ I Exec xmodmap ~/.Xmodmap
-	+ I Exec xbindkeys -f .config/xbindkeysrc.scm
+	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
 	+ I Module FvwmAnimate
 	+ I Module FvwmDebug --log /var/log/fvwm --events --xconsole -d7
