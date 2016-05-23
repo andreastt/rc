@@ -54,6 +54,7 @@ Style "Fvwm*"		NoTitle, Sticky, WindowListSkip
 DestroyFunc InitFunction
 AddToFunc InitFunction
 	+ I Exec xset -b
+	+ I Exec xrandr --dpi 96
 	+ I Exec xrdb .Xresources
 	+ I Exec xsetroot -solid "#777777"
 	+ I Exec xmodmap ~/.Xmodmap
