@@ -14,7 +14,6 @@ root = ssh://eir//home/ato
 path = scratch
 path = notes
 path = .bash_history
-
 path = .ssh
 
 ignore = Name *.egg-info
@@ -25,14 +24,9 @@ ignore = Name .*~
 ignore = Name .DS_Store
 
 path = 1
-ignore = Path 1/bin
-ignore = Path 1/selenium/third_party/gecko-*
-ignore = Path 1/hgwatchman
-ignore = Path 1/B2G
-
 path = Documents
 path = Patches
 #path = Pictures
 path = Desktop
-path = Mail
+#path = Mail
 
