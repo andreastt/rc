@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -ex
+
+ns="$(zenity --entry --text="" --entry-text="/tmp/ns.ato.:0")"
+mkdir -p "$ns"
+NAMESPACE="$ns" exec acme.rc
+
