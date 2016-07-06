@@ -1,9 +1,10 @@
-#CCACHE_PREFIX="distcc"
+export CCACHE_PREFIX=icecc
 
-export CC="icecc clang-3.4"
-export CXX="icecc clang++-3.4"
+export CC=clang
+export CXX=clang++
 
 mk_add_options AUTOCLOBBER=1
+mk_add_options MOZ_MAKE_FLAGS="-j100"
 
 ac_add_options --with-ccache
 ac_add_options --enable-rust
