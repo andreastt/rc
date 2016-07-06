@@ -312,7 +312,9 @@ AddToMenu MenuFvwmRoot
 	+ "&Spotify"				Exec exec spotify
 	+ "P&hotos"				Exec exec shotwell
 	+ ""					Nop
-	+ "$[gt.&Remote logins]"		Popup MenuFvwmLogins
+	+ "&Run command…"			Exec exec $(zenity --entry --text "Run command:")
+	+ ""					Nop
+	+ "$[gt.Remote &logins]"		Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
 	+ "&Lock screen"			Exec exec xscreensaver-command -lock
