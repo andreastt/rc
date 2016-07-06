@@ -322,15 +322,15 @@ AddToMenu MenuFvwmRoot
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
-	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Arandr"			Exec exec arandr
-	+ "&Wicd"			Exec exec wicd-gtk
 	+ "Calc&ulator"			Exec exec xcalc
 	+ "&Clock"			Exec exec xclock
-	+ "X&man"			Exec exec xman
-	+ "Xma&g"			Exec exec xmag
 	+ "Edit&res"			Exec exec editres
 	+ "&Package manager"		Exec exec gksudo synaptic
+	+ "&Top"			Exec exec xterm -T Top -n Top -e top
+	+ "&Wicd"			Exec exec wicd-gtk
+	+ "X&man"			Exec exec xman
+	+ "Xma&g"			Exec exec xmag
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
