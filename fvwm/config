@@ -326,6 +326,7 @@ AddToMenu MenuFvwmUtilities
 	+ "Calc&ulator"			Exec exec xcalc
 	+ "&Clock"			Exec exec xclock
 	+ "Edit&res"			Exec exec editres
+	+ "&IceCC monitor"		Exec exec icemon
 	+ "&Package manager"		Exec exec gksudo synaptic
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Wicd"			Exec exec wicd-gtk
