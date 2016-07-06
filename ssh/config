@@ -19,7 +19,7 @@ Host people.mozilla.com
 	User atolfsen
 
 Host eir
-	HostName %h.corp.lon1.mozilla.com
+	HostName %h.corp.lon2.mozilla.com
 
 Host sny.no
 	Port 33138
