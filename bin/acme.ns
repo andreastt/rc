@@ -3,6 +3,9 @@
 set -ex
 
 ns="$(zenity --entry --text="" --entry-text="/tmp/ns.ato.:0")"
-mkdir -p "$ns"
-NAMESPACE="$ns" exec acme.rc
+export NAMESPACE="$ns"
+
+mkdir -p "$NAMESPACE"
+plumber
+exec acme.rc
 
