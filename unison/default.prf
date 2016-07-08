@@ -30,4 +30,5 @@ path = Patches
 path = Desktop
 #path = Mail
 path = .sylpheed-2.0
+path = .mozilla
 
