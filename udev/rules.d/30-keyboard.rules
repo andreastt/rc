@@ -1,0 +1,2 @@
+KERNEL=="card0", SUBSYSTEM=="drm", RUN+="xmodmap ~/.Xmodmap"
+
