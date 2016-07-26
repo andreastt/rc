@@ -327,6 +327,7 @@ AddToMenu MenuFvwmUtilities
 	+ "&Clock"			Exec exec xclock
 	+ "Edit&res"			Exec exec editres
 	+ "&IceCC monitor"		Exec exec icemon
+	+ "&Kill…"			Exec exec xkill
 	+ "&Package manager"		Exec exec gksudo synaptic
 	+ "&System monitor"		Exec exec gnome-system-monitor
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
