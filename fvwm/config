@@ -319,7 +319,7 @@ AddToMenu MenuFvwmRoot
 	+ "$[gt.Remote logins]"			Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
-	+ "&Lock screen"			Exec exec xscreensaver-command -lock
+	+ "Lock screen"				Exec exec xscreensaver-command -lock
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
 
 DestroyMenu MenuFvwmUtilities
