@@ -301,6 +301,8 @@ Read menudefs.hook Quiet
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot
 	+ "&Terminal"				Xterm
+	+ "Fi&le manager"			Exec exec nautilus -w $HOME
+	+ ""					Nop
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
@@ -314,7 +316,7 @@ AddToMenu MenuFvwmRoot
 	+ ""					Nop
 	+ "&Run command…"			Exec exec $(zenity --entry --text "Run command:")
 	+ ""					Nop
-	+ "$[gt.Remote &logins]"		Popup MenuFvwmLogins
+	+ "$[gt.Remote logins]"			Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
 	+ "&Lock screen"			Exec exec xscreensaver-command -lock
