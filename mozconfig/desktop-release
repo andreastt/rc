@@ -1,5 +1,6 @@
 . $topsrcdir/../mozconfig/common
 
 ac_add_options --enable-application=browser
+ac_add_options --enable-official-branding
 
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/desktop-release
