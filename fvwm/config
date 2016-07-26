@@ -328,6 +328,7 @@ AddToMenu MenuFvwmUtilities
 	+ "Edit&res"			Exec exec editres
 	+ "&IceCC monitor"		Exec exec icemon
 	+ "&Package manager"		Exec exec gksudo synaptic
+	+ "&System monitor"		Exec exec gnome-system-monitor
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Wicd"			Exec exec wicd-gtk
 	+ "X&man"			Exec exec xman
