@@ -360,11 +360,11 @@ AddToMenu MenuFvwmConfig "$[gt.Fvwm Config Ops]" Title
 # things.  Here is the "common" part:
 DestroyFunc FuncFvwmWindowCommon
 AddToFunc FuncFvwmWindowCommon
++ I AddToMenu $0 "$[gt.(De)&Iconify]"         Thumbnail
 + I AddToMenu $0 "$[gt.&Move]"                Move
 + I AddToMenu $0 "$[gt.&Resize]"              Resize
 + I AddToMenu $0 "$[gt.R&aise]"               Raise
 + I AddToMenu $0 "$[gt.&Lower]"               Lower
-+ I AddToMenu $0 "$[gt.(De)&Iconify]"         Thumbnail
 + I AddToMenu $0 "$[gt.(Un)&Stick]"           Stick
 + I AddToMenu $0 "$[gt.(Un)Ma&ximize]"        Maximize
 + I AddToMenu $0 "$[gt.(Un)&Grow vertically]" Maximize 0 grow
@@ -378,7 +378,6 @@ AddToFunc FuncFvwmWindowCommon
 # mouse 2 on root
 # Root menu
 DestroyMenu MenuFvwmWindowOps
-AddToMenu MenuFvwmWindowOps     "$[gt.Window Ops]"    Title
 FuncFvwmWindowCommon MenuFvwmWindowOps
 + "$[gt.Take screens&hot]" RootScreenshot
 
