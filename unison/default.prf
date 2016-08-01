@@ -28,7 +28,8 @@ path = Documents
 path = Patches
 #path = Pictures
 path = Desktop
-#path = Mail
+path = Mail
+path = SylpheedMail
 path = .sylpheed-2.0
 path = .mozilla
 
