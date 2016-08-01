@@ -59,6 +59,8 @@ AddToFunc InitFunction
 	+ I Exec xmodmap ~/.Xmodmap
 	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
+	+ I Exec xss-lock -- xscreensaver-command --lock
+	+ I Exec compton -cCGfF -o 0.10 -O 1 -I 1 -t 3 -l -15 -r 8 --backend glx -b
 	+ I Module FvwmAnimate
 	+ I Module FvwmDebug --log /var/log/fvwm --events --xconsole -d7
 
@@ -305,7 +307,7 @@ AddToMenu MenuFvwmRoot
 	+ ""					Nop
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
-	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
+	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump 2>$HOME/dock.log
 	+ "acme on &ns…"			Exec exec $HOME/bin/acme.ns 2>$HOME/dock.log
 	+ "acme@&eir"				Exec exec ssh -YC eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
 	+ "&Mail"				Exec exec sylpheed
