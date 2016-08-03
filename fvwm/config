@@ -84,6 +84,12 @@ AddToFunc Xterm
 	+ I Wait xterm
 	+ I Next (xterm) WarpToWindow 50 17p
 
+DestroyFunc Run
+AddToFunc Run
+	+ I Exec exec $(zenity --entry --text "Run command:")
+	+ I Wait zenity
+	+ I Next (zenity) WarpToWindow 50 17p
+
 DestroyFunc Rxvt
 AddToFunc Rxvt
 	+ I Exec exec rxvt
@@ -315,7 +321,7 @@ AddToMenu MenuFvwmRoot
 	+ "&Spotify"				Exec exec spotify
 	+ "P&hotos"				Exec exec shotwell
 	+ ""					Nop
-	+ "&Run command…"			Exec exec $(zenity --entry --text "Run command:")
+	+ "&Run command…"			Run
 	+ ""					Nop
 	+ "$[gt.Remote logins]"			Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
