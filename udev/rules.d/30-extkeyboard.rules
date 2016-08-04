@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYTEM=="usb", ATTRS{idVendor}=="17ef", ATTRS{idProduct}=="6047" RUN+="/bin/sh -c 'echo enable >/sys$env{DEVPATH}/../power/wakeup'"
+
