@@ -11,6 +11,8 @@ mk_add_options MOZ_MAKE_FLAGS="-j100"
 ac_add_options --with-ccache
 ac_add_options --enable-rust
 
+CARGO=/home/ato/.cargo/bin/cargo
+
 # Marionette tests depend on various resource files
 # that are guarded for inclusion in testing/marionette/manifest.jar
 # by the TEST ifdef
