@@ -1,6 +1,6 @@
 export PLAN9=/usr/local/plan9
 export CARGO=$HOME/.cargo
-export GOPATH=$HOME/1
+export GOPATH=$HOME
 
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
