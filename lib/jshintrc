@@ -76,6 +76,20 @@
 		"interactions": true,
 		"window": true,
 		"navigator": true,
-		"Element": true
+		"Element": true,
+		"element": true,
+		"logging": true,
+		"Sandboxes": true,
+		"Cookies": true,
+		"interaction": true,
+		"URL": true,
+		"File": true,
+		"InvalidSelectorError": true,
+		"atom": true,
+		"navigate": true,
+		"accessibility": true,
+		"proxy": true,
+		"action": true,
+		"simpletest": true
 	}
 }
