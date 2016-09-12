@@ -84,6 +84,12 @@ AddToFunc Xterm
 	+ I Wait xterm
 	+ I Next (xterm) WarpToWindow 50 17p
 
+DestroyFunc FirefoxWindow
+AddToFunc FirefoxWindow
+	+ I Exec exec firefox -new-window
+	+ I Wait firefox
+	+ I Next (firefox) WarpToWindow 50 17p
+
 DestroyFunc Run
 AddToFunc Run
 	+ I Exec exec $(zenity --entry --text "Run command:")
@@ -167,7 +173,9 @@ AddToFunc WindowScreenshot
 IgnoreModifiers L25
 
 # Super-Return gives you a new X terminal
+# and S-Super-Return a new Firefox window
 Key Return A 4 Xterm
+Key Return A 4S FirefoxWindow
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
