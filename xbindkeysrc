@@ -1,7 +1,7 @@
-"amixer set Master 3dB+ unmute"
+"amixer set Master 5%+ unmute"
 	XF86AudioRaiseVolume
 
-"amixer set Master 3dB- unmute"
+"amixer set Master 5%- unmute"
 	XF86AudioLowerVolume
 
 "amixer set Master toggle"
