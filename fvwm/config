@@ -347,15 +347,16 @@ AddToMenu MenuFvwmRoot
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
 	+ "&Arandr"			Exec exec arandr
-	+ "Calc&ulator"			Exec exec xcalc
 	+ "&Clock"			Exec exec xclock
-	+ "Edit&res"			Exec exec editres
 	+ "&IceCC monitor"		Exec exec icemon
 	+ "&Kill…"			Exec exec xkill
 	+ "&Package manager"		Exec exec gksudo synaptic
 	+ "&System monitor"		Exec exec gnome-system-monitor
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
+	+ "&Volume control"		Exec exec pavucontrol
 	+ "&Wicd"			Exec exec wicd-gtk
+	+ "Calc&ulator"			Exec exec xcalc
+	+ "Edit&res"			Exec exec editres
 	+ "X&man"			Exec exec xman
 	+ "Xma&g"			Exec exec xmag
 	+ ""				Nop
