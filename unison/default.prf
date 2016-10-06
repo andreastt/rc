@@ -26,6 +26,7 @@ ignore = Name .DS_Store
 path = 1
 path = src
 path = pkg
+path = doc
 path = Documents
 path = Patches
 path = Pictures
