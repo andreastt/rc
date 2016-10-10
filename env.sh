@@ -14,6 +14,7 @@ export EDITOR=E
 
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
+export DEBIAN_FRONTEND=noninteractive
 
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
