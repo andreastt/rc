@@ -329,7 +329,7 @@ AddToMenu MenuFvwmRoot
 	+ "Firefox (&private)"			Exec exec firefox -private-window
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme on &ns…"			Exec exec $HOME/bin/acme.ns
-	+ "acme@&eir"				Exec exec ssh -YC eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
+	+ "acme@&eir"				Exec exec ssh -Y eir '/home/ato/bin/acme.rc -l /home/ato/acme.dump'
 	+ "&Mail"				Exec exec sylpheed
 	+ "&Calendar"				Exec exec gnome-calendar
 	+ "C&ontacts"				Exec exec gnome-contacts
