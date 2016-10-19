@@ -2,7 +2,7 @@ XTerm*ReverseVide: true
 XTerm*SaveLines: 20000
 
 XClock*update: 1
-XClock*geometry: 210x210+1020+12
+XClock*geometry: 127x127+1020+12
 XClock*hourColor: rgba:c9/66/11/72
 XClock*minuteColor: rgba:00/82/9f/72
 XClock*secondColor: rgba:50/93/30/6f
