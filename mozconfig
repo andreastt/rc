@@ -17,3 +17,16 @@ CARGO=/home/ato/.cargo/bin/cargo
 # that are guarded for inclusion in testing/marionette/manifest.jar
 # by the TEST ifdef
 #ac_add_options --disable-tests
+
+ac_add_options --enable-application=browser
+#ac_add_options --enable-artifact-builds
+
+# debug
+#ac_add_options --enable-debug
+#ac_add_options --enable-debug-symbols
+#ac_add_options --disable-optimize
+
+ac_add_options --enable-official-branding
+
+# change output directory
+#mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/artifact-desktop-release

@@ -1,9 +1,0 @@
-. $topsrcdir/../mozconfig/common
-
-ac_add_options --enable-application=b2g/dev
-
-MOZCONFIG=mulet
-GAIADIR=$home/Code/gaia
-MOZTTDIR=$home/Code/moztt
-
-mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/mulet-release
