@@ -338,7 +338,7 @@ AddToMenu MenuFvwmRoot
 	+ ""					Nop
 	+ "&Run command…"			Run
 	+ ""					Nop
-	+ "$[gt.Remote logins]"			Popup MenuFvwmLogins
+	+ "$[gt.Remote log&ins]"		Popup MenuFvwmLogins
 	+ "$[gt.&Utilities]"			Popup MenuFvwmUtilities
 	+ ""					Nop
 	+ "Lock screen"				Exec exec xscreensaver-command -lock
@@ -423,7 +423,7 @@ AddToFunc FuncFvwmRloginSshRxvt \
 # be sure to fill these in with your correct machine names:
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
-+ &sny.no		FuncFvwmRloginXterm sny.no
++ &sny.no	FuncFvwmRloginXterm sny.no
 + &eir		FuncFvwmRLoginXterm eir
 
 DestroyMenu MenuFvwmModules
