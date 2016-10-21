@@ -22,17 +22,13 @@ ignore = Name *.swp
 ignore = Name *~
 ignore = Name .*~
 ignore = Name .DS_Store
+ignore = Name .ahd
+ignore = Name .cache
+ignore = Name .cargo
+ignore = Name .ccache
+ignore = Name .multirust
+ignore = Name .mozbuild
+ignore = Name .unison.log
+ignore = Name .unison
 
-path = 1
-path = src
-path = pkg
-path = doc
-path = Documents
-path = Patches
-path = Pictures
-path = Desktop
-path = Mail
-path = SylpheedMail
-path = .sylpheed-2.0
-path = .mozilla
-
+path =
