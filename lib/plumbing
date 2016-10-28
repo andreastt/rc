@@ -29,12 +29,6 @@ plumb start web https://bugzilla.mozilla.org/show_bug.cgi?id=$1
 #data matches '([abcdef0-9]+)'
 #plumb start rc -c 'git show $1'
 
-# critic reviews
-type is text
-data matches 'r/([0-9]+)'
-plumb to web
-plumb start web https://critic.hoppipolla.co.uk/r/$1
-
 # Pictures
 type is text
 data matches '[a-zA-Z0-9_-./]+'
