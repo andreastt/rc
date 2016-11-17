@@ -327,6 +327,7 @@ AddToMenu MenuFvwmRoot
 	+ ""					Nop
 	+ "&Firefox" 				Exec exec firefox -new-window
 	+ "Firefox (&private)"			Exec exec firefox -private-window
+	+ "Other &browsers"			Popup MenuBrowsers
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme on &ns…"			Exec exec $HOME/bin/acme.ns
 	+ "acme@&eir"				Exec exec ssh -Y eir '$HOME/bin/acme.rc -l $HOME/acme.dump'
@@ -343,6 +344,11 @@ AddToMenu MenuFvwmRoot
 	+ ""					Nop
 	+ "Lock screen"				Exec exec xscreensaver-command -lock
 	+ "$[gt.fv&wm]"				Popup MenuFvwm
+
+DestroyMenu MenuBrowsers
+AddToMenu MenuBrowsers
+	+ "&Chrome"		Exec exec google-chrome
+	+ "Chrome &incognito"	Exec exec google-chrome --incognito
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
