@@ -90,6 +90,8 @@
 		"accessibility": true,
 		"proxy": true,
 		"action": true,
-		"simpletest": true
+		"simpletest": true,
+		"Preferences": true,
+		"cert": true
 	}
 }
