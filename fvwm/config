@@ -331,7 +331,7 @@ AddToMenu MenuFvwmRoot
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme on &ns…"			Exec exec $HOME/bin/acme.ns
 	+ "acme@&eir"				Exec exec ssh -Y eir '$HOME/bin/acme.rc -l $HOME/acme.dump'
-	+ "&Mail"				Exec exec sylpheed
+	+ "&Mail"				Exec exec evolution
 	+ "&Calendar"				Exec exec gnome-calendar
 	+ "C&ontacts"				Exec exec gnome-contacts
 	+ "&Spotify"				Exec exec spotify
