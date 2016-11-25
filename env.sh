@@ -8,7 +8,6 @@ export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$CARGO/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/src/git-cinnabar
-export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
 
 export EDITOR=E
 
