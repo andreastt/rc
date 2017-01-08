@@ -92,6 +92,8 @@
 		"action": true,
 		"simpletest": true,
 		"Preferences": true,
-		"cert": true
+		"cert": true,
+		"session": true,
+		"assert": true
 	}
 }
