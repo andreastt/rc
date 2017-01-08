@@ -329,7 +329,6 @@ AddToMenu MenuFvwmRoot
 	+ "Firefox (&private)"			Exec exec firefox -private-window
 	+ "Other &browsers"			Popup MenuBrowsers
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
-	+ "acme on &ns…"			Exec exec $HOME/bin/acme.ns
 	+ "acme@&eir"				Exec exec ssh -Y eir '$HOME/bin/acme.rc -l $HOME/acme.dump'
 	+ "&Mail"				Exec exec evolution
 	+ "&Calendar"				Exec exec gnome-calendar

@@ -3,6 +3,7 @@
 export TERM=dumb
 export SHELL=rc
 export PAGER=nobs
+export NAMESPACE=$(mktemp -d)
 
 pgrep plumber >/dev/null || plumber &
 
