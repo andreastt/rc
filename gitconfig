@@ -14,6 +14,9 @@
 [fetch]
 	recurseSubmodules = true
 
+[merge]
+	ff = false
+
 [alias]
 	st = status
 	co = checkout
