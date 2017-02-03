@@ -9,7 +9,6 @@ export CC=clang
 export CXX=clang++
 
 ac_add_options --with-ccache
-ac_add_options --enable-rust
 
 CARGO=/home/ato/.cargo/bin/cargo
 
