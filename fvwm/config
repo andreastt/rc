@@ -362,7 +362,6 @@ AddToMenu MenuFvwmUtilities
 	+ "&Volume control"		Exec exec pavucontrol
 	+ "&Wicd"			Exec exec wicd-gtk
 	+ "Calc&ulator"			Exec exec xcalc
-	+ "Edit&res"			Exec exec editres
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
