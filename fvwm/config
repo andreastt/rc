@@ -330,7 +330,7 @@ AddToMenu MenuFvwmRoot
 	+ "Other &browsers"			Popup MenuBrowsers
 	+ "&acme"				Exec exec $HOME/bin/acme.rc -l $HOME/acme.dump
 	+ "acme@&eir"				Exec exec ssh -Y eir '$HOME/bin/acme.rc -l $HOME/acme.dump'
-	+ "&Mail"				Exec exec evolution
+	+ "&Mail"				Exec exec evolution -g 1920x1080
 	+ "&Calendar"				Exec exec gnome-calendar
 	+ "C&ontacts"				Exec exec gnome-contacts
 	+ "&Spotify"				Exec exec spotify
