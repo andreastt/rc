@@ -363,8 +363,6 @@ AddToMenu MenuFvwmUtilities
 	+ "&Wicd"			Exec exec wicd-gtk
 	+ "Calc&ulator"			Exec exec xcalc
 	+ "Edit&res"			Exec exec editres
-	+ "X&man"			Exec exec xman
-	+ "Xma&g"			Exec exec xmag
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
