@@ -357,7 +357,7 @@ AddToMenu MenuFvwmUtilities
 	+ "&Kill…"			Exec exec xkill
 	+ "&Package manager"		Exec exec gksudo synaptic
 	+ "&System monitor"		Exec exec gnome-system-monitor
-	+ "&Power statistics"		Exec exec gnome-power-statistics
+	+ "P&ower statistics"		Exec exec gnome-power-statistics
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Volume control"		Exec exec pavucontrol
 	+ "&Wicd"			Exec exec wicd-gtk
