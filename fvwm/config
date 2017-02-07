@@ -56,7 +56,6 @@ AddToFunc InitFunction
 	+ I Exec xset -b
 	+ I Exec xrdb .Xresources
 	+ I Exec xsetroot -solid "#777777"
-	+ I Exec xmodmap ~/.Xmodmap
 	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
 	+ I Module FvwmAnimate
@@ -70,6 +69,7 @@ AddToFunc StartFunction
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 	+ I Exec xrandr --dpi 96
 	+ I Exec killall compton ; compton -b -cCGfF -o 0.10 -O 1 -I 1 -t 3 -l -15 -r 8 -b
+	+ I Exec xmodmap ~/.Xmodmap
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
