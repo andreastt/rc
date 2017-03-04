@@ -335,6 +335,7 @@ AddToMenu MenuFvwmRoot
 	+ "C&ontacts"				Exec exec gnome-contacts
 	+ "&Spotify"				Exec exec spotify
 	+ "P&hotos"				Exec exec shotwell
+	+ "&Games"				Popup MenuGames
 	+ ""					Nop
 	+ "&Run command…"			Run
 	+ ""					Nop
@@ -348,6 +349,10 @@ DestroyMenu MenuBrowsers
 AddToMenu MenuBrowsers
 	+ "&Chrome"		Exec exec google-chrome
 	+ "Chrome &incognito"	Exec exec google-chrome --incognito
+
+DestroyMenu MenuGames
+AddToMenu MenuGames
+	+ "&Stardew Valley"	Exec exec $HOME/Games/Stardew\ Valley/start.sh
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
