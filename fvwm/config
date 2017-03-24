@@ -420,15 +420,10 @@ AddToMenu MenuFvwmWindowOps2
 FuncFvwmWindowCommon MenuFvwmWindowOps2
 + "$[gt.Take screens&hot]" WindowScreenshot
 
-# 3 different ways to log on, take your pick:
 DestroyFunc FuncFvwmRloginXterm
 AddToFunc FuncFvwmRloginXterm \
   I Exec xterm -name $0 -title "$USER @ $0" -e rlogin -Y $0
-DestroyFunc FuncFvwmRloginSshRxvt
-AddToFunc FuncFvwmRloginSshRxvt \
-  I Exec Exec ssh $0 rxvt -display $HOSTDISPLAY
 
-# be sure to fill these in with your correct machine names:
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
 + &sny.no	FuncFvwmRloginXterm sny.no
