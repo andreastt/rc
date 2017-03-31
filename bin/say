@@ -1,0 +1,5 @@
+#!/bin/sh
+tmp=/tmp/say-$$.wav
+pico2wave -w $tmp -l en-GB "$*"
+aplay $tmp
+rm -f $tmp
