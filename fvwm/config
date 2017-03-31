@@ -366,7 +366,7 @@ AddToMenu MenuFvwmUtilities
 	+ "&Top"			Exec exec xterm -T Top -n Top -e top
 	+ "&Volume control"		Exec exec pavucontrol
 	+ "&Wicd"			Exec exec wicd-gtk
-	+ "Calc&ulator"			Exec exec xcalc
+	+ "Calc&ulator"			Exec exec gnome-calculator
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
