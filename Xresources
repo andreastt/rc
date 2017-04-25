@@ -1,5 +1,6 @@
 XTerm*ReverseVide: true
 XTerm*SaveLines: 20000
+XTerm*ScrollBar: true
 
 XClock*update: 1
 XClock*geometry: 127x127+1020+12
