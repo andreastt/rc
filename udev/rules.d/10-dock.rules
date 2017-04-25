@@ -1,2 +1,0 @@
-KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0.0", ENV{XAUTHORITY}="/home/ato/.Xauthority", RUN+="/home/ato/1/dotfiles/dock.sh"
-

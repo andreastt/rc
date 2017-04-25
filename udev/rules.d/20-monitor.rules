@@ -1,2 +1,0 @@
-KERNEL=="card0", SUBSYSTEM=="drm", RUN+="/usr/bin/arandr"
-
