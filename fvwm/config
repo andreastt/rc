@@ -63,7 +63,7 @@ AddToFunc InitFunction
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
-	#+ I Exec xconsole -file /dev/xconsole -geometry 550x110-120-1 -notify
+	+ I Exec xconsole -file /dev/xconsole -geometry 550x110-120-1 -notify
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
@@ -323,6 +323,7 @@ Read menudefs.hook Quiet
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot
 	+ "&Terminal"				Xterm
+	+ "&9term"				9term
 	+ "Fi&le manager"			Exec exec nautilus -w $HOME
 	+ ""					Nop
 	+ "&Firefox" 				Exec exec firefox -new-window
