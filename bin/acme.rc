@@ -3,11 +3,10 @@
 export TERM=dumb
 export SHELL=rc
 export PAGER=nobs
-if [ -d $DEFAULT_NAMESPACE ]
+if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d)
 else
-	export NAMESPACE=$DEFAULT_NAMESPACE
 	mkdir $NAMESPACE
 fi
 
