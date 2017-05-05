@@ -5,6 +5,8 @@ export SHELL=rc
 export PAGER=nobs
 export NAMESPACE=$(mktemp -d)
 
+trap "rm -rf $NAMESPACE" 0 1 2 3 15
+
 plumber
-exec acme -a $*
+acme -a $*
 
