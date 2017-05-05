@@ -10,7 +10,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
 
-export DEFAULT_NAMESPACE=/tmp/ns.ato.:0
+export NAMESPACE=/tmp/ns.ato.:0
 export EDITOR=E
 
 export PYTHONDONTWRITEBYTECODE=1
