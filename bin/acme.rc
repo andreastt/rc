@@ -3,7 +3,15 @@
 export TERM=dumb
 export SHELL=rc
 export PAGER=nobs
-export NAMESPACE=$(mktemp -d)
+if [ -d $DEFAULT_NAMESPACE ]
+then
+	export NAMESPACE=$(mktemp -d)
+else
+	export NAMESPACE=$DEFAULT_NAMESPACE
+	mkdir $NAMESPACE
+fi
+
+echo $NAMESPACE
 
 trap "rm -rf $NAMESPACE" 0 1 2 3 15
 
