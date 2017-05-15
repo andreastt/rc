@@ -29,6 +29,7 @@ ignore = Name .multirust
 ignore = Name *.pyc
 ignore = Name *.swp
 ignore = Name *.swp
+ignore = Name tmp
 ignore = Name .unison
 ignore = Name unison.log
 ignore = Name .xsession-errors
