@@ -32,4 +32,3 @@ ignore = Name *.swp
 ignore = Name .unison
 ignore = Name unison.log
 ignore = Name .xsession-errors
-path = .cache/evolution
