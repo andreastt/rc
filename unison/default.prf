@@ -10,7 +10,7 @@ links = true
 confirmbigdel = false
 
 root = /home/ato
-root = ssh://eir//home/ato
+root = ssh://tristan//home/ato
 
 path =
 
