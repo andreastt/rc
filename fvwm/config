@@ -426,8 +426,9 @@ AddToFunc FuncFvwmRloginXterm \
 
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
-+ &sny.no	FuncFvwmRloginXterm sny.no
 + &eir		FuncFvwmRLoginXterm eir
++ &sny.no	FuncFvwmRloginXterm sny.no
++ &tristan	FuncFvwmRLoginXterm tristan
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "$[gt.Fvwm Modules]"        Title
