@@ -1,2 +1,0 @@
-#!/bin/bash
-dialdevdraw 'ssh eir /usr/local/plan9/bin/dial -e unix\!/tmp/devdrawserver'
