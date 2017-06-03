@@ -1,3 +1,0 @@
-#!/bin/sh
-exec rg --no-heading --column --threads 4 "$1" ${2-.}
-
