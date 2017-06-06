@@ -339,6 +339,7 @@ AddToMenu MenuBrowsers
 DestroyMenu MenuGames
 AddToMenu MenuGames
 	+ "&Stardew Valley"	Exec exec $HOME/Games/Stardew\ Valley/start.sh
+	+ "&Wesnoth"		Exec exec wesnoth
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities

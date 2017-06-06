@@ -3,6 +3,7 @@
 
 alias .="pwd"
 alias ..="cd .."
+alias l="ls"
 alias ls="ls --color"
 alias open="xdg-open"
 
