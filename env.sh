@@ -8,6 +8,7 @@ export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$CARGO/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
+export PATH=$PATH:$HOME/src/moz-git-tools
 
 export NAMESPACE=/tmp/ns.ato.:0
 export EDITOR=E
