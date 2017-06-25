@@ -1,26 +1,24 @@
 # mozconfig gets sourced by configure and client.mk
 # but unless we save the variable (during configure),
 # it's not going to be exposed to the make environment
-mk_add_options 'export CCACHE_PREFIX=icecc'
+#mk_add_options 'export CCACHE_PREFIX=icecc'
 mk_add_options AUTOCLOBBER=1
 mk_add_options MOZ_MAKE_FLAGS="-j100"
 
-export CC=clang
-export CXX=clang++
-
-ac_add_options --with-ccache
+export CC=/usr/lib/icecc/bin/cc
+export CXX=/usr/lib/icecc/bin/c++
 
 CARGO=/home/ato/.cargo/bin/cargo
 
-ac_add_options --enable-application=browser
-#ac_add_options --enable-geckodriver
+ac_add_options --with-ccache
+ac_add_options --enable-geckodriver
 #ac_add_options --enable-webrender
 #ac_add_options --enable-stylo
 #ac_add_options --enable-artifact-builds
 
 # debug
 #ac_add_options --enable-debug
-ac_add_options --enable-debug-symbols
+#ac_add_options --enable-debug-symbols
 #ac_add_options --disable-optimize
 
 # fennec
@@ -29,7 +27,7 @@ ac_add_options --enable-debug-symbols
 #ac_add_options --with-android-sdk="/home/ato/.mozbuild/android-sdk-linux"
 #ac_add_options --with-android-ndk="/home/ato/.mozbuild/android-ndk-r11b"
 
-#ac_add_options --enable-official-branding
+ac_add_options --enable-official-branding
 
 # change output directory
 #mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/artifact-desktop-release
