@@ -1,2 +1,2 @@
 #!/bin/sh
-ls --color -al
+ls --color -alh
