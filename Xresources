@@ -1,0 +1,2 @@
+URxvt.keysym.M-Left:        \033[1;3D
+URxvt.keysym.M-Right:       \033[1;3C
