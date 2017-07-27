@@ -1,9 +1,11 @@
 # mozconfig gets sourced by configure and client.mk
 # but unless we save the variable (during configure),
 # it's not going to be exposed to the make environment
-#mk_add_options 'export CCACHE_PREFIX=icecc'
 mk_add_options AUTOCLOBBER=1
 mk_add_options MOZ_MAKE_FLAGS="-j70"
+mk_add_options RUSTC_WRAPPER=sccache
+mk_add_options CCACHE_PREFIX=icecc
+mk_add_options CCACHE_CPP2=yes
 
 export CC=/usr/lib/icecc/bin/cc
 export CXX=/usr/lib/icecc/bin/c++
