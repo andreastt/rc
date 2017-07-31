@@ -29,7 +29,7 @@ ac_add_options --enable-geckodriver
 #ac_add_options --with-android-sdk="/home/ato/.mozbuild/android-sdk-linux"
 #ac_add_options --with-android-ndk="/home/ato/.mozbuild/android-ndk-r11b"
 
-ac_add_options --enable-official-branding
+#ac_add_options --enable-official-branding
 
 # change output directory
 #mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../build/artifact-desktop-release
