@@ -353,6 +353,7 @@ AddToMenu MenuFvwmUtilities
 	+ "&Volume control"		Exec exec pavucontrol
 	+ "&Wicd"			Exec exec wicd-gtk
 	+ "Calc&ulator"			Exec exec gnome-calculator
+	+ "&Disk usage space analyzer"	Exec exec baobab
 	+ ""				Nop
 	+ "&D. $[gt.Reset X defaults]"	Exec xrdb -load $HOME/.Xdefaults
 
