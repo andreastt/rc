@@ -19,6 +19,6 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Mozilla's try server shortcuts
 # because these are almost impossible to remember
-export tryall="-b do -p all -u all -t none --artifact"
-export trymn="-b do -p linux64,macosx64,win64,android-api-15 -u marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-e10s -t none --artifact"
+export tryall="-b do -p all -u all -t none"
+export trymn="-b do -p linux64,macosx64,win64,android-api-16 -u marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-local-e10s,firefox-ui-functional-remote-e10s -t none"
 
