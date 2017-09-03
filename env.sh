@@ -13,6 +13,8 @@ export PATH=$PATH:$HOME/src/moz-git-tools
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
 
+export RUSTC_WRAPPER=sccache
+export CARGO_INCREMENTAL=1
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 export DEBIAN_FRONTEND=noninteractive
