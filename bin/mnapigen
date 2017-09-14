@@ -38,7 +38,7 @@ then
 	exit 1
 fi
 
-git -C $DEST commit -am "No bug: Generate Marionette API docs. r=me"
+git -C $DEST commit -am "No bug: Generate Marionette API docs. r=me NPOTB"
 git -C $DEST push -n
 
 log "done"
