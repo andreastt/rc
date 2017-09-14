@@ -2,6 +2,12 @@
 
 editor = acme
 
+# file:// URIs
+type is text
+data matches 'file:\/\/(.+)?'
+arg isfile $0
+plumb to edit
+
 # Toolkit modules
 type is text
 data matches 'resource:\/\/gre\/modules\/(.+)\.jsm(:([0-9]+))?'
