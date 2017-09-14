@@ -58,6 +58,7 @@ AddToFunc InitFunction
 	+ I Exec xrdb -merge .Xresources
 	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
+	+ I Exec redshift
 	+ I Module FvwmAnimate
 	+ I Module FvwmDebug --log /var/log/fvwm --events --xconsole -d7
 
