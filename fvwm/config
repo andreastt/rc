@@ -65,7 +65,6 @@ AddToFunc InitFunction
 	+ I Exec xrdb -merge .Xresources
 	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
-	+ I Exec redshift
 	+ I Module FvwmAnimate
 	+ I Module FvwmDebug --log /var/log/fvwm --events --xconsole -d7
 
@@ -76,6 +75,7 @@ AddToFunc StartFunction
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 	+ I Exec xrandr --dpi 96
 	+ I Exec pgrep compton || compton -b -cCGfF -o 0.10 -O1 -I1 -t3 -l -15 -r8 --backend glx
+	+ I Exec pgrep redshift || redshift
 	+ I Exec xmodmap .Xmodmap
 
 DestroyFunc SelectWindow
