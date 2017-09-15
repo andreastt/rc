@@ -12,6 +12,7 @@ export PATH=$PATH:$HOME/src/moz-git-tools
 
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
+export PAGER=nobs
 
 export RUSTC_WRAPPER=sccache
 export CARGO_INCREMENTAL=1
