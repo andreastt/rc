@@ -105,12 +105,6 @@ AddToFunc Run
 	+ I Wait zenity
 	+ I Next (zenity) WarpToWindow 50 17p
 
-DestroyFunc Rxvt
-AddToFunc Rxvt
-	+ I Exec exec rxvt
-	+ I Wait rxvt
-	+ I Next (rxvt) WarpToWindow 50 17p
-
 DestroyFunc FuncSwitchWindow
 AddToFunc FuncSwitchWindow
   + I $[infostore.DIR] (CurrentPage, AcceptsFocus, !Shaded !Iconic, !Sticky) SelectWindow
