@@ -76,9 +76,9 @@ AddToFunc StartFunction
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
 	+ I Exec xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
-+ I Exec xrandr --dpi 96
+	+ I Exec xrandr --dpi 96
 	+ I Exec pgrep compton || compton -b -cCGfF -o 0.10 -O1 -I1 -t3 -l -15 -r8 --backend glx
-	+ I Exec xmodmap ~/.Xmodmap
+	+ I Exec xmodmap .Xmodmap
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
@@ -147,8 +147,8 @@ AddToFunc Thumbnail
 
 DestroyFunc DeThumbnail
 AddToFunc DeThumbnail
-  + I Exec rm -f /tmp/icon.tmp.$[w.id].png
-  + I DestroyWindowStyle
+	+ I Exec rm -f /tmp/icon.tmp.$[w.id].png
+	+ I DestroyWindowStyle
 
 *FvwmEvent: deiconify DeThumbnail
 
