@@ -339,6 +339,7 @@ AddToMenu MenuFvwmUtilities
 	+ "&Arandr"			Exec exec arandr
 	+ "&IceCC monitor"		Exec exec icemon
 	+ "&Kill…"			Exec exec xkill
+	+ "&Font viewer"		Exec exec gnome-font-viewer
 	+ "&Package manager"		Exec exec gksudo synaptic
 	+ "&System monitor"		Exec exec gnome-system-monitor
 	+ "System &logs"		Exec exec gnome-system-log
