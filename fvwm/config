@@ -91,6 +91,12 @@ AddToFunc Urxvt
 	+ I Wait urxvt
 	+ I Next (urxvt) WarpToWindow 50 17p
 
+DestroyFunc 9term
+AddToFunc 9term
+	+ I Exec exec 9term.rc
+	+ I Wait 9term
+	+ I Next (9term) WarpToWindow 50 17p
+
 DestroyFunc FirefoxWindow
 AddToFunc FirefoxWindow
 	+ I Exec exec firefox -new-window
@@ -170,6 +176,7 @@ IgnoreModifiers L25
 
 # Super-Return gives you a new X terminal
 Key Return A 4 Urxvt
+Key Return A 4S 9term
 
 # Super-d runs dmenu
 Key d A 4 Exec exec dmenu_run
