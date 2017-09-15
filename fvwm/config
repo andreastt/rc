@@ -75,6 +75,7 @@ AddToFunc StartFunction
 	+ I Exec xrandr --dpi 96
 	+ I Exec pgrep compton || compton -b -cCGfF -o 0.10 -O1 -I1 -t3 -l -15 -r8 --backend glx
 	+ I Exec pgrep redshift || redshift
+	+ I Exec feh --bg-tile Pictures/Wallpapers/lightgrey_rock.gif
 	+ I Exec xmodmap .Xmodmap
 
 DestroyFunc SelectWindow
