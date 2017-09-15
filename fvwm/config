@@ -58,7 +58,6 @@ MenuStyle	*	Foreground black, Background gainsboro, Greyed grey40
 # Style specific to programs 
 Style "xload"	NoTitle, Sticky, WindowListSkip, ClickToFocus
 Style "Fvwm*"	NoTitle, Sticky, WindowListSkip
-Style "xterm"	HandleWidth 3, HilightFore yellow, HilightBack red
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
