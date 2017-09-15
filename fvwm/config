@@ -38,13 +38,22 @@ SetAnimation 10 -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
 Style * MwmDecor, SlipperyIcon
 Style * IconBox 0 -10 -280 -1
 
-Style *     BorderWidth 4
-Style *     HandleWidth 4
-Style *     SnapAttraction 20 SameType Screen
+# Border styling
+Style	*	NoTitle, BorderWidth 3, HandleWidth 4
+Style	*	SnapAttraction 20 SameType Screen
+BorderStyle	Active Solid SteelBlue4 -- NoInset HiddenHandles
+BorderStyle	Inactive Solid #11236b -- NoInset HiddenHandles
 
-Style		*	IconFont	"xft:Lucida Sans:size=10"
+# Styles for various Fvwm modules:
+Style Fvwm*       NoTitle,  Sticky, WindowListSkip
+Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style FvwmPager   StaysOnTop
+Style FvwmBanner  StaysOnTop
+Style FvwmButtons Icon toolbox.xpm, ClickToFocus
+
+Style	*	IconFont	"xft:Lucida Sans:size=10"
 MenuStyle	*	Font		"xft:Lucida Sans:size=10"
-MenuStyle * Foreground black, Background gainsboro, Greyed grey40
+MenuStyle	*	Foreground black, Background gainsboro, Greyed grey40
 
 # Style specific to programs 
 Style "xload"		NoTitle, Sticky, WindowListSkip, ClickToFocus
@@ -237,17 +246,7 @@ Key Down A 4C Maximize 0 grow
 Key Left A 4C Maximize grow 0
 Key Right A 4C Maximize grow 0
 
-# Border styling
-Style * NoTitle, BorderWidth 3
-BorderStyle Active Solid SteelBlue4 -- NoInset HiddenHandles
-BorderStyle Inactive Solid #11236b -- NoInset HiddenHandles
 
-# Styles for various Fvwm modules:
-Style Fvwm*       NoTitle,  Sticky, WindowListSkip
-Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
-Style FvwmPager   StaysOnTop
-Style FvwmBanner  StaysOnTop
-Style FvwmButtons Icon toolbox.xpm, ClickToFocus
 
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
