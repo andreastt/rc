@@ -63,7 +63,6 @@ Style "xterm"	HandleWidth 3, HilightFore yellow, HilightBack red
 DestroyFunc InitFunction
 AddToFunc InitFunction
 	+ I Exec xset -b
-	+ I Exec xsetroot -solid "#777777"
 	+ I Exec xrdb -merge .Xresources
 	+ I Exec xbindkeys -f .xbindkeysrc
 	+ I Exec xscreensaver -no-splash
