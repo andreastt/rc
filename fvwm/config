@@ -77,6 +77,7 @@ AddToFunc StartFunction
 	+ I Exec pgrep redshift || redshift
 	+ I Exec feh --bg-tile Pictures/Wallpapers/lightgrey_rock.gif
 	+ I Exec xmodmap .Xmodmap
+	+ I Exec /usr/lib/x86_64-linux-gnu/notify-osd
 
 DestroyFunc SelectWindow
 AddToFunc SelectWindow
