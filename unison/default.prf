@@ -26,6 +26,7 @@ ignore = Name *.egg-info
 ignore = Name .iceccd.socket
 ignore = Name .mozbuild
 ignore = Name *.pyc
+ignore = Name src/gecko/obj-x86_64-pc-linux-gnu
 ignore = Name *.swp
 ignore = Name *.swp
 ignore = Name tmp
@@ -33,3 +34,4 @@ ignore = Name .unison
 ignore = Name unison.log
 ignore = Name .Xauthority
 ignore = Name .xsession-errors
+
