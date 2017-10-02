@@ -393,8 +393,8 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 + "$[gt.Take screens&hot]" WindowScreenshot
 
 DestroyFunc FuncFvwmRloginUrxvt
-AddToFunc FuncFvwmRloginUrxvt \
-  I Exec urxvt -name $0 -title "$USER @ $0" -e rlogin -Y $0
+AddToFunc FuncFvwmRloginUrxvt
+	+ I Exec exec urxvt -e rlogin -Y $0
 
 DestroyMenu MenuFvwmLogins
 AddToMenu MenuFvwmLogins
