@@ -4,5 +4,6 @@ grep --binary-file=without-match \
 	--exclude-dir=.git \
 	--exclude-dir=.hg \
 	--exclude-dir=target \
+	--exclude-dir=doc \
 	-rn \
 	"$1" ${2-.} /dev/null
