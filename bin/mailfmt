@@ -1,3 +1,2 @@
 #!/bin/sh
-/usr/bin/par 68gqr
-
+sed -E 's/https:\/\/bugzilla\.mozilla\.org\/show_bug\.cgi\?id=([0-9]+)/https:\/\/bugzil\.la\/\1/' | par 68gqr
