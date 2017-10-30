@@ -6,4 +6,4 @@ grep --binary-file=without-match \
 	--exclude-dir=target \
 	--exclude-dir=doc \
 	-rn \
-	"$1" ${2-.} /dev/null
+	$@
