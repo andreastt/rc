@@ -11,7 +11,7 @@
 	m:0x0 + c:107
 	Print
 
-"gnome-screenshot -w -e shadow -f $HOME/Desktop/screenshot-`date +%F-%H%M%S`.png"
+"gnome-screenshot -a -f $HOME/Desktop/screenshot-`date +%F-%H%M%S`.png"
 	m:0x1 + c:107
 	Shift + Print
 
