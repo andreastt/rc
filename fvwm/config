@@ -343,6 +343,7 @@ AddToMenu MenuGames
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities
 	+ "&Arandr"			Exec exec arandr
+	+ "&Clocks"			Exec exec gnome-clocks
 	+ "&IceCC monitor"		Exec exec icemon
 	+ "&Kill…"			Exec exec xkill
 	+ "&Font viewer"		Exec exec gnome-font-viewer
