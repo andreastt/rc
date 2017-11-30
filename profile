@@ -1,5 +1,5 @@
 # non-login shells do not source /etc/profile.d/*
-. /etc/profile.d/env.sh
+. $HOME/src/rc/env.sh
 
 alias .="pwd"
 alias ..="cd .."
