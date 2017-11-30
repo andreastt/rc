@@ -9,6 +9,7 @@ export PATH=$PATH:$CARGO/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
 export PATH=$PATH:$HOME/src/moz-git-tools
+export PATH=$PATH:$HOME/src/arcanist/bin
 
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
