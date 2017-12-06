@@ -4,8 +4,7 @@
 alias .="pwd"
 alias ..="cd .."
 alias l="ls"
-alias ls="ls --color"
-alias open="xdg-open"
+alias ls="ls -G"
 
 PS1="% "
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
