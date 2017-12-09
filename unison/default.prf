@@ -26,6 +26,7 @@ ignore = Name .bashrc
 ignore = Name .cache
 ignore = Name .cargo
 ignore = Name .ccache
+ignore = Name .config
 ignore = Name .iceccd.socket
 ignore = Name .mozbuild
 ignore = Name .rustup
