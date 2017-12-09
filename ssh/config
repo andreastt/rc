@@ -20,6 +20,8 @@ Host people.mozilla.com
 
 Host tristan
 	HostName %h.corp.lon2.mozilla.com
+	Compression yes
+	ForwardX11 yes
 
 Host eir
 	HostName %h.corp.lon2.mozilla.com
