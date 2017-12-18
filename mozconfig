@@ -10,7 +10,7 @@ mk_add_options 'export CCACHE_CPP2=yes'
 export CC=/usr/lib/icecc/bin/cc
 export CXX=/usr/lib/icecc/bin/c++
 
-CARGO=/home/ato/.cargo/bin/cargo
+CARGO=$HOME/.cargo/bin/cargo
 
 ac_add_options --with-ccache
 ac_add_options --enable-geckodriver
