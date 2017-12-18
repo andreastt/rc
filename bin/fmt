@@ -1,8 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 if [[ $(uname -s) == "Darwin" ]]
 then
 	exec /usr/bin/fmt
 else
 	exec /usr/bin/fmt -w 75 -g 65 $@
 fi
-
