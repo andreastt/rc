@@ -1,10 +1,11 @@
 export PLAN9=/usr/local/plan9
+export CARGO=$HOME/.cargo
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
 
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
-export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$CARGO/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mozbuild/version-control-tools/git/commands
 export PATH=$PATH:$HOME/src/moz-git-tools
@@ -13,11 +14,7 @@ export PATH=$PATH:$HOME/src/arcanist/bin
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
 
-export CC=/usr/lib/icecc/bin/cc
-export CXX=/usr/lib/icecc/bin/c++
-export CCACHE_PREFIX=icecc
 export RUSTC_WRAPPER=sccache
-export CARGO=$HOME/.cargo/bin/cargo
 export CARGO_INCREMENTAL=1
 export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
 export PYTHONDONTWRITEBYTECODE=1
