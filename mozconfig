@@ -5,7 +5,6 @@ mk_add_options AUTOCLOBBER=1
 mk_add_options MOZ_MAKE_FLAGS="-j90"
 mk_add_options 'export RUSTC_WRAPPER=sccache'
 mk_add_options 'export CCACHE_PREFIX=icecc'
-mk_add_options 'export CCACHE_CPP2=yes'
 
 export CC=/usr/lib/icecc/bin/cc
 export CXX=/usr/lib/icecc/bin/c++
