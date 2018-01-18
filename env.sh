@@ -16,6 +16,7 @@ export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
 export CARGO_INCREMENTAL=1
+export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 export DEBIAN_FRONTEND=noninteractive
@@ -24,4 +25,3 @@ export DEBIAN_FRONTEND=noninteractive
 # because these are almost impossible to remember
 export tryall="-b do -p all -u all -t none"
 export trymn="-b do -p linux,linux64,macosx64,win64,android-api-16 -u marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-local-e10s,firefox-ui-functional-remote-e10s -t none"
-
