@@ -16,6 +16,7 @@ export EDITOR=E
 export RUSTC_WRAPPER=sccache
 export CARGO=$HOME/.cargo/bin/cargo
 export CARGO_INCREMENTAL=1
+export CCACHE_PREFIX=icecc
 export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
 export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
