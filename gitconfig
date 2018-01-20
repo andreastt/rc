@@ -16,7 +16,6 @@
 
 [merge]
 	ff = false
-	tool = meld
 
 [alias]
 	st = status
