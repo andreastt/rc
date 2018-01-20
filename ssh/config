@@ -23,6 +23,7 @@ Host tristan
 	HostName 10.239.30.54
 	Compression yes
 	ForwardX11 yes
+	ForwardX11Trusted yes
 
 Host eir
 	HostName %h.corp.lon2.mozilla.com
