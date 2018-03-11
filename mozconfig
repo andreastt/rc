@@ -4,6 +4,9 @@
 mk_add_options AUTOCLOBBER=1
 mk_add_options MOZ_MAKE_FLAGS="-j90"
 
+export CC=/usr/lib/icecc/bin/cc
+export CXX=/usr/lib/icecc/bin/c++
+
 ac_add_options --with-ccache
 ac_add_options --enable-geckodriver
 ac_add_options --enable-rust-tests
