@@ -10,10 +10,13 @@ else
 	mkdir $NAMESPACE
 fi
 
+trap "rm -rf $NAMESPACE" EXIT
+trap "kill -TERM -$$" EXIT
+
+#vfont=/mnt/font/LucidaGrandeRegular/13a/font
+#ffont=/mnt/font/LucidaGrandeMono/13a/font
+
 echo $NAMESPACE
-
-trap "rm -rf $NAMESPACE" 0 1 2 3 15
-
 plumber
 acme -a $*
 
