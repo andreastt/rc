@@ -3,7 +3,8 @@
 
 alias .="pwd"
 alias ..="cd .."
-alias l="ls"
+alias l="ls -p"
+alias ll="ls -Glhp"
 alias ls="ls -G"
 
 PS1="% "
