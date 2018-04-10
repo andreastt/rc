@@ -28,12 +28,6 @@ Host tristan
 Host eir
 	HostName %h.corp.lon2.mozilla.com
 
-Host brunnhilde
-	HostName 167.99.91.47
-	Compression yes
-	ForwardX11 yes
-	ForwardX11Trusted yes
-
 Host sny.no
 	Port 33138
 
