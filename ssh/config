@@ -19,8 +19,7 @@ Host people.mozilla.com
 	User atolfsen
 
 Host tristan
-#	HostName %h.corp.lon2.mozilla.com
-	HostName 10.239.30.54
+	HostName %h.corp.lon2.mozilla.com
 	Compression yes
 	ForwardX11 yes
 	ForwardX11Trusted yes
