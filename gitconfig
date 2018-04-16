@@ -23,6 +23,11 @@
 	cp = cherry-pick
 	bdiff = log -p master..
 	fdiff = diff --name-status master..
-	squash = !git rebase -i --autosquash $(git merge-base HEAD origin/master)
+
 	fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut -f 1 -d ' '`
 	patch = format-patch -n 'HEAD^'
+
+	current-branch = rev-parse --abbrev-ref HEAD
+	parent = !git show-branch -a 2>/dev/null | grep '\\*' | grep -v $(git current-branch) | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//'
+	fork-point = !git merge-base $(git current-branch) $(git parent)
+	histedit = !git rebase -i $(git fork-point) --autosquash
