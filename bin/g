@@ -1,2 +1,2 @@
 #!/bin/sh
-rg --no-heading $@
+exec rg --no-heading --fixed-strings "$@"
