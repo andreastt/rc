@@ -11,7 +11,7 @@ Darwin)
 	alias ls="ls -G"
 	;;
 *)
-	alias ll="ls --color -hp"
+	alias ll="ls --color -lhp"
 	alias ls="ls --color"
 	;;
 esac
