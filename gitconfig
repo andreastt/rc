@@ -29,3 +29,7 @@
 	parent = !git show-branch -a 2>/dev/null | grep '\\*' | grep -v $(git current-branch) | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//'
 	fork-point = !git merge-base $(git current-branch) $(git parent)
 	histedit = !git rebase -i $(git fork-point) --autosquash
+
+[cinnabar]
+	helper = /home/ato/src/git-cinnabar/git-cinnabar-helper
+
