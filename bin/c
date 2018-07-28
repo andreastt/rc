@@ -1,0 +1,2 @@
+#!/bin/sh
+exec g --smart-case --fixed-strings "$@"
