@@ -33,7 +33,6 @@ ignore = Name .rustup
 ignore = Name .unison
 ignore = Name .xsession-errors
 ignore = Name Library/Caches
-ignore = Name Mail
 ignore = Name src/gecko/obj-*
 ignore = Name src/gecko/target
 ignore = Name src/servo/.servo
