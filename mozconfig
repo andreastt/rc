@@ -8,6 +8,9 @@ mk_add_options 'export CCACHE_PREFIX=icecc'
 #ac_add_options --disable-debug
 #ac_add_options --disable-optimize
 
+#export TUP=~/.mozbuild/tup/tup
+#ac_add_options --enable-build-backends=Tup
+
 ac_add_options --with-ccache=sccache
 ac_add_options --enable-geckodriver
 ac_add_options --enable-rust-tests
