@@ -8,6 +8,7 @@ export PATH=$PATH:$HOME/src/git-cinnabar
 
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
+export prompt='% '
 
 export RUSTC_WRAPPER=sccache
 export RUSTFLAGS="-Clinker=clang -Clink-arg=-fuse-ld=lld"
