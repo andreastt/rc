@@ -2,7 +2,6 @@
 set autoindent
 set hlsearch
 set mouse=a
-syntax on
 
 " please don't nanny me
 set nobackup
