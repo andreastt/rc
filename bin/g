@@ -1,2 +1,2 @@
 #!/bin/sh
-exec rg -g !target/ -g !obj-*/ --no-heading "$@"
+exec rg --no-heading "$@"
