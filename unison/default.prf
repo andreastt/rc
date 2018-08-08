@@ -12,13 +12,13 @@ root = ssh://tristan//home/ato
 
 path =
 
+ignore = Name .*~
+ignore = Name *~
 ignore = Name .DS_Store
 ignore = Name *.egg-info
 ignore = Name *.o
 ignore = Name *.pyc
 ignore = Name *.swp
-ignore = Name *~
-ignore = Name .*~
 ignore = Name .unison.*
 
 ignore = Path .Xauthority
