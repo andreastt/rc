@@ -12,7 +12,6 @@ root = ssh://tristan//home/ato
 
 path =
 
-ignore = Name .AppleDouble
 ignore = Name .DS_Store
 ignore = Name *.egg-info
 ignore = Name *.o
