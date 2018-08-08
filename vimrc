@@ -6,6 +6,7 @@ set mouse=a
 " please don't nanny me
 set nobackup
 set noswapfile
+set shortmess=I
 
 " respect Unix terminal key bindings
 map <C-a> <Home>
