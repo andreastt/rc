@@ -5,18 +5,6 @@ mk_add_options AUTOCLOBBER=1
 mk_add_options MOZ_MAKE_FLAGS="-j60"
 mk_add_options 'export CCACHE_PREFIX=icecc'
 
-#ac_add_options --disable-debug
-#ac_add_options --disable-optimize
-
 ac_add_options --with-ccache=sccache
 ac_add_options --enable-geckodriver
 ac_add_options --enable-rust-tests
-
-#ac_add_options --enable-artifact-builds
-
-# debug
-#ac_add_options --enable-debug
-#ac_add_options --enable-debug-symbols
-#ac_add_options --disable-optimize
-
-#ac_add_options --enable-official-branding
