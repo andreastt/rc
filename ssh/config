@@ -12,12 +12,6 @@ Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.
 Host hg.mozilla.org
 	User ato@sny.no
 
-Host reviewboard-hg.mozilla.org
-	User atolfsen@mozilla.com
-
-Host people.mozilla.com
-	User atolfsen
-
 Host tristan
 	HostName %h.corp.lon2.mozilla.com
 	Compression yes
