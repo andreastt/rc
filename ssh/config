@@ -14,7 +14,6 @@ Host hg.mozilla.org
 
 Host tristan
 	HostName %h.corp.lon2.mozilla.com
-	Compression yes
 	ForwardX11 yes
 	ForwardX11Trusted yes
 
@@ -23,4 +22,3 @@ Host eir
 
 Host sny.no
 	Port 33138
-
