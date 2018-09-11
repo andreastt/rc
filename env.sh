@@ -18,6 +18,7 @@ export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
 export PYTHONDONTWRITEBYTECODE=1
 
 export MACH_NO_TERMINAL_FOOTER=1
+export MOZ_NOSPAM=1
 export DEBIAN_FRONTEND=noninteractive
 
 # Mozilla's try server shortcuts
