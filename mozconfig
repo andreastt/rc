@@ -1,7 +1,4 @@
 mk_add_options AUTOCLOBBER=1
 
 ac_add_options --with-ccache=sccache
-
-#ac_add_options --enable-artifact-builds
-ac_add_options --enable-geckodriver
 ac_add_options --enable-rust-tests
