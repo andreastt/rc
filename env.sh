@@ -5,6 +5,7 @@ export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/src/git-bz-moz
 export PATH=$PATH:$HOME/src/git-cinnabar
+export PATH=$PATH:$HOME/src/phlay
 
 export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
