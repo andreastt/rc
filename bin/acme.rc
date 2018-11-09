@@ -13,7 +13,7 @@ fi
 trap "rm -rf $NAMESPACE" EXIT
 trap "kill -TERM -$$" EXIT
 
-#vfont=/mnt/font/LucidaGrandeRegular/13a/font
+#vfont=/mnt/font/LucidaGrande-RegularW/14a/font
 #ffont=/mnt/font/LucidaGrandeMono/13a/font
 
 echo $NAMESPACE
