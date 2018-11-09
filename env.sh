@@ -11,7 +11,6 @@ export NAMESPACE=/tmp/ns.$USER.:0
 export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
-export RUSTFLAGS="-Clinker=clang -Clink-arg=-fuse-ld=lld"
 export CARGO=$HOME/.cargo/bin/cargo
 export CARGO_INCREMENTAL=1
 export CCACHE_PREFIX=icecc
