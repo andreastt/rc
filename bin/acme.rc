@@ -1,8 +1,8 @@
 #!/bin/sh
 
-export TERM=dumb
-export SHELL=rc
-export PAGER=nobs
+TERM=dumb
+SHELL=rc
+PAGER=nobs
 if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d)
