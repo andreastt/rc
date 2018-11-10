@@ -3,6 +3,7 @@
 TERM=dumb
 SHELL=rc
 PAGER=nobs
+EDITOR=E
 if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d)
