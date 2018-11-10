@@ -8,7 +8,7 @@ export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
 export NAMESPACE=/tmp/ns.$USER.:0
-export EDITOR=bb -w
+export EDITOR="bb -w"
 
 export RUSTC_WRAPPER=sccache
 export CARGO=$HOME/.cargo/bin/cargo
