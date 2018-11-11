@@ -3,7 +3,6 @@ export PLAN9=/usr/local/plan9
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/src/git-bz-moz
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
