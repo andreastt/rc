@@ -20,7 +20,6 @@ ignore = Name *.o
 ignore = Name *.pyc
 ignore = Name *.swp
 ignore = Name .unison.*
-ignore = Name .serverauth.*
 
 ignore = Path .Xauthority
 ignore = Path .bash_history
@@ -44,5 +43,6 @@ ignore = Path src/servo/.servo
 ignore = Path src/servo/target
 ignore = Path tmp
 ignore = Path unison.log
+ignore = Path .serverauth.*
 
 ignorenot = Path Library/Mail
