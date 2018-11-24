@@ -12,15 +12,15 @@ root = ssh://tristan//home/ato
 
 path =
 
-ignore = Name .*~
-ignore = Name *~
-ignore = Name .DS_Store
 ignore = Name *.egg-info
 ignore = Name *.o
 ignore = Name *.pyc
 ignore = Name *.swp
+ignore = Name *~
+ignore = Name .*~
 ignore = Name .AppleDB
 ignore = Name .AppleDouble
+ignore = Name .DS_Store
 ignore = Name .unison.*
 
 ignore = Path .Xauthority
@@ -34,6 +34,7 @@ ignore = Path .config
 ignore = Path .iceccd.socket
 ignore = Path .mozbuild
 ignore = Path .rustup
+ignore = Path .serverauth.*
 ignore = Path .unison
 ignore = Path .viminfo
 ignore = Path .xsession-errors
@@ -45,6 +46,5 @@ ignore = Path src/servo/.servo
 ignore = Path src/servo/target
 ignore = Path tmp
 ignore = Path unison.log
-ignore = Path .serverauth.*
 
 ignorenot = Path Library/Mail
