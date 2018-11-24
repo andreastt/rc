@@ -19,6 +19,7 @@ ignore = Name *.swp
 ignore = Name *~
 ignore = Name .*~
 ignore = Name .AppleDB
+ignore = Name .AppleDesktop
 ignore = Name .AppleDouble
 ignore = Name .DS_Store
 ignore = Name .unison.*
