@@ -19,6 +19,8 @@ ignore = Name *.egg-info
 ignore = Name *.o
 ignore = Name *.pyc
 ignore = Name *.swp
+ignore = Name .AppleDB
+ignore = Name .AppleDouble
 ignore = Name .unison.*
 
 ignore = Path .Xauthority
