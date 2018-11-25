@@ -6,7 +6,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
-export EDITOR="bb -w"
+export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
 export CARGO=$HOME/.cargo/bin/cargo
