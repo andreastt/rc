@@ -29,5 +29,6 @@
 	current-branch = rev-parse --abbrev-ref HEAD
 	fork-point = !git merge-base $(git current-branch) central
 	histedit = !git rebase -i $(git fork-point) --autosquash
+
 [cinnabar]
-	helper = /home/ato/src/git-cinnabar/git-cinnabar-helper
+	helper = $HOME/src/git-cinnabar/git-cinnabar-helper
