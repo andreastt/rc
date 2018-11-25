@@ -1,9 +1,10 @@
 #!/bin/sh
 
-TERM=dumb
-SHELL=rc
-PAGER=nobs
-EDITOR=E
+export TERM=dumb
+export SHELL=rc
+export PAGER=nobs
+export EDITOR=E
+
 if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d)
@@ -14,10 +15,19 @@ fi
 trap "rm -rf $NAMESPACE" EXIT
 trap "kill -TERM -$$" EXIT
 
-#vfont=/mnt/font/LucidaGrande-RegularW/14a/font
-#ffont=/mnt/font/LucidaGrandeMono/13a/font
+case $(uname) in
+Linux*)
+	size=10
+	;;
+*)
+	size=13
+	;;
+esac
+
+vfont=/mnt/font/LucidaGrande/${size}a/font
+ffont=/mnt/font/LucidaGrandeMono/${size}a/font
 
 echo $NAMESPACE
 plumber
-acme -a $*
+acme -a -f$vfont -F$ffont $*
 
