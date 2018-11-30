@@ -20,7 +20,7 @@ Linux*)
 	size=10
 	;;
 *)
-	size=13
+	size=14
 	;;
 esac
 
