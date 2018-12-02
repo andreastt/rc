@@ -24,6 +24,14 @@ data set /home/ato/src/gecko/testing/marionette/$1.js
 attr add addr=$3
 plumb to edit
 
+# RDP 
+type is text
+data matches 'chrome:\/\/remote\/content\/(.+)\.jsm(:([0-9]+))?'
+arg isfile /home/ato/src/gecko/devtools/remote/$1.jsm
+data set /home/ato/src/gecko/devtools/remote/$1.jsm
+attr add addr=$3
+plumb to edit
+
 # Bugzilla
 type is text
 data matches '[Bb]ug ([0-9]+)'
