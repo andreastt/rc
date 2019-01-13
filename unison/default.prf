@@ -41,6 +41,7 @@ ignore = Path .viminfo
 ignore = Path .xsession-errors
 ignore = Path Library
 ignore = Path Mail
+ignore = Path Pictures/Photos Library.photoslibrary
 ignore = Path src/gecko/obj-*
 ignore = Path src/gecko/target
 ignore = Path src/servo/.servo
