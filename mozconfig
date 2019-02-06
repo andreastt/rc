@@ -1,8 +1,10 @@
 mk_add_options AUTOCLOBBER=1
 
-ac_add_options --enable-cdp
-
-#ac_add_options --enable-artifact-builds
-
+CC=/usr/lib/icecc/bin/cc
+CXX=/usr/lib/icecc/bin/c++
+mk_add_options MOZ_MAKE_FLAGS="-j$(icecc-jobs)"
 ac_add_options --with-ccache=sccache
+
+#ac_add_options --enable-cdp
+#ac_add_options --enable-artifact-builds
 ac_add_options --enable-rust-tests
