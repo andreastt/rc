@@ -7,7 +7,7 @@ export EDITOR=E
 
 if [ -d $NAMESPACE ]
 then
-	export NAMESPACE=$(mktemp -d)
+	export NAMESPACE=$(mktemp -t ns.$USER)
 else
 	mkdir -p $NAMESPACE
 fi
