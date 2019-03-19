@@ -9,7 +9,7 @@ if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d)
 else
-	mkdir $NAMESPACE
+	mkdir -p $NAMESPACE
 fi
 
 trap "rm -rf $NAMESPACE" EXIT
