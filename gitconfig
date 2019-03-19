@@ -23,6 +23,7 @@
 	cp = cherry-pick
 	serve = instaweb
 
+	lo = !git log --format='%h    \t%s'
 	fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut -f 1 -d ' '`
 	patch = format-patch -n 'HEAD^'
 
