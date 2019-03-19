@@ -2,6 +2,6 @@ mk_add_options AUTOCLOBBER=1
 ac_add_options --with-ccache=sccache
 
 ac_add_options --enable-rust-tests
-#ac_add_options --enable-cdp
+ac_add_options --enable-cdp
 
 #ac_add_options --enable-artifact-builds
