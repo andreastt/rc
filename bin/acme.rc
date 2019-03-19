@@ -12,8 +12,8 @@ else
 	mkdir -p $NAMESPACE
 fi
 
-trap "rm -rf $NAMESPACE" EXIT
-trap "kill -TERM -$$" EXIT
+trap "rm -rf $NAMESPACE" EXIT SIGINT SIGQUIT
+trap "kill -TERM -$$" EXIT SIGINT SIGQUIT
 
 case $(uname) in
 Linux*)
