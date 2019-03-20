@@ -16,6 +16,7 @@
 
 [merge]
 	ff = false
+	log = true
 
 [alias]
 	st = status
