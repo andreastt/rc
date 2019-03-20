@@ -6,7 +6,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
-export NAMESPACE=$HOME/ns/default
+export NAMESPACE=${TMPDIR}ns.ato.default
 export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
