@@ -16,9 +16,6 @@ else
 	fi
 fi
 
-trap "rm -rf $NAMESPACE" EXIT SIGINT SIGQUIT
-trap "kill -TERM -$$" EXIT SIGINT SIGQUIT
-
 function cleanup {
 	rm -rf $NAMESPACE
 }
