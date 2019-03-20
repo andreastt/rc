@@ -8,11 +8,11 @@
 [push]
 	default = current
 
-[pull]
-	rebase = true
-
 [fetch]
 	recurseSubmodules = true
+
+[pull]
+	rebase = false
 
 [merge]
 	ff = false
