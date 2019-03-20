@@ -10,6 +10,10 @@ then
 	export NAMESPACE=$(mktemp -d -t ns.$USER)
 else
 	mkdir -p $NAMESPACE
+	if [ -f $HOME/acme.dump ]
+	then
+		loadflag=-l$HOME/acme.dump
+	fi
 fi
 
 trap "rm -rf $NAMESPACE" EXIT SIGINT SIGQUIT
@@ -29,5 +33,5 @@ ffont=/mnt/font/LucidaGrandeMono/${size}a/font
 
 echo $NAMESPACE
 plumber
-acme -a -f$vfont -F$ffont $*
+acme -a -f$vfont -F$ffont $loadflag $*
 
