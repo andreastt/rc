@@ -8,7 +8,6 @@ export NAMESPACE=${TMPDIR}ns.ato.default
 export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
-export CARGO=$HOME/.cargo/bin/cargo
 export CCACHE_PREFIX=icecc
 export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
 export PYTHONDONTWRITEBYTECODE=1
