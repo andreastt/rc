@@ -4,6 +4,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
+TMPDIR=${TMPDIR:-/tmp/}
 export NAMESPACE=${TMPDIR}ns.ato.default
 export EDITOR=E
 
