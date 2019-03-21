@@ -7,7 +7,7 @@ export EDITOR=E
 
 if [ -d $NAMESPACE ]
 then
-	export NAMESPACE=$(mktemp -d -t ns.$USER)
+	export NAMESPACE=$(mktemp -d -t ns.$USER.XXXXXX)
 else
 	mkdir -p $NAMESPACE
 	if [ -f $HOME/acme.dump ]
