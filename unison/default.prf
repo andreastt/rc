@@ -41,10 +41,9 @@ ignore = Path .xsession-errors
 ignore = Path Library
 ignore = Path Mail
 ignore = Path Pictures/Photos Library.photoslibrary
+ignore = Path src/*/target
 ignore = Path src/gecko/obj-*
-ignore = Path src/gecko/target
 ignore = Path src/servo/.servo
-ignore = Path src/servo/target
 ignore = Path tmp
 ignore = Path unison.log
 
