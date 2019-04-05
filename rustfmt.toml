@@ -1,5 +1,0 @@
-format_strings = true
-wrap_comments = true
-normalize_comments = true
-use_try_shorthand = true
-reorder_imports = true
