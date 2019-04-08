@@ -2,6 +2,7 @@ export PLAN9=/usr/local/plan9
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
 
+export PATH=$HOME/bin/sshfsexec:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:/usr/local/plan9/bin
 export PATH=$PATH:$HOME/.cargo/bin
