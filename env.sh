@@ -2,7 +2,6 @@ export PLAN9=/usr/local/plan9
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
 
-export PATH=$HOME/bin/sshfsexec:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:/usr/local/plan9/bin
 export PATH=$PATH:$HOME/.cargo/bin
@@ -12,7 +11,8 @@ export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
 TMPDIR=${TMPDIR:-/tmp/}
-export NAMESPACE=${TMPDIR}ns.ato.default
+NAMESPACE=${NAMESPACE:-${TMPDIR}ns.ato.default}
+export NAMESPACE
 export EDITOR=E
 
 export RUSTC_WRAPPER=sccache
@@ -28,3 +28,14 @@ export DEBIAN_FRONTEND=noninteractive
 # because these are almost impossible to remember
 export tryall="-b do -p all -u all -t none"
 export trymn="-b do -p linux,linux64,macosx64,win64,android-api-16 -u marionette,marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-local-e10s,firefox-ui-functional-remote-e10s -t none"
+
+
+
+_cd () {
+     \cd "$@" &&
+     case $- in
+     *i*)
+          awd
+     esac
+}
+alias cd=_cd
