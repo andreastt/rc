@@ -28,14 +28,3 @@ export DEBIAN_FRONTEND=noninteractive
 # because these are almost impossible to remember
 export tryall="-b do -p all -u all -t none"
 export trymn="-b do -p linux,linux64,macosx64,win64,android-api-16 -u marionette,marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-local-e10s,firefox-ui-functional-remote-e10s -t none"
-
-
-
-_cd () {
-     \cd "$@" &&
-     case $- in
-     *i*)
-          awd
-     esac
-}
-alias cd=_cd
