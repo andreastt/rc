@@ -40,6 +40,7 @@ ignore = Path .viminfo
 ignore = Path .xsession-errors
 ignore = Path Library
 ignore = Path Mail
+ignore = Path Music
 ignore = Path Pictures/Photos Library.photoslibrary
 ignore = Path src/*/target
 ignore = Path src/gecko/obj-*
