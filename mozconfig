@@ -1,5 +1,6 @@
 mk_add_options AUTOCLOBBER=1
 ac_add_options --with-ccache=sccache
+mk_add_options 'export CARGO_BUILD_PIPELINING=1'
 
 ac_add_options --enable-tests
 ac_add_options --enable-rust-tests
