@@ -22,8 +22,3 @@ export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 export MOZ_NOSPAM=1
 export DEBIAN_FRONTEND=noninteractive
-
-# Mozilla's try server shortcuts
-# because these are almost impossible to remember
-export tryall="-b do -p all -u all -t none"
-export trymn="-b do -p linux,linux64,macosx64,win64,android-api-16 -u marionette,marionette-e10s,marionette-headless-e10s,xpcshell,web-platform-tests,firefox-ui-functional-local-e10s,firefox-ui-functional-remote-e10s -t none"
