@@ -17,8 +17,8 @@ export EDITOR=E
 export RUSTC_WRAPPER=sccache
 export CCACHE_PREFIX=icecc
 export SCCACHE_REDIS=redis://icecc-scheduler.corp.lon2.mozilla.com
-export PYTHONDONTWRITEBYTECODE=1
 
+export PYTHONDONTWRITEBYTECODE=1
 export MACH_NO_TERMINAL_FOOTER=1
 export MOZ_NOSPAM=1
 export DEBIAN_FRONTEND=noninteractive
