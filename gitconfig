@@ -19,11 +19,12 @@
 	log = true
 
 [alias]
-	st = status
 	co = checkout
 	cp = cherry-pick
-	serve = instaweb
 	lo = log --oneline
+	patch = format-patch
+	serve = instaweb
+	st = status
 
 [cinnabar]
 	helper = $HOME/src/git-cinnabar/git-cinnabar-helper
