@@ -25,7 +25,6 @@
 	serve = instaweb
 
 	lo = log --oneline
-	fixup = !git commit --fixup=`git log --format='%H %s' | grep -Ev '[a-z0-9]{40}\\sfixup!\\s' | head -n1 | cut -f 1 -d ' '`
 
 	current-branch = rev-parse --abbrev-ref HEAD
 	fork-point = !git merge-base $(git current-branch) central
