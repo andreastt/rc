@@ -5,7 +5,7 @@ export GOBIN=$HOME/bin
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOBIN
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
 
