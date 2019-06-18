@@ -23,12 +23,7 @@
 	co = checkout
 	cp = cherry-pick
 	serve = instaweb
-
 	lo = log --oneline
-
-	current-branch = rev-parse --abbrev-ref HEAD
-	fork-point = !git merge-base $(git current-branch) central
-	histedit = !git rebase -i $(git fork-point) --autosquash
 
 [cinnabar]
 	helper = $HOME/src/git-cinnabar/git-cinnabar-helper
