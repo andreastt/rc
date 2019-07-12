@@ -7,8 +7,8 @@ prefer = newer
 links = true
 confirmbigdel = false
 
-root = /Users/ato
-root = ssh://tristan//home/ato
+root =
+root = ssh://delcorf.sny.no//unison
 
 path =
 
