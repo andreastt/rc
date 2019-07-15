@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# TODO(ato):
+# - support for multiple OSes
+# - support for clipboards across SSH
+
+function copy {
+	pbcopy -
+}
+
+function paste {
+	pbpaste
+}
+
+# echo "hællæ" | clip
+if [[ -p /dev/stdin ]]
+then
+	copy
+fi
+
+# clip <foo.txt
+if [[ ! -t 0 && ! -p /dev/stdin ]]
+then
+	copy
+fi
+
+if [[ -t 0 ]]
+then
+	paste
+fi
