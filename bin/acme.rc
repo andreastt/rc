@@ -35,5 +35,6 @@ ffont=/mnt/font/LucidaGrandeMono/${size}a/font
 
 echo $NAMESPACE
 plumber
-acme -a -f$vfont -F$ffont $loadflag $*
+#acme -a -f$vfont -F$ffont $loadflag $*
+acme -a $loadflag $*
 
