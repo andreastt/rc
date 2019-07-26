@@ -31,6 +31,7 @@ ignore = Path .cache
 ignore = Path .cargo
 ignore = Path .ccache
 ignore = Path .iceccd.socket
+ignore = Path .local
 ignore = Path .mozilla
 ignore = Path .mozbuild
 ignore = Path .rustup
