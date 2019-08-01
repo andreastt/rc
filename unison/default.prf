@@ -34,6 +34,7 @@ ignore = Path .iceccd.socket
 ignore = Path .local
 ignore = Path .mozilla
 ignore = Path .mozbuild
+ignore = Path .nv
 ignore = Path .rustup
 ignore = Path .serverauth.*
 ignore = Path .unison
