@@ -32,6 +32,14 @@ data set /home/ato/src/gecko/remote/$1.jsm
 attr add addr=$3
 plumb to edit
 
+# mochitests
+type is text
+data matches 'chrome:\/\/mochitests\/content\/browser\/(.+)\.js(:([0-9]+))?'
+arg isfile /home/ato/src/gecko/$1.js
+data set /home/ato/src/gecko/$1.js
+attr add addr=$3
+plumb to edit
+
 # Bugzilla
 type is text
 data matches '[Bb]ug ([0-9]+)'
