@@ -37,7 +37,7 @@ alias l=ls
 PS1="% "
 
 # thin beam cursor in xterm
-if [[ $parent != "win" ]]
-then
-	echo -en "\x1b[\x36 q"
-fi
+#if [[ $parent != "win" ]]
+#then
+#	echo -en "\x1b[\x36 q"
+#fi
