@@ -35,9 +35,11 @@ fi
 alias l=ls
 
 PS1="% "
-
-# thin beam cursor in xterm
-#if [[ $parent != "win" ]]
-#then
-#	echo -en "\x1b[\x36 q"
-#fi
+case "$TERM" in
+xterm*|rxvt*)
+	PROMPT_COMMAND='echo -ne "\033]2;$(whoami)@$(hostname):$(dirs)\007\033]1;\007"'
+	echo -en "\x1b[\x36 q"
+	;;
+*)
+	;;
+esac
