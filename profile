@@ -13,8 +13,10 @@ _cd () {
 }
 alias cd=_cd
 
+parent=$(tr -d '\0' </proc/$PPID/cmdline)
+
 # POSIX compatibility -- hah, I laugh in your face!
-if [[ $(ps -p $PPID -o comm=) == "win" ]]
+if [[ $parent == "win" ]]
 then
 	alias ll="ls -Flh"
 	alias ls="ls -F | mc"
@@ -33,3 +35,11 @@ fi
 alias l=ls
 
 PS1="% "
+case "$TERM" in
+xterm*|rxvt*)
+	PROMPT_COMMAND='echo -ne "\033]2;$(whoami)@$(hostname):$(dirs)\007\033]1;\007"'
+	echo -en "\x1b[\x36 q"
+	;;
+*)
+	;;
+esac

@@ -21,7 +21,8 @@
 [alias]
 	co = checkout
 	cp = cherry-pick
-	lo = log --oneline
+	l = log --oneline
+	lo = log --stat
 	patch = format-patch
 	serve = instaweb
 	st = status
