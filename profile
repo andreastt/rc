@@ -15,7 +15,6 @@ alias cd=_cd
 
 parent=$(tr -d '\0' </proc/$PPID/cmdline)
 
-# POSIX compatibility -- hah, I laugh in your face!
 if [[ $parent == "win" ]]
 then
 	alias ll="ls -Flh"
