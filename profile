@@ -13,7 +13,14 @@ _cd () {
 }
 alias cd=_cd
 
-parent=$(tr -d '\0' </proc/$PPID/cmdline)
+case $(uname) in
+Darwin*)
+	parent=$(ps -p $PPID -o command=)
+	;;
+*)
+	parent=$(tr -d '\0' </proc/$PPID/cmdline)
+	;;
+esac
 
 if [[ $parent == "win" ]]
 then
