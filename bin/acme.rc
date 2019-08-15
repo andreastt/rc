@@ -30,11 +30,15 @@ Linux*)
 	;;
 esac
 
-vfont=/mnt/font/LucidaGrande/${size}a/font
-ffont=/mnt/font/LucidaGrandeMono/${size}a/font
+fontflags=""
+if [[ $(system_profiler SPDisplaysDataType | grep Resolution) =~ "Retina" ]]
+then
+	vfont=/mnt/font/LucidaGrande/${size}a/font
+	ffont=/mnt/font/LucidaGrandeMono/${size}a/font
+	fontflags="${fontflags} -f${vfont} -F${ffont}"
+fi
 
 echo $NAMESPACE
 plumber
-#acme -a -f$vfont -F$ffont $loadflag $*
-acme -a $loadflag $*
+acme -a $fontflags $loadflag $*
 
