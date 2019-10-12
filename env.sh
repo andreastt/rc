@@ -8,6 +8,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$HOME/src/git-cinnabar
 export PATH=$PATH:$HOME/src/phlay
+export PATH=$PATH:$HOME/src/review
 
 TMPDIR=${TMPDIR:-/tmp/}
 NAMESPACE=${NAMESPACE:-${TMPDIR}ns.ato.default}
