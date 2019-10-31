@@ -5,11 +5,11 @@ alias .=pwd
 alias ..="cd .."
 
 _cd () {
-     \cd "$@" &&
-     case $- in
-     *i*)
-          awd
-     esac
+	\cd "$@" &&
+	case $- in
+	*i*)
+		awd
+	esac
 }
 alias cd=_cd
 
