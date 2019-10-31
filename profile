@@ -27,7 +27,7 @@ preexec() {
 
 	# TODO(ato): preexec() doesn't propagate the exit code
 	>&2 echo "Delegating to $CPU_REMOTE"
-	cpu -v $1 && return 1 || return $?
+	cpu $1 && return 1 || return $?
 }
 
 case $(uname) in
