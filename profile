@@ -1,5 +1,8 @@
+shopt -s extdebug
+
 # non-login shells do not source /etc/profile.d/*
 . $HOME/src/rc/env.sh
+. $HOME/src/rc/preexec.sh
 
 alias .=pwd
 alias ..="cd .."
@@ -12,6 +15,19 @@ _cd () {
 	esac
 }
 alias cd=_cd
+
+localwhitelist=(ls pwd ssh cpu)
+preexec() {
+	[[ -z $CPU_REMOTE ]] && return
+
+	local cmd=$(echo $1 | awk '{print $1}')
+
+	[[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
+	[[ ${localwhitelist[@]} =~ ${cmd} ]] && return 0
+
+	# TODO(ato): preexec() doesn't propagate the exit code
+	cpu -v $1 && return 1 || return $?
+}
 
 case $(uname) in
 Darwin*)
