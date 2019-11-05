@@ -1,34 +1,11 @@
-shopt -s extdebug
+set -o functrace >/dev/null 2>&1
+shopt -s extdebug >/dev/null 2>&1
 
-# non-login shells do not source /etc/profile.d/*
 . $HOME/src/rc/env.sh
-. $HOME/src/rc/preexec.sh
+. $HOME/src/rc/cpu.bash
 
 alias .=pwd
 alias ..="cd .."
-
-_cd () {
-	\cd "$@" &&
-	case $- in
-	*i*)
-		awd
-	esac
-}
-alias cd=_cd
-
-localwhitelist=(ls pwd ssh cpu)
-preexec() {
-	[[ -z $CPU_REMOTE ]] && return
-
-	local cmd=$(echo $1 | awk '{print $1}')
-
-	[[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
-	[[ ${localwhitelist[@]} =~ ${cmd} ]] && return 0
-
-	# TODO(ato): preexec() doesn't propagate the exit code
-	>&2 echo "Delegating to $CPU_REMOTE"
-	cpu $1 && return 1 || return $?
-}
 
 case $(uname) in
 Darwin*)
