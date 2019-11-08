@@ -37,6 +37,7 @@ ignore = Path .mozbuild
 ignore = Path .nv
 ignore = Path .rustup
 ignore = Path .serverauth.*
+ignore = Path .ssh/sockets
 ignore = Path .unison
 ignore = Path .viminfo
 ignore = Path .xsession-errors
