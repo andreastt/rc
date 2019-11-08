@@ -38,6 +38,8 @@ _cd () {
                 awd
         esac
 
+	unset CPU_REMOTE
+
         local mountp="$(mount | grep osxfuse | awk '{print $3}')"
 	local remotep="$(mount | grep osxfuse | awk '{print $1}')"
         if [[ "$(pwd)" = "$mountp"* ]]
