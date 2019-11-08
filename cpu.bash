@@ -52,13 +52,13 @@ _cd () {
 alias cd=_cd
 
 preexec() {
-        [[ -z $CPU_REMOTE ]] && return
+	[[ -z $CPU_REMOTE ]] && return
 	[[ ! -n "$1" ]] && return
 
-        local cmd=$(echo $1 | awk '{print $1}')
-        [[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
-        [[ ${whitelist[@]} =~ "${cmd}" ]] && return 0
+	local cmd=$(echo $1 | awk '{print $1}')
+	[[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
+	[[ ${whitelist[@]} =~ "${cmd}" ]] && return 0
 
-        # TODO(ato): preexec() doesn't propagate the exit code
-        cpu $1 && return 1 || return $?
+	# TODO(ato): preexec() doesn't propagate the exit code
+	cpu $1 && return 1 || return $?
 }
