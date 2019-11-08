@@ -53,6 +53,7 @@ alias cd=_cd
 
 preexec() {
         [[ -z $CPU_REMOTE ]] && return
+	[[ ! -n "$1" ]] && return
 
         local cmd=$(echo $1 | awk '{print $1}')
         [[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
