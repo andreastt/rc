@@ -14,6 +14,9 @@
 # and never relayed to the remote:
 whitelist=(
 	ls
+	rm
+	du
+	file
 	pwd
 	ssh
 	cpu
