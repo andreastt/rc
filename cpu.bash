@@ -42,7 +42,7 @@ _cd () {
 
         local mountp="$(mount | grep osxfuse | awk '{print $3}')"
 	local remotep="$(mount | grep osxfuse | awk '{print $1}')"
-        if [[ "$(pwd)" = "$mountp"* ]]
+        if [[ -n "$mountp" ]] && [[ "$(pwd)" = "$mountp"* ]]
         then
                 local pwd=$(pwd)
                 local relp=${pwd#$mountp}
