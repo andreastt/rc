@@ -15,6 +15,7 @@
 whitelist=(
 	ls
 	rm
+	mv
 	du
 	file
 	pwd
