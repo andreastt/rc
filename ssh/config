@@ -17,6 +17,9 @@ Host tristan
 	HostName %h.corp.lon2.mozilla.com
 	ForwardX11 yes
 	ForwardX11Trusted yes
+	#ControlMaster auto
+	#ControlPath ~/.ssh/sockets/%r@%h:%p
+	#ControlPersist 6000
 
 Host eir
 	HostName %h.corp.lon2.mozilla.com
