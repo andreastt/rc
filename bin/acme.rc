@@ -31,7 +31,8 @@ Linux*)
 esac
 
 fontflags=""
-if [[ $(system_profiler SPDisplaysDataType | grep Resolution | tail -1) =~ "Retina" ]]
+res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
+if [[ "$res" =~ Retina|Ultra ]]
 then
 	vfont=/mnt/font/LucidaGrande/${size}a/font
 	ffont=/mnt/font/LucidaGrandeMono/${size}a/font
