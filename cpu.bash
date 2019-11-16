@@ -27,27 +27,25 @@ whitelist=(
 	awd
 )
 
-set -o functrace >/dev/null 2>&1
-shopt -s extdebug >/dev/null 2>&1
 . $HOME/src/rc/preexec.bash
 
 _cd () {
-        \cd "$@" &&
-        case $- in
-        *i*)
-                awd
-        esac
+	\cd "$@" &&
+	case $- in
+	*i*)
+		awd
+	esac
 
 	unset CPU_REMOTE
 
-        local mountp="$(mount | grep osxfuse | awk '{print $3}')"
+	local mountp="$(mount | grep osxfuse | awk '{print $3}')"
 	local remotep="$(mount | grep osxfuse | awk '{print $1}')"
-        if [[ -n "$mountp" ]] && [[ "$(pwd)" = "$mountp"* ]]
-        then
-                local pwd=$(pwd)
-                local relp=${pwd#$mountp}
-                export CPU_REMOTE="$remotep$relp"
-        fi
+	if [[ -n "$mountp" ]] && [[ "$(pwd)" = "$mountp"* ]]
+	then
+		local pwd=$(pwd)
+		local relp=${pwd#$mountp}
+		export CPU_REMOTE="$remotep$relp"
+	fi
 }
 alias cd=_cd
 
