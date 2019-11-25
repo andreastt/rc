@@ -4,6 +4,18 @@ mk_add_options MOZ_MAKE_FLAGS="-j100"
 
 mk_add_options AUTOCLOBBER=1
 
+#export CFLAGS="--target=x86_64-apple-darwin16.0.0"
+#export CXXFLAGS="--target=x86_64-apple-darwin16.0.0"
+#export HOST_CFLAGS="--target=x86_64-apple-darwin16.0.0"
+#export HOST_CXXFLAGS="--target=x86_64-apple-darwin16.0.0"
+#ac_add_options --with-macos-sdk=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#ac_add_options CCACHE=~/.cargo/bin/sccache
+
+#ac_add_options --enable-application=mobile/android
+#ac_add_options --target=x86_64
+
+ac_add_options --enable-debug
+
 #ac_add_options --enable-artifact-builds
-#ac_add_options --enable-tests
+ac_add_options --enable-tests
 #ac_add_options --enable-rust-tests
