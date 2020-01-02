@@ -17,5 +17,5 @@ mk_add_options AUTOCLOBBER=1
 ac_add_options --enable-debug
 
 #ac_add_options --enable-artifact-builds
-ac_add_options --enable-tests
+#ac_add_options --enable-tests
 #ac_add_options --enable-rust-tests
