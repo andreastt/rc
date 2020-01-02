@@ -14,7 +14,8 @@ Host hg.mozilla.org
 	User ato@sny.no
 
 Host tristan
-	HostName %h.corp.lon2.mozilla.com
+	#HostName %h.corp.lon2.mozilla.com
+	HostName 10.239.30.203
 	ForwardX11 yes
 	ForwardX11Trusted yes
 	#ControlMaster auto
