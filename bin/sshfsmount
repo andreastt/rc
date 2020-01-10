@@ -2,7 +2,8 @@
 mountp=/Volumes/$1
 if [[ -d $mountp ]]
 then
-	diskutil unmount force $mountp
+	sudo diskutil unmount force $mountp
 fi
 sudo mkdir $mountp
-sudo sshfs $1:/home/$(whoami) $mountp -oauto_cache,reconnect,Compression=no
+sudo chown $(whoami) $mountp
+sshfs $1:/home/$(whoami) $mountp -oauto_cache,reconnect,Compression=no
