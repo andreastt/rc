@@ -13,17 +13,5 @@ Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.
 Host hg.mozilla.org
 	User ato@sny.no
 
-Host tristan
-	#HostName %h.corp.lon2.mozilla.com
-	HostName 10.239.30.203
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	#ControlMaster auto
-	#ControlPath ~/.ssh/sockets/%r@%h:%p
-	#ControlPersist 6000
-
-Host eir
-	HostName %h.corp.lon2.mozilla.com
-
 Host *.sny.no
 	Port 33138
