@@ -10,3 +10,6 @@ brew "rust"
 brew "sshfs"
 brew "unison"
 brew "wget"
+
+tap "homebrew/cask"
+cask "1Password"
