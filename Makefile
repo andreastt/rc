@@ -17,4 +17,5 @@ $(HOME)/%:
 	@$(ln) $(rel)/$(patsubst .%,%,$(notdir $@)) $@
 
 tools:
+	go install sny.no/tools/clip
 	go install sny.no/tools/f
