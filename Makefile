@@ -26,7 +26,7 @@ tools:
 
 deps: Brewfile
 	brew update >/dev/null
-	brew bundle --file $< --no-lock >/dev/null
+	brew bundle --file $< --no-lock
 
 brew:
 	$(curl) https://raw.githubusercontent.com/Homebrew/install/master/install.sh >$(TMP)/brew.sh
