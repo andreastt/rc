@@ -28,5 +28,6 @@ brew: Brewfile
 	brew bundle --file $< --no-lock >/dev/null
 
 bootstrap:
+	chsh -s /bin/bash $(USER)
 	$(curl) https://raw.githubusercontent.com/Homebrew/install/master/install.sh >$(TMP)/brew.sh
 	bash $(TMP)/brew.sh
