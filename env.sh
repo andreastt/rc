@@ -4,7 +4,6 @@ export GOBIN=$HOME/bin
 
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
-export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOBIN
 
 TMPDIR=${TMPDIR:-/tmp/}
