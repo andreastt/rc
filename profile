@@ -1,8 +1,8 @@
 set -o functrace >/dev/null 2>&1
 shopt -s extdebug >/dev/null 2>&1
 
-. $HOME/src/rc/env.sh
-. $HOME/src/rc/cpu.bash
+. $HOME/rc/env.sh
+. $HOME/rc/cpu.bash
 
 alias .=pwd
 alias ..="cd .."

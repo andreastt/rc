@@ -28,7 +28,7 @@ whitelist=(
 	awd
 )
 
-. $HOME/src/rc/preexec.bash
+. $HOME/rc/preexec.bash
 
 _cd () {
 	\cd "$@" &&
