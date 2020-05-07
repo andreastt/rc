@@ -15,7 +15,12 @@ export PATH=$PATH:$HOME/src/review
 TMPDIR=${TMPDIR:-/tmp/}
 NAMESPACE=${NAMESPACE:-${TMPDIR}ns.ato.default}
 export NAMESPACE
-export EDITOR=E
+if [[ -n $SSH_CLIENT ]]
+then
+	export EDITOR=vis
+else
+	export EDITOR=E
+fi
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PYTHONDONTWRITEBYTECODE=1
