@@ -21,16 +21,8 @@ then
 	alias ll="ls -Flh"
 	alias ls="ls -F | mc"
 else
-	case $(uname) in
-	Darwin)
-		alias ll="ls -GFlh"
-		alias ls="ls -FG"
-		;;
-	*)
-		alias ll="ls --color -Flh"
-		alias ls="ls -F --color"
-		;;
-	esac
+	alias ll="ls --color -Flh"
+	alias ls="ls -F --color"
 fi
 alias l=ls
 
