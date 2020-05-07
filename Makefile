@@ -12,5 +12,6 @@ symlinks:
 tools:
 	go install github.com/rogpeppe/godef
 	go install golang.org/x/tools/cmd/gorename
+	go install marius.ae/tools/g
 	go install sny.no/tools/clip
 	go install sny.no/tools/f
