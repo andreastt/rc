@@ -21,7 +21,7 @@ lexers.STYLE_TAG = "fore:red,bold"
 lexers.STYLE_TYPE = "fore:#6fc2ef,bold"
 lexers.STYLE_VARIABLE = "fore:#ecdd8e,bold"
 lexers.STYLE_WHITESPACE = ""
-lexers.STYLE_EMBEDDED = "back:red,bold"
+lexers.STYLE_EMBEDDED = "fore:#ecdd8e"
 lexers.STYLE_IDENTIFIER = "fore:white"
 
 lexers.STYLE_LINENUMBER = "fore:white"
