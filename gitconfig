@@ -26,6 +26,3 @@
 	patch = format-patch
 	serve = instaweb
 	st = status
-
-[cinnabar]
-	helper = $HOME/src/git-cinnabar/git-cinnabar-helper
