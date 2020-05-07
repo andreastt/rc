@@ -6,8 +6,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOBIN
-export PATH=$PATH:/opt/local/bin
-export PATH=$PATH:/opt/local/sbin
 
 TMPDIR=${TMPDIR:-/tmp/}
 NAMESPACE=${NAMESPACE:-${TMPDIR}ns.ato.default}
