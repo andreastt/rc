@@ -1,9 +1,0 @@
-#!/bin/sh
-mountp=/Volumes/$1
-if [[ -d $mountp ]]
-then
-	sudo diskutil unmount force $mountp
-fi
-sudo mkdir $mountp
-sudo chown $(whoami) $mountp
-sshfs $1:/home/$(whoami) $mountp -oauto_cache,reconnect,Compression=no
