@@ -22,7 +22,9 @@ vis.events.subscribe(vis.events.FILE_OPEN, file_open)
 function file_type_exec(path)
 	if not path then return end
 
-	if string.match(path, ".ts") or string.match(path, ".mjs") then
+	if string.match(path, ".bs") then
+		vis:command("set syntax html")
+	elseif string.match(path, ".ts") or string.match(path, ".mjs") then
 		vis:command("set syntax javascript")
 	elseif string.match(path, ".go") then
 		--vis:command("set go_fmt_binary goimports")
