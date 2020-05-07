@@ -16,6 +16,9 @@ else
 	export EDITOR=E
 fi
 
+export XDG_CONFIG_HOME=$HOME/rc
+export XDG_CACHE_HOME=$HOME/tmp
+
 export PYTHONDONTWRITEBYTECODE=1
 export DEBIAN_FRONTEND=noninteractive
 export LESSHISTFILE=/dev/null
