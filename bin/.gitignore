@@ -2,3 +2,6 @@ clip
 f
 fmt2
 g
+godef
+goimports
+gorename
