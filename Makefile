@@ -1,6 +1,5 @@
 TMP ?= /tmp
 
-curl = curl -fsSL
 ln = ln -Fvs
 
 rel = $(subst $(HOME)/,,$(PWD))
