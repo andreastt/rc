@@ -7,16 +7,7 @@ shopt -s extdebug >/dev/null 2>&1
 alias .=pwd
 alias ..="cd .."
 
-case $(uname) in
-Darwin*)
-	parent=$(ps -p $PPID -o command=)
-	;;
-*)
-	parent=$(tr -d '\0' </proc/$PPID/cmdline)
-	;;
-esac
-
-if [[ $parent == "win" ]]
+if [[ $(tr -d '\0' </proc/$PPID/cmdline) == "win" ]]
 then
 	alias ll="ls -Flh"
 	alias ls="ls -F | mc"
