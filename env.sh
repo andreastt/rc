@@ -23,7 +23,5 @@ else
 fi
 
 export PYTHONDONTWRITEBYTECODE=1
-export MACH_NO_TERMINAL_FOOTER=1
-export MOZ_NOSPAM=1
 export DEBIAN_FRONTEND=noninteractive
 export LESSHISTFILE=/dev/null
