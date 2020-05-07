@@ -1,0 +1,9 @@
+[submodule "vis/cursors"]
+	path = vis/cursors
+	url = https://github.com/erf/vis-cursors.git
+[submodule "vis/go"]
+	path = vis/go
+	url = https://gitlab.com/timoha/vis-go
+[submodule "vis/smart-backspace"]
+	path = vis/smart-backspace
+	url = https://github.com/ingolemo/vis-smart-backspace.git
