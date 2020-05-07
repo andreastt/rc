@@ -1,22 +1,13 @@
-TMP ?= /tmp
-
-ln = ln -Fvs
-
-rel = $(subst $(HOME)/,,$(PWD))
+ln = ln -Ffvs
 
 .PHONY: all symlinks tools
 
 all: symlinks tools
 
-symlinks: \
-	$(HOME)/.gitconfig \
-	$(HOME)/.profile \
-	$(HOME)/.ssh/ \
-	$(HOME)/lib/ \
-	$(HOME)/bin/
-
-$(HOME)/%:
-	@$(ln) $(rel)/$(patsubst .%,%,$(notdir $@)) $@
+symlinks:
+	@$(ln) $(PWD)/profile $(HOME)/.profile
+	@$(ln) $(PWD)/env.sh $(HOME)/.bashrc
+	@$(ln) $(PWD)/ssh/config $(HOME)/.ssh/config
 
 tools:
 	go install sny.no/tools/clip
