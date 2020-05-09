@@ -32,8 +32,6 @@ function file_type_exec(path)
 		vis:command("set syntax html")
 	elseif string.match(path, ".ts") or string.match(path, ".mjs") then
 		vis:command("set syntax javascript")
-	elseif string.match(path, ".go") then
-		--vis:command("set go_fmt_binary goimports")
 	elseif string.match(path, ".rs") then
 		vis:command("set expandtab on")
 		vis:command("set tabwidth 4")
