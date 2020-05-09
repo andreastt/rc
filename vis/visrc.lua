@@ -5,9 +5,15 @@ local smart_backspace = require("smart-backspace")
 smart_backspace.tab_width = 4
 require("go/vis-go")
 
+local current_file = "nofile"
+
 function win_open()
 	vis:command("set autoindent on")
 	vis:command("set theme transparent")
+
+	if current_file and current_file.path ~= nil then
+		file_type_exec(current_file.name)
+	end
 end
 
 function file_open(file)
