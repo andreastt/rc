@@ -21,25 +21,6 @@ function cleanup {
 }
 trap cleanup EXIT
 
-case $(uname) in
-Linux*)
-	size=10
-	;;
-*)
-	size=14
-	;;
-esac
-
-fontflags=""
-res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
-if [[ "$res" =~ Retina|Ultra ]]
-then
-	vfont=/mnt/font/LucidaGrande/${size}a/font
-	ffont=/mnt/font/LucidaGrandeMono/${size}a/font
-	fontflags="${fontflags} -f${vfont} -F${ffont}"
-fi
-
 echo $NAMESPACE
 plumber
-acme -a $fontflags $loadflag $*
-
+acme -a $*
