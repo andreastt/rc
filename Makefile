@@ -10,9 +10,9 @@ symlinks:
 	@$(ln) $(PWD)/ssh/config $(HOME)/.ssh/config
 
 tools:
-	go install github.com/rogpeppe/godef
-	go install golang.org/x/tools/cmd/gorename
-	go install marius.ae/tools/g
-	go install sny.no/cmd/cpu
-	go install sny.no/tools/clip
-	go install sny.no/tools/f
+	go get github.com/rogpeppe/godef
+	go get golang.org/x/tools/cmd/gorename
+	go get marius.ae/tools/g
+	go get sny.no/cmd/cpu
+	go get sny.no/tools/clip
+	go get sny.no/tools/f
