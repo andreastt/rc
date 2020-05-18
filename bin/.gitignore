@@ -1,6 +1,7 @@
 clip
 cpu
 f
+fmt
 g
 godef
 goimports
