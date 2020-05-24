@@ -23,3 +23,4 @@ export PYTHONDONTWRITEBYTECODE=1
 export DEBIAN_FRONTEND=noninteractive
 export HISTFILE="$XDG_DATA_HOME"/bash/history
 export LESSHISTFILE=/dev/null
+export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
