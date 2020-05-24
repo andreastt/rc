@@ -1,1 +1,2 @@
 defshell -bash
+maptimeout 5
