@@ -18,7 +18,7 @@ set message_cachedir = $XDG_CACHE_HOME/mutt/bodies
 set alias_file= $XDG_DATA_HOME/mutt/aliases
 source $alias_file
 
-set sort = "threads"
+set sort = threads
 set sort_aux = last-date-received
 set attribution = "Also sprach %n:\n"
 set forward_attribution_intro = "-- >8 --"
