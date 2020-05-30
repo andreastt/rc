@@ -37,7 +37,7 @@ set delete = yes
 
 set sendmail = msmtpq
 set sendmail_wait = -1
-set send_charset="us-ascii:utf-8"
+set send_charset = "us-ascii:utf-8"
 
 # vi like movement
 bind pager j next-line
