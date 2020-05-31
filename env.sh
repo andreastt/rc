@@ -20,8 +20,9 @@ export XDG_CACHE_HOME=$HOME/tmp
 export XDG_CONFIG_HOME=$HOME/rc
 export XDG_DATA_HOME=$HOME/lib
 
-export PYTHONDONTWRITEBYTECODE=1
 export DEBIAN_FRONTEND=noninteractive
 export HISTFILE="$XDG_CACHE_HOME"/bash/history
+export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export LESSHISTFILE=/dev/null
+export PYTHONDONTWRITEBYTECODE=1
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
