@@ -2,6 +2,7 @@ clip
 cpu
 f
 fmt
+envtoolkit
 g
 godef
 goimports
