@@ -26,3 +26,8 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export LESSHISTFILE=/dev/null
 export PYTHONDONTWRITEBYTECODE=1
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
+
+if [ -n "$ENVTOOLKIT_PROMPT" ]
+then
+	export PS1="$ENVTOOLKIT_PROMPT$PS1"
+fi
