@@ -16,3 +16,7 @@ Host *.sny.no
 
 Host *.uio.no
 	User andretol
+
+Host cere-utv04
+	User andretol
+	ProxyCommand ssh -W %h:%p saruman.uio.no
