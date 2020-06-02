@@ -1,6 +1,3 @@
-set -o functrace >/dev/null 2>&1
-shopt -s extdebug >/dev/null 2>&1
-
 . $HOME/rc/env.sh
 . $HOME/rc/cpu.bash
 

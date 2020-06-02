@@ -10,6 +10,14 @@
 # sshfsexec, but has the advantage of not being tied to a particular
 # editor or designated program.
 
+if ! which awd >/dev/null 2>&1
+then
+	return
+fi
+
+set -o functrace >/dev/null 2>&1
+shopt -s extdebug >/dev/null 2>&1
+
 # Programs that should always be run locally
 # and never relayed to the remote:
 whitelist=(
