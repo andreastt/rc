@@ -18,6 +18,10 @@ set message_cachedir = $XDG_CACHE_HOME/mutt/bodies
 set alias_file= $XDG_DATA_HOME/mutt/aliases
 source $alias_file
 
+set mailcap_path = $XDG_CONFIG_HOME/mutt/mailcap
+auto_view text/html application/text application/pdf
+alternative_order text/enriched text/html text/plain text
+
 set sort = threads
 set sort_aux = last-date-received
 set attribution = "Also sprach %n:\n"
