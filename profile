@@ -14,6 +14,6 @@ else
 fi
 alias l=ls
 
-PS1="% "
+PS1="\h% "
 
 bind -m vi-insert "\C-l":clear-screen
