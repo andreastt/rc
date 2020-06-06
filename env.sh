@@ -1,3 +1,6 @@
+#. $HOME/rc/profile
+#. $HOME/rc/cpu.bash
+
 export PLAN9=/usr/local/plan9
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
@@ -27,7 +30,21 @@ export LESSHISTFILE=/dev/null
 export PYTHONDONTWRITEBYTECODE=1
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 
-if [ -n "$ENVTOOLKIT_PROMPT" ]
+alias .=pwd
+alias ..="cd .."
+
+if [[ $(tr -d '\0' </proc/$PPID/cmdline) == "win" ]]
 then
-	export PS1="$ENVTOOLKIT_PROMPT$PS1"
+	alias ll="ls -Flh"
+	alias ls="ls -F | mc"
+else
+	alias ll="ls --color -Flh"
+	alias ls="ls -F --color"
 fi
+alias l=ls
+
+PROMPT_COMMAND='echo -ne "\033]2;${USER}@${HOSTNAME}:`dirs`\007\033]1;\007"'
+PS1="$ENVTOOLKIT_PROMPT\h% "
+
+bind -m vi-insert "\C-l":clear-screen
+
