@@ -47,27 +47,3 @@ PROMPT_COMMAND='echo -ne "\033]2;${USER}@${HOSTNAME}:`dirs`\007\033]1;\007"'
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
 bind -m vi-insert "\C-l":clear-screen
-
-cwd_to_urxvt() {
-	local update="\0033]777;cwd-spawn;path;$PWD\0007"
-	case $TERM in
-	screen*)
-		# pass through to parent terminal emulator
-		update="\0033P$update\0033\\";;
-	esac
-	echo -ne "$update"
-}
-
-cwd_to_urxvt # execute upon startup to set initial directory
-
-ssh_connection_to_urxvt() {
-	# don't propagate information to urxvt if ssh is used non-interactive
-	[ -t 0 ] || [ -t 1 ] || return
-	local update="\0033]777;cwd-spawn;ssh;$1\0007"
-	case $TERM in
-	screen*)
-		# pass through to parent terminal emulator
-		update="\0033P$update\0033\\";;
-	esac
-	echo -ne "$update"
-}
