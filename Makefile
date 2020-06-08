@@ -8,7 +8,7 @@ symlinks:
 	@$(ln) $(PWD)/env.sh $(HOME)/.profile
 	@$(ln) $(PWD)/env.sh $(HOME)/.bashrc
 	@$(ln) $(PWD)/ssh/config $(HOME)/.ssh/config
-	@$(ln) $(PWD)/Xresources $(HOME)/.Xresources
+	@$(ln) $(PWD)/Xdefaults $(HOME)/.Xdefaults
 
 tools:
 	go get github.com/rogpeppe/godef
