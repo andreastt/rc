@@ -12,7 +12,7 @@ export PATH=$PATH:$GOBIN
 TMPDIR=${TMPDIR:-/tmp/}
 NAMESPACE=${NAMESPACE:-${TMPDIR}ns.ato.default}
 export NAMESPACE
-if [[ -n $SSH_CLIENT ]]
+if [ -n $SSH_CLIENT ] || [[ $(hostname) == "kain" ]]
 then
 	export EDITOR=vis
 else
