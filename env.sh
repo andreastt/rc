@@ -47,4 +47,7 @@ alias l=ls
 PROMPT_COMMAND='echo -ne "\033]2;${USER}@${HOSTNAME}:`dirs`\007\033]1;\007"'
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
-bind -m vi-insert "\C-l":clear-screen
+if [[ "$-" =~ "i" ]]
+then
+	bind -m vi-insert "\C-l":clear-screen
+fi
