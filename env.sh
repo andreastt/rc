@@ -49,5 +49,6 @@ PS1="$ENVTOOLKIT_PROMPT\h% "
 
 if [[ "$-" =~ "i" ]]
 then
+	export TERM=xterm-256color
 	bind -m vi-insert "\C-l":clear-screen
 fi
