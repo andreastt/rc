@@ -29,7 +29,7 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export LESSHISTFILE=/dev/null
 export PYTHONDONTWRITEBYTECODE=1
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
-export XENVIRONMENT=$XDG_CONFIG_HOME/x/defaults
+export XAPPLRESDIR=$XDG_CONFIG_HOME/x
 
 alias .=pwd
 alias ..="cd .."
