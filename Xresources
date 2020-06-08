@@ -1,0 +1,23 @@
+! Less surprising scrolling behaviour
+URxvt.jumpScroll: true
+URxvt.saveLines: 32768
+URxvt.scrollstyle: plain
+URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: false
+
+! Styling
+URxvt.font: -misc-fixed-medium-r-normal-*-14-*-*-*-*-*-*-*
+URxvt.background: black
+URxvt.foreground: lightgrey
+URxvt.cursorColor: red
+
+! Whoever thought this was a good default‽
+URxvt.print-pipe: "cat >/dev/null"
+
+! Send links to web browser
+! (should ideally use plumber(1))
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
