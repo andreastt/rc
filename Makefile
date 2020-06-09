@@ -7,7 +7,6 @@ all: symlinks tools
 symlinks:
 	@$(ln) $(PWD)/bashrc $(HOME)/.profile
 	@$(ln) $(PWD)/bashrc $(HOME)/.bashrc
-	@$(ln) $(PWD)/Xdefaults $(HOME)/.Xdefaults
 	@$(ln) $(PWD)/xsessionrc $(HOME)/.xsessionrc
 
 tools:
