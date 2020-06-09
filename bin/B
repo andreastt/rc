@@ -1,2 +1,7 @@
 #!/bin/sh
-E $@ &
+if [ -z ${DISPLAY} ]
+then
+	E $@
+else
+	E $@ &
+fi
