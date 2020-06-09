@@ -1,4 +1,11 @@
-export $(systemctl --user show-environment | grep -v ^DISPLAY | xargs)
+if systemctl --user show-environment &>/dev/null
+then
+	export $(systemctl --user show-environment | grep -v ^DISPLAY | xargs)
+else
+	set -a
+	. $HOME/rc/environment
+	set +a
+fi
 
 alias .=pwd
 alias ..="cd .."
