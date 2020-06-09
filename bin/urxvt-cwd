@@ -1,0 +1,49 @@
+#!/bin/bash
+
+set -ex
+
+# Derives contextual information from the currently focussed X terminal to
+# start another urxvt(1) terminal in the same location.  If the terminal
+# is ssh'ed into another system, we derive the remote host and remote CWD
+# from the title.
+#
+# This has some notable deficiencies:
+#
+#   1. The terminal title must always respect the format
+#      <user>@<host>:<path>.
+#   2. It only supports urxvt(1).
+#   3. Remote hosts must be predeclared in $HOME/.ssh/config.
+#   4. Doesn't support multiple jumps.
+#
+# Solutions to remidy the above are known:
+#
+#   - Using ssh's PermitLocalCommand, use ~C !<cmd> to send back CWD
+#     and remote connection information from remote shell session.
+#   - Store remote CWD in /proc/<pid>/rcwd.
+#
+# Uncertainties:
+#
+#   - How do we send the shell escape sequence ̃̃~C !<cmd>?
+
+id=$(xdpyinfo | grep focus | cut -f4 -d " ")
+cmd=$(xprop -id $id | grep -m1 WM_COMMAND | cut -d " " -f4 | tr ',' ' ' | tr '"' ' ' | tr -d '[:space:]')
+title=$(xprop -id $id | grep -m1 WM_NAME | cut -d " " -f3 | rev | cut -c2- | rev | cut -c2-)
+host=$(echo $title | cut -d@ -f2 | cut -d: -f1)
+cwd=$(echo $title | cut -d@ -f2 | cut -d: -f2)
+
+#echo "pre cmd:" $(xprop -id $id | grep -m1 WM_COMMAND | cut -d " " -f4 | grep -o '"[^\"]\+') >>test.log
+#echo "cmd: $cmd" >>test.log
+#echo "title: $title" >>test.log
+#echo "host: $host" >>test.log
+#echo "urxvt: $urxvt" >>test.log
+
+if [[ $cmd != "urxvt" ]]
+then
+	urxvt -e $SHELL
+elif [[ $host != $(hostname) ]]
+then
+	ssh="ssh -t $host 'cd $cwd && exec bash -l'"
+	urxvt -e $SHELL -c "$ssh"
+else
+	urxvt -e $SHELL -c "cd $cwd && exec bash -l"
+fi
