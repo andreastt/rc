@@ -8,6 +8,8 @@ URxvt.scrollWithBuffer: false
 
 ! Styling
 URxvt.font: -misc-fixed-medium-r-normal-*-14-*-*-*-*-*-*-*
+!URxvt.font: -*-fixed-*-r-*-*-16-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-fixed-*-r-*-*-16-*-*-*-*-*-*-*
 URxvt.background: black
 URxvt.foreground: lightgrey
 URxvt.cursorColor: red
