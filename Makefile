@@ -5,8 +5,8 @@ ln = ln -Ffvs
 all: symlinks tools
 
 symlinks:
-	@$(ln) $(PWD)/bashrc $(HOME)/.profile
-	@$(ln) $(PWD)/bashrc $(HOME)/.bashrc
+	@$(ln) $(PWD)/bash/bashrc $(HOME)/.profile
+	@$(ln) $(PWD)/bash/bashrc $(HOME)/.bashrc
 	@$(ln) $(PWD)/xsessionrc $(HOME)/.xsessionrc
 
 tools:
