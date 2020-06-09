@@ -5,8 +5,8 @@ ln = ln -Ffvs
 all: symlinks tools
 
 symlinks:
-	@$(ln) $(PWD)/env.sh $(HOME)/.profile
-	@$(ln) $(PWD)/env.sh $(HOME)/.bashrc
+	@$(ln) $(PWD)/bashrc $(HOME)/.profile
+	@$(ln) $(PWD)/bashrc $(HOME)/.bashrc
 	@$(ln) $(PWD)/ssh/config $(HOME)/.ssh/config
 	@$(ln) $(PWD)/Xdefaults $(HOME)/.Xdefaults
 

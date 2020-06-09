@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# TODO:
+# - support use on remote systems
+
+if [ -z ${DISPLAY} ]
+then
+	exec vis $@
+else
+	emulator=$(perl -lpe 's/\0/ /g' /proc/$(xdotool getwindowpid $WINDOWID)/cmdline | cut -d' ' -f1)
+	exec $emulator -e vis $@
+fi
