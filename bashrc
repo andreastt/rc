@@ -1,3 +1,4 @@
+# TODO: use hostname -f check instead
 if systemctl --user show-environment &>/dev/null
 then
 	export $(systemctl --user show-environment | grep -v ^DISPLAY | xargs)
