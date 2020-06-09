@@ -8,6 +8,7 @@ symlinks:
 	@$(ln) $(PWD)/bashrc $(HOME)/.profile
 	@$(ln) $(PWD)/bashrc $(HOME)/.bashrc
 	@$(ln) $(PWD)/Xdefaults $(HOME)/.Xdefaults
+	@$(ln) $(PWD)/xsessionrc $(HOME)/.xsessionrc
 
 tools:
 	go get github.com/rogpeppe/godef
