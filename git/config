@@ -2,6 +2,9 @@
 	name = Andreas Tolfsen
 	email = ato@sny.no
 
+[color]
+	ui = auto
+
 [branch]
 	autosetuprebase = always
 
