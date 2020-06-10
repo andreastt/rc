@@ -26,9 +26,9 @@ URxvt.color8: #686868
 URxvt.color9: red
 URxvt.color10: lightgreen
 URxvt.color11: lightyellow
-URxvt.color12: lightblue
+URxvt.color12: #0087FF
 URxvt.color13: pink
-URxvt.color14: lightcyan
+URxvt.color14: cyan
 URxvt.color15: white
 
 ! Whoever thought this was a good default‽
@@ -37,6 +37,6 @@ URxvt.print-pipe: "cat >/dev/null"
 ! Send links to web browser
 ! (should ideally use plumber(1))
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: firefox
+URxvt.url-launcher: WWW
 URxvt.matcher.button: 1
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
