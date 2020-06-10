@@ -39,7 +39,12 @@ cwd=$(echo $title | cut -d@ -f2 | cut -d: -f2)
 
 if [[ $cmd != "urxvt" ]]
 then
-	urxvt -e $SHELL
+	if [ -z $REMOTEHOST ]
+	then
+		urxvt -e $SHELL
+	else
+		urxvt -e $SHELL -c "ssh -t $REMOTEHOST"
+	fi
 elif [[ $host != $(hostname) ]]
 then
 	ssh="ssh -t $host 'cd $cwd && exec bash -l'"
