@@ -24,8 +24,8 @@ URxvt.cursorColor: red
 *color7: white
 *color8: lightblack
 *color9: lightred
-*color10: green
-*color11: yellow
+*color10: lightgreen
+*color11: lightyellow
 *color12: lightblue
 *color13: lightpurple
 *color14: lightcyan
