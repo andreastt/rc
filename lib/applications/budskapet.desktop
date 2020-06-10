@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=ssh to budskapet.sny.no
+Exec=urxvt -e bash -c 'ssh -t budskapet.sny.no'
+Type=Application
