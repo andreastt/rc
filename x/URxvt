@@ -14,22 +14,22 @@ URxvt.background: black
 URxvt.foreground: lightgrey
 URxvt.cursorColor: red
 
-*color0: black
-*color1: red
-*color2: green
-*color3: yellow
-*color4: blue
-*color5: purple
-*color6: cyan
-*color7: white
-*color8: lightblack
-*color9: lightred
-*color10: lightgreen
-*color11: lightyellow
-*color12: lightblue
-*color13: lightpurple
-*color14: lightcyan
-*color15: lightwhite
+URxvt.color0: black
+URxvt.color1: red
+URxvt.color2: green
+URxvt.color3: yellow
+URxvt.color4: blue
+URxvt.color5: purple
+URxvt.color6: cyan
+URxvt.color7: white
+URxvt.color8: lightblack
+URxvt.color9: lightred
+URxvt.color10: lightgreen
+URxvt.color11: lightyellow
+URxvt.color12: lightblue
+URxvt.color13: lightpurple
+URxvt.color14: lightcyan
+URxvt.color15: lightwhite
 
 ! Whoever thought this was a good default‽
 URxvt.print-pipe: "cat >/dev/null"
