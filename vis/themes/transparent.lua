@@ -2,7 +2,7 @@
 
 local lexers = vis.lexers
 
-lexers.STYLE_DEFAULT = "back:default,fore:white"
+lexers.STYLE_DEFAULT = "back:default,fore:default"
 lexers.STYLE_NOTHING = "back:black"
 lexers.STYLE_CLASS = "fore:red,bold"
 lexers.STYLE_COMMENT = "fore:#f0853e"
