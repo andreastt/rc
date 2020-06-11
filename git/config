@@ -15,7 +15,7 @@
 	recurseSubmodules = true
 
 [pull]
-	rebase = false
+	rebase = true
 
 [merge]
 	ff = false
