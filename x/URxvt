@@ -37,6 +37,6 @@ URxvt.print-pipe: "cat >/dev/null"
 ! Send links to web browser
 ! (should ideally use plumber(1))
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: WWW
+URxvt.url-launcher: gtk-launch www.desktop
 URxvt.matcher.button: 1
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
