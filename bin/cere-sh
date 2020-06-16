@@ -392,12 +392,7 @@ def main(inargs=None):
         "args": args,
     })
 
-    # load cerebrum_path, cereconf
-    try:
-        namespace["cerebrum_path"] = load_module("cerebrum_path")
-        section_setup.exec_ok("import cerebrum_path")
-    except ImportError:
-        section_setup.exec_err("import cerebrum_path")
+    # load cereconf
     namespace["cereconf"] = cereconf = load_module("cereconf", args.cereconf)
     section_setup.exec_ok("import cereconf")
 
