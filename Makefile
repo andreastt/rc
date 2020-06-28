@@ -1,8 +1,9 @@
 ln = ln -Ffvs
 
-.PHONY: all symlinks tools
+.PHONY: all symlinks tools bootstrap defaults
 
-all: symlinks tools
+all: symlinks tools deps
+bootstrap: defaults
 
 symlinks:
 	@$(ln) $(PWD)/bash/bashrc $(HOME)/.profile
@@ -17,3 +18,11 @@ tools:
 	-go get sny.no/tools/clip
 	-go get sny.no/tools/f
 	-go get sny.no/tools/fmt
+
+deps: Brewfile
+	brew update >/dev/null
+	brew bundle --file $< --no-lock >/dev/null
+
+defaults:
+	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
