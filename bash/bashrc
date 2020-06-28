@@ -11,8 +11,31 @@ fi
 alias .=pwd
 alias ..="cd .."
 
-alias ll="ls --color -Flh"
-alias ls="ls -F --color"
+_cd () {
+	\cd "$@" &&
+	case $- in
+	*i*)
+		awd
+	esac
+}
+alias cd=_cd
+
+if [[ $(ps -p $PPID -o comm=) == "win" ]]
+then
+	alias ll="ls -Flh"
+	alias ls="ls -F | mc"
+else
+	case $(uname) in
+	Darwin)
+		alias ll="ls -GFlh"
+		alias ls="ls -FG"
+		;;
+	*)
+		alias ll="ls --color -Flh"
+		alias ls="ls -F --color"
+		;;
+	esac
+fi
 alias l=ls
 
 PROMPT_COMMAND='echo -ne "\033]2;${USER}@${HOSTNAME}:`dirs`\007\033]1;\007"'
