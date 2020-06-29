@@ -3,6 +3,17 @@ source $HOME/rc/environment
 set +a
 #. $HOME/rc/cpu.bash
 
+if [ -x "$(command -v awd)" ]
+then
+	_cd () {
+		\cd "$@" &&
+		case $- in
+		*i*)
+			awd
+		esac
+	}
+	alias cd=_cd
+fi
 alias .='pwd'
 alias ..='cd ..'
 
