@@ -8,7 +8,6 @@ bootstrap: defaults
 symlinks:
 	@$(ln) $(PWD)/bash/bashrc $(HOME)/.profile
 	@$(ln) $(PWD)/bash/bashrc $(HOME)/.bashrc
-	@$(ln) $(PWD)/xsessionrc $(HOME)/.xsessionrc
 
 tools:
 	go get github.com/rogpeppe/godef
