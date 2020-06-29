@@ -35,6 +35,20 @@ else
 fi
 alias l=ls
 
+localwhitelist=(ls pwd ssh cpu)
+preexec() {
+	[[ -z $CPU_REMOTE ]] && return
+
+	local cmd=$(echo $1 | awk '{print $1}')
+
+	[[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
+	[[ ${localwhitelist[@]} =~ ${cmd} ]] && return 0
+
+	# TODO(ato): preexec() doesn't propagate the exit code
+	>&2 echo "Delegating to $CPU_REMOTE"
+	cpu $1 && return 1 || return $?
+}
+
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
 if [[ "$-" =~ "i" ]]
