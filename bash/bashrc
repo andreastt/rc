@@ -1,28 +1,14 @@
-# TODO: use hostname -f check instead
-if systemctl --user show-environment &>/dev/null
+set -a
+source $HOME/rc/environment
+set +a
+#. $HOME/rc/cpu.bash
+
+alias .='pwd'
+alias ..='cd ..'
+
+if [[ $(ps -p $PPID -o command=) == "win" ]]
 then
-	export $(systemctl --user show-environment | grep -v ^DISPLAY | xargs)
-else
-	set -a
-	. $HOME/rc/environment
-	set +a
-fi
-
-alias .=pwd
-alias ..="cd .."
-
-_cd () {
-	\cd "$@" &&
-	case $- in
-	*i*)
-		awd
-	esac
-}
-alias cd=_cd
-
-if [[ $(ps -p $PPID -o comm=) == "win" ]]
-then
-	alias ll="ls -Flh"
+	alias ll="/bin/ls -Flh | sed 's/\s+/	/g'"
 	alias ls="ls -F | mc"
 else
 	case $(uname) in
@@ -42,6 +28,5 @@ PS1="$ENVTOOLKIT_PROMPT\h% "
 
 if [[ "$-" =~ "i" ]]
 then
-	TERM=xterm-256color
 	bind -m vi-insert "\C-l":clear-screen
 fi

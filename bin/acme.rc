@@ -5,6 +5,17 @@ export SHELL=bash
 export PAGER=nobs
 export EDITOR=E
 
+_cd () {
+	\cd "$@" &&
+	case $- in
+	*i*)
+		awd
+	esac
+}
+alias cd=cd_
+#alias ll="/bin/ls -Flh"
+#alias ls="/bin/ls -F | mc"
+
 if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d -t ns.$USER)
