@@ -19,7 +19,7 @@ alias ..='cd ..'
 
 if [[ $(ps -p $PPID -o command=) == "win" ]]
 then
-	alias ll="/bin/ls -Flh | sed 's/\s+/	/g'"
+	alias ll="/bin/ls -Flh"
 	alias ls="ls -F | mc"
 else
 	case $(uname) in
