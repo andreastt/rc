@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>uio.sshfs</string>
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/sshfs</string>
+		<string>andretol@job.uio.no:/uio/kant/usit-uait-u1/andretol</string>
+		<string>/Volumes/uio</string>
+		<string>-oreconnect,auto_cache,volname=uio</string>
+		<string>-f</string>
+	</array>
+
+	<key>RunAtLoad</key>
+	<true />
+</dict>
+</plist>
