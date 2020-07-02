@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=ssh to job.uio.no
-Exec=urxvt -e bash -c 'ssh -t job.uio.no'
-Type=Application

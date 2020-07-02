@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=ssh to cere-utv04
-Exec=urxvt -e bash -c 'ssh -t cere-utv04'
-Type=Application

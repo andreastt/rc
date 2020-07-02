@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=Mail archive
-Exec=urxvt -T mutt -e bash -c 'ssh -t budskapet.sny.no mutt -f =Archive'
-Type=Application

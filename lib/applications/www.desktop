@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=WWW
-Exec=firefox-esr --profile $XDG_DATA_HOME/mozilla/firefox/x0f0te6o.default --new-window
-Type=Application
