@@ -36,9 +36,9 @@ fontflags=""
 res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
 if [[ "$res" =~ Retina ]]
 then
-	#vfont=/mnt/font/LucidaGrande/14a/font
+	vfont=/mnt/font/LucidaGrande/14a/font
 	#ffont=/mnt/font/LucidaGrandeMono/14a/font
-	vfont=/mnt/font/GoRegular/14a/font
+	#vfont=/mnt/font/GoRegular/16a/font
 	ffont=/mnt/font/GoMono/14a/font
 	fontflags="${fontflags} -f${vfont} -F${ffont}"
 fi
