@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>uio.sshfs</string>
+	<string>src.sshfs</string>
 
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/sshfs</string>
 		<string>ato@delcorf.sny.no:/src</string>
 		<string>/Volumes/src</string>
-		<string>-oreconnect,auto_cache,volname=uio</string>
+		<string>-oreconnect,auto_cache,volname=src</string>
 		<string>-f</string>
 	</array>
 
