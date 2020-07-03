@@ -13,6 +13,7 @@ then
 		esac
 	}
 	alias cd=_cd
+	awd
 fi
 alias .='pwd'
 alias ..='cd ..'
