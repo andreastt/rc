@@ -16,7 +16,7 @@ alias cd=cd_
 #alias ll="/bin/ls -Flh"
 #alias ls="/bin/ls -F | mc"
 
-if [ -d $NAMESPACE ]
+if [ -z $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d -t ns.$USER)
 else
