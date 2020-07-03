@@ -19,4 +19,4 @@ TMPDIR=${TMPDIR:-/tmp/}
 NAMESPACE=${NAMESPACE:-${TMPDIR}ns.${USER}.default}
 EDITOR=E
 
-PATH=$HOME/bin:$PATH:$PLAN9/bin
+PATH=$HOME/bin:/usr/local/bin:$PATH:$PLAN9/bin
