@@ -5,7 +5,7 @@ export SHELL=bash
 export PAGER=nobs
 export EDITOR=E
 
-if [ -z $NAMESPACE ]
+if [ -d $NAMESPACE ]
 then
 	export NAMESPACE=$(mktemp -d -t ns.$USER)
 else
