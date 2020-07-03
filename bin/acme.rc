@@ -27,10 +27,7 @@ else
 	fi
 fi
 
-function cleanup {
-	rm -rf $NAMESPACE
-}
-trap cleanup EXIT
+trap 'rm -rf $NAMESPACE' exit
 
 fontflags=""
 res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
