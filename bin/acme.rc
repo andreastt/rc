@@ -7,13 +7,17 @@ export EDITOR=E
 
 if [ -z $NAMESPACE ]
 then
-	export NAMESPACE=$(mktemp -d -t ns.$USER)
-else
+	2&> echo "$0: NAMESPACE required"
+	exit 64
+fi
+if [ ! -d $NAMESPACE ]
+then
 	mkdir -p $NAMESPACE
-	if [ -f $HOME/acme.dump ]
-	then
-		loadflag=-l$HOME/acme.dump
-	fi
+fi
+
+if [ -f $HOME/acme.dump ]
+then
+	loadflag=-l$HOME/acme.dump
 fi
 
 trap 'rm -rf $NAMESPACE' exit
