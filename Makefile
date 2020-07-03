@@ -16,7 +16,7 @@ tools:
 	-go get sny.no/cmd/cpu
 	-go get sny.no/tools/clip
 	-go get sny.no/tools/f
-	-go get sny.no/tools/fmt
+	#-go get sny.no/tools/fmt
 
 deps: Brewfile
 	brew update >/dev/null
