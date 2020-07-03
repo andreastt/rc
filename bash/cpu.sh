@@ -28,7 +28,7 @@ whitelist=(
 	awd
 )
 
-. $HOME/rc/preexec.bash
+. $HOME/rc/bash/preexec.sh
 
 _cd () {
 	\cd "$@" &&
@@ -39,6 +39,10 @@ _cd () {
 
 	unset CPU_REMOTE
 
+	# TODO: does not support multiple mountpoints
+	#
+	# this needs to iterate over each osxfuse mount,
+	# then extract fields $1 and $3 from each line
 	local mountp="$(mount | grep osxfuse | awk '{print $3}')"
 	local remotep="$(mount | grep osxfuse | awk '{print $1}')"
 	if [[ -n "$mountp" ]] && [[ "$(pwd)" = "$mountp"* ]]
