@@ -31,8 +31,6 @@ whitelist=(
 	awd
 )
 
-. $HOME/rc/bash/preexec.sh
-
 _cd () {
 	if [ -x "$(command -v awd)" ]
 	then
