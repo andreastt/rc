@@ -1,6 +1,6 @@
 # This is a bash extension that detects when you cd into an sshfs(1)
 # mountpoint, then intercepts and relays all shell commands within
-# this namespace to the remote.
+# this namespace to the remote using cpu(1).
 #
 # It relies on a program I wrote called cpu (https://git.sny.no/cmd/cpu)
 # to replicate the shell environment in the right subdirectory on the
