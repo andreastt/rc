@@ -59,6 +59,7 @@ preexec() {
 	[[ $(type -t "$cmd") =~ ^(alias|builtin)$ ]] && return 0
 	[[ ${whitelist[@]} =~ "${cmd}" ]] && return 0
 
-	# TODO(ato): preexec() doesn't propagate the exit code
+	# causes preexec.sh to abort if this function returns a non-zero value
+	shopt -s extdebug
 	cpu $1 && return 1 || return $?
 }
