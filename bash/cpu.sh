@@ -21,6 +21,7 @@ whitelist=(
 	du
 	file
 	pwd
+	logout
 	ssh
 	cpu
 	bash
