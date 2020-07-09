@@ -31,11 +31,16 @@ whitelist=(
 . $HOME/rc/bash/preexec.sh
 
 _cd () {
-	\cd "$@" &&
-	case $- in
-	*i*)
+	if [ -x "$(command -v awd)" ]
+	then
 		awd
-	esac
+
+		\cd "$@" &&
+		case $- in
+		*i*)
+			awd
+		esac
+	fi
 
 	unset CPU_REMOTE
 
