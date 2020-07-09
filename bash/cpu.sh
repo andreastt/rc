@@ -45,18 +45,9 @@ _cd () {
 
 	unset CPU_REMOTE
 
-	# TODO: does not support multiple mountpoints
-	#
-	# this needs to iterate over each osxfuse mount,
-	# then extract fields $1 and $3 from each line
-	local mountp="$(mount | grep osxfuse | awk '{print $3}')"
-	local remotep="$(mount | grep osxfuse | awk '{print $1}')"
-	if [[ -n "$mountp" ]] && [[ "$(pwd)" = "$mountp"* ]]
-	then
-		local pwd=$(pwd)
-		local relp=${pwd#$mountp}
-		export CPU_REMOTE="$remotep$relp"
-	fi
+	local mountp=$(pwd -P | grep -o "$(mount | grep osxfuse | awk '{print $3}')")
+	local remote=$(mount | grep osxfuse | grep "$mountp" | awk '{print $1}')
+	if [[ -n "$mountp"]] && export CPU_REMOTE="$remote"
 }
 alias cd=_cd
 
