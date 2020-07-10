@@ -47,9 +47,10 @@ _cd () {
 
 	local mountp=$(pwd -P | grep -o "$(mount | grep osxfuse | awk '{print $3}')")
 	local remote=$(mount | grep osxfuse | grep "$mountp" | awk '{print $1}')
+	local cwd=${PWD##$mountp}
 	if [[ -n "$mountp" ]]
 	then
-		export CPU_REMOTE="$remote"
+		export CPU_REMOTE="$remote$cwd"
 	fi
 }
 alias cd=_cd
