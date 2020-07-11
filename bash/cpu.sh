@@ -15,21 +15,22 @@ source $(brew --prefix)/etc/profile.d/bash-preexec.sh
 # Programs that should always be run locally
 # and never relayed to the remote:
 whitelist=(
-	ls
-	rm
-	rmdir
-	mv
-	du
-	file
-	pwd
-	logout
-	ssh
-	cpu
-	bash
-	acme.rc
 	B
 	E
+	acme.rc
 	awd
+	bash
+	cpu
+	du
+	file
+	logout
+	ls
+	mkdir
+	mv
+	pwd
+	rm
+	rmdir
+	ssh
 )
 
 _cd () {
