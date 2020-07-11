@@ -29,8 +29,8 @@ tools:
 	#-go get sny.no/tools/fmt
 
 deps: Brewfile
-	brew update >/dev/null
-	brew bundle --file $< --no-lock >/dev/null
+	brew update
+	brew bundle --file $< --no-lock
 
 defaults:
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
