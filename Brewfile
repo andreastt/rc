@@ -12,3 +12,4 @@ brew "wget"
 
 tap "homebrew/cask"
 cask "1Password"
+cask "Spotify"
