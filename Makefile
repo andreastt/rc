@@ -1,4 +1,4 @@
-ln = ln -Ffvs
+LN = ln -Ffs
 
 .PHONY: all symlinks tools defaults fonts
 
@@ -7,8 +7,8 @@ ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
 all: symlinks tools deps defaults fonts
 
 symlinks:
-	@$(ln) $(PWD)/bash/bashrc $(HOME)/.profile
-	@$(ln) $(PWD)/bash/bashrc $(HOME)/.bashrc
+	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
+	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
 
 tools:
 	go get github.com/rogpeppe/godef
@@ -30,4 +30,4 @@ defaults:
 fonts:
 	-chmod -N ~/Library/Fonts
 	$(RM) -r ~/Library/Fonts
-	$(ln) $(ICLOUD)/Fonts ~/Library
+	$(LN) $(ICLOUD)/Fonts ~/Library
