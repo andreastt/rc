@@ -1,12 +1,12 @@
 LN = ln -Ffs
 
-.PHONY: all symlinks tools defaults $(HOME)/Library/Fonts
-
 ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
+LIBRARY = $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
 
+.PHONY: all symlinks tools defaults $(LIBRARY)
 all: symlinks tools deps defaults
 
-symlinks: $(HOME)/Library/Fonts
+symlinks: $(LIBRARY)
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
 
@@ -14,6 +14,10 @@ $(HOME)/Library/Fonts:
 	-chmod -N $@
 	$(RM) -r $@
 	$(LN) $(ICLOUD)/Fonts $(dir $@)
+
+$(HOME)/Library/LaunchAgents:
+	$(RM) -r $@
+	$(LN) $(PWD)/Library/LaunchAgents $(dir $@)
 
 tools:
 	go get github.com/rogpeppe/godef
