@@ -1,3 +1,4 @@
+brew "bash-preexec"
 brew "git"
 brew "git-gui"
 brew "go"
