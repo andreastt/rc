@@ -2,6 +2,8 @@ ln = ln -Ffvs
 
 .PHONY: all symlinks tools bootstrap defaults fonts
 
+ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
+
 all: symlinks tools deps
 bootstrap: defaults
 
@@ -27,6 +29,6 @@ defaults:
 	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 fonts:
-	chmod -N ~/Library/Fonts
+	-chmod -N ~/Library/Fonts
 	$(RM) -r ~/Library/Fonts
-	$(ln) ~/Documents/Fonts ~/Library
+	$(ln) $(ICLOUD)/Fonts ~/Library
