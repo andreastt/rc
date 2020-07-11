@@ -1,11 +1,10 @@
 ln = ln -Ffvs
 
-.PHONY: all symlinks tools bootstrap defaults fonts
+.PHONY: all symlinks tools defaults fonts
 
 ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
 
-all: symlinks tools deps
-bootstrap: defaults
+all: symlinks tools deps defaults fonts
 
 symlinks:
 	@$(ln) $(PWD)/bash/bashrc $(HOME)/.profile
