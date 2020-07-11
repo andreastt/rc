@@ -1,6 +1,6 @@
 ln = ln -Ffvs
 
-.PHONY: all symlinks tools bootstrap defaults
+.PHONY: all symlinks tools bootstrap defaults fonts
 
 all: symlinks tools deps
 bootstrap: defaults
@@ -25,3 +25,8 @@ deps: Brewfile
 defaults:
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+fonts:
+	chmod -N ~/Library/Fonts
+	$(RM) -r ~/Library/Fonts
+	$(ln) ~/Documents/Fonts ~/Library
