@@ -17,6 +17,7 @@ source $HOME/rc/bash/preexec.sh
 whitelist=(
 	ls
 	rm
+	rmdir
 	mv
 	du
 	file
