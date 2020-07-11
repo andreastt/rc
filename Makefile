@@ -1,14 +1,19 @@
 LN = ln -Ffs
 
-.PHONY: all symlinks tools defaults fonts
+.PHONY: all symlinks tools defaults $(HOME)/Library/Fonts
 
 ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
 
-all: symlinks tools deps defaults fonts
+all: symlinks tools deps defaults
 
-symlinks:
+symlinks: $(HOME)/Library/Fonts
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
+
+$(HOME)/Library/Fonts:
+	-chmod -N $@
+	$(RM) -r $@
+	$(LN) $(ICLOUD)/Fonts $(dir $@)
 
 tools:
 	go get github.com/rogpeppe/godef
@@ -26,8 +31,3 @@ deps: Brewfile
 defaults:
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-fonts:
-	-chmod -N ~/Library/Fonts
-	$(RM) -r ~/Library/Fonts
-	$(LN) $(ICLOUD)/Fonts ~/Library
