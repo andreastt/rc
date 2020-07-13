@@ -10,7 +10,7 @@
 		<string>/usr/local/bin/sshfs</string>
 		<string>andretol@job.uio.no:/uio/kant/usit-uait-u1/andretol</string>
 		<string>/Volumes/uio</string>
-		<string>-oreconnect,auto_cache,volname=uio</string>
+                <string>-oidmap=user,exec,allow_other,reconnect,auto_cache,default_permissions,volname=uio</string>
 		<string>-f</string>
 	</array>
 

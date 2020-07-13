@@ -10,7 +10,7 @@
 		<string>/usr/local/bin/sshfs</string>
 		<string>ato@delcorf.sny.no:/src</string>
 		<string>/Volumes/src</string>
-		<string>-oreconnect,auto_cache,volname=src</string>
+		<string>-oidmap=user,exec,allow_other,reconnect,auto_cache,default_permissions,volname=src</string>
 		<string>-f</string>
 	</array>
 
