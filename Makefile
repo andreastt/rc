@@ -27,11 +27,11 @@ $(HOME)/Library/LaunchAgents:
 tools:
 	go get github.com/rogpeppe/godef
 	go get golang.org/x/tools/cmd/gorename
-	-go get marius.ae/tools/g
-	-go get sny.no/cmd/cpu
+	go get marius.ae/tools/g
+	go get sny.no/cmd/cpu
 	go get sny.no/tools/...
-	-go get sny.no/tools/edit/...
-	#-go get sny.no/tools/fmt
+	go get sny.no/tools/edit/...
+	#go get sny.no/tools/fmt
 
 deps: Brewfile
 	brew update
