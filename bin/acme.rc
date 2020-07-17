@@ -17,6 +17,7 @@ else
 fi
 
 trap 'rm -rf $NAMESPACE' exit
+trap 'kill $(jobs -p)' exit
 
 fontflags=""
 res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
@@ -30,5 +31,6 @@ then
 fi
 
 echo $NAMESPACE
+editd &
 plumber
 acme -a $fontflags $loadflag $*
