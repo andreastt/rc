@@ -1,12 +1,17 @@
 LN = ln -Ffs
 
-ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
-LIBRARY = $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
-
 .PHONY: all symlinks tools defaults $(LIBRARY)
-all: symlinks tools deps defaults
 
-symlinks: $(LIBRARY)
+ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
+LIBRARY += $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
+
+ifeq ($(shell uname -s),Darwin)
+all: symlinks tools deps defaults $(LIBRARY)
+else
+all: symlinks tools
+endif
+
+symlinks:
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
 
