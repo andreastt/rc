@@ -10,7 +10,8 @@
 # sshfsexec, but has the advantage of not being tied to a particular
 # editor or designated program.
 
-source $(brew --prefix)/etc/profile.d/bash-preexec.sh
+#source $(brew --prefix)/etc/profile.d/bash-preexec.sh
+source /usr/local/etc/profile.d/bash-preexec.sh
 
 # Programs that should always be run locally
 # and never relayed to the remote:
