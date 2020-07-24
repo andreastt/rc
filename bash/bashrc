@@ -1,7 +1,7 @@
 set -a
 source $HOME/rc/environment
 set +a
-source $HOME/rc/bash/cpu.sh
+#source $HOME/rc/bash/cpu.sh
 
 alias .='pwd'
 alias ..='cd ..'
