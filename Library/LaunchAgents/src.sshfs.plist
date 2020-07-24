@@ -16,5 +16,10 @@
 
 	<key>RunAtLoad</key>
 	<true />
+
+        <key>StandardErrorPath</key>
+        <string>/Users/am/Desktop/sshfs.err.log</string>
+        <key>StandardOutPath</key>
+        <string>/Users/am/Desktop/sshfs.out.log</string>
 </dict>
 </plist>
