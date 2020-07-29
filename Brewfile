@@ -9,6 +9,7 @@ brew "par"
 brew "python"
 brew "rust"
 brew "sshfs"
+brew "sshuttle"
 brew "wget"
 
 tap "homebrew/cask"
