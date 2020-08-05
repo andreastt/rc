@@ -13,6 +13,6 @@ brew "wget"
 
 tap "homebrew/cask"
 cask "1Password"
-cask "Mattermost"
-cask "Spotify"
+cask "mattermost"
 cask "microsoft-teams"
+cask "spotify"
