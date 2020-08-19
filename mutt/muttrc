@@ -7,7 +7,7 @@ set envelope_from = yes
 
 set mbox_type = Maildir
 set timeout = 30
-set folder = /mail/
+set folder = $HOME/mail/
 set spoolfile = +INBOX
 set record = "+Sent Items"
 set postponed = +Drafts
