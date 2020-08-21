@@ -12,8 +12,8 @@ all: symlinks tools
 endif
 
 symlinks:
-	$(LN) $(PWD)/bin $(HOME)/bin
-	$(LN) /Volumes/src $(HOME)/src
+	$(LN) $(PWD)/bin $(HOME)
+	$(LN) /Volumes/src $(HOME)
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
 
