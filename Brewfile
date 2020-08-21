@@ -15,6 +15,7 @@ brew "wget"
 
 tap "homebrew/cask"
 cask "1Password"
+cask "mactex"
 cask "mattermost"
 cask "microsoft-teams"
 cask "spotify"
