@@ -10,6 +10,7 @@
 # sshfsexec, but has the advantage of not being tied to a particular
 # editor or designated program.
 
+[[ ! -f /usr/local/etc/profile.d/bash-preexec.sh ]] && return
 source /usr/local/etc/profile.d/bash-preexec.sh
 
 # Programs that should always be run locally
