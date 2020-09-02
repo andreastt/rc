@@ -1,3 +1,4 @@
+brew "a2ps"
 brew "bash-preexec"
 brew "git"
 brew "git-gui"
