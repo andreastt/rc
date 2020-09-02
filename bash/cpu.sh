@@ -10,7 +10,6 @@
 # sshfsexec, but has the advantage of not being tied to a particular
 # editor or designated program.
 
-#source $(brew --prefix)/etc/profile.d/bash-preexec.sh
 source /usr/local/etc/profile.d/bash-preexec.sh
 
 # Programs that should always be run locally
@@ -59,6 +58,7 @@ _cd () {
 alias cd=_cd
 
 preexec() {
+	[[ ! $CPU_REMOTE_AUTO ]] && return
 	[[ -z $CPU_REMOTE ]] && return
 	[[ ! -n "$1" ]] && return
 
