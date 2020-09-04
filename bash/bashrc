@@ -17,8 +17,14 @@ else
 		alias ls="ls -FG"
 		;;
 	*)
-		alias ll="ls --color -Flh"
-		alias ls="ls -F --color"
+		if [[ $TERM == "dumb" ]]
+		then
+			alias ll="ls -Flh"
+			alias ls="ls -F"
+		else
+			alias ll="ls --color -Flh"
+			alias ls="ls -F --color"
+		fi
 		;;
 	esac
 fi
