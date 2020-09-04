@@ -1,2 +1,3 @@
-defshell -bash
 maptimeout 5
+autodetach on
+startup_message off
