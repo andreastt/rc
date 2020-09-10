@@ -11,22 +11,13 @@ then
 	alias ll="/bin/ls -Flh"
 	alias ls="ls -F | mc"
 else
+	color=""
 	case $(uname) in
-	Darwin)
-		alias ll="ls -GFlh"
-		alias ls="ls -FG"
-		;;
-	*)
-		if [[ $TERM == "dumb" ]]
-		then
-			alias ll="ls -Flh"
-			alias ls="ls -F"
-		else
-			alias ll="ls --color -Flh"
-			alias ls="ls -F --color"
-		fi
-		;;
+	Darwin) color="-G" ;;
+	*) color="--color" ;;
 	esac
+	alias ll="ls -Fhl $color"
+	alias ls="ls -F $color"
 fi
 alias l=ls
 
