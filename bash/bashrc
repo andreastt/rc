@@ -23,7 +23,4 @@ alias l=ls
 
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
-if [[ "$-" =~ "i" ]]
-then
-	bind -m vi-insert "\C-l":clear-screen
-fi
+[[ "$-" =~ "i" ]] && bind -m vi-insert "\C-l":clear-screen
