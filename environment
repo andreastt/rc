@@ -20,3 +20,5 @@ NAMESPACE=${NAMESPACE:-${TMPDIR}ns.${USER}.default}
 EDITOR=E
 
 PATH=$HOME/bin:/usr/local/bin:$PATH:$PLAN9/bin
+
+LC_ALL=en_GB.UTF-8
