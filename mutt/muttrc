@@ -57,7 +57,7 @@ bind attach,index G last-entry
 
 # x to tag, y to archive
 bind index x tag-entry
-macro index,pager y "<save-message>=Archive<enter>" "Archive message"
+macro index,pager y "<save-message>=stored<enter>" "Archive message"
 
 # r to reply, R to reply to all
 bind index,pager R group-reply
