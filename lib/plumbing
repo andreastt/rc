@@ -15,6 +15,14 @@ data matches '([a-zA-Z�-?0-9_\-./]+) \.(jpe?g|JPE?G|gif|GIF|tiff?|TIFF?|ppm|bi
 arg isfile $0
 plumb start open $file
 
+# typeset documents
+type is text
+data matches '[a-zA-Z¡-￿0-9_\-./@]+'
+data matches '([a-zA-Z¡-￿0-9_\-./@]+)\.(ps|PS|eps|EPS|pdf|PDF|dvi|DVI)'
+arg isfile $0
+plumb to postscript
+plumb start open $file
+
 # gitfiles
 kind is text
 data matches '[a-zA-Z0-9_\-./~{}@]+('$addr')?'
