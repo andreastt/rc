@@ -13,6 +13,7 @@ endif
 
 symlinks:
 	$(LN) $(PWD)/bin $(HOME)
+	$(LN) $(PWD)/lib $(HOME)
 	$(LN) /Volumes/src $(HOME)
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
