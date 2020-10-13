@@ -59,7 +59,7 @@ _cd () {
 alias cd=_cd
 
 preexec() {
-	[[ ! $CPU_REMOTE_AUTO ]] && return
+	[[ ! $CPU_ENABLED ]] && return
 	[[ -z $CPU_REMOTE ]] && return
 	[[ ! -n "$1" ]] && return
 
