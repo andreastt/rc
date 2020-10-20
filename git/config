@@ -1,5 +1,5 @@
 [core]
-	attributesfile = attributes
+	attributesfile = ~/rc/git/attributes
 
 [user]
 	name = Andreas Tolfsen
