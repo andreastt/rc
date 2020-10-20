@@ -1,3 +1,6 @@
+[core]
+	attributesfile = attributes
+
 [user]
 	name = Andreas Tolfsen
 	email = ato@sny.no

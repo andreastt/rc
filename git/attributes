@@ -1,0 +1,12 @@
+*.c		diff=cpp
+*.h		diff=cpp
+*.cpp	diff=cpp
+*.cc		diff=cpp
+*.css		diff=css
+*.html	diff=html
+*.xhtml	diff=html
+*.go		diff=golang
+*.pl		diff=perl
+*.py		diff=python
+*.md		diff=markdown
+*.rs		diff=rust
