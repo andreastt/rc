@@ -23,4 +23,5 @@ alias l=ls
 
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
+# in vi mode, clear screen with Control-L
 [[ "$-" =~ "i" ]] && bind -m vi-insert "\C-l":clear-screen
