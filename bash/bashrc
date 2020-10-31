@@ -25,3 +25,7 @@ PS1="$ENVTOOLKIT_PROMPT\h% "
 
 # in vi mode, clear screen with Control-L
 [[ "$-" =~ "i" ]] && bind -m vi-insert "\C-l":clear-screen
+
+# resume with Control-Z
+stty susp undef
+bind '"\C-z":"fg\015"'
