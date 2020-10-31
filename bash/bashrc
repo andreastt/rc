@@ -23,9 +23,12 @@ alias l=ls
 
 PS1="$ENVTOOLKIT_PROMPT\h% "
 
-# in vi mode, clear screen with Control-L
-[[ "$-" =~ "i" ]] && bind -m vi-insert "\C-l":clear-screen
+if [[ "$-" =~ "i" ]]
+then
+	# in vi mode, clear screen with Control-L
+	bind -m vi-insert "\C-l":clear-screen
 
-# resume with Control-Z
-stty susp undef
-bind '"\C-z":"fg\015"'
+	# resume with Control-Z
+	stty susp undef
+	bind '"\C-z":"fg\015"'
+fi
