@@ -1,7 +1,7 @@
 B
-E
 clip
 cpu
+E
 editd
 encap
 envtoolkit
@@ -12,4 +12,5 @@ godef
 goimports
 gorename
 htmlquery
+q
 wwwd
