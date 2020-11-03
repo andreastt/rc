@@ -1,15 +1,10 @@
 LN = ln -Ffs
 
-.PHONY: all symlinks tools defaults $(LIBRARY) $(HOME)/Library/Fonts
-
 ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
-LIBRARY += $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
+LIBRARY = $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
 
-ifeq ($(shell uname -s),Darwin)
-all: symlinks tools deps defaults $(LIBRARY) $(HOME)/Library/Fonts
-else
-all: symlinks tools
-endif
+.PHONY: all symlinks tools defaults $(LIBRARY)
+all: symlinks tools deps defaults $(LIBRARY)
 
 symlinks:
 	$(LN) $(PWD)/bin $(HOME)
