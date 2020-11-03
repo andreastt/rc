@@ -1,0 +1,49 @@
+#!/bin/bash
+
+fshell=$(finger $(whoami) | sed -n 's/.*Shell: //p' | sed 1q)
+SHELL=${fshell:-$SHELL}
+PLAN9=${PLAN9:-/usr/local/plan9}
+PAGER=nobs
+EDITOR=e
+
+case "$SHELL" in
+*/bash)
+	. ~/.bashrc
+	;;
+*)
+	. ~/.profile
+	;;
+esac
+
+if [ -d $NAMESPACE ]
+then
+        export NAMESPACE=$(mktemp -d -t ns.$USER)
+else
+        mkdir -p $NAMESPACE
+        if [ -f $HOME/acme.dump ]
+        then
+                loadflag=-l$HOME/acme.dump
+        fi
+fi
+
+#trap 'rm -rf $NAMESPACE' exit
+#trap 'kill $(jobs -p)' exit
+
+fontflags=""
+res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
+if [[ "$res" =~ Retina ]]
+then
+        vfont=/mnt/font/LucidaGrande/14a/font
+        #ffont=/mnt/font/LucidaGrandeMono/14a/font
+        #vfont=/mnt/font/GoRegular/16a/font
+	ffont=/mnt/font/GoMono/14a/font
+        fontflags="${fontflags} -f${vfont} -F${ffont}"
+fi
+
+echo $NAMESPACE
+plumber
+
+cd $HOME
+$PLAN9/bin/acme -a $fontflags $loadflag $* &
+exit 0
+
