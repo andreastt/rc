@@ -1,4 +1,4 @@
-LN = ln -Ffs
+LN ?= ln -Ffs
 
 ICLOUD = "$(HOME)/Library/Mobile Documents/com~apple~CloudDocs"
 LIBRARY = $(HOME)/Library/Fonts $(HOME)/Library/LaunchAgents
