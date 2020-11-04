@@ -1,0 +1,36 @@
+#!/bin/bash
+
+export TERM=dumb
+export SHELL=bash
+export PAGER=nobs
+export EDITOR=E
+
+if [ -d $NAMESPACE ]
+then
+	export NAMESPACE=$(mktemp -d -t ns.$USER)
+else
+	mkdir -p $NAMESPACE
+	if [ -f $HOME/acme.dump ]
+	then
+		loadflag=-l$HOME/acme.dump
+	fi
+fi
+
+trap 'rm -rf $NAMESPACE' exit
+trap 'kill $(jobs -p)' exit
+
+fontflags=""
+res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
+if [[ "$res" =~ Retina ]]
+then
+	vfont=/mnt/font/LucidaGrande/14a/font
+	#ffont=/mnt/font/LucidaGrandeMono/14a/font
+	#vfont=/mnt/font/GoRegular/16a/font
+	ffont=/mnt/font/GoMono/14a/font
+	fontflags="${fontflags} -f${vfont} -F${ffont}"
+fi
+
+echo $NAMESPACE
+#editd &
+plumber
+acme -a $fontflags $loadflag $*
