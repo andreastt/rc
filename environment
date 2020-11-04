@@ -8,7 +8,6 @@ HISTFILE=$XDG_CACHE_HOME/bash/history
 HISTCONTROL=ignoreboth:erasedups
 INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 LESSHISTFILE=/dev/null
-SCREENRC=$XDG_CONFIG_HOME/screen/screenrc
 
 PLAN9=/usr/local/plan9
 GOPATH=$HOME
