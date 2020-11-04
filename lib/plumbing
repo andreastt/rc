@@ -4,7 +4,7 @@ editor = acme
 
 # Python stack traces
 type is text
-data  matches ' *File "([.a-zA-Z¡-￿0-9_/\-@]*[a-zA-Z¡-￿0-9_/\-])", line ([0-9]+), in .*'
+data  matches ' *File "([a-zA-Z¡-￿0-9_\-./@]+)", line ([0-9]+), in .*'
 arg isfile $1
 data set $file
 attr add addr=$2-#0
