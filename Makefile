@@ -24,6 +24,7 @@ $(HOME)/Library/LaunchAgents:
 	$(LN) $(PWD)/Library/LaunchAgents $(dir $@)
 
 tools:
+	go get 9fans.net/go/acme/Watch
 	go get github.com/rogpeppe/godef
 	go get golang.org/x/tools/cmd/gorename
 	go get marius.ae/tools/g
