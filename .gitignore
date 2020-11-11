@@ -3,3 +3,4 @@ htop/
 pulse/
 
 .DS_Store
+.nfs*
