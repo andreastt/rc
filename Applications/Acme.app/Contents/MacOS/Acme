@@ -3,8 +3,6 @@
 fshell=$(finger $(whoami) | sed -n 's/.*Shell: //p' | sed 1q)
 SHELL=${fshell:-$SHELL}
 PLAN9=${PLAN9:-/usr/local/plan9}
-PAGER=nobs
-EDITOR=e
 
 case "$SHELL" in
 */bash)
@@ -40,6 +38,8 @@ fi
 
 echo $NAMESPACE
 plumber
+
+export PAGER=nobs
 
 cd $HOME
 $PLAN9/bin/acme -a $fontflags $loadflag $* &
