@@ -16,6 +16,7 @@ brew "wget"
 
 tap "homebrew/cask"
 cask "1Password"
+cask "little-snitch"
 cask "mactex"
 cask "mattermost"
 cask "osxfuse"
