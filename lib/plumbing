@@ -42,9 +42,9 @@ plumb start open $file
 kind is text
 data matches '[a-zA-Z0-9_\-./~{}@]+('$addr')?'
 data matches '((/[a-zA-Z0-9_\-./]+)@[a-zA-Z0-9_\-./~{}@]+)('$addr')?'
-data set       $1
-arg isdir      $2
-attr add       addr=$4
+data set $1
+arg isdir $2
+attr add addr=$4
 plumb to gitfileedit
 plumb client Gitfiles
 
