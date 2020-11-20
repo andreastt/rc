@@ -11,6 +11,12 @@ attr add addr=$2-#0
 plumb to edit
 plumb client $editor
 
+# RT tickets
+type is text
+data matches 'RT#([0-9]+)'
+plumb to web
+plumb start web https://rt.uio.no/Ticket/Display.html?id=$1
+
 # file:// URIs
 type is text
 data matches 'file:\/\/(.+)?'
