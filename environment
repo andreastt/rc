@@ -9,6 +9,7 @@ HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$XDG_CACHE_HOME/bash/history
 INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 LESSHISTFILE=/dev/null
+PASSWORD_STORE_DIR=$XDG_DATA_HOME/pass
 
 PLAN9=/usr/local/plan9
 GOPATH=$HOME
