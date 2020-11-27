@@ -1,4 +1,4 @@
 [Desktop Entry]
 Name=New mail
-Exec=urxvt -T mutt -e bash -c 'ssh -t budskapet.sny.no mutt -x'
+Exec=urxvt -T mutt -e bash -c 'ssh -t metusalem.sny.no mutt -x'
 Type=Application

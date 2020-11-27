@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=ssh to metusalem.sny.no
+Exec=urxvt -e bash -c 'ssh -t metusalem.sny.no'
+Type=Application
