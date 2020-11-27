@@ -12,7 +12,7 @@ bindsym $mod+Shift+Return exec urxvt
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
