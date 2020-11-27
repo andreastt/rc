@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Mail
+Exec=urxvt -T mutt -e bash -c 'ssh -t budskapet.sny.no mutt'
+Type=Application
