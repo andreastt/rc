@@ -1,6 +1,7 @@
 git/gitk
 htop/
 pulse/
+qutebrowser/
 
 .DS_Store
 .nfs*
