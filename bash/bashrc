@@ -22,6 +22,7 @@ fi
 alias l=ls
 
 PS1="$ENVTOOLKIT_PROMPT\h% "
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD} \007"'
 
 if [[ "$-" =~ "i" ]]
 then
