@@ -86,6 +86,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym Pause exec i3lock -c000000
+bindsym $mod+z exec i3lock -c000000
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
