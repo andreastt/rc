@@ -1,3 +1,4 @@
 setxkbmap -layout no
 setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+xrdb -load $XDG_CONFIG_HOME/x11/*
