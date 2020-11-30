@@ -113,3 +113,4 @@ bar {
 }
 
 exec --no-startup-id compton &
+exec --no-startup-id redshift-gtk &
