@@ -1,0 +1,63 @@
+set from = andretol@usit.uio.no
+set realname = "Andreas Tolfsen"
+my_hdr Organization: University of Oslo
+set hostname = job.usit.uio.no
+set use_from = yes
+set envelope_from = yes
+set user_agent = no
+
+set mbox_type = Maildir
+set timeout = 30
+set folder = $HOME/mail/
+set spoolfile = +INBOX
+set record = "+Sent Items"
+set postponed = +Drafts
+mailboxes +INBOX
+
+set header_cache = $XDG_CACHE_HOME/mutt/headers
+set message_cachedir = $XDG_CACHE_HOME/mutt/bodies
+set alias_file= $XDG_DATA_HOME/mutt/aliases
+source $alias_file
+
+source $XDG_CONFIG_HOME/mutt/headers
+set mailcap_path = $XDG_CONFIG_HOME/mutt/mailcap
+auto_view text/html application/text application/pdf
+alternative_order text/enriched text/html text/plain text
+
+set sort = threads
+set sort_aux = last-date-received
+set attribution = "Also sprach %n:\n"
+set forward_attribution_intro = "-- >8 --"
+unset forward_attribution_trailer
+set sort_alias = alias
+set reverse_alias = yes
+
+set edit_headers = yes
+set fast_reply = yes
+set include = yes
+set forward_quote = yes
+set copy = yes
+set confirmappend = no
+set delete = yes
+#set move = yes
+
+set sendmail = msmtpq
+set sendmail_wait = -1
+set send_charset = "us-ascii:utf-8"
+
+# vi like movement
+bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+# x to tag, y to archive
+bind index x tag-entry
+macro index,pager y "<save-message>=Archive<enter>" "Archive message"
+
+# r to reply, R to reply to all
+bind index,pager R group-reply
