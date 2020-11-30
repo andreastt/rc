@@ -6,3 +6,4 @@ qutebrowser/
 .DS_Store
 .fuse_hidden*
 .nfs*
+zoomus.conf
