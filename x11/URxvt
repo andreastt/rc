@@ -34,9 +34,11 @@ URxvt.color15: white
 ! Whoever thought this was a good default‽
 URxvt.print-pipe: "cat >/dev/null"
 
-! Send links to web browser
-! (should ideally use plumber(1))
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,font-size
+
 URxvt.url-launcher: gtk-launch www.desktop
 URxvt.matcher.button: 1
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
