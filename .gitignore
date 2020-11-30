@@ -1,5 +1,6 @@
 git/gitk
 htop/
+ibus/
 pulse/
 
 .DS_Store
