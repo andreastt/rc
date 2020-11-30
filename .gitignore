@@ -1,7 +1,6 @@
 git/gitk
 htop/
 pulse/
-qutebrowser/
 
 .DS_Store
 .fuse_hidden*
