@@ -33,9 +33,8 @@ tools:
 	go get sny.no/tools/...
 	go get sny.no/tools/edit/...
 
-deps: Brewfile
-	brew update
-	brew bundle --file $< --no-lock
+deps: Debfile
+	cat Debfile | xargs sudo apt install -y
 
 defaults:
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
