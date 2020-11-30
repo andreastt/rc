@@ -12,7 +12,7 @@ bindsym $mod+Shift+Return exec urxvt
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu "dmenu -fn 'Deja Vu Sans-9'"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -113,4 +113,3 @@ bar {
 }
 
 exec --no-startup-id compton &
-
