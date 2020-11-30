@@ -22,7 +22,7 @@ chatnets = {
     max_msgs = "4";
     max_whois = "1";
   };
-  IRCnet = { 
+  IRCnet = {
     type = "IRC";
     max_kicks = "1";
     max_msgs = "1";
@@ -187,7 +187,7 @@ statusbar = {
   };
 };
 settings = {
-  core = { 
+  core = {
     real_name = "Andreas Tolfsen";
     user_name = "ato";
     nick = "ato";
@@ -195,5 +195,5 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
 };
 ignores = (
-  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#sway" ); }
+  { level = "JOINS PARTS QUITS"; }
 );
