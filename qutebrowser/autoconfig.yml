@@ -29,5 +29,7 @@ settings:
     global: true
   tabs.show:
     global: multiple
+  url.start_pages:
+    global: about:blank
   window.title_format:
     global: '{perc}{title}{title_sep}'
