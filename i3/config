@@ -114,3 +114,4 @@ bar {
 
 exec --no-startup-id compton &
 exec --no-startup-id redshift-gtk &
+exec --no-startup-id feh --bg-tile $HOME/Pictures/Wallpapers/lightgrey_rock.gif
