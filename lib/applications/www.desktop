@@ -1,4 +1,4 @@
 [Desktop Entry]
 Name=WWW
-Exec=qutebrowser
+Exec=/opt/qutebrowser/bin/python3 -m qutebrowser
 Type=Application
