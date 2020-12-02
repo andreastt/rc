@@ -41,8 +41,8 @@ set confirmappend = no
 set delete = yes
 #set move = yes
 
-set sendmail = msmtpq
-set sendmail_wait = -1
+#set sendmail = msmtpq
+#set sendmail_wait = -1
 set send_charset = "us-ascii:utf-8"
 
 # vi like movement
