@@ -24,7 +24,7 @@ settings:
   fonts.tabs:
     global: 9pt sans-serif
   statusbar.hide:
-    global: true
+    global: false
   tabs.background:
     global: true
   tabs.show:
