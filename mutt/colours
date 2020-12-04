@@ -1,0 +1,10 @@
+color quoted	cyan	default
+color quoted2	green	default
+color quoted3	yellow	default
+
+color header brightyellow default "^Date:"
+color header brightgreen default "^(From|To):"
+color header brightblue default "^(Cc|Bcc):"
+color header brightgreen blue "^Subject:"
+
+#color body brightblue default "(http|https)://[^ \">\t\r\n]*"
