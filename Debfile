@@ -8,10 +8,12 @@ golang
 gpg
 i3
 lightdm
+msmtp-mta
 printer-driver-brlaser
 qutebrowser
 redshift-gtk
 rxvt-unicode
+s-nail
 sudo
 vim
 vim-gtk
