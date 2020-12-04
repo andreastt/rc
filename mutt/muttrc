@@ -39,7 +39,6 @@ set forward_quote = yes
 set copy = yes
 set confirmappend = no
 set delete = yes
-#set move = yes
 
 #set sendmail = msmtpq
 #set sendmail_wait = -1
