@@ -34,7 +34,9 @@ settings:
     global: true
   tabs.show:
     global: multiple
+  tabs.title.format:
+    global: '{audio} {current_title}'
   url.start_pages:
     global: about:blank
   window.title_format:
-    global: '{perc}{title}{title_sep}'
+    global: '{perc}{current_title}{title_sep}'
