@@ -11,3 +11,6 @@ unignore Subject:
 unignore To:
 unignore User-Agent:
 unignore X-Mailer:
+
+unhdr_order *
+hdr_order Date From Organization To Cc Bcc User-Agent X-Mailer Message-ID Archived-At Subject
