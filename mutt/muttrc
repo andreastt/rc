@@ -41,20 +41,4 @@ set delete = yes
 set send_charset = "us-ascii:utf-8"
 
 source $XDG_CONFIG_HOME/mutt/colours
-
-# vi like movement
-bind pager j next-line
-bind pager k previous-line
-bind attach,index,pager \CD next-page
-bind attach,index,pager \CU previous-page
-bind pager g top
-bind pager G bottom
-bind attach,index g first-entry
-bind attach,index G last-entry
-
-# x to tag, y to archive
-bind index x tag-entry
-macro index,pager y "<save-message>=Archive<enter>" "Archive message"
-
-# r to reply, R to reply to all
-bind index,pager R group-reply
+source $XDG_CONFIG_HOME/mutt/keys
