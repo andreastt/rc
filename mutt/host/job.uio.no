@@ -1,0 +1,6 @@
+set from = andretol@usit.uio.no
+set realname = Andreas Tolfsen
+my_hdr Organization: University of Oslo
+set hostname = job.uio.no
+
+set record = "+Sent Items"

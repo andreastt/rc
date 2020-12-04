@@ -1,7 +1,3 @@
-set from = andretol@usit.uio.no
-set realname = "Andreas Tolfsen"
-my_hdr Organization: University of Oslo
-set hostname = job.usit.uio.no
 set use_from = yes
 set envelope_from = yes
 set user_agent = no
@@ -10,9 +6,11 @@ set mbox_type = Maildir
 set timeout = 30
 set folder = $HOME/mail/
 set spoolfile = +INBOX
-set record = "+Sent Items"
+set record = +Sent
 set postponed = +Drafts
 mailboxes +INBOX
+
+source $XDG_CONFIG_HOME/mutt/host/$HOSTNAME
 
 set header_cache = $XDG_CACHE_HOME/mutt/headers
 set message_cachedir = $XDG_CACHE_HOME/mutt/bodies
