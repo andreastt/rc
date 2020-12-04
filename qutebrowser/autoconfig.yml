@@ -28,8 +28,8 @@ settings:
     global: 9pt sans-serif
   fonts.tabs.unselected:
     global: 9pt sans-serif
-  statusbar.hide:
-    global: false
+  statusbar.show:
+    global: always
   tabs.background:
     global: true
   tabs.show:
