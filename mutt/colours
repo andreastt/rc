@@ -3,7 +3,7 @@ color quoted2	green	default
 color quoted3	yellow	default
 
 color header brightyellow default "^Date:"
-color header brightgreen default "^(From|To):"
+color header brightgreen default "^(From|Organization|To):"
 color header brightblue default "^(Cc|Bcc):"
 color header cyan default "^(Archived-At|Message-ID):"
 color header brightgreen blue "^Subject:"
