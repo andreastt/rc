@@ -24,7 +24,9 @@ settings:
     global: 9pt sans-serif
   fonts.statusbar:
     global: 8pt sans-serif
-  fonts.tabs:
+  fonts.tabs.selected:
+    global: 9pt sans-serif
+  fonts.tabs.unselected:
     global: 9pt sans-serif
   statusbar.hide:
     global: false
