@@ -25,7 +25,7 @@ alternative_order text/enriched text/html text/plain text
 set sort = threads
 set sort_aux = last-date-received
 set attribution = "Also sprach %n:\n"
-set forward_attribution_intro = "-- >8 --"
+set forward_attribution_intro = "--------- >8 ---------"
 unset forward_attribution_trailer
 set sort_alias = alias
 set reverse_alias = yes
