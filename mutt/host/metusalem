@@ -1,3 +1,6 @@
 set from = ato@sny.no
 set realname = "Andreas Tolfsen"
 set hostname = metusalem.sny.no
+
+set sendmail = msmtpq
+set sendmail_wait = -1

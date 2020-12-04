@@ -38,8 +38,6 @@ set copy = yes
 set confirmappend = no
 set delete = yes
 
-#set sendmail = msmtpq
-#set sendmail_wait = -1
 set send_charset = "us-ascii:utf-8"
 
 source $XDG_CONFIG_HOME/mutt/colours
