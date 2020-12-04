@@ -5,7 +5,7 @@ color quoted3	yellow	default
 color header brightyellow default "^Date:"
 color header brightgreen default "^(From|Organization|To):"
 color header brightblue default "^(Cc|Bcc):"
-color header cyan default "^(Archived-At|Message-ID):"
+color header cyan default "^(X-Mailer|User-Agent|Archived-At|Message-ID):"
 color header brightgreen blue "^Subject:"
 
 #color body brightblue default "(http|https)://[^ \">\t\r\n]*"
