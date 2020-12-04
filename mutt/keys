@@ -1,4 +1,4 @@
-# vi like movement
+# vi(1) like movement
 bind pager j next-entry
 bind pager k previous-entry
 bind attach,index,pager \CD next-page
@@ -8,9 +8,15 @@ bind pager G bottom
 bind attach,index g first-entry
 bind attach,index G last-entry
 
-# x to tag, y to archive
-bind index x tag-entry
-macro index,pager y "<save-message>=Archive<enter>" "Archive message"
+# ,<shorthand> to jump
+# .<shorthand> to save
+# folders: (i)nbox, (a)rchive, (t)odo
+macro index ,i "<change-folder>=INBOX<enter>" "Jump to inbox"
+macro index .i "<save-message=INBOX<enter>" "Save to inbox"
+macro index ,a "<change-folder>=Archive<enter>" "Jump to archive"
+macro index .a "<save-message>=Archive<enter>" "Save to archive"
+macro index ,t "<change-folder>=todo<enter>" "Jump to todo list"
+macro index .t "<save-message>=todo<enter>" "Save to todo list"
 
 # r to reply, R to reply to all
 bind index,pager R group-reply
