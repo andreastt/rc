@@ -1,3 +1,4 @@
 save-hook "~C git@" =git
+save-hook "~C golang-dev@" =golang-dev
 save-hook "~C golang-nuts@" =golang-nuts
 save-hook "~C qutebrowser@" =qutebrowser
