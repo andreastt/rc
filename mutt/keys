@@ -10,13 +10,15 @@ bind attach,index G last-entry
 
 # ,<shorthand> to jump
 # .<shorthand> to save
-# folders: (i)nbox, (a)rchive, (t)odo, (g)it
+# folders: (i)nbox, (a)rchive, (t)odo, (d)ev, (g)it
 macro index ,i "<change-folder>=INBOX<enter>" "Jump to inbox"
 macro index .i "<save-message>=INBOX<enter>" "Save to inbox"
 macro index ,a "<change-folder>=Archive<enter>" "Jump to archive"
 macro index .a "<save-message>=Archive<enter>" "Save to archive"
 macro index ,t "<change-folder>=todo<enter>" "Jump to todo list"
 macro index .t "<save-message>=todo<enter>" "Save to todo list"
+macro index ,d "<change-folder>=dev<enter>" "Jump to development inbox"
+macro index .d "<save-message>=dev<enter>" "Save to development inbox"
 macro index ,g "<change-folder>=git<enter>" "Jump to git mailbox"
 macro index .g "<save-message>=git<enter>" "Save to git mailbox"
 
