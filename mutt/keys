@@ -12,7 +12,7 @@ bind attach,index G last-entry
 # .<shorthand> to save
 # folders: (i)nbox, (a)rchive, (t)odo, (g)it
 macro index ,i "<change-folder>=INBOX<enter>" "Jump to inbox"
-macro index .i "<save-message=INBOX<enter>" "Save to inbox"
+macro index .i "<save-message>=INBOX<enter>" "Save to inbox"
 macro index ,a "<change-folder>=Archive<enter>" "Jump to archive"
 macro index .a "<save-message>=Archive<enter>" "Save to archive"
 macro index ,t "<change-folder>=todo<enter>" "Jump to todo list"
