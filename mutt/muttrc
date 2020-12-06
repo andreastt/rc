@@ -33,7 +33,6 @@ unset forward_attribution_trailer
 set sort_alias = alias
 set reverse_alias = yes
 
-set confirmappend
 set copy
 set delete
 set edit_headers
@@ -41,6 +40,10 @@ set fast_reply
 set forward_quote
 set include
 set quit
+unset beep_new
+unset confirmappend
+unset mark_old
+unset move
 
 set send_charset = "us-ascii:utf-8"
 
