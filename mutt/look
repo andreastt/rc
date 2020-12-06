@@ -1,4 +1,4 @@
-set help=no
+unset help
 
 color quoted	cyan	default
 color quoted2	green	default
