@@ -40,6 +40,6 @@ set delete = yes
 
 set send_charset = "us-ascii:utf-8"
 
-source $XDG_CONFIG_HOME/mutt/colours
 source $XDG_CONFIG_HOME/mutt/keys
 source $XDG_CONFIG_HOME/mutt/lists
+source $XDG_CONFIG_HOME/mutt/look
