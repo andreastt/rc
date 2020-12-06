@@ -1,3 +1,5 @@
+set help=no
+
 color quoted	cyan	default
 color quoted2	green	default
 color quoted3	yellow	default
