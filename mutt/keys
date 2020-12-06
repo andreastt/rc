@@ -26,7 +26,6 @@ macro index ,g "<change-folder>=git<enter>" "Jump to git mailbox"
 macro index .g "<save-message>=git<enter>" "Save to git mailbox"
 
 # r to reply, R to reply to all
-bind index,pager D purge-message
 bind index,pager R group-reply
 bind index <space> collapse-thread
 bind index <tab> sync-mailbox
