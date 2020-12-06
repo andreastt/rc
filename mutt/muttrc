@@ -8,6 +8,7 @@ set folder = $HOME/mail/
 set spoolfile = +INBOX
 set record = +Sent
 set postponed = +Drafts
+unset mark_old
 mailboxes +INBOX
 
 source $XDG_CONFIG_HOME/mutt/host/$HOSTNAME
