@@ -1,7 +1,3 @@
-set use_from = yes
-set envelope_from = yes
-set user_agent = no
-
 set mbox_type = Maildir
 set timeout = 3
 set mail_check = 0
@@ -27,16 +23,11 @@ alternative_order text/plain text text/enriched text/html
 
 set sort = threads
 set sort_aux = last-date-received
-set attribution = "Also sprach %n:\n"
-set forward_attribution_intro = "--------- >8 ---------"
-unset forward_attribution_trailer
 set sort_alias = alias
 set reverse_alias = yes
 
 set copy
 set delete
-set edit_headers
-set fast_reply
 set forward_quote
 set include
 set quit
@@ -44,6 +35,21 @@ unset beep_new
 unset confirmappend
 unset mark_old
 unset move
+
+set attribution = "Also sprach %n:\n"
+set edit_headers
+set envelope_from
+set fast_reply
+set fcc_attach
+set forward_attribution_intro = "--------- >8 ---------"
+set forward_decode
+set forward_quote
+set include
+set reply_to
+set reverse_name
+unset forward_attribution_trailer
+
+unset user_agent
 
 set send_charset = "us-ascii:utf-8"
 
