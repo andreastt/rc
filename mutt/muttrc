@@ -4,6 +4,8 @@ set user_agent = no
 
 set mbox_type = Maildir
 set timeout = 3
+set mail_check = 0
+set delete
 set folder = $HOME/mail/
 set spoolfile = +INBOX
 set record = +Sent
@@ -31,13 +33,14 @@ unset forward_attribution_trailer
 set sort_alias = alias
 set reverse_alias = yes
 
-set edit_headers = yes
-set fast_reply = yes
-set include = yes
-set forward_quote = yes
-set copy = yes
-set confirmappend = no
-set delete = yes
+set confirmappend
+set copy
+set delete
+set edit_headers
+set fast_reply
+set forward_quote
+set include
+set quit
 
 set send_charset = "us-ascii:utf-8"
 
