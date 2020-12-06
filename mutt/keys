@@ -3,11 +3,10 @@ bind attach,index g first-entry
 bind attach,index G last-entry
 bind attach,index,pager \Cd next-page
 bind attach,index,pager \Cu previous-page
-bind index gg first-entry
-bind index G last-entry
-bind index,pager g noop
-bind index,pager j next-entry
-bind index,pager k previous-entry
+bind attach,index gg first-entry
+bind attach,index G last-entry
+bind attach,index,pager j next-entry
+bind attach,index,pager k previous-entry
 bind pager G bottom
 bind pager gg top
 
