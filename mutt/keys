@@ -23,7 +23,6 @@ macro index ,d "<change-folder>=dev<enter>" "Jump to development inbox"
 macro index .d "<save-message>=dev<enter>" "Save to development inbox"
 macro index ,g "<change-folder>=git<enter>" "Jump to git mailbox"
 macro index .g "<save-message>=git<enter>" "Save to git mailbox"
-macro index ,s "<change-folder>=Sent<enter>" "Jump to sent"
 
 # r to reply, R to reply to all
 bind index,pager R group-reply

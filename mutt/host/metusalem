@@ -4,3 +4,5 @@ set hostname = metusalem.sny.no
 
 set sendmail = msmtpq
 set sendmail_wait = -1
+
+macro index ,s "<change-folder>=Sent<enter>" "Jump to sent"

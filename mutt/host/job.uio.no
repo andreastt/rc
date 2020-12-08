@@ -6,3 +6,5 @@ set record = "+Sent Items"
 
 save-hook "~C bnt-int@" =bnt-int
 save-hook "~C usit-int@rt.uio.no" =rt
+
+macro index ,s "<change-folder>=Sent Items<enter>" "Jump to sent"
