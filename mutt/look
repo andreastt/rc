@@ -3,6 +3,8 @@ unset help
 color normal white default
 color signature cyan default
 color tilde blue default
+color status white blue
+color indicator white red
 
 color quoted	cyan	default
 color quoted2	green	default
@@ -12,6 +14,6 @@ color header brightyellow default "^Date:"
 color header brightgreen default "^(From|Organization|To):"
 color header brightblue default "^(Cc|Bcc):"
 color header cyan default "^(X-Mailer|User-Agent|Archived-At|Message-ID):"
-color header brightgreen blue "^Subject:"
+color header white blue "^Subject:"
 
 #color body brightblue default "(http|https)://[^ \">\t\r\n]*"
