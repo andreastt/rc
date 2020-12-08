@@ -1,5 +1,9 @@
 unset help
 
+color normal white default
+color signature cyan default
+color tilde blue default
+
 color quoted	cyan	default
 color quoted2	green	default
 color quoted3	yellow	default
