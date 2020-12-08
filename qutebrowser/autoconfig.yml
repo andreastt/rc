@@ -29,7 +29,7 @@ settings:
   fonts.tabs.unselected:
     global: 9pt sans-serif
   statusbar.show:
-    global: always
+    global: in-mode
   tabs.background:
     global: true
   tabs.show:
