@@ -12,6 +12,7 @@ brew "par"
 brew "python"
 brew "sshfs"
 brew "sshuttle"
+brew "texlive"
 brew "wget"
 
 tap "homebrew/cask"
