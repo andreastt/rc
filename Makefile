@@ -12,7 +12,6 @@ symlinks:
 	$(LN) /Volumes/src $(HOME)
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
-	$(LN) $(PWD)/tmux/tmux.conf $(HOME)/.tmux.conf
 	-$(LN) $(PWD)/Applications/Acme.app /Applications/Acme.app
 
 $(HOME)/Library/Fonts:
