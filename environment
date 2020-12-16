@@ -10,9 +10,10 @@ HISTFILE=$XDG_CACHE_HOME/bash/history
 INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 LESSHISTFILE=/dev/null
 
+SNY=/n/sny/am
 PLAN9=/usr/local/plan9
-GOPATH=$HOME
-GOBIN=$HOME/bin
+GOPATH=$SNY
+GOBIN=$SNY/bin
 PYTHONDONTWRITEBYTECODE=1
 JAVA_HOME=/lib/jvm/java
 
