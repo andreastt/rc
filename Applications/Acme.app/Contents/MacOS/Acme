@@ -15,13 +15,13 @@ esac
 
 if [ -d $NAMESPACE ]
 then
-        export NAMESPACE=$(mktemp -d -t ns.$USER)
+	export NAMESPACE=$(mktemp -d -t ns.$USER)
 else
-        mkdir -p $NAMESPACE
-        if [ -f $HOME/acme.dump ]
-        then
-                loadflag=-l$HOME/acme.dump
-        fi
+	mkdir -p $NAMESPACE
+	if [ -f $HOME/acme.dump ]
+	then
+		loadflag=-l$HOME/acme.dump
+	fi
 fi
 
 #trap 'rm -rf $NAMESPACE' exit
@@ -31,9 +31,9 @@ fontflags=""
 res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
 if [[ "$res" =~ Retina ]]
 then
-        vfont=/mnt/font/LucidaGrande/14a/font
+	vfont=/mnt/font/LucidaGrande/14a/font
 	ffont=/mnt/font/GoMono/14a/font
-        fontflags="${fontflags} -f${vfont} -F${ffont}"
+	fontflags="${fontflags} -f${vfont} -F${ffont}"
 fi
 
 echo $NAMESPACE
