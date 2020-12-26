@@ -11,6 +11,7 @@ INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 LESSHISTFILE=/dev/null
 
 SNY=/n/sny/am
+ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 PLAN9=/usr/local/plan9
 GOPATH=$SNY
 GOBIN=$SNY/bin
