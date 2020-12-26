@@ -9,7 +9,6 @@ all: symlinks tools deps defaults $(LIBRARY)
 symlinks:
 	$(LN) $(PWD)/bin $(HOME)
 	$(LN) $(PWD)/lib $(HOME)
-	$(LN) /Volumes/src $(HOME)
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.profile
 	$(LN) $(PWD)/bash/bashrc $(HOME)/.bashrc
 	-$(LN) $(PWD)/Applications/Acme.app /Applications/Acme.app
