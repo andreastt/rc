@@ -25,9 +25,9 @@ $(HOME)/Library/LaunchAgents:
 
 tools:
 	go get 9fans.net/go/acme/Watch
+	go get github.com/mariusae/tools/g
 	go get github.com/rogpeppe/godef
 	go get golang.org/x/tools/cmd/gorename
-	go get marius.ae/tools/g
 	go get sny.no/cmd/cpu
 	go get sny.no/tools/...
 	go get sny.no/tools/edit/...
