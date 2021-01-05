@@ -38,3 +38,4 @@ deps: Brewfile
 
 defaults:
 	defaults write -globalDomain CGDisableCursorLocationMagnification -bool true
+	defaults write com.apple.ActivityMonitor ShowCategory -int 100
