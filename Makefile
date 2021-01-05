@@ -37,3 +37,4 @@ deps: Brewfile
 	brew bundle --file $< --no-lock
 
 defaults:
+	defaults write -globalDomain CGDisableCursorLocationMagnification -bool true
