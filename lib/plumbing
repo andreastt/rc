@@ -17,6 +17,13 @@ data matches 'RT#([0-9]+)'
 plumb to web
 plumb start web https://rt.uio.no/Ticket/Display.html?id=$1
 
+# JIRA tickets
+type is text
+data matches '[A-Z]+-[0-9]+'
+data matches '(TOFH|ZOOMD|CRB)-([0-9]+)'
+plumb to web
+plumb start web https://jira.usit.uio.no/browse/$1-$2
+
 # file:// URIs
 type is text
 data matches 'file:\/\/(.+)?'
