@@ -1,2 +1,2 @@
 #!/bin/sh
-win ssh -t $@ PAGER=$PAGER exec $SHELL
+win ssh -t $@ PAGER=cat exec $SHELL
