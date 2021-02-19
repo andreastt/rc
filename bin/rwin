@@ -1,2 +1,2 @@
 #!/bin/sh
-win ssh $@
+win ssh -t $@ PAGER=$PAGER exec $SHELL
