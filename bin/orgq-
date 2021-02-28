@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -E '/#[-+](begin|end|BEGIN|END)_(quote|QUOTE)/d'
