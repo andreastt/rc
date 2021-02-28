@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Wraps latexmk(1) to avoid polluting
+# the current working directory with temporary files.
+
+set -euo pipefail
+
+PATH=/Library/TeX/texbin:$PATH
+TMPDIR=${TMPDIR}$(basename $0)${PWD}
+
+mkdir -p $TMPDIR
+
+for file in ${@:-$(ls *.tex)}
+do
+	latexmk -silent -outdir=$TMPDIR --pdf $file
+	cp $TMPDIR/${file%.tex}.pdf $PWD
+done
