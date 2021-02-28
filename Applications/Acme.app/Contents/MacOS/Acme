@@ -27,12 +27,14 @@ fi
 #trap 'rm -rf $NAMESPACE' exit
 #trap 'kill $(jobs -p)' exit
 
+export vfont=/mnt/font/LucidaGrande/15a/font
+export ffont=/mnt/font/GoMono/14a/font
+export sfont=/mnt/font/NotoSerif-Regular/14a/font
+
 fontflags=""
 res="$(system_profiler SPDisplaysDataType | grep Resolution | tail -1)"
 if [[ "$res" =~ (Retina|QHD) ]]
 then
-	vfont=/mnt/font/LucidaGrande/15a/font
-	ffont=/mnt/font/GoMono/14a/font
 	fontflags="${fontflags} -f${vfont} -F${ffont}"
 fi
 
