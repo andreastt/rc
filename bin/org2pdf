@@ -1,6 +1,6 @@
 #!/bin/sh
 source=${1%.*}
-target=${source:-$TMPDIR$(mktemp XXXXXXXX)}.pdf
+target=${source:-$(mktemp $TMPDIRXXXXXXXX)}.pdf
 PATH=/Library/TeX/texbin:$PATH
 pandoc \
 	--from org \
