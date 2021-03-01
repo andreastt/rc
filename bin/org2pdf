@@ -1,0 +1,6 @@
+#!/bin/sh
+source=${1%.*}
+target=${source:-$TMPDIR$(mktemp XXXXXXXX)}.pdf
+PATH=/Library/TeX/texbin:$PATH
+pandoc -f org -t pdf ${1:-/dev/stdin} -o $target
+open $target
