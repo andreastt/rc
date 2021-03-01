@@ -2,5 +2,10 @@
 source=${1%.*}
 target=${source:-$TMPDIR$(mktemp XXXXXXXX)}.pdf
 PATH=/Library/TeX/texbin:$PATH
-pandoc -f org -t pdf ${1:-/dev/stdin} -o $target
+pandoc \
+	--from org \
+	--to pdf \
+	--output $target \
+	--variable 'fontfamily:fourier' \
+	${1:-/dev/stdin}
 open $target
