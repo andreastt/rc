@@ -8,4 +8,4 @@ pandoc \
 	--output $target \
 	--variable 'fontfamily:fourier' \
 	${1:-/dev/stdin}
-open $target
+plumb $target
