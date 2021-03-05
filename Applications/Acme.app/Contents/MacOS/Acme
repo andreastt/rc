@@ -43,6 +43,5 @@ plumber
 
 export PAGER=nobs
 
-cd $SNY
 $PLAN9/bin/acme -a $fontflags $loadflag $* &
 exit 0
